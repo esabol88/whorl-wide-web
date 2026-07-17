@@ -67,7 +67,15 @@ locally) surfaced two things worth knowing:
   actually answer the open question about the other 3 subreddits. Fixed:
   each Reddit source now waits an increasing delay (`redditDelayMs`, 3s
   apart) before firing, so they hit Reddit one at a time instead of in a
-  burst.
+  burst. **Update:** a second live run at 3s spacing came back with the
+  identical result — same 429s, same 40-item total. That rules out "our
+  own requests are bursty" and points toward Reddit rate-limiting or
+  blocking GitHub Actions' entire shared IP pool, a limit no amount of
+  pacing on our end can get around, since it's shared across every other
+  Action in the world hitting reddit.com at the same moment. Bumped the
+  delay to 20s as a last check before concluding that for good — if that
+  still doesn't move the needle, the real fix is a self-hosted runner (a
+  non-shared IP), not more delay-tuning.
 - **DeviantArt returned 403 Forbidden.** Likely blocking GitHub Actions'
   shared/datacenter IP ranges outright, a common defense against scraping
   — separate from the rate-limiting issue above.

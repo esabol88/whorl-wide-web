@@ -171,6 +171,16 @@ const SOURCES = [
   // exist; a 429 tells you nothing about whether the subreddit is real. So
   // each Reddit source gets an increasing delay (redditDelayMs) before its
   // request fires — see fetchRedditRss below, which awaits it.
+  //
+  // A first attempt at 3s spacing got the identical result — same 429s,
+  // byte-for-byte same item count — which points away from "our own
+  // requests are bursty" and toward Reddit rate-limiting or blocking
+  // GitHub Actions' whole shared IP pool, a limit our own request pacing
+  // can't do anything about since it's shared across every other Action
+  // in the world hitting reddit.com at the same moment. Bumped to 20s as
+  // a last check before concluding that. If this still doesn't change
+  // anything, the pacing theory is dead and the real fix is a
+  // self-hosted runner (a non-shared IP) rather than more delay-tuning.
   ...[
     { name: 'r/genewolfe', subreddit: 'genewolfe' },
     { name: 'r/rereadingwolfepodcast', subreddit: 'rereadingwolfepodcast' }, // TODO: verify — corrected from requested "rereadingwolfe"
@@ -184,7 +194,7 @@ const SOURCES = [
     series: 'general',
     kind: 'reddit-rss',
     url: `https://www.reddit.com/r/${subreddit}/.rss`,
-    redditDelayMs: i * 3000
+    redditDelayMs: i * 20000 // was 3000 — a live run showed identical 429s at 3s spacing, so trying 20s as a last check before concluding this is IP-pool-wide, not pacing
   })),
 
   // --- DeviantArt (fan art, no auth needed) ---
