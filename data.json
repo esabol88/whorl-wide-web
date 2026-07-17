@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T14:19:15.702Z",
+  "generatedAt": "2026-07-17T16:07:30.677Z",
   "items": [
     {
       "id": "alzabo-soup-2688e0f0",
@@ -23,6 +23,37 @@
       "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
       "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
       "tags": []
+    },
+    {
+      "id": "r-genewolfe-e3c1ef36",
+      "title": "Who is Jonas",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-17",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uz15bu/who_is_jonas/",
+      "desc": "Who is Jonas?\n In some sense, Jonas is akin to Talos for Baldanders, a perfectly loyal companion and thus a distinction from women, whom Severian has experienced or knows as betrayers-of-trust:\n  \nBirds twittered overhea",
+      "tags": [
+        "Severian",
+        "the Claw",
+        "Vodalus",
+        "Dorcas",
+        "Hethor",
+        "Thecla"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-a70fe1c1",
+      "title": "Long Sun personae lists, centralized and expandable",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "long",
+      "date": "2026-07-17",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uz2n5e/long_sun_personae_lists_centralized_and_expandable/",
+      "desc": "https://docs.google.com/spreadsheets/d/1VqgxlrfgSHtLVwtkWNj1K79IZnITzz8uR4IzHQirkAQ/edit?usp=sharing\n I put Long Sun's three lists of \"Gods, Persons, and Animals Mentioned in the Text\" into columns, together with brief n",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "r-genewolfe-776af63b",
@@ -171,33 +202,6 @@
       "url": "https://www.reddit.com/r/genewolfe/comments/1uvrqez/anyone_else_find_botns_surprisingly_funny/",
       "desc": "Reading Sword of the Lictor and found this amusing - \n 'At the time, however, I was far more concerned with the mechanism that had once fed him. I told myself that ancient machines were often astoundingly durable, and th",
       "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-80df1659",
-      "title": "The Land Across: Nichols and May update",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-13",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uvkwac/the_land_across_nichols_and_may_update/",
-      "desc": "To update my post from, lo, three years ago:\n The topic is a brief exchange between two JAKA operatives in chapter 10 of The Land Across:\n  \nI quoted, “’I don’t trust that conductor. Why is he so short?’”\n “And you mean ",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-3947c48e",
-      "title": "Severian sketch dump from unfinished fan art project (spoilers for New Sun, I guess)",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-12",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uug8av/severian_sketch_dump_from_unfinished_fan_art/",
-      "desc": "Hey all,\n I realized I'm probably never going to finish this project, so I thought I'd share it as-is. I started it in December 2024, worked on it a couple of weeks, and never looked at it again. I'm lazy like that, unfo",
-      "tags": [
-        "Severian",
-        "the Claw"
-      ],
       "thumbnail": null
     },
     {
