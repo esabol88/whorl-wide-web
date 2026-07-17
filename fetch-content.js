@@ -67,9 +67,22 @@ function guessTags(text) {
     .map(([tag]) => tag);
 }
 
+// Shared across the rss-parser instance and the two raw fetch() calls this
+// file makes directly (Pipermail doesn't have an RSS feed to parse, so it's
+// fetched and scraped as plain HTML instead) — see the note on `parser`
+// below for why this is a real browser UA rather than a bot-labeled one.
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+
 const parser = new Parser({
   timeout: 15000,
-  headers: { 'User-Agent': 'wolfe-dispatch-bot/1.0' },
+  // A realistic browser UA, not a bot-labeled one. A live run against real
+  // reddit.com and DeviantArt showed Reddit rate-limiting (429) a burst of
+  // simultaneous requests and DeviantArt outright blocking (403) — both
+  // classic reactions to traffic that self-identifies as an obvious bot
+  // from a datacenter IP (GitHub Actions runners). This won't fix
+  // IP-range blocking if that's also happening, but it removes the
+  // "looks like a bot" signal, which is often enough on its own.
+  headers: { 'User-Agent': USER_AGENT },
   customFields: {
     // YouTube's video RSS nests the thumbnail inside <media:group>.
     // DeviantArt's RSS uses MediaRSS too: <media:content> for the image,
@@ -150,6 +163,14 @@ const SOURCES = [
   // trustworthy than a guess. Any of these that 404 will just show up as
   // a normal [skip] line when you run this — check the actual subreddit
   // name against reddit.com yourself and fix the entry below if so.
+  //
+  // STAGGERED, NOT PARALLEL: a live run against real reddit.com showed 3 of
+  // 4 subreddit requests failing with 429 (Too Many Requests) when fired
+  // simultaneously via Promise.all — only the first got through. That's
+  // Reddit rate-limiting a burst, not evidence those subreddits don't
+  // exist; a 429 tells you nothing about whether the subreddit is real. So
+  // each Reddit source gets an increasing delay (redditDelayMs) before its
+  // request fires — see fetchRedditRss below, which awaits it.
   ...[
     { name: 'r/genewolfe', subreddit: 'genewolfe' },
     { name: 'r/rereadingwolfepodcast', subreddit: 'rereadingwolfepodcast' }, // TODO: verify — corrected from requested "rereadingwolfe"
@@ -157,12 +178,13 @@ const SOURCES = [
     { name: 'r/shittygenewolfe', subreddit: 'shittygenewolfe' }, // TODO: verify this exists
     // Add more the same way — one line each:
     // { name: 'r/subredditname', subreddit: 'subredditname' },
-  ].map(({ name, subreddit }) => ({
+  ].map(({ name, subreddit }, i) => ({
     name,
     type: 'discussion',
     series: 'general',
     kind: 'reddit-rss',
-    url: `https://www.reddit.com/r/${subreddit}/.rss`
+    url: `https://www.reddit.com/r/${subreddit}/.rss`,
+    redditDelayMs: i * 3000
   })),
 
   // --- DeviantArt (fan art, no auth needed) ---
@@ -256,8 +278,11 @@ function guessSeries(text, fallback) {
 // as every other RSS source in this file: title, link, publish date, and
 // contentSnippet. No thumbnail, author, or vote data — Reddit's RSS doesn't
 // expose any of that as a usable field, so there's nothing to fake here.
+function delay(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
+
 async function fetchRedditRss(source) {
   try {
+    if (source.redditDelayMs) await delay(source.redditDelayMs);
     const feed = await parser.parseURL(source.url);
     return feed.items.slice(0, 15).map(item => ({
       id: makeId(source.name, item.link),
@@ -342,7 +367,7 @@ const MONTHS = ['January','February','March','April','May','June','July','August
 const PIPERMAIL_BASE = 'http://lists.urth.net/pipermail/urth-urth.net/';
 
 async function findLatestPipermailMonth() {
-  const res = await fetch(PIPERMAIL_BASE, { headers: { 'User-Agent': 'wolfe-dispatch-bot/1.0' } });
+  const res = await fetch(PIPERMAIL_BASE, { headers: { 'User-Agent': USER_AGENT } });
   if (!res.ok) throw new Error(`HTTP ${res.status} reading archive index`);
   const html = await res.text();
   const matches = [...html.matchAll(/href="(\d{4})-([A-Za-z]+)\/?(?:thread\.html)?"/gi)];
@@ -366,7 +391,7 @@ function decodeHtmlEntities(str) {
 async function fetchPipermail(source) {
   try {
     const indexUrl = await findLatestPipermailMonth();
-    const res = await fetch(indexUrl, { headers: { 'User-Agent': 'wolfe-dispatch-bot/1.0' } });
+    const res = await fetch(indexUrl, { headers: { 'User-Agent': USER_AGENT } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const html = await res.text();
     const matches = [...html.matchAll(/<A HREF="(\d+\.html)">([^<]+)<\/A>/gi)];

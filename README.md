@@ -55,6 +55,31 @@ Two real trade-offs versus the JSON API:
   whatever Reddit's RSS returns by default (its own front-page sort) rather
   than an explicit "only threads above N upvotes" cutoff.
 
+### A note from the first live run
+
+The first real run against actual reddit.com and DeviantArt (not just
+locally) surfaced two things worth knowing:
+
+- **Reddit rate-limited a burst of simultaneous requests.** All 4
+  subreddit RSS fetches fired at once via `Promise.all`, and 3 of them came
+  back `429 Too Many Requests` — only `r/genewolfe` got through. A 429
+  means "you're going too fast," not "this doesn't exist," so it didn't
+  actually answer the open question about the other 3 subreddits. Fixed:
+  each Reddit source now waits an increasing delay (`redditDelayMs`, 3s
+  apart) before firing, so they hit Reddit one at a time instead of in a
+  burst.
+- **DeviantArt returned 403 Forbidden.** Likely blocking GitHub Actions'
+  shared/datacenter IP ranges outright, a common defense against scraping
+  — separate from the rate-limiting issue above.
+- Both sources were also using a bot-labeled User-Agent
+  (`wolfe-dispatch-bot/1.0`), which is exactly the kind of signal that
+  invites this treatment. Fixed: switched to a realistic browser UA
+  (shared across every fetch in this file via the `USER_AGENT` constant),
+  which alone may resolve DeviantArt's block too, though IP-range blocking
+  — if that's what's actually happening — wouldn't be fixable from within
+  GitHub Actions at all. Run it again and check the log for whether the
+  403 persists.
+
 ## Fan art: DeviantArt, not Reddit (or INPRNT, or ArtStation)
 
 Reddit's RSS can't reliably tell you "this post is an image" or who made
