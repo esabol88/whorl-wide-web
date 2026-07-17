@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Whorl Wide Web — Gene Wolfe Content Aggregator</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root{
+  --fuligin:#050403;
+  --surface:#0e0d0b;
+  --surface-hover:#131210;
+  --hairline:#211f1a;
+  --hairline-hi:#302d26;
+  --parchment:#efe9db;
+  --parchment-dim:#8a8474;
+  --muted:#5f5a4d;
+  --ochre:#b6924f;
+  --verdigris:#6a9c83;
+  --rust:#c2703f;
+  --slate-blue:#6f93c2;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--fuligin);
+  color:var(--parchment);
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif;
+  padding:0 0 110px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;}
+
+/* ---------- masthead ---------- */
+header{ max-width:640px; margin:0 auto; padding:80px 24px 36px; text-align:center; }
+.sun-mark{ width:28px; height:28px; margin:0 auto 24px; opacity:.9; }
+.eyebrow{ font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--rust); margin-bottom:16px; }
+h1{ font-weight:800; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parchment); letter-spacing:-0.025em; line-height:1.05; }
+.arrow-rule{ display:flex; align-items:center; gap:8px; max-width:120px; margin:20px auto 0; color:var(--rust); opacity:.7; }
+.arrow-rule .line{flex:1; height:1px; background:currentColor;}
+.arrow-rule .tip{font-size:9px; line-height:1;}
+.subtitle{ color:var(--parchment-dim); font-size:16px; font-weight:400; margin-top:18px; line-height:1.55; letter-spacing:-0.005em; }
+.updated-stamp{ margin-top:14px; font-size:11.5px; font-weight:600; letter-spacing:.03em; color:var(--muted); }
+.updated-stamp:empty{display:none;}
+
+/* ---------- shared: disclosure bars (Start Here / Spoiler Shield) ---------- */
+.bar-wrap{ max-width:640px; margin:0 auto; padding:0 24px; display:grid; gap:8px; }
+.disclosure{ border:1px solid var(--hairline); border-radius:12px; background:var(--surface); overflow:hidden; }
+.disc-toggle{
+  width:100%; display:flex; align-items:center; gap:10px;
+  padding:13px 16px; background:none; border:none; color:var(--parchment-dim);
+  font-family:inherit; font-size:13.5px; font-weight:600; cursor:pointer; text-align:left;
+}
+.disc-toggle:hover{color:var(--parchment);}
+.disc-toggle .ic{font-size:14px; color:var(--rust); flex:0 0 auto;}
+.disc-toggle .txt{flex:1;}
+.disc-toggle .status{font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.04em;}
+.disc-toggle .chev{transition:transform .15s ease; color:var(--muted); font-size:10px;}
+.disc-toggle.open .chev{transform:rotate(90deg);}
+.disc-body{ padding:0 18px 18px; font-size:13.5px; color:var(--parchment-dim); line-height:1.65; }
+.disc-body p{margin:0 0 10px;}
+.disc-body p:last-child{margin-bottom:0;}
+.disc-body a{color:var(--parchment); font-weight:650; text-decoration:none; border-bottom:1px solid var(--hairline-hi);}
+.disc-body a:hover{border-color:var(--rust); color:var(--rust);}
+.shield-row{ display:flex; gap:14px; flex-wrap:wrap; padding-top:4px; }
+.shield-field{ display:flex; flex-direction:column; gap:5px; }
+.shield-field label{ font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+.shield-field select{
+  background:var(--fuligin); color:var(--parchment); border:1px solid var(--hairline-hi);
+  border-radius:7px; padding:7px 10px; font-family:inherit; font-size:12.5px;
+}
+
+/* ---------- first-visit onboarding banner ---------- */
+.onboard-banner{
+  max-width:640px; margin:0 auto 24px; padding:20px 22px;
+  background:var(--surface); border:1px solid var(--hairline-hi); border-left:3px solid var(--rust);
+  border-radius:14px; display:flex; align-items:flex-start; gap:14px;
+}
+.onboard-banner[hidden]{ display:none; } /* our own display:flex above otherwise beats the browser's default [hidden] rule */
+.onboard-banner .ic{font-size:18px; flex:0 0 auto; margin-top:1px;}
+.onboard-banner .body{flex:1; min-width:0;}
+.onboard-banner .headline{font-weight:650; font-size:14.5px; color:var(--parchment); margin:0 0 4px;}
+.onboard-banner .sub{font-size:13px; color:var(--parchment-dim); line-height:1.5; margin:0 0 12px;}
+.onboard-banner .actions{display:flex; flex-wrap:wrap; gap:8px;}
+.onboard-banner button{
+  font-family:inherit; font-size:12.5px; font-weight:600; border-radius:999px; cursor:pointer; border:none; padding:8px 14px;
+}
+.onboard-banner .primary{background:var(--rust); color:#0e0d0b;}
+.onboard-banner .secondary{background:rgba(255,255,255,0.06); color:var(--parchment-dim);}
+.onboard-banner .secondary:hover{background:rgba(255,255,255,0.1); color:var(--parchment);}
+.onboard-banner .close{
+  flex:0 0 auto; background:none; border:none; color:var(--muted); cursor:pointer; font-size:13px; padding:2px;
+}
+.onboard-banner .close:hover{color:var(--parchment);}
+
+/* ---------- controls: pill chips ---------- */
+.controls{ max-width:760px; margin:0 auto; padding:22px 24px 4px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; }
+.chip{
+  font-size:13px; font-weight:600; letter-spacing:-0.005em; padding:9px 16px; border:none;
+  border-radius:999px; background:rgba(255,255,255,0.045); color:var(--parchment-dim); cursor:pointer;
+  transition:all .16s ease;
+}
+.chip:hover{background:rgba(255,255,255,0.09); color:var(--parchment);}
+.chip.active{background:var(--ochre); color:#0e0d0b;}
+.chip[data-series="new"].active{background:var(--rust); color:#0e0d0b;}
+.chip[data-series="long"].active{background:var(--verdigris); color:#0e0d0b;}
+.chip[data-series="short"].active{background:var(--slate-blue); color:#0e0d0b;}
+.chip[data-series="general"].active{background:var(--parchment-dim); color:#0e0d0b;}
+.chip.saved-toggle{ background:rgba(255,255,255,0.045); }
+.chip.saved-toggle.active{ background:var(--parchment); color:#0e0d0b; }
+
+.status-line{
+  max-width:760px; margin:16px auto 0; padding:0 24px;
+  font-size:12.5px; color:var(--muted); text-align:center;
+}
+.status-line b{color:var(--rust); font-weight:600;}
+.tag-filter-line{
+  max-width:760px; margin:10px auto 0; padding:0 24px;
+  font-size:12.5px; color:var(--muted); text-align:center; display:none; align-items:center; justify-content:center; gap:8px;
+}
+.tag-filter-line.active{display:flex;}
+.tag-filter-line button{
+  background:rgba(255,255,255,0.06); border:none; color:var(--parchment-dim);
+  border-radius:999px; padding:4px 10px; font-size:11.5px; cursor:pointer; font-family:inherit;
+}
+
+.divider{
+  display:flex; align-items:center; gap:12px; max-width:760px; margin:30px auto 16px; padding:0 24px;
+  font-size:11px; font-weight:600; letter-spacing:.14em; color:var(--muted); text-transform:uppercase;
+}
+.divider .line{flex:1; height:1px; background:var(--hairline);}
+
+/* ---------- search ---------- */
+.search-wrap{ max-width:520px; margin:20px auto 0; padding:0 24px; }
+.search-box{
+  position:relative; display:flex; align-items:center;
+  background:var(--surface); border:1px solid var(--hairline); border-radius:999px;
+  padding:0 16px; transition:border-color .16s ease, background .16s ease;
+}
+.search-box:focus-within{ border-color:var(--ochre); background:var(--surface-hover); }
+.search-box .ic{ font-size:14px; color:var(--muted); flex:0 0 auto; }
+.search-box input{
+  flex:1; min-width:0; background:none; border:none; outline:none;
+  color:var(--parchment); font-family:inherit; font-size:14.5px;
+  padding:12px 10px; letter-spacing:-0.005em;
+}
+.search-box input::placeholder{ color:var(--muted); }
+.search-box .clear{
+  flex:0 0 auto; background:none; border:none; cursor:pointer; color:var(--muted);
+  font-size:13px; padding:4px; line-height:1; display:none; font-family:inherit;
+}
+.search-box .clear:hover{ color:var(--parchment); }
+.search-box.has-query .clear{ display:block; }
+
+/* ---------- featured item ---------- */
+#featuredSlot{max-width:760px; margin:0 auto; padding:0 24px;}
+#featuredSlot:empty{display:none;}
+.featured-label{
+  display:flex; align-items:center; gap:8px; margin-bottom:10px;
+  font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+}
+.featured-label .dot{width:6px; height:6px; border-radius:50%; background:currentColor;}
+.featured-label.new{color:var(--rust);}
+.featured-label.long{color:var(--verdigris);}
+.featured-label.short{color:var(--slate-blue);}
+.featured-label.general{color:var(--ochre);}
+.card.featured{
+  padding:26px 28px; margin-bottom:28px; gap:20px;
+  border-width:1.5px;
+}
+.card.new.featured{border-color:rgba(194,112,63,0.45);}
+.card.long.featured{border-color:rgba(106,156,131,0.45);}
+.card.short.featured{border-color:rgba(111,147,194,0.45);}
+.card.general.featured{border-color:rgba(138,132,116,0.4);}
+.card.featured .thumb{width:120px; height:120px; border-radius:16px;}
+.card.featured .title{font-size:21px; font-weight:700;}
+.card.featured .desc{font-size:15px; max-width:none;}
+
+/* ---------- feed cards ---------- */
+main{max-width:760px; margin:0 auto; padding:0 24px; display:grid; gap:10px;}
+.card{
+  position:relative; background:var(--surface); border:1px solid var(--hairline); border-radius:16px;
+  padding:20px 22px; display:flex; gap:16px; transition:background .16s ease, border-color .16s ease;
+}
+.card:hover{background:var(--surface-hover); border-color:var(--hairline-hi);}
+
+.thumb{
+  flex:0 0 auto; width:84px; height:84px; border-radius:14px; position:relative; overflow:hidden;
+  background:var(--ochre);
+}
+.card.new .thumb{background:linear-gradient(155deg, var(--rust), #6e3822);}
+.card.long .thumb{background:linear-gradient(155deg, var(--verdigris), #35513f);}
+.card.short .thumb{background:linear-gradient(155deg, var(--slate-blue), #2e4a68);}
+.card.general .thumb{background:linear-gradient(155deg, var(--parchment-dim), #3a362c);}
+.thumb img{ width:100%; height:100%; object-fit:cover; display:block; position:relative; z-index:1; transition:filter .2s ease; }
+.thumb .thumb-icon{
+  position:absolute; inset:0; z-index:0; display:flex; align-items:center; justify-content:center;
+  font-size:26px; color:rgba(5,4,3,0.55);
+}
+.new-dot{
+  position:absolute; top:5px; right:5px; width:9px; height:9px; border-radius:50%;
+  background:var(--parchment); border:2px solid var(--fuligin); z-index:2;
+}
+.thumb.nsfw img{ filter:blur(18px) saturate(0.7); }
+.nsfw-badge{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:4px;
+  background:rgba(5,4,3,0.55); cursor:pointer; z-index:1;
+}
+.nsfw-badge .warn{font-size:15px;}
+.nsfw-badge span.lbl{font-size:8.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--parchment); text-align:center; padding:0 6px;}
+
+.body{flex:1; min-width:0;}
+.top{display:flex; justify-content:space-between; gap:10px; align-items:flex-start;}
+.title{ font-weight:650; font-size:16.5px; letter-spacing:-0.01em; color:var(--parchment); margin:0; line-height:1.35; }
+.top-right{ display:flex; align-items:center; gap:8px; flex:0 0 auto; }
+.meta{font-size:11.5px; font-weight:600; color:var(--muted); white-space:nowrap; letter-spacing:.02em;}
+.save-btn{
+  background:none; border:none; cursor:pointer; font-size:15px; color:var(--muted); padding:2px; line-height:1;
+}
+.save-btn.saved{color:var(--ochre);}
+.source{ font-size:12.5px; font-weight:600; margin-top:6px; color:var(--ochre); }
+.source .quiet-badge{
+  font-weight:600; color:var(--muted); text-transform:none; letter-spacing:0;
+  background:rgba(255,255,255,0.05); border-radius:999px; padding:2px 8px; margin-left:6px; font-size:10.5px;
+}
+.card.new .source{color:var(--rust);}
+.card.long .source{color:var(--verdigris);}
+.card.short .source{color:var(--slate-blue);}
+.card.general .source{color:var(--parchment-dim);}
+.desc{font-size:14px; color:var(--parchment-dim); margin-top:8px; line-height:1.55; max-width:54ch; font-weight:400;}
+.attribution{
+  display:flex; flex-wrap:wrap; align-items:center; gap:6px;
+  margin-top:9px; padding:8px 10px; border-radius:8px; background:rgba(255,255,255,0.035);
+  font-size:12px; color:var(--parchment-dim);
+}
+.attribution .lbl{color:var(--muted); font-weight:600; text-transform:uppercase; font-size:9.5px; letter-spacing:.05em;}
+.attribution a{font-weight:650; color:var(--parchment); text-decoration:none; border-bottom:1px solid var(--hairline-hi);}
+.attribution a:hover{border-color:var(--rust); color:var(--rust);}
+.attribution .sep{color:var(--muted);}
+.tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.tag{
+  font-size:10.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  padding:4px 10px; border-radius:999px; background:rgba(255,255,255,0.05); color:var(--parchment-dim);
+  border:none; cursor:pointer; font-family:inherit;
+}
+.tag:hover{background:rgba(255,255,255,0.1); color:var(--parchment);}
+.tag.series-tag{cursor:default;}
+.tag.series-tag:hover{background:rgba(255,255,255,0.05); color:var(--parchment-dim);}
+
+/* spoiler overlay */
+.spoiler-overlay{
+  position:absolute; inset:0; border-radius:16px; background:rgba(5,4,3,0.94);
+  display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px;
+  backdrop-filter:blur(3px);
+}
+.spoiler-overlay .lock{font-size:15px; color:var(--rust);}
+.spoiler-overlay button{
+  background:rgba(255,255,255,0.07); border:none; color:var(--parchment);
+  padding:8px 16px; border-radius:999px; font-size:12.5px; font-weight:600; cursor:pointer; font-family:inherit;
+}
+.spoiler-overlay .note{font-size:11px; color:var(--muted); max-width:220px; text-align:center; line-height:1.5;}
+
+.empty{ text-align:center; color:var(--muted); font-size:13px; padding:50px 0; }
+
+/* ---------- reference shelf ---------- */
+.shelf{ max-width:760px; margin:60px auto 0; padding:0 24px; }
+.shelf-list{ display:grid; gap:2px; border-top:1px solid var(--hairline); }
+.shelf-item{
+  display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+  padding:16px 0; border-bottom:1px solid var(--hairline); text-decoration:none;
+}
+.shelf-item:hover .shelf-title{color:var(--rust);}
+.shelf-main{min-width:0;}
+.shelf-title{ font-weight:650; font-size:14.5px; color:var(--parchment); transition:color .15s ease; }
+.shelf-author{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+.shelf-desc{ font-size:12.5px; color:var(--parchment-dim); margin-top:4px; max-width:54ch; line-height:1.5; }
+.shelf-arrow{ flex:0 0 auto; color:var(--muted); font-size:13px; }
+
+footer{
+  max-width:760px; margin:50px auto 0; padding:24px 24px 0; border-top:1px solid var(--hairline);
+  font-size:12px; color:var(--muted); line-height:1.7;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="sun-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="10" fill="none" stroke="#c2703f" stroke-width="1.4"/>
+    <circle cx="24" cy="17" r="7.5" fill="#050403"/>
+    <g stroke="#c2703f" stroke-width="1" opacity="0.55">
+      <line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+      <line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+    </g>
+  </svg>
+  <div class="eyebrow">Gene Wolfe Content Aggregator</div>
+  <h1>The Whorl Wide Web</h1>
+  <div class="arrow-rule"><span class="tip">&#9666;</span><span class="line"></span><span class="tip">&#9656;</span></div>
+  <p class="subtitle">Everything Urth has to say, pulled into one feed.</p>
+  <div class="updated-stamp" id="updatedStamp"></div>
+</header>
+
+<div class="onboard-banner" id="onboardBanner" hidden>
+  <span class="ic">&#128737;</span>
+  <div class="body">
+    <p class="headline">First time here? Let's avoid spoiling anything.</p>
+    <p class="sub">By default, everything's blurred until you tell us how far you've read in each series. You can change this any time in Spoiler Shield below.</p>
+    <div class="actions">
+      <button class="primary" id="onboardSetup">Set my reading progress</button>
+      <button class="secondary" id="onboardCaughtUp">I'm caught up on everything — skip this</button>
+    </div>
+  </div>
+  <button class="close" id="onboardClose" aria-label="Dismiss">&#10005;</button>
+</div>
+
+<div class="bar-wrap">
+  <div class="disclosure">
+    <button class="disc-toggle" id="startHereToggle">
+      <span class="ic">&#128214;</span>
+      <span class="txt">New to Urth? Start here — reading order &amp; what to expect</span>
+      <span class="chev">&#9656;</span>
+    </button>
+    <div class="disc-body" id="startHereBody" hidden>
+      <p>Not sure where to start, or what fits where? Rereading Wolfe's <a href="https://www.patreon.com/rereadingwolfe/posts/solar-cycle-49850386" target="_blank" rel="noopener">Solar Cycle reading order</a> lays out the whole path — start there.</p>
+    </div>
+  </div>
+
+  <div class="disclosure">
+    <button class="disc-toggle" id="shieldToggle">
+      <span class="ic">&#128737;</span>
+      <span class="txt">Spoiler Shield</span>
+      <span class="status" id="shieldStatus">Off</span>
+      <span class="chev">&#9656;</span>
+    </button>
+    <div class="disc-body" id="shieldBody" hidden>
+      <p>Tell it how far you've read in each series. Anything further ahead gets blurred in your feed until you choose to reveal it.</p>
+      <div class="shield-row">
+        <div class="shield-field">
+          <label>New Sun</label>
+          <select id="progNew"></select>
+        </div>
+        <div class="shield-field">
+          <label>Long Sun</label>
+          <select id="progLong"></select>
+        </div>
+        <div class="shield-field">
+          <label>Short Sun</label>
+          <select id="progShort"></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <div class="search-box" id="searchBox">
+    <span class="ic">&#128269;</span>
+    <input type="text" id="searchInput" placeholder="Search titles, descriptions, sources, tags…" autocomplete="off">
+    <button class="clear" id="searchClear" aria-label="Clear search">&#10005;</button>
+  </div>
+</div>
+
+<div class="controls" id="seriesControls">
+  <button class="chip active" data-series="all">All Series</button>
+  <button class="chip" data-series="new">New Sun</button>
+  <button class="chip" data-series="long">Long Sun</button>
+  <button class="chip" data-series="short">Short Sun</button>
+  <button class="chip" data-series="general">General Wolfe</button>
+</div>
+<div class="controls" id="typeControls">
+  <button class="chip active" data-type="all">All Formats</button>
+  <button class="chip" data-type="video">Video</button>
+  <button class="chip" data-type="podcast">Podcast</button>
+  <button class="chip" data-type="discussion">Discussion</button>
+  <button class="chip" data-type="article">Article</button>
+  <button class="chip" data-type="paper">Paper</button>
+  <button class="chip" data-type="fanart">Fan Art</button>
+  <button class="chip saved-toggle" id="savedToggle">&#9733; Saved</button>
+</div>
+
+<div id="featuredSlot"></div>
+
+<div class="status-line" id="statusLine"></div>
+<div class="tag-filter-line" id="tagFilterLine"></div>
+
+<div class="divider"><span class="line"></span>latest<span class="line"></span></div>
+
+<main id="feed"></main>
+
+<div class="shelf">
+  <div class="divider"><span class="line"></span>further reading<span class="line"></span></div>
+  <div class="shelf-list">
+    <a class="shelf-item" href="https://www.goodreads.com/book/show/5970607-lexicon-urthus" target="_blank" rel="noopener">
+      <div class="shelf-main">
+        <div class="shelf-title">Lexicon Urthus</div>
+        <div class="shelf-author">Michael Andre-Driussi</div>
+        <div class="shelf-desc">A word-by-word glossary of New Sun's invented and archaic vocabulary — the reference most re-readers keep open.</div>
+      </div>
+      <div class="shelf-arrow">&#8599;</div>
+    </a>
+    <a class="shelf-item" href="https://www.goodreads.com/book/show/25944503-between-light-and-shadow" target="_blank" rel="noopener">
+      <div class="shelf-main">
+        <div class="shelf-title">Between Light and Shadow</div>
+        <div class="shelf-author">Marc Aramini</div>
+        <div class="shelf-desc">A multi-volume close reading of Wolfe's fiction, chapter by chapter, from the same Marc Aramini featured above.</div>
+      </div>
+      <div class="shelf-arrow">&#8599;</div>
+    </a>
+    <a class="shelf-item" href="https://www.goodreads.com/book/show/2967976-attending-daedalus" target="_blank" rel="noopener">
+      <div class="shelf-main">
+        <div class="shelf-title">Attending Daedalus</div>
+        <div class="shelf-author">Peter Wright</div>
+        <div class="shelf-desc">An academic study of artifice and unreliable narration across the New Sun books.</div>
+      </div>
+      <div class="shelf-arrow">&#8599;</div>
+    </a>
+    <a class="shelf-item" href="https://www.goodreads.com/book/show/55459.Solar_Labyrinth" target="_blank" rel="noopener">
+      <div class="shelf-main">
+        <div class="shelf-title">Solar Labyrinth</div>
+        <div class="shelf-author">Robert Borski</div>
+        <div class="shelf-desc">Essay collection exploring specific puzzles and symbols in The Book of the New Sun.</div>
+      </div>
+      <div class="shelf-arrow">&#8599;</div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  Sources: YouTube channels, podcast RSS feeds, the <b style="color:var(--parchment-dim)">Urth Mailing List</b> (urth.net, an active Gene Wolfe discussion list running since the 1990s), Reddit (via its plain RSS feed, no login needed), and DeviantArt (fan art, with real artist attribution and content-rating data). Reference Shelf links go to Goodreads — swap for your preferred retailer or library catalog if you'd rather.
+</footer>
+
+<script>
+/* ---------------------------------------------------------------------
+   STORAGE
+   Real localStorage — this file is now deployed outside the Claude.ai
+   artifact sandbox, where browser storage APIs work normally. Saved
+   items, spoiler progress, and "last visit" persist across sessions.
+--------------------------------------------------------------------- */
+const STORE = {
+  _defaults: { saved:{}, lastVisit:'2026-07-11', progress:{new:'none', long:'none', short:'none'}, filters:null, onboarded:false },
+  get(key){
+    const raw = localStorage.getItem(key);
+    return raw !== null ? JSON.parse(raw) : this._defaults[key];
+  },
+  set(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
+};
+
+const ICONS = {video:'&#9654;', podcast:'&#9834;', discussion:'&#128172;', article:'&#9998;', paper:'&#167;', fanart:'&#10086;'};
+const SERIES_LABEL = {new:'New Sun', long:'Long Sun', short:'Short Sun', general:'General Wolfe'};
+
+// A source whose newest known item (from its own RSS feed — quiet channels
+// still return their old items, they just stop having new ones) is older
+// than this many days gets flagged as having gone quiet. Tune to taste.
+const STALE_DAYS = 60;
+
+// Formats an ISO date or datetime as "3h ago" / "5d ago" / "2mo ago" etc.
+function relativeTime(isoString){
+  const then = new Date(isoString).getTime();
+  if(Number.isNaN(then)) return '';
+  const diffMs = Date.now() - then;
+  const mins = Math.floor(diffMs / 60000);
+  if(mins < 1) return 'just now';
+  if(mins < 60) return `${mins}m ago`;
+  const hrs = Math.floor(mins / 60);
+  if(hrs < 24) return `${hrs}h ago`;
+  const days = Math.floor(hrs / 24);
+  if(days < 30) return `${days}d ago`;
+  const months = Math.floor(days / 30);
+  if(months < 12) return `${months}mo ago`;
+  return `${Math.floor(months / 12)}y ago`;
+}
+
+const BOOKS = {
+  new:   [['shadow','Shadow of the Torturer'], ['claw','Claw of the Conciliator'], ['sword','Sword of the Lictor'], ['citadel','Citadel of the Autarch'], ['urth','Urth of the New Sun']],
+  long:  [['nightside','Nightside the Long Sun'], ['lake','Lake of the Long Sun'], ['calde','Cald\u00e9 of the Long Sun'], ['exodus','Exodus from the Long Sun']],
+  short: [['blue',"On Blue's Waters"], ['green',"In Green's Jungles"], ['return','Return to the Whorl']],
+};
+
+// Sample data — used as a fallback if data.json hasn't been generated yet
+// (first local run, or the Action hasn't fired) or fails to load. Once the
+// Action commits a real data.json, that always takes priority.
+const SAMPLE_DATA = [
+  {id:'aramini-narrator', title:"Understanding Gene Wolfe: Is Severian a reliable narrator?", source:"Marc Aramini", type:"video", series:"new", book:null, date:"2026-07-12", featured:true,
+   desc:"A close reading of Severian's claimed eidetic memory and where the text quietly contradicts him.", tags:["Severian"]},
+  {id:'rw-sword-34', title:"Chapter 34: 'The Sword of the Lictor' — The Garden of Endless Sleep", source:"Rereading Wolfe", type:"podcast", series:"new", book:"sword", date:"2026-07-14",
+   desc:"James Wynn and Craig Brewer continue their spoiler-intensive, chapter-by-chapter read.", tags:["Severian"]},
+  {id:'urth-long-reread', title:"Weekly digest: what are people noticing on their Long Sun reread?", source:"Urth Mailing List", type:"discussion", series:"long", book:null, date:"2026-07-12",
+   desc:"A recurring thread on the Urth list collecting observations from ongoing Book of the Long Sun read-alongs.", tags:["Silk"]},
+  {id:'mdc-short-sun', title:"Media Death Cult x Alzabo Soup: talking Book of the Short Sun", source:"Media Death Cult", type:"video", series:"short", book:"blue", date:"2026-07-10",
+   desc:"A book-by-book conversation working through On Blue's Waters and the trilogy's shift in narrator.", tags:["Horn"]},
+  {id:'urth-urth-fifth', title:"Is 'Urth of the New Sun' a fifth volume or a coda?", source:"Urth Mailing List", type:"discussion", series:"new", book:"urth", date:"2026-07-08",
+   desc:"A recurring debate on the Urth list over where the follow-up novel sits relative to the core tetralogy.", tags:["Severian"]},
+  {id:'extrapolation-paper', title:"Unreliable Memory and the Torturer's Guild: Narration in The Book of the New Sun", source:"Extrapolation (journal)", type:"paper", series:"new", book:"citadel", date:"2026-07-11",
+   desc:"A peer-reviewed reading of Severian's claimed eidetic memory against the text's internal contradictions.", tags:["Severian"]},
+  {id:'fanart-severian-jacal', title:"Severian at the Jacal — portrait study", source:"DeviantArt", type:"fanart", series:"new", book:"shadow", date:"2026-07-09",
+   desc:"Sample entry — a live run pulls the real title, image, and artist from DeviantArt's search RSS.", tags:["Severian"],
+   artist:"example-artist (DeviantArt)", artistUrl:"#", postUrl:"#", nsfw:false},
+  {id:'fanart-vodalus-camp', title:"Vodalus's camp at night — digital painting", source:"DeviantArt", type:"fanart", series:"new", book:"shadow", date:"2026-07-15",
+   desc:"Another sample entry — this one demonstrates the NSFW blur, which is driven by DeviantArt's own content-rating field for real fetches.", tags:["Vodalus"],
+   artist:"another-example (DeviantArt)", artistUrl:"#", postUrl:"#", nsfw:true},
+  {id:'urth-net-claw', title:"On the true nature of the Claw — thirty years of theories, revisited", source:"Urth Mailing List", type:"discussion", series:"new", book:"claw", date:"2026-07-13",
+   desc:"A long-running thread on the Urth list (est. 1996) resurfacing the major theories about the Claw of the Conciliator.", tags:["the Claw"]},
+];
+
+let DATA = SAMPLE_DATA;
+let usingSampleData = true;
+let generatedAt = null; // ISO timestamp from the fetcher's last run — drives the "Updated Xh ago" stamp
+
+fetch('./data.json')
+  .then(r => { if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then(data => {
+    if(data && Array.isArray(data.items) && data.items.length){
+      DATA = data.items;
+      generatedAt = data.generatedAt || null;
+      usingSampleData = false;
+    }
+    render();
+  })
+  .catch(err => {
+    console.warn('Could not load data.json, showing sample data instead:', err);
+    render();
+  });
+
+let activeSeries='all', activeType='all', activeTag=null, savedOnly=false, activeSearch='';
+const revealed = new Set();
+const revealedNsfw = new Set();
+let visitMarked = false; // only stamp lastVisit once per page load, not on every re-render
+
+/* ---------- populate spoiler-shield selects ---------- */
+function buildSelect(id, series){
+  const sel = document.getElementById(id);
+  let html = `<option value="all">All caught up</option>`;
+  html += `<option value="none">Haven't started</option>`;
+  BOOKS[series].forEach(([code,label]) => { html += `<option value="${code}">Through ${label}</option>`; });
+  sel.innerHTML = html;
+  sel.value = STORE.get('progress')[series];
+  sel.addEventListener('change', () => {
+    const p = STORE.get('progress'); p[series] = sel.value; STORE.set('progress', p);
+    STORE.set('onboarded', true); // they've engaged with progress directly — no need for the banner anymore
+    if(onboardBanner) onboardBanner.hidden = true;
+    updateShieldStatus(); render();
+  });
+}
+buildSelect('progNew','new'); buildSelect('progLong','long'); buildSelect('progShort','short');
+
+function updateShieldStatus(){
+  const p = STORE.get('progress');
+  const active = Object.values(p).some(v => v !== 'all');
+  document.getElementById('shieldStatus').textContent = active ? 'On' : 'Off';
+}
+updateShieldStatus();
+
+function isSpoiler(item){
+  if(!item.book) return false;
+  const p = STORE.get('progress')[item.series];
+  if(p === 'all') return false;
+  const order = BOOKS[item.series].map(b => b[0]);
+  const itemIdx = order.indexOf(item.book);
+  if(p === 'none') return true;
+  const progIdx = order.indexOf(p);
+  return itemIdx > progIdx;
+}
+
+/* ---------- disclosures ---------- */
+function wireDisclosure(toggleId, bodyId){
+  const t = document.getElementById(toggleId), b = document.getElementById(bodyId);
+  t.addEventListener('click', () => {
+    const open = !b.hidden;
+    b.hidden = open;
+    t.classList.toggle('open', !open);
+  });
+}
+wireDisclosure('startHereToggle','startHereBody');
+wireDisclosure('shieldToggle','shieldBody');
+
+/* ---------- first-visit onboarding banner ---------- */
+// Only shown to genuinely new visitors (STORE.get('onboarded') is false —
+// the localStorage default, never explicitly set true yet). The safe
+// default is already maximum spoiler protection (see STORE._defaults), so
+// doing nothing here is never dangerous — this banner exists purely to
+// surface that choice immediately instead of leaving it buried in a
+// collapsed panel someone might not find until after they've been spoiled.
+const onboardBanner = document.getElementById('onboardBanner');
+if(!STORE.get('onboarded')){
+  onboardBanner.hidden = false;
+}
+function dismissOnboarding(){
+  STORE.set('onboarded', true);
+  onboardBanner.hidden = true;
+}
+document.getElementById('onboardSetup').addEventListener('click', () => {
+  dismissOnboarding();
+  const toggle = document.getElementById('shieldToggle'), body = document.getElementById('shieldBody');
+  body.hidden = false;
+  toggle.classList.add('open');
+  toggle.scrollIntoView({ behavior:'smooth', block:'center' });
+});
+document.getElementById('onboardCaughtUp').addEventListener('click', () => {
+  STORE.set('progress', { new:'all', long:'all', short:'all' });
+  ['progNew','progLong','progShort'].forEach(id => { const s=document.getElementById(id); if(s) s.value='all'; });
+  updateShieldStatus();
+  dismissOnboarding();
+  render();
+});
+document.getElementById('onboardClose').addEventListener('click', dismissOnboarding);
+
+/* ---------- saved toggle ---------- */
+document.getElementById('savedToggle').addEventListener('click', e => {
+  savedOnly = !savedOnly;
+  e.currentTarget.classList.toggle('active', savedOnly);
+  render();
+});
+
+/* ---------- search ---------- */
+const searchInput = document.getElementById('searchInput');
+const searchBox = document.getElementById('searchBox');
+searchInput.addEventListener('input', () => {
+  activeSearch = searchInput.value.trim().toLowerCase();
+  searchBox.classList.toggle('has-query', activeSearch.length > 0);
+  render();
+});
+searchInput.addEventListener('keydown', e => {
+  if(e.key === 'Escape' && activeSearch){ searchInput.value=''; activeSearch=''; searchBox.classList.remove('has-query'); render(); }
+});
+document.getElementById('searchClear').addEventListener('click', () => {
+  searchInput.value=''; activeSearch=''; searchBox.classList.remove('has-query'); searchInput.focus(); render();
+});
+
+// Matches an item against the search query across title, description,
+// source name, and character/theme tags — so "claw" finds both a title
+// mentioning it and an item only tagged "the Claw".
+function matchesSearch(d, query){
+  if(!query) return true;
+  const haystack = `${d.title} ${d.desc} ${d.source} ${(d.tags||[]).join(' ')}`.toLowerCase();
+  return haystack.includes(query);
+}
+
+/* ---------- render ---------- */
+
+// Builds one card's HTML. Shared by the regular feed and the featured slot
+// so spoiler/NSFW/save/tag behavior stays identical in both places.
+function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } = {}){
+  const spoiler = isSpoiler(d) && !revealed.has(d.id);
+  const isNew = d.date > lastVisit;
+  const isSaved = !!saved[d.id];
+  const dateLabel = new Date(d.date+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'}).toUpperCase();
+  const blurred = d.nsfw && !revealedNsfw.has(d.id);
+  // Only badge the single newest item from a quiet source, not every one
+  // of its (old) items in the feed — one signal per source is plenty.
+  const isQuietFlag = quietSources[d.source] && quietSources[d.source].newestDate === d.date;
+
+  /* Real thumbnail if the fetch script found one (YouTube media:thumbnail
+     or a podcast's itunes:image). Falls back to the tinted icon tile if
+     there isn't one, or if the image fails to load. Fan art thumbnails are
+     manually added for now — see the README. */
+  const thumbHtml = `
+    <div class="thumb ${blurred ? 'nsfw' : ''}">
+      <div class="thumb-icon">${ICONS[d.type]}</div>
+      ${d.thumbnail ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+      ${blurred ? `<div class="nsfw-badge" data-nsfw-reveal="${d.id}"><span class="warn">&#128683;</span><span class="lbl">Sensitive&nbsp;content</span></div>` : ''}
+      ${isNew ? '<span class="new-dot"></span>' : ''}
+    </div>`;
+
+  const attributionHtml = d.type === 'fanart' ? `
+    <div class="attribution">
+      <span class="lbl">Art by</span>
+      <a href="${d.artistUrl}" target="_blank" rel="noopener">${d.artist}</a>
+      <span class="sep">&middot;</span>
+      <a href="${d.postUrl}" target="_blank" rel="noopener">View original post</a>
+    </div>` : '';
+
+  return `
+    <div class="card ${d.series} ${featured ? 'featured' : ''}">
+      ${spoiler ? `
+        <div class="spoiler-overlay">
+          <span class="lock">&#128737;</span>
+          <button data-reveal="${d.id}">Reveal spoiler</button>
+          <span class="note">Ahead of your New/Long/Short Sun progress — adjust in Spoiler Shield above.</span>
+        </div>` : ''}
+      ${thumbHtml}
+      <div class="body">
+        <div class="top">
+          <p class="title">${d.title}</p>
+          <div class="top-right">
+            <span class="meta">${dateLabel}</span>
+            <button class="save-btn ${isSaved?'saved':''}" data-save="${d.id}">${isSaved ? '&#9733;' : '&#9734;'}</button>
+          </div>
+        </div>
+        <div class="source">${d.source} &middot; ${d.type}${isQuietFlag ? `<span class="quiet-badge">quiet ${relativeTime(d.date)}</span>` : ''}</div>
+        <div class="desc">${d.desc}</div>
+        ${attributionHtml}
+        <div class="tags">
+          <span class="tag series-tag">${SERIES_LABEL[d.series]}</span>
+          ${(d.tags||[]).map(t => `<button class="tag" data-tag="${t}">${t}</button>`).join('')}
+        </div>
+      </div>
+    </div>`;
+}
+
+// Revealing a spoiler-blurred card is a direct signal: you've read at
+// least that far. Rather than making you separately remember to update the
+// Spoiler Shield dropdown, quietly advance your tracked progress to match
+// — but only forward, never backward, and only for the series that item
+// belongs to. A one-line note surfaces in the status line for this render
+// only, so it's not a silent, unexplained change.
+let progressNote = null;
+function maybeAdvanceProgress(id){
+  const item = DATA.find(x => x.id === id);
+  if(!item || !item.book) return;
+  const order = BOOKS[item.series].map(b => b[0]);
+  const itemIdx = order.indexOf(item.book);
+  if(itemIdx === -1) return;
+  const p = STORE.get('progress');
+  const cur = p[item.series];
+  const curIdx = cur === 'none' ? -1 : cur === 'all' ? order.length : order.indexOf(cur);
+  if(itemIdx > curIdx){
+    p[item.series] = item.book;
+    STORE.set('progress', p);
+    const selId = { new:'progNew', long:'progLong', short:'progShort' }[item.series];
+    const sel = document.getElementById(selId);
+    if(sel) sel.value = item.book;
+    updateShieldStatus();
+    const bookLabel = BOOKS[item.series].find(b => b[0]===item.book)[1];
+    progressNote = `Spoiler Shield for ${SERIES_LABEL[item.series]} updated to <b>through ${bookLabel}</b>.`;
+  }
+}
+
+// Wires up the interactive bits (save/reveal/nsfw-reveal/tag-filter) for
+// whatever cards live inside a given container — called once for the
+// regular feed and once for the featured slot.
+function wireCardEvents(container){
+  container.querySelectorAll('[data-nsfw-reveal]').forEach(el => {
+    el.addEventListener('click', () => { revealedNsfw.add(el.dataset.nsfwReveal); render(); });
+  });
+  container.querySelectorAll('[data-save]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.save;
+      const s = STORE.get('saved');
+      s[id] = !s[id];
+      STORE.set('saved', s);
+      render();
+    });
+  });
+  container.querySelectorAll('[data-tag]').forEach(btn => {
+    btn.addEventListener('click', () => { activeTag = btn.dataset.tag; render(); });
+  });
+  container.querySelectorAll('[data-reveal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      revealed.add(btn.dataset.reveal);
+      maybeAdvanceProgress(btn.dataset.reveal);
+      render();
+    });
+  });
+}
+
+function render(){
+  const feed = document.getElementById('feed');
+  const featuredSlot = document.getElementById('featuredSlot');
+  const saved = STORE.get('saved');
+  const lastVisit = STORE.get('lastVisit');
+
+  // "Updated Xh ago" — when the fetcher itself last actually ran, not the
+  // date of any particular item. Only meaningful once real data.json has
+  // loaded; sample data has no real generation time to report.
+  document.getElementById('updatedStamp').textContent =
+    (!usingSampleData && generatedAt) ? `Updated ${relativeTime(generatedAt)}` : '';
+
+  // Per-source freshness: a channel's RSS always returns its latest items
+  // even if it's gone quiet, so a source's newest known date is a direct,
+  // no-extra-fetcher-work signal for "has this dried up?" Sources whose
+  // newest item is older than STALE_DAYS get a quiet badge on that item.
+  const sourceLatest = {};
+  DATA.forEach(d => { if(!sourceLatest[d.source] || d.date > sourceLatest[d.source]) sourceLatest[d.source] = d.date; });
+  const staleCutoff = new Date(Date.now() - STALE_DAYS*24*60*60*1000).toISOString().slice(0,10);
+  const quietSources = {};
+  Object.entries(sourceLatest).forEach(([source, newestDate]) => {
+    if(newestDate < staleCutoff) quietSources[source] = { newestDate };
+  });
+  const quietList = Object.keys(quietSources);
+
+  // Remember series/format/saved-only/tag so a reload picks up where you
+  // left off instead of resetting to "All Series, All Formats" every time.
+  // Search is deliberately not persisted here — a query is a one-off
+  // lookup, not a standing preference like "I only care about New Sun."
+  STORE.set('filters', { series: activeSeries, type: activeType, tag: activeTag, savedOnly });
+
+  // Featured slot: a single manually-curated item (set featured:true on it
+  // in data.json or SAMPLE_DATA) gets pulled out and shown above the feed,
+  // full-width. Nothing is featured by default — this is an editorial
+  // choice, not something the fetcher guesses at. The featured item is
+  // excluded from the regular feed below so it isn't shown twice, but it
+  // still goes through the same spoiler/NSFW checks as any other card.
+  // If a search is active, the featured pin only shows when it matches —
+  // otherwise it's dead space unrelated to what someone's looking for.
+  const featuredItem = DATA.find(d => d.featured && matchesSearch(d, activeSearch));
+
+  let filtered = DATA.filter(d =>
+    (activeSeries==='all' || d.series===activeSeries) &&
+    (activeType==='all' || d.type===activeType) &&
+    (!activeTag || (d.tags||[]).includes(activeTag)) &&
+    (!savedOnly || saved[d.id]) &&
+    matchesSearch(d, activeSearch) &&
+    !(featuredItem && d.id===featuredItem.id)
+  ).sort((a,b) => b.date.localeCompare(a.date));
+
+  if(featuredItem){
+    featuredSlot.innerHTML = `
+      <div class="featured-label ${featuredItem.series}"><span class="dot"></span>Featured &middot; ${featuredItem.source}</div>
+      ${cardHtml(featuredItem, { featured:true, saved, lastVisit, quietSources })}`;
+    wireCardEvents(featuredSlot);
+  } else {
+    featuredSlot.innerHTML = '';
+  }
+
+  // status line: new-since-last-visit, plus a one-time note if Spoiler
+  // Shield progress just auto-advanced from revealing something, plus a
+  // quiet-sources summary when the pipeline itself is healthy but one or
+  // more channels/feeds haven't posted anything in a while
+  const newCount = DATA.filter(d => d.date > lastVisit).length;
+  document.getElementById('statusLine').innerHTML = (usingSampleData ? `<span style="color:var(--ochre)">Showing sample data — data.json not found yet.</span> ` : '')
+    + (progressNote ? `<span style="color:var(--ochre)">${progressNote}</span> ` : '')
+    + (newCount > 0
+    ? `<b>${newCount} new</b> since your last visit`
+    : `You're caught up.`)
+    + (quietList.length ? ` &middot; <span title="${quietList.join(', ')}">${quietList.length} source${quietList.length>1?'s':''} quiet ${STALE_DAYS}+ days</span>` : '');
+  progressNote = null;
+  if(!visitMarked && !usingSampleData){
+    STORE.set('lastVisit', new Date().toISOString().slice(0, 10));
+    visitMarked = true;
+  }
+
+  // tag filter line
+  const tagLine = document.getElementById('tagFilterLine');
+  if(activeTag){
+    tagLine.classList.add('active');
+    tagLine.innerHTML = `Filtering by <b style="color:var(--parchment)">${activeTag}</b> &nbsp;<button id="clearTag">Clear</button>`;
+    document.getElementById('clearTag').addEventListener('click', () => { activeTag=null; render(); });
+  } else {
+    tagLine.classList.remove('active'); tagLine.innerHTML='';
+  }
+
+  if(!filtered.length){
+    feed.innerHTML = activeSearch
+      ? `<div class="empty">No dispatches match "${searchInput.value.trim()}"${(activeSeries!=='all'||activeType!=='all'||activeTag||savedOnly) ? ' with the current filters' : ''}.</div>`
+      : '<div class="empty">No dispatches match this filter.</div>';
+    return;
+  }
+
+  feed.innerHTML = filtered.map(d => cardHtml(d, { saved, lastVisit, quietSources })).join('');
+  wireCardEvents(feed);
+}
+
+document.getElementById('seriesControls').addEventListener('click', e=>{
+  if(e.target.tagName!=='BUTTON') return;
+  document.querySelectorAll('#seriesControls .chip').forEach(c=>c.classList.remove('active'));
+  e.target.classList.add('active');
+  activeSeries = e.target.dataset.series;
+  render();
+});
+document.getElementById('typeControls').addEventListener('click', e=>{
+  if(e.target.tagName!=='BUTTON' || e.target.id==='savedToggle') return;
+  document.querySelectorAll('#typeControls .chip:not(.saved-toggle)').forEach(c=>c.classList.remove('active'));
+  e.target.classList.add('active');
+  activeType = e.target.dataset.type;
+  render();
+});
+
+// Applies filters saved from a previous visit — both the state variables
+// render() reads and the chip UI, so the buttons don't lie about what's
+// actually active. Runs once, before the very first render().
+function restoreFilters(){
+  const f = STORE.get('filters');
+  if(!f) return;
+  if(f.series){
+    activeSeries = f.series;
+    document.querySelectorAll('#seriesControls .chip').forEach(c=>c.classList.toggle('active', c.dataset.series===activeSeries));
+  }
+  if(f.type){
+    activeType = f.type;
+    document.querySelectorAll('#typeControls .chip:not(.saved-toggle)').forEach(c=>c.classList.toggle('active', c.dataset.type===activeType));
+  }
+  if(f.tag) activeTag = f.tag; // the tag-filter-line banner itself is (re)built inside render(), nothing to sync here
+  if(f.savedOnly){
+    savedOnly = true;
+    document.getElementById('savedToggle').classList.add('active');
+  }
+}
+
+restoreFilters();
+render();
+</script>
+</body>
+</html>
