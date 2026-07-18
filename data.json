@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T17:47:54.203Z",
+  "generatedAt": "2026-07-18T18:49:17.344Z",
   "items": [
     {
       "id": "urth-mailing-list-b92588aa",
@@ -28,7 +28,7 @@
       "id": "r-shittygenewolfe-1d604b65",
       "title": "I have to go now, Severian. My planet needs me.",
       "source": "r/shittygenewolfe",
-      "type": "fanart",
+      "type": "discussion",
       "series": "new",
       "date": "2026-07-17",
       "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uyl6k3/i_have_to_go_now_severian_my_planet_needs_me/",
@@ -36,43 +36,69 @@
       "tags": [
         "Severian"
       ],
-      "thumbnail": "https://preview.redd.it/w7geestfwodh1.jpeg?width=640&crop=smart&auto=webp&s=4f9960a2cdf0eb33a3f40a0c230ab5178da83ffb",
-      "artist": "u/Forever_Man (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/Forever_Man",
-      "postUrl": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uyl6k3/i_have_to_go_now_severian_my_planet_needs_me/",
-      "nsfw": false
+      "thumbnail": "https://preview.redd.it/w7geestfwodh1.jpeg?width=640&crop=smart&auto=webp&s=4f9960a2cdf0eb33a3f40a0c230ab5178da83ffb"
+    },
+    {
+      "id": "youtube-search-b1c4f8b1",
+      "title": "BOOK OF THE NEW SUN - No Spoilers | Experience, Ranking, Male Gaze, &amp; More 🐺",
+      "source": "Johanna Reads",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-16",
+      "url": "https://www.youtube.com/watch?v=PP5KRaiezNo",
+      "desc": "Welcome to my spoiler-free review of Book of the New Sun and Urth of the New Sun by Gene Wolfe! Timestamps: 0:00 Intro 0:20 ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/PP5KRaiezNo/hqdefault.jpg"
     },
     {
       "id": "r-rereadingwolfepodcast-99a1ad43",
       "title": "Deeper Dive - Bibliomen Summary",
       "source": "r/rereadingwolfepodcast",
-      "type": "fanart",
+      "type": "discussion",
       "series": "general",
       "date": "2026-07-15",
       "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1uwqvb0/deeper_dive_bibliomen_summary/",
       "desc": "I'm glad to report the arrival of the latest installment in my Gene Wolfe Chapter Guide series. Feel free to pick up a paperback or Kindle copy of the Bibliomen guide with my sincere appreciation. \n This one is short, so",
       "tags": [],
-      "thumbnail": "https://preview.redd.it/9l2vkpcrjadh1.jpeg?width=640&crop=smart&auto=webp&s=4348049db3ff5e36a375bbeebd00cdbd5ec47a96",
-      "artist": "u/mpc3980 (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/mpc3980",
-      "postUrl": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1uwqvb0/deeper_dive_bibliomen_summary/",
-      "nsfw": false
+      "thumbnail": "https://preview.redd.it/9l2vkpcrjadh1.jpeg?width=640&crop=smart&auto=webp&s=4348049db3ff5e36a375bbeebd00cdbd5ec47a96"
     },
     {
       "id": "r-shittygenewolfe-394cb14d",
       "title": "Getting to the Widow's House in Sword of the Lictor made me think of this",
       "source": "r/shittygenewolfe",
-      "type": "fanart",
+      "type": "discussion",
       "series": "new",
       "date": "2026-07-14",
       "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwe7v4/getting_to_the_widows_house_in_sword_of_the/",
       "desc": "submitted by    /u/TheAndyChrist  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": "https://preview.redd.it/qjvtgopz58dh1.png?width=640&crop=smart&auto=webp&s=11d6b03c6e0c8fa587a09f40a9a4b062c41c7dbe",
-      "artist": "u/TheAndyChrist (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/TheAndyChrist",
-      "postUrl": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwe7v4/getting_to_the_widows_house_in_sword_of_the/",
-      "nsfw": false
+      "thumbnail": "https://preview.redd.it/qjvtgopz58dh1.png?width=640&crop=smart&auto=webp&s=11d6b03c6e0c8fa587a09f40a9a4b062c41c7dbe"
+    },
+    {
+      "id": "youtube-search-d9217514",
+      "title": "This 40-year-old book is still the most spiritually complex thing I&#39;ve read #booktube #scifi",
+      "source": "SHRIKANT THE NOSTALGIC DRAGON",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-13",
+      "url": "https://www.youtube.com/watch?v=BFkBSDjVHow",
+      "desc": "Is Gene Wolfe's Book of the New Sun the most spiritually rewarding sci-fi fantasy ever written? Full spoiler-free analysis of The ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/BFkBSDjVHow/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-d251c6da",
+      "title": "Book of the New Sun: The claw of the conciliator analysis and review",
+      "source": "SHRIKANT THE NOSTALGIC DRAGON",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-13",
+      "url": "https://www.youtube.com/watch?v=NuEZgSuHj3o",
+      "desc": "Is Gene Wolfe's Book of the New Sun the most spiritually rewarding science fantasy ever written? In this spoiler-free review, I dive ...",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/NuEZgSuHj3o/hqdefault.jpg"
     },
     {
       "id": "r-genewolfe-75b71a73",
@@ -85,18 +111,6 @@
       "desc": "The Book Of The New Sun vols.1-4 (cover art by Yoshitaka Amano)\n Credits to @wallacepolsom.bsky.social on Bluesky (link)\n    submitted by    /u/meltdrome  \n [link]   [comments]",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "Chapter 20 Part 1 - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-07-10",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Phil tells Metz about BookTube reading trends Content (7:30) - Discussion of part 1 of Chapter 20 of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Star King, by Jack Vance Check out more at alzabos",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
       "id": "r-rereadingwolfepodcast-df61d285",
@@ -114,17 +128,13 @@
       "id": "r-shittygenewolfe-038142fc",
       "title": "\"I tried to give you the sun, and now you are burned.\"",
       "source": "r/shittygenewolfe",
-      "type": "fanart",
+      "type": "discussion",
       "series": "general",
       "date": "2026-07-06",
       "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uol5wy/i_tried_to_give_you_the_sun_and_now_you_are_burned/",
       "desc": "submitted by    /u/newsflashjackass  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": "https://preview.redd.it/q9r8ufyvvibh1.jpeg?width=320&crop=smart&auto=webp&s=5a15a3e44d705c687abef13d604d49ad1dd64f5d",
-      "artist": "u/newsflashjackass (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/newsflashjackass",
-      "postUrl": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uol5wy/i_tried_to_give_you_the_sun_and_now_you_are_burned/",
-      "nsfw": false
+      "thumbnail": "https://preview.redd.it/q9r8ufyvvibh1.jpeg?width=320&crop=smart&auto=webp&s=5a15a3e44d705c687abef13d604d49ad1dd64f5d"
     },
     {
       "id": "r-genewolfe-4c445888",
@@ -151,18 +161,6 @@
       "thumbnail": null
     },
     {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "Chapter 19 Part 2 - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-07-03",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Phil and Metz celebrate National Hamburger Day Content (7:55) - Discussion of part 2 of Chapter 19 of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Star King, by Jack Vance Check out more at alzabo",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
       "id": "r-genewolfe-8456e05a",
       "title": "Illustration: The Necropolis",
       "source": "r/genewolfe",
@@ -173,18 +171,6 @@
       "desc": "Got another one finished! With the green light and nighttime tones, this one was a bit more difficult to color than the others, but had a lot of fun with it regardless!\n    submitted by    /u/deimosremus  \n [link]   [com",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "Chapter 19 Part 1 - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-06-26",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Phil and Metz introduce the next readalong series: The Demon Princes, by Jack Vance Content (13:29) - Discussion of part 1 of Chapter 19 of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Star King, ",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
       "id": "r-shittygenewolfe-4837495e",
@@ -230,7 +216,7 @@
       "id": "r-shittygenewolfe-9d385eed",
       "title": "The story of Typhon is so fascinating.",
       "source": "r/shittygenewolfe",
-      "type": "fanart",
+      "type": "discussion",
       "series": "general",
       "date": "2026-06-22",
       "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1ucxfxl/the_story_of_typhon_is_so_fascinating/",
@@ -238,11 +224,7 @@
       "tags": [
         "Typhon"
       ],
-      "thumbnail": "https://preview.redd.it/qx6ratzkiw8h1.jpeg?width=640&crop=smart&auto=webp&s=d30dbcb780ca1815be8062847a53365fa6aa463c",
-      "artist": "u/mab0roshi (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/mab0roshi",
-      "postUrl": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1ucxfxl/the_story_of_typhon_is_so_fascinating/",
-      "nsfw": false
+      "thumbnail": "https://preview.redd.it/qx6ratzkiw8h1.jpeg?width=640&crop=smart&auto=webp&s=d30dbcb780ca1815be8062847a53365fa6aa463c"
     },
     {
       "id": "r-genewolfe-dde620ba",
@@ -272,52 +254,40 @@
       "thumbnail": null
     },
     {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "Chapter 18 - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-06-19",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Phil and Metz celebrate the launch of Super Znes Content (9:37) - Discussion of Chapter 18 of Return to the Whorl, by Gene Wolfe. Current Read-Along - Perhaps the Stars, by Ada Palmer Check out more at alzabosoup",
+      "id": "high-low-brow-002378fd",
+      "title": "Gene Wolfe: Citadel of the Autarch (BOTNS 4) - Full Analysis | High Lowbrow",
+      "source": "High Low Brow",
+      "type": "video",
+      "series": "new",
+      "date": "2026-06-02",
+      "url": "https://www.youtube.com/watch?v=cuJL2Hu_aEM",
+      "desc": "",
       "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+      "thumbnail": "https://i4.ytimg.com/vi/cuJL2Hu_aEM/hqdefault.jpg"
     },
     {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "Chapter 17 Part 4 - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-06-12",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Phil forces Metz to define perfection in television shows. Content (13:40) - Discussion of part 4 of Chapter 17 of Return to the Whorl, by Gene Wolfe. Current Read-Along - Perhaps the Stars, by Ada Palmer Check o",
+      "id": "high-low-brow-2a0f8d85",
+      "title": "Gene Wolfe: The Sword of the Lictor (BOTNS Pt 3) - Full Analysis | High Lowbrow",
+      "source": "High Low Brow",
+      "type": "video",
+      "series": "new",
+      "date": "2026-05-19",
+      "url": "https://www.youtube.com/watch?v=u9OxgGjPkmA",
+      "desc": "",
       "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+      "thumbnail": "https://i2.ytimg.com/vi/u9OxgGjPkmA/hqdefault.jpg"
     },
     {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "Chapter 17 Part 3 - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-06-05",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Metz asks Phil about his wife's new hobby Content (8:36) - Discussion of part 3 of Chapter 17 of Return to the Whorl, by Gene Wolfe. Current Read-Along - Perhaps the Stars, by Ada Palmer Check out more at alzabos",
+      "id": "isamwise-ccd9001d",
+      "title": "April Wrap Up - Project Hail Mary, Gene Wolfe and The Terminal List",
+      "source": "iSamwise",
+      "type": "video",
+      "series": "general",
+      "date": "2026-05-05",
+      "url": "https://www.youtube.com/watch?v=AHAY7lTyqR0",
+      "desc": "",
       "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "Chapter 17 Part 2 - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-05-29",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Phil tells Metz about a surprising new fashion item. Content (6:38) - Discussion of part 2 of Chapter 17 of Return to the Whorl, by Gene Wolfe. Current Read-Along - Perhaps the Stars, by Ada Palmer Check out more",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+      "thumbnail": "https://i2.ytimg.com/vi/AHAY7lTyqR0/hqdefault.jpg"
     },
     {
       "id": "rereading-wolfe-7d19375e",
@@ -428,6 +398,18 @@
       "thumbnail": "https://i3.ytimg.com/vi/VYwYlNzHBdo/hqdefault.jpg"
     },
     {
+      "id": "undertowers-podcast-fecc6d63",
+      "title": "Episode 36: Peace by Gene Wolfe; what the $%!^ was that?!",
+      "source": "Undertowers Podcast",
+      "type": "video",
+      "series": "general",
+      "date": "2025-08-11",
+      "url": "https://www.youtube.com/watch?v=W93DwkQvIw4",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i4.ytimg.com/vi/W93DwkQvIw4/hqdefault.jpg"
+    },
+    {
       "id": "rereading-wolfe-66efad4d",
       "title": "tbotns 3-6 \"The Library of the Citadel\"",
       "source": "Rereading Wolfe",
@@ -438,6 +420,18 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i4.ytimg.com/vi/7kcVZGrufpo/hqdefault.jpg"
+    },
+    {
+      "id": "sunbeamsjess-13c57c37",
+      "title": "april 2025 reading review · gene wolfe, marilynne robinson, isabella hammad",
+      "source": "sunbeamsjess",
+      "type": "video",
+      "series": "general",
+      "date": "2025-05-13",
+      "url": "https://www.youtube.com/watch?v=zccp6_rw7Lg",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i3.ytimg.com/vi/zccp6_rw7Lg/hqdefault.jpg"
     },
     {
       "id": "ultan-s-library-9134967b",
@@ -510,18 +504,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-17105d1e",
-      "title": "Pushups - jumping knuckle and one-handed",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-12-22",
-      "url": "https://www.youtube.com/watch?v=avuGzBdZctQ",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/avuGzBdZctQ/hqdefault.jpg"
     },
     {
       "id": "ultan-s-library-bf25b430",
@@ -631,28 +613,40 @@
       "thumbnail": null
     },
     {
-      "id": "marc-aramini-ad9a61b2",
-      "title": "English 1020 Changeling, Suzanne Delage, Ride a Tin Can",
+      "id": "marc-aramini-166c4cdf",
+      "title": "Gene Wolfe and Literature Part 11: An Evil Guest",
       "source": "Marc Aramini",
       "type": "video",
       "series": "general",
-      "date": "2020-05-04",
-      "url": "https://www.youtube.com/watch?v=N-A-bDSRscI",
+      "date": "2020-04-01",
+      "url": "https://www.youtube.com/watch?v=vhTYdc_K_6o",
       "desc": "",
       "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/N-A-bDSRscI/hqdefault.jpg"
+      "thumbnail": "https://i3.ytimg.com/vi/vhTYdc_K_6o/hqdefault.jpg"
     },
     {
-      "id": "marc-aramini-7df41035",
-      "title": "English 1010 Argumentation and Final",
+      "id": "marc-aramini-15211a53",
+      "title": "Gene Wolfe and Literature Part 10: There Are Doors",
       "source": "Marc Aramini",
       "type": "video",
       "series": "general",
-      "date": "2020-05-04",
-      "url": "https://www.youtube.com/watch?v=FeLITU7V_l0",
+      "date": "2020-03-31",
+      "url": "https://www.youtube.com/watch?v=TsSlKDwjn_A",
       "desc": "",
       "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/FeLITU7V_l0/hqdefault.jpg"
+      "thumbnail": "https://i1.ytimg.com/vi/TsSlKDwjn_A/hqdefault.jpg"
+    },
+    {
+      "id": "marc-aramini-c4a1b0f2",
+      "title": "Gene Wolfe and Literature Part 9: Sorcerer's House",
+      "source": "Marc Aramini",
+      "type": "video",
+      "series": "general",
+      "date": "2020-03-25",
+      "url": "https://www.youtube.com/watch?v=wvUlG2I4PEI",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i4.ytimg.com/vi/wvUlG2I4PEI/hqdefault.jpg"
     },
     {
       "id": "crossref-scholarly-papers-8dab90c2",
