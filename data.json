@@ -1,6 +1,45 @@
 {
-  "generatedAt": "2026-07-17T23:42:33.144Z",
+  "generatedAt": "2026-07-18T11:44:20.325Z",
   "items": [
+    {
+      "id": "urth-mailing-list-b92588aa",
+      "title": "(urth) Homage to The Changeling?",
+      "source": "Urth Mailing List",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-18",
+      "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
+      "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
+      "tags": []
+    },
+    {
+      "id": "r-genewolfe-f836d779",
+      "title": "Did I just read too many spoilers?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-18",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uznhq9/did_i_just_read_too_many_spoilers/",
+      "desc": "Currently starting Claw. I'm absolutely loving this series, it's nothing like I've ever read before, it's fascinating. Its puzzle aspect makes it addicting, and in said addiction, I have found myself searching in this su",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-067b335b",
+      "title": "Just finished Shadow of the Torturer and I need some info before I continue the series.",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-07-18",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uzoznb/just_finished_shadow_of_the_torturer_and_i_need/",
+      "desc": "Is Severian supposed to be a loser? Like it's really important to me that Gene Wolfe wrote him as a loser on purpose and that he isn't supposed to seem cool at all. \n Is stuff like \"creamy amplitude\" more of a r/Menwriti",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
     {
       "id": "alzabo-soup-2688e0f0",
       "title": "Chapter 20 Part 2 and Afterword - Gene Wolfe's Return to the Whorl",
@@ -14,15 +53,16 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "urth-mailing-list-b92588aa",
-      "title": "(urth) Homage to The Changeling?",
-      "source": "Urth Mailing List",
+      "id": "r-genewolfe-a70fe1c1",
+      "title": "Long Sun personae lists, centralized and expandable",
+      "source": "r/genewolfe",
       "type": "discussion",
-      "series": "general",
+      "series": "long",
       "date": "2026-07-17",
-      "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
-      "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
-      "tags": []
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uz2n5e/long_sun_personae_lists_centralized_and_expandable/",
+      "desc": "https://docs.google.com/spreadsheets/d/1VqgxlrfgSHtLVwtkWNj1K79IZnITzz8uR4IzHQirkAQ/edit?usp=sharing\n I put Long Sun's three lists of \"Gods, Persons, and Animals Mentioned in the Text\" into columns, together with brief n",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "r-genewolfe-e3c1ef36",
@@ -41,18 +81,6 @@
         "Hethor",
         "Thecla"
       ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-a70fe1c1",
-      "title": "Long Sun personae lists, centralized and expandable",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-07-17",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uz2n5e/long_sun_personae_lists_centralized_and_expandable/",
-      "desc": "https://docs.google.com/spreadsheets/d/1VqgxlrfgSHtLVwtkWNj1K79IZnITzz8uR4IzHQirkAQ/edit?usp=sharing\n I put Long Sun's three lists of \"Gods, Persons, and Animals Mentioned in the Text\" into columns, together with brief n",
-      "tags": [],
       "thumbnail": null
     },
     {
@@ -175,32 +203,6 @@
       "date": "2026-07-14",
       "url": "https://www.reddit.com/r/genewolfe/comments/1uw9tv3/reading_sword_of_the_lictor_for_the_first_time/",
       "desc": "submitted by    /u/TheAndyChrist  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-c925cf22",
-      "title": "Silk and Quetzal blood sharing",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-07-14",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uvsrtn/silk_and_quetzal_blood_sharing/",
-      "desc": "I’m reading through long and short sun again, and came across the part in Calde that seems to imply Quetzal gave Silk blood to save him after the tunnel cave in. \n I seem to remember in short sun that sharing blood share",
-      "tags": [
-        "Silk"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-ee263a73",
-      "title": "Anyone else find BOTNS surprisingly funny sometimes?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-13",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uvrqez/anyone_else_find_botns_surprisingly_funny/",
-      "desc": "Reading Sword of the Lictor and found this amusing - \n 'At the time, however, I was far more concerned with the mechanism that had once fed him. I told myself that ancient machines were often astoundingly durable, and th",
       "tags": [],
       "thumbnail": null
     },
