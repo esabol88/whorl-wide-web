@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T15:10:30.672Z",
+  "generatedAt": "2026-07-18T15:37:36.041Z",
   "items": [
     {
       "id": "urth-mailing-list-b92588aa",
@@ -560,6 +560,17 @@
       "thumbnail": null
     },
     {
+      "id": "crossref-scholarly-papers-188184c2",
+      "title": "Time After Time: On the speculative fiction of Gene Wolfe",
+      "source": "Critical Quarterly",
+      "type": "paper",
+      "series": "general",
+      "date": "2020-10-01",
+      "url": "https://doi.org/10.1111/criq.12563",
+      "desc": "By Francis Gooding — Critical Quarterly",
+      "tags": []
+    },
+    {
       "id": "ultan-s-library-9f37d039",
       "title": "Review: Gene Wolfe’s ‘Operation ARES’",
       "source": "Ultan's Library",
@@ -644,6 +655,17 @@
       "thumbnail": "https://i3.ytimg.com/vi/FeLITU7V_l0/hqdefault.jpg"
     },
     {
+      "id": "crossref-scholarly-papers-8dab90c2",
+      "title": "Remembering Gene Wolfe, 1931-2019",
+      "source": "Science Fiction Studies",
+      "type": "paper",
+      "series": "general",
+      "date": "2019-01-01",
+      "url": "https://doi.org/10.1353/sfs.2019.0080",
+      "desc": "By Joan Gordon — Science Fiction Studies",
+      "tags": []
+    },
+    {
       "id": "reactor-e700b181",
       "title": "16 Ecologically-Minded Speculative Fictions!",
       "source": "Reactor",
@@ -702,6 +724,61 @@
       "desc": "It’s impossible not to have mixed emotions when presenting this book. Jay has been diagnosed with terminal cancer, and in all likelihood this will be the last collection of his work that he will live to see. But we have ",
       "tags": [],
       "thumbnail": null
+    },
+    {
+      "id": "crossref-scholarly-papers-ec7c280e",
+      "title": "The Yeast Gene Order Browser: Combining curated homology and syntenic context reveals gene fate in polyploid species",
+      "source": "Genome Research",
+      "type": "paper",
+      "series": "general",
+      "date": "2005-09-16",
+      "url": "https://doi.org/10.1101/gr.3672305",
+      "desc": "We developed the Yeast Gene Order Browser (YGOB; http://wolfe.gen.tcd.ie/ygob) to facilitate visual comparisons and computational analysis of synteny relationships in yeasts. The data presented in YGOB, currently coverin",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-38ae2f60",
+      "title": "Attending Daedalus: Gene Wolfe, Artifice and the Reader",
+      "source": "Utopian Studies",
+      "type": "paper",
+      "series": "general",
+      "date": "2005-01-01",
+      "url": "https://doi.org/10.2307/20718738",
+      "desc": "By Dennis Hardy — Utopian Studies",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-4c4a2695",
+      "title": "Journal for Gene Wolfe Studies",
+      "source": "Science Fiction Studies",
+      "type": "paper",
+      "series": "general",
+      "date": "2000-11-01",
+      "url": "https://doi.org/10.1525/sfs.27.3.0549",
+      "desc": "Science Fiction Studies",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-5d8429fc",
+      "title": "On Encompassing the Entire Universe: An Interview with Gene Wolfe",
+      "source": "Science Fiction Studies",
+      "type": "paper",
+      "series": "general",
+      "date": "1988-11-01",
+      "url": "https://doi.org/10.1525/sfs.15.3.334",
+      "desc": "By Larry McCaffery — Science Fiction Studies",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-de691b8c",
+      "title": "Review: <i>Gene Wolfe</i>, by Joan Gordon",
+      "source": "Science Fiction Studies",
+      "type": "paper",
+      "series": "general",
+      "date": "1987-03-01",
+      "url": "https://doi.org/10.1525/sfs.14.1.0115",
+      "desc": "By Donald M. Hassler — Science Fiction Studies",
+      "tags": []
     }
   ]
 }
