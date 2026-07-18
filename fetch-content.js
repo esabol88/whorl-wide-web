@@ -32,6 +32,20 @@ const Parser = require('rss-parser');
 const fs = require('fs');
 const crypto = require('crypto');
 
+// Fan art detection turned off, 2026 — the heuristics for it (Reddit:
+// "does this post have an embedded image," Bluesky: same) can't tell real
+// fan art apart from memes, screenshots, or reaction images. r/shittygenewolfe
+// especially — it's a joke/meme subreddit by name, and every image post
+// there was getting reclassified as "fan art" with nothing to stop it.
+// DeviantArt (real image + artist attribution + a real content rating,
+// not a blunt "has an image" guess) is unaffected in principle, but it's
+// also currently blocked from GitHub Actions anyway (see fetchDeviantArt),
+// so this flag being off changes nothing for it right now either way.
+// Flip back to true once Reddit/Bluesky detection is actually tightened —
+// this suppresses the *output*, not the underlying detection code, so
+// nothing needs to be rebuilt to turn it back on.
+const FAN_ART_ENABLED = false;
+
 // index.html needs a stable `id` per item (used as the key for saved-item
 // stars, spoiler-reveal state, and NSFW-reveal state) — derive one from the
 // item's URL so it stays the same across runs instead of being random.
@@ -114,11 +128,132 @@ const SOURCES = [
     channelId: 'UCnS-xbh0apvPFN75Mft0nZQ'
   },
   {
+    // Aramini covers a wide range of literary criticism, not just Wolfe —
+    // requireKeyword scopes this to his actual Wolfe content, same fix as
+    // Wolf (radicaledward) and Martin Crookall further down, for the same
+    // reason: a general-subject creator whose channel/blog isn't
+    // exclusively about Wolfe.
     name: 'Marc Aramini',
     type: 'video',
     series: 'general',
     kind: 'youtube',
-    channelId: 'UC8H8yTqvudLIUJphj5M6yvQ'
+    channelId: 'UC8H8yTqvudLIUJphj5M6yvQ',
+    requireKeyword: 'wolfe'
+  },
+  // Three more general sci-fi/literary channels that cover Wolfe among
+  // many other authors — same requireKeyword scoping as Aramini above.
+  // Filtering happens against every item YouTube's feed returns (~15,
+  // not just the 8 we keep), so an infrequent Wolfe video isn't missed
+  // just because a high-upload-volume channel posted about other things
+  // more recently.
+  {
+    name: 'Media Death Cult',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UChWX1yxVym2kNXMBD1oKo8Q',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'High Low Brow',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UCBOI_J6_0lW8MWX1DWm0n3A',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'The Well-Read Monocle',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UCR8u7-uACB3xP_KQHPbNtcw',
+    requireKeyword: 'wolfe'
+  },
+  // Seven more, found via a research pass on recent (2025-2026) Wolfe
+  // BookTube/podcast coverage — all general-interest, none Wolfe-
+  // dedicated, so all get the same requireKeyword scoping. Each
+  // channel ID was individually confirmed (not guessed) against a real
+  // channel page or its RSS feed URL.
+  {
+    name: 'iSamwise',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UCyAsfm99u0OlW74ipH_KhyA',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'A Novel Review',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UCRQzE_T2r6qPR_jbZNgZC1Q',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'Exits Examined',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UC5gmH9jjdUUTGHVl-Qp4BbQ',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'Nick Reads Fantasy',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UCBqInCqKho9lWLKJmZqq0sw',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'sunbeamsjess',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UCV9f9VrkwR-EX9gtYHe11Tw',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: "Geek's Guide to the Galaxy",
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UCLu3HWCPWiQbOktcPSlKRyg',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'Undertowers Podcast',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube',
+    channelId: 'UCJSfKVXHgSwM0gfnf2WgSPw',
+    requireKeyword: 'wolfe'
+  },
+  // "Zac's (mostly) Fantasy & Sci-Fi" was also flagged by the same
+  // research pass, but I couldn't confirm a real channel ID for it —
+  // closest search match ("Mostly Scifi") isn't a confident enough
+  // match to use. Add it by hand if you have the actual channel URL:
+  // {
+  //   name: "Zac's (mostly) Fantasy & Sci-Fi",
+  //   type: 'video',
+  //   series: 'general',
+  //   kind: 'youtube',
+  //   channelId: 'PUT_THE_REAL_ID_HERE',
+  //   requireKeyword: 'wolfe'
+  // },
+
+  // --- YouTube search (sweeps all of YouTube, not just named channels) ---
+  // See fetchYouTubeSearch above for how this works and the quota math.
+  // Needs YOUTUBE_API_KEY set — see README for the Google Cloud Console
+  // setup. Gracefully skips (doesn't break the run) if it's not set.
+  {
+    name: 'YouTube Search',
+    type: 'video',
+    series: 'general',
+    kind: 'youtube-search',
+    query: 'Gene Wolfe'
   },
 
   // --- Podcast RSS feeds (direct feed URL from the podcast's own site or Podcast Index) ---
@@ -512,7 +647,7 @@ async function fetchRedditRss(source) {
     return feed.items.slice(0, 6).map(item => {
       const title = (item.title || 'Untitled').trim();
       const thumbnail = extractRedditThumbnail(item.content);
-      const isArt = !!thumbnail;
+      const isArt = FAN_ART_ENABLED && !!thumbnail;
       const author = isArt ? extractRedditAuthor(item) : null;
       return {
         id: makeId(source.name, item.link),
@@ -816,6 +951,82 @@ async function fetchPatreon(source) {
 }
 
 // ---------------------------------------------------------------------
+// YOUTUBE SEARCH (sweeps all of YouTube, not just named channels)
+// ---------------------------------------------------------------------
+// Everything else YouTube-related in this file pulls from a fixed list of
+// named channels — real, but it only ever finds what's already been
+// manually added. This uses YouTube's official Data API v3 search.list
+// endpoint to search *all* of YouTube for recent uploads matching a query,
+// catching creators nobody thought to add by hand. Needs a free API key
+// (see README for the two-minute Google Cloud Console setup) — gracefully
+// skips with a clear message if YOUTUBE_API_KEY isn't set, rather than
+// failing the whole run.
+//
+// Quota: search.list costs 100 units per call regardless of result count,
+// against a free daily quota of 10,000 units (100 calls/day). Running
+// hourly, one query per run costs 2,400/day — comfortable headroom even
+// with the occasional retry. publishedAfter is set to a rolling 7-day
+// window rather than searching all-time on every run: keeps each call
+// small and fast, and the overlap between runs (this ran an hour ago too)
+// means a missed run or two doesn't lose anything.
+//
+// Real semantic search (not a fuzzy bibliographic match like Crossref
+// had), so noise should be much lower — but title/description still get
+// the same "does it actually say wolfe" sanity filter as everything else,
+// since a two-word query like "Gene Wolfe" can still occasionally surface
+// something irrelevant.
+async function fetchYouTubeSearch(source) {
+  const apiKey = process.env.YOUTUBE_API_KEY;
+  if (!apiKey) {
+    console.error(`[skip] ${source.name}: YOUTUBE_API_KEY not set — see README for setup`);
+    return [];
+  }
+  try {
+    const publishedAfter = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+    const params = new URLSearchParams({
+      part: 'snippet',
+      q: source.query,
+      type: 'video',
+      order: 'date',
+      maxResults: '25',
+      publishedAfter,
+      key: apiKey
+    });
+    const res = await fetch(`https://www.googleapis.com/youtube/v3/search?${params.toString()}`, {
+      signal: AbortSignal.timeout(15000)
+    });
+    if (!res.ok) {
+      const body = await res.text().catch(() => '');
+      throw new Error(`HTTP ${res.status}${body ? ` — ${body.slice(0, 200)}` : ''}`);
+    }
+    const data = await res.json();
+    return (data.items || [])
+      .filter(item => item.id?.videoId)
+      .map(item => {
+        const s = item.snippet || {};
+        const title = s.title || 'Untitled';
+        const desc = s.description || '';
+        return {
+          id: makeId(source.name, `https://www.youtube.com/watch?v=${item.id.videoId}`),
+          title,
+          source: s.channelTitle || 'YouTube',
+          type: 'video',
+          series: guessSeries(`${title} ${desc}`, source.series),
+          date: (s.publishedAt || new Date().toISOString()).slice(0, 10),
+          url: `https://www.youtube.com/watch?v=${item.id.videoId}`,
+          desc: desc.slice(0, 220),
+          tags: guessTags(`${title} ${desc}`),
+          thumbnail: s.thumbnails?.high?.url || s.thumbnails?.medium?.url || s.thumbnails?.default?.url || null
+        };
+      })
+      .filter(item => `${item.title} ${item.desc}`.toLowerCase().includes('wolfe'));
+  } catch (err) {
+    console.error(`[skip] ${source.name}: ${err.message}`);
+    return [];
+  }
+}
+
+// ---------------------------------------------------------------------
 // URTH MAILING LIST (Pipermail)
 // ---------------------------------------------------------------------
 // Pipermail's monthly archive has a predictable, unchanged-in-decades HTML
@@ -912,10 +1123,11 @@ function extractThumbnail(item, feed, source) {
 async function fetchSource(source) {
   if (source.kind === 'pipermail') return fetchPipermail(source);
   if (source.kind === 'reddit-rss') return fetchRedditRss(source);
-  if (source.kind === 'deviantart') return fetchDeviantArt(source);
-  if (source.kind === 'bluesky') return fetchBlueskyArt(source);
+  if (source.kind === 'deviantart') return FAN_ART_ENABLED ? fetchDeviantArt(source) : [];
+  if (source.kind === 'bluesky') return FAN_ART_ENABLED ? fetchBlueskyArt(source) : [];
   if (source.kind === 'crossref') return fetchCrossref(source);
   if (source.kind === 'patreon') return fetchPatreon(source);
+  if (source.kind === 'youtube-search') return fetchYouTubeSearch(source);
 
   const feedUrl = source.kind === 'youtube' ? youtubeFeedUrl(source.channelId) : source.url;
   try {
@@ -965,7 +1177,27 @@ async function timedFetch(source) {
 
 async function main() {
   const results = await Promise.all(SOURCES.map(timedFetch));
-  const allItems = results.flat().sort((a, b) => b.date.localeCompare(a.date));
+  let allItems = results.flat().sort((a, b) => b.date.localeCompare(a.date));
+
+  // Global dedup by URL, across all sources — needed now that the YouTube
+  // search source (see fetchYouTubeSearch) can surface the exact same
+  // video a named channel's RSS already pulled in independently. Each
+  // source generates its own `id` via makeId(source.name, url), so the
+  // same video from two different sources would otherwise get two
+  // different ids and show up as two separate cards. Keeps whichever
+  // copy was seen first — sources earlier in SOURCES win, which in
+  // practice means a named channel's own listing is preferred over the
+  // same video showing up via search.
+  const seenUrls = new Set();
+  const beforeDedup = allItems.length;
+  allItems = allItems.filter(item => {
+    if (!item.url || seenUrls.has(item.url)) return false;
+    seenUrls.add(item.url);
+    return true;
+  });
+  if (beforeDedup !== allItems.length) {
+    console.log(`[dedup] Removed ${beforeDedup - allItems.length} duplicate(s) seen across multiple sources`);
+  }
 
   // generatedAt records when the fetcher last actually ran — distinct from
   // any item's own date. A source can go quiet (no new posts) while the

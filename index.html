@@ -451,6 +451,14 @@ footer{
       </div>
       <div class="shelf-arrow">&#8599;</div>
     </a>
+    <a class="shelf-item" href="https://www.amazon.com/Book-New-Sun-Chapter-Guides-ebook/dp/B09MSZH7QT" target="_blank" rel="noopener">
+      <div class="shelf-main">
+        <div class="shelf-title">The Book of the New Sun: A Chapter Guide</div>
+        <div class="shelf-author">Matthew Chiarello</div>
+        <div class="shelf-desc">Spoiler-free, chapter-by-chapter plot summaries covering all four New Sun volumes — no analysis, just a plain companion for staying oriented. Part of a much larger chapter-guide series covering most of Wolfe's other novels too.</div>
+      </div>
+      <div class="shelf-arrow">&#8599;</div>
+    </a>
   </div>
 </div>
 
@@ -561,11 +569,20 @@ let visitMarked = false; // only stamp lastVisit once per page load, not on ever
 /* ---------- populate spoiler-shield selects ---------- */
 function buildSelect(id, series){
   const sel = document.getElementById(id);
+  // The last book in a series is excluded from the picker on purpose —
+  // "through" the final book is functionally identical to "All caught
+  // up" (nothing can be further ahead), so showing both as separate
+  // options was pure redundancy, not a real distinction. BOOKS itself
+  // stays whole — isSpoiler() below still needs the full list to compare
+  // against items actually tagged with that final book.
+  const selectable = BOOKS[series].slice(0, -1);
   let html = `<option value="all">All caught up</option>`;
   html += `<option value="none">Haven't started</option>`;
-  BOOKS[series].forEach(([code,label]) => { html += `<option value="${code}">Through ${label}</option>`; });
+  selectable.forEach(([code,label]) => { html += `<option value="${code}">Through ${label}</option>`; });
   sel.innerHTML = html;
-  sel.value = STORE.get('progress')[series];
+  const stored = STORE.get('progress')[series];
+  const lastBookCode = BOOKS[series][BOOKS[series].length - 1][0];
+  sel.value = stored === lastBookCode ? 'all' : stored; // normalize an old selection of the now-removed redundant option
   sel.addEventListener('change', () => {
     const p = STORE.get('progress'); p[series] = sel.value; STORE.set('progress', p);
     STORE.set('onboarded', true); // they've engaged with progress directly — no need for the banner anymore
@@ -755,14 +772,20 @@ function maybeAdvanceProgress(id){
   const cur = p[item.series];
   const curIdx = cur === 'none' ? -1 : cur === 'all' ? order.length : order.indexOf(cur);
   if(itemIdx > curIdx){
-    p[item.series] = item.book;
+    // Revealing the last book in a series means "fully caught up" — store
+    // that as 'all' rather than the book's own code, since the dropdown
+    // no longer offers "through <last book>" as a separate option (it was
+    // redundant with "All caught up," nothing can be further ahead).
+    const isLastBook = itemIdx === order.length - 1;
+    const newValue = isLastBook ? 'all' : item.book;
+    p[item.series] = newValue;
     STORE.set('progress', p);
     const selId = { new:'progNew', long:'progLong', short:'progShort' }[item.series];
     const sel = document.getElementById(selId);
-    if(sel) sel.value = item.book;
+    if(sel) sel.value = newValue;
     updateShieldStatus();
-    const bookLabel = BOOKS[item.series].find(b => b[0]===item.book)[1];
-    progressNote = `Spoiler Shield for ${SERIES_LABEL[item.series]} updated to <b>through ${bookLabel}</b>.`;
+    const noteText = isLastBook ? 'all caught up' : `through ${BOOKS[item.series].find(b => b[0]===item.book)[1]}`;
+    progressNote = `Spoiler Shield for ${SERIES_LABEL[item.series]} updated to <b>${noteText}</b>.`;
   }
 }
 

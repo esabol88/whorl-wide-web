@@ -160,6 +160,19 @@ self-hosted runner on a non-shared IP) even though it doesn't work here.
 
 ## Fan art: DeviantArt, Bluesky, and now Reddit
 
+**Currently disabled** — `FAN_ART_ENABLED = false` near the top of
+`fetch-content.js`. Live use surfaced exactly the risk that was flagged
+when Reddit and Bluesky fan art were built: neither can actually tell real
+art apart from memes, screenshots, or reaction images, they just check
+"does this post have an embedded image." r/shittygenewolfe made it worse
+by being a joke/meme subreddit in the first place — every image post there
+was getting reclassified as fan art with nothing to stop it. The flag
+suppresses *output* from all three sources (Reddit's image-reclassification,
+Bluesky, and DeviantArt, even though DeviantArt's own detection is real —
+see below — and isn't actually the problem), not the underlying detection
+code, so flipping it back to `true` needs no rebuilding once Reddit/Bluesky
+detection is actually tightened.
+
 Fan art comes from three places. **DeviantArt**
 (`backend.deviantart.com/rss.xml`) is the most structured — a public
 search-as-RSS endpoint, no login needed, with real fields Reddit's RSS
@@ -357,6 +370,92 @@ this was built in. Built from a real, working open-source implementation's
 source code, not a guess — but still needs a real run (once you've added a
 creator ID) to actually confirm.
 
+## YouTube search — sweeps all of YouTube, not just named channels
+
+Everything else YouTube-related in this file (Rereading Wolfe, Marc
+Aramini, and the growing list below) pulls from a fixed list of named
+channels — real content, but it only ever finds creators someone thought
+to add by hand. This uses YouTube's **official Data API v3** `search.list`
+endpoint instead, which searches all of YouTube for recent uploads
+matching a query — catching creators nobody's added yet.
+
+**Setup (one-time, a few minutes):**
+1. Go to [console.cloud.google.com](https://console.cloud.google.com),
+   create a new project (any name).
+2. **APIs & Services → Library** → search "YouTube Data API v3" → **Enable**.
+3. **APIs & Services → Credentials → Create Credentials → API Key**.
+4. Optional but recommended: click into the new key and restrict it to
+   only "YouTube Data API v3" — limits the damage if it ever leaks.
+5. In the GitHub repo: **Settings → Secrets and variables → Actions → New
+   repository secret** → name it `YOUTUBE_API_KEY` → paste the key.
+
+That's it — `fetchYouTubeSearch` picks it up automatically via
+`process.env.YOUTUBE_API_KEY`, already wired into the workflow's `env:`.
+**If the secret isn't set, this source just skips gracefully** with a
+clear `[skip]` message — the rest of the pipeline is unaffected either
+way, so there's no rush to set this up if you'd rather hold off.
+
+**Quota, and why it's not searching all-time on every run:**
+`search.list` costs 100 quota units per call no matter how many results
+come back, against a free daily quota of 10,000 units (100 calls/day).
+Running hourly at one query per run costs 2,400/day — comfortable
+headroom. `publishedAfter` is set to a rolling 7-day window rather than
+searching from the beginning of time each run: keeps every call small and
+fast, and since this runs hourly, the window overlaps run to run — missing
+an occasional run doesn't lose anything.
+
+**Why this should be cleaner than Crossref was:** `search.list` does real
+semantic search, not the fuzzy bibliographic match that had Crossref
+surfacing unrelated genetics papers. Still applies the same "does it
+actually say wolfe" sanity filter as everything else, though — a two-word
+query like "Gene Wolfe" can occasionally surface something irrelevant, and
+it's cheap insurance regardless.
+
+**A real bug this surfaced, fixed proactively:** search could easily find
+the *same* video a named channel's RSS already pulls in — Rereading
+Wolfe's own uploads, for instance, are exactly the kind of thing this
+query would also match. Each source generates its own item `id` from
+`source.name` + the URL, so the same video from two sources would've
+produced two different ids and shown up as two separate cards. Fixed with
+a global dedup pass in `main()`, by URL, across every source — not just
+this one. Whichever source lists a duplicate first wins; in practice that
+means a named channel's own copy is kept over the search-discovered one.
+
+**Not verified against the live API** — I don't have a real API key and
+can't reach googleapis.com from the sandbox this was built in. Built
+directly from Google's own API documentation for `search.list`, not a
+guess, but this genuinely needs a real run (once the secret's set) to
+confirm the response shape and result quality match what's expected here.
+
+## More YouTube channels, and a real bug fix
+
+Added three more general sci-fi/literary YouTube channels that cover
+Wolfe among other authors: Media Death Cult, High Low Brow, and The
+Well-Read Monocle. All three get `requireKeyword: 'wolfe'`, same as Wolf
+and Crookall — general channels, not Wolfe-dedicated ones.
+
+While adding these, realized Marc Aramini's channel — in `SOURCES` since
+the very start of this project — never got the same filter, even though
+he's exactly the kind of creator who needed it: a broad literary critic,
+not someone who only covers Wolfe. Real bug, not a new addition: unrelated
+videos of his had been showing up in the feed the whole time. Fixed the
+same way as everything else in this category — `requireKeyword: 'wolfe'`
+added to his source entry. The filtering itself needed no code changes;
+YouTube channels already flow through the same generic fetch path Wolf and
+Crookall use, so this was purely a one-line config fix, not a new feature.
+
+**Seven more added** from a research pass on recent (2025-2026) Wolfe
+BookTube/podcast coverage: iSamwise, A Novel Review, Exits Examined, Nick
+Reads Fantasy, sunbeamsjess, Geek's Guide to the Galaxy, and Undertowers
+Podcast. All general-interest channels, all get `requireKeyword: 'wolfe'`.
+ReReading Wolfe (already tracked since the start of this project) came up
+independently in the same research as the strongest ongoing Wolfe
+coverage — good confirmation the original source list was on the right
+track. One more channel from that same research, "Zac's (mostly) Fantasy
+& Sci-Fi," couldn't be confidently identified — the closest search match
+wasn't a sure enough thing to use, so it's a commented placeholder in
+`SOURCES` instead of a guess.
+
 ## Written Wolfe content beyond Patreon
 
 Prompted by a round of research into where else serious written Wolfe
@@ -500,6 +599,22 @@ belongs to. A one-line note appears in the status area the moment it
 happens ("Spoiler Shield for New Sun updated to through Sword of the
 Lictor") so it's not an invisible, unexplained change — you'll notice it
 once, then it's just quietly correct from then on.
+
+### Fixed a redundant dropdown option
+
+"Through [last book in a series]" and "All caught up" used to be two
+separate options that meant exactly the same thing — nothing can be
+further ahead than a series' final book, so selecting either one produced
+identical behavior. Confusing, not a real distinction. Fixed: the last
+book no longer appears as its own choice in the picker (`buildSelect` in
+`index.html` deliberately excludes it via `BOOKS[series].slice(0, -1)`),
+leaving "All caught up" as the one way to represent full completion.
+`BOOKS` itself stays whole, though — items actually tagged with that final
+book still need it for spoiler comparisons against readers who chose an
+earlier "Through X." Also normalized both `maybeAdvanceProgress` (the
+auto-advance feature above) and any already-stored progress value that
+pointed at the now-removed option, so neither path can silently produce a
+value the dropdown no longer has a matching entry for.
 
 ## First-visit onboarding banner
 
