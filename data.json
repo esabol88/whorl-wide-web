@@ -1,171 +1,6 @@
 {
-  "generatedAt": "2026-07-18T14:22:39.603Z",
+  "generatedAt": "2026-07-18T15:00:34.310Z",
   "items": [
-    {
-      "id": "crossref-scholarly-papers-f347f487",
-      "title": "Association between IL13 and IL18 Gene Expression and Allergic Rhinitis Patients in Babylon Province, Iraq",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-07-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.494603.2476",
-      "desc": "By Zinah A. Al-Nidawat, Anwar A. Abdulla — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-777d37e8",
-      "title": "Association of TLR2 (+2477) G&gt;A Gene polymorphism with Chlamydia trachomatis Infection in Infertile Iraqi Women: A Case–Control Study",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-07-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.493155.2458",
-      "desc": "By Amal H. Abdul Mutalib, Heam Q. Muhammed — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-81772e0f",
-      "title": "Biofilm-Forming Capacity and Adhesion-Associated Gene Profiling of Aeromonas Species from Clinical and Environmental Sources in Hilla City, Iraq",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-07-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.495819.2493",
-      "desc": "By Furqan D. Mardan, Azhar O.L. Althahab — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-98ac0eba",
-      "title": "Elevated TLR-9 Gene Expression Correlates with IL-41 and TNF-α Levels and Renal Dysfunction in Iraqi Patients with Chronic Kidney Disease",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-07-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.497345.2513",
-      "desc": "By Fatima A. Habba, Basima Q. ALSaadi — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-5d7a0b5e",
-      "title": "The antibacterial activity of Partially Purified Pyocin and Its Effect on toxA Gene Expression in a Clinical Multidrug-resistant Pseudomonas aeruginosa isolate",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-04-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.482977.2346",
-      "desc": "By Alyaa J. Mohammed, Zainab Z. Khalaf — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-b6925147",
-      "title": "Protein Tyrosine Phosphatase Non-Receptor 22 (PTPN22) Gene Polymorphism in Egyptian Patients with Chronic Spontaneous Urticaria",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-04-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.491451.2445",
-      "desc": "By Rasha G. Mostafa, Amal H. Atta, Azza Z. Labeeb, Eman S. Elgharabawy, Sara M.H. Mousa, Mona S. Sabal — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-f93aa19c",
-      "title": "Investigation of ERG11 gene prevalence among azole-resistant Candida species isolated from otomycosis patients",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-04-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.484841.2370",
-      "desc": "By Haider Abdul Amair Ali, Najwa M. Abu-Mejdad, Abdullah H. Al-Saadoon — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-125ecced",
-      "title": "Comparison of Gene Expression in Klebsiella pneumoniae Urinary Tract Infections Between Type 2 Diabetes Mellitus and Non-Diabetes Mellitus Patients",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-04-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.491254.2442",
-      "desc": "By Yahia F. Fadhil, Ashwak B. Al-Hashimy — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-eafbb495",
-      "title": "Association of kfu Gene with Biofilm Formation, Antibiotic Resistance, and Genetic Diversity in Klebsiella pneumoniae Isolated from Diabetic Patients",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-04-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.483654.2356",
-      "desc": "By Ashwak B. Al-Hashimy, Yaser S. Ahmed — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-21cd8d20",
-      "title": "Evaluation of Colistin Susceptibility in Multiple Resistance Level Gram-Negative Organisms by Broth Microdilution, E-test and Molecular Detection of mcr-1 Gene",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-04-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.474021.2257",
-      "desc": "By Reham Monir, Dalia K. Ismail, Nada N. Nawar, Yasmin Adel — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-a08461f2",
-      "title": "Virulence Gene Distribution and Resistance Profiles of Clinical Klebsiella pneumoniae Isolates from Al-Diwaniyah, Iraq",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-04-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.484397.2361",
-      "desc": "By Noor F. Hameed, Ibtisam H. Al-Azzawi — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-9442368e",
-      "title": "Expression and Polymorphism of the Progesterone-Associated Endometrial Protein Gene and Serum Parameters in Relation to Intracytoplasmic Sperm Injection Outcomes among Iraqi Women",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-01-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.460581.2117",
-      "desc": "By Sara R. Farhan — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-922abb14",
-      "title": "Evaluating circulating tumor DNA methylation patterns of a multi-gene panel for colorectal cancer diagnosis: A pilot study",
-      "source": "Clinica Chimica Acta",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-01-01",
-      "url": "https://doi.org/10.1016/j.cca.2026.121191",
-      "desc": "By Faten Usrof, Karima M. Abu Helal, Mohammed J. Ashour, Hadeer N. Abuwarda, Mazen M. Alzaharna, Fadel A. Sharif — Clinica Chimica Acta",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-ca3f3eb3",
-      "title": "Inter-relationship of CTLA-4+49 A/G Gene Polymorphism and Serum Soluble (CTLA-4) in Vitiligo Patients",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-01-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.483760.2354",
-      "desc": "By Alyaa Y. Ali, Lina S. Adham, Khalid S. Salih, Yasir A. Khamis — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-4d956901",
-      "title": "OX40 (CD134) Activation and fas Ligand Gene Expression in Dialysis Patients with Hepatitis C Virus Infection",
-      "source": "Egyptian Journal of Medical Microbiology",
-      "type": "paper",
-      "series": "general",
-      "date": "2027-01-01",
-      "url": "https://doi.org/10.21608/ejmm.2026.476342.2273",
-      "desc": "By Mays H, Razzaq, Saif J. Yasir — Egyptian Journal of Medical Microbiology",
-      "tags": []
-    },
     {
       "id": "urth-mailing-list-b92588aa",
       "title": "(urth) Homage to The Changeling?",
@@ -176,34 +11,6 @@
       "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
       "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
       "tags": []
-    },
-    {
-      "id": "r-genewolfe-f836d779",
-      "title": "Did I just read too many spoilers?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-18",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uznhq9/did_i_just_read_too_many_spoilers/",
-      "desc": "Currently starting Claw. I'm absolutely loving this series, it's nothing like I've ever read before, it's fascinating. Its puzzle aspect makes it addicting, and in said addiction, I have found myself searching in this su",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-067b335b",
-      "title": "Just finished Shadow of the Torturer and I need some info before I continue the series.",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-18",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uzoznb/just_finished_shadow_of_the_torturer_and_i_need/",
-      "desc": "Is Severian supposed to be a loser? Like it's really important to me that Gene Wolfe wrote him as a loser on purpose and that he isn't supposed to seem cool at all. \n Is stuff like \"creamy amplitude\" more of a r/Menwriti",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
     },
     {
       "id": "alzabo-soup-2688e0f0",
@@ -218,41 +25,10 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-genewolfe-a70fe1c1",
-      "title": "Long Sun personae lists, centralized and expandable",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-07-17",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uz2n5e/long_sun_personae_lists_centralized_and_expandable/",
-      "desc": "https://docs.google.com/spreadsheets/d/1VqgxlrfgSHtLVwtkWNj1K79IZnITzz8uR4IzHQirkAQ/edit?usp=sharing\n I put Long Sun's three lists of \"Gods, Persons, and Animals Mentioned in the Text\" into columns, together with brief n",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-e3c1ef36",
-      "title": "Who is Jonas",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-17",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uz15bu/who_is_jonas/",
-      "desc": "Who is Jonas?\n In some sense, Jonas is akin to Talos for Baldanders, a perfectly loyal companion and thus a distinction from women, whom Severian has experienced or knows as betrayers-of-trust:\n  \nBirds twittered overhea",
-      "tags": [
-        "Severian",
-        "the Claw",
-        "Vodalus",
-        "Dorcas",
-        "Hethor",
-        "Thecla"
-      ],
-      "thumbnail": null
-    },
-    {
       "id": "r-shittygenewolfe-1d604b65",
       "title": "I have to go now, Severian. My planet needs me.",
       "source": "r/shittygenewolfe",
-      "type": "discussion",
+      "type": "fanart",
       "series": "new",
       "date": "2026-07-17",
       "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uyl6k3/i_have_to_go_now_severian_my_planet_needs_me/",
@@ -260,205 +36,54 @@
       "tags": [
         "Severian"
       ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-776af63b",
-      "title": "Just finished The book of the new sun and the urth of the new sun!",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-16",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uya9m3/just_finished_the_book_of_the_new_sun_and_the/",
-      "desc": "It was an amazing trip, to say the least.\n I don't want to write a long review of the series just yet, since I haven't reread it (I'm going to start right away). But even after a first read, I honestly can't think of a w",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-b6f2034f",
-      "title": "Peace and a reference to Escher?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-16",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uyfue8/peace_and_a_reference_to_escher/",
-      "desc": "In Chapter 4 (page 256 of the current Orb paperback) there is this passage:\n That Heaven is (by the report of the summoned angels) a land of hills and terraced gardens, with cold, blue freshwater seas; that it is shaped ",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-af072876",
-      "title": "Reporting from the Red Sun Whorl (Boston)",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-07-16",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uxn0ky/reporting_from_the_red_sun_whorl_boston/",
-      "desc": "submitted by    /u/Lilac_Son  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-3680758f",
-      "title": "Ready for a Journey feat. bookmark my gf made",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uxfu4b/ready_for_a_journey_feat_bookmark_my_gf_made/",
-      "desc": "Also, does anyone got any recommendations for music to listen to during reading? Already found some ambience music but maybe you guys got some bangers.\n    submitted by    /u/MrHelios000  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-4a6c208a",
-      "title": "How good are the Latro books?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uxa5yp/how_good_are_the_latro_books/",
-      "desc": "Outside of solar cycle and The wizard knight, this is probably the most popular series by Gene Wolfe but outside of goodreads I have not seen much written or discussed about this series and surprisingly almost nothing on",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-cd466e22",
-      "title": "Confused about potential misprint in my copy of Exodus from the Long Sun",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-07-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uxbspf/confused_about_potential_misprint_in_my_copy_of/",
-      "desc": "I would like some help with a passage in Exodus that has been confusing me since I read it. I also have a kindle version so perhaps that is it. \n In my copy on page 367 in the \"The Best Thieves in the Whorl\" chapter, I b",
-      "tags": [
-        "Silk",
-        "Horn"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-4399174e",
-      "title": "also born in Nessus?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1ux22a7/also_born_in_nessus/",
-      "desc": "Hmm, when a history audiobook stops you in your tracks: Nessus?\n 1)\n \"Constantine I the Great was born around 272 in Naissus, part of the province of Dardania in Mesa, a Roman province in the central Balkans (now Niš, a ",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-3577ab7c",
-      "title": "Deep Cuts - Bibliomen Summary",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uwqulr/deep_cuts_bibliomen_summary/",
-      "desc": "I'm glad to report the arrival of the latest installment in my Gene Wolfe Chapter Guide series. Feel free to pick up a paperback or Kindle copy of the Bibliomen guide with my sincere appreciation. \n This one is short, so",
-      "tags": [],
-      "thumbnail": null
+      "thumbnail": "https://preview.redd.it/w7geestfwodh1.jpeg?width=640&crop=smart&auto=webp&s=4f9960a2cdf0eb33a3f40a0c230ab5178da83ffb",
+      "artist": "u/Forever_Man (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/Forever_Man",
+      "postUrl": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uyl6k3/i_have_to_go_now_severian_my_planet_needs_me/",
+      "nsfw": false
     },
     {
       "id": "r-rereadingwolfepodcast-99a1ad43",
       "title": "Deeper Dive - Bibliomen Summary",
       "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
+      "type": "fanart",
       "series": "general",
       "date": "2026-07-15",
       "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1uwqvb0/deeper_dive_bibliomen_summary/",
       "desc": "I'm glad to report the arrival of the latest installment in my Gene Wolfe Chapter Guide series. Feel free to pick up a paperback or Kindle copy of the Bibliomen guide with my sincere appreciation. \n This one is short, so",
       "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-shittygenewolfe-3b0ce7a8",
-      "title": "POV: you just watched silk mindmerge with god",
-      "source": "r/shittygenewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-07-15",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwvtxt/pov_you_just_watched_silk_mindmerge_with_god/",
-      "desc": "submitted by    /u/Massive-Grocery7152  \n [link]   [comments]",
-      "tags": [
-        "Silk"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-ef863459",
-      "title": "What is this bullsh;t?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-14",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uwbgyf/what_is_this_bullsht/",
-      "desc": "submitted by    /u/John_Lee_Petitfours  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-965ba08a",
-      "title": "Reading Sword of the Lictor for the first time and The Widow's House chapter made me think of this.",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-14",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uw9tv3/reading_sword_of_the_lictor_for_the_first_time/",
-      "desc": "submitted by    /u/TheAndyChrist  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
+      "thumbnail": "https://preview.redd.it/9l2vkpcrjadh1.jpeg?width=640&crop=smart&auto=webp&s=4348049db3ff5e36a375bbeebd00cdbd5ec47a96",
+      "artist": "u/mpc3980 (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/mpc3980",
+      "postUrl": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1uwqvb0/deeper_dive_bibliomen_summary/",
+      "nsfw": false
     },
     {
       "id": "r-shittygenewolfe-394cb14d",
       "title": "Getting to the Widow's House in Sword of the Lictor made me think of this",
       "source": "r/shittygenewolfe",
-      "type": "discussion",
+      "type": "fanart",
       "series": "new",
       "date": "2026-07-14",
       "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwe7v4/getting_to_the_widows_house_in_sword_of_the/",
       "desc": "submitted by    /u/TheAndyChrist  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": null
+      "thumbnail": "https://preview.redd.it/qjvtgopz58dh1.png?width=640&crop=smart&auto=webp&s=11d6b03c6e0c8fa587a09f40a9a4b062c41c7dbe",
+      "artist": "u/TheAndyChrist (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/TheAndyChrist",
+      "postUrl": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwe7v4/getting_to_the_widows_house_in_sword_of_the/",
+      "nsfw": false
     },
     {
-      "id": "r-shittygenewolfe-b04fc929",
-      "title": "What in the red sun is happening?!",
-      "source": "r/shittygenewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-14",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwkhuw/what_in_the_red_sun_is_happening/",
-      "desc": "submitted by    /u/tugaim33  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-shittygenewolfe-962f1076",
-      "title": "Happened to see this tweet within a few days of finishing The Citadel of the Autarch",
-      "source": "r/shittygenewolfe",
+      "id": "r-genewolfe-75b71a73",
+      "title": "The Book Of The New Sun cover art by Yoshitaka Amano",
+      "source": "r/genewolfe",
       "type": "discussion",
       "series": "new",
-      "date": "2026-07-14",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwhmhn/happened_to_see_this_tweet_within_a_few_days_of/",
-      "desc": "Now the trail will forever be \"The Penis Chopper Machine\" to me \n    submitted by    /u/lulaf0rtune  \n [link]   [comments]",
+      "date": "2026-07-11",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1ut6q1h/the_book_of_the_new_sun_cover_art_by_yoshitaka/",
+      "desc": "The Book Of The New Sun vols.1-4 (cover art by Yoshitaka Amano)\n Credits to @wallacepolsom.bsky.social on Bluesky (link)\n    submitted by    /u/meltdrome  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-shittygenewolfe-b6441b27",
-      "title": "Dril + BOTNS (please help me)",
-      "source": "r/shittygenewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-12",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uulykp/dril_botns_please_help_me/",
-      "desc": "Years ago I saw a whole online meme collage of Dril tweets chosen to reflect Severian's journey in book of the new sun. I cannot find it anywhere now. Help!\n    submitted by    /u/Emergency-Sock-2557  \n [link]   [comment",
-      "tags": [
-        "Severian"
-      ],
       "thumbnail": null
     },
     {
@@ -474,32 +99,6 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-shittygenewolfe-14dcd870",
-      "title": "Now they tryna say Severian touched Little Severian and that's why he quiet... 🤦🏾‍♂️",
-      "source": "r/shittygenewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-10",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1usv70p/now_they_tryna_say_severian_touched_little/",
-      "desc": "submitted by    /u/CrookdSpokeAdjacent  \n [link]   [comments]",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-shittygenewolfe-03db41d0",
-      "title": "Zero context spoilers for Nightside the long sun",
-      "source": "r/shittygenewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-07-09",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1us354t/zero_context_spoilers_for_nightside_the_long_sun/",
-      "desc": "submitted by    /u/IntelligentLaw8662  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "r-rereadingwolfepodcast-df61d285",
       "title": "Bells and the shape of truth...",
       "source": "r/rereadingwolfepodcast",
@@ -512,38 +111,30 @@
       "thumbnail": null
     },
     {
-      "id": "r-shittygenewolfe-85124e62",
-      "title": "THEORY: Nessus was based on Bound Brook, New Jersey",
-      "source": "r/shittygenewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-07",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1upl9ky/theory_nessus_was_based_on_bound_brook_new_jersey/",
-      "desc": "Lots of evidence points to this being the case\n    submitted by    /u/ihateledzepplin  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "r-shittygenewolfe-038142fc",
       "title": "\"I tried to give you the sun, and now you are burned.\"",
       "source": "r/shittygenewolfe",
-      "type": "discussion",
+      "type": "fanart",
       "series": "general",
       "date": "2026-07-06",
       "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uol5wy/i_tried_to_give_you_the_sun_and_now_you_are_burned/",
       "desc": "submitted by    /u/newsflashjackass  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": null
+      "thumbnail": "https://preview.redd.it/q9r8ufyvvibh1.jpeg?width=320&crop=smart&auto=webp&s=5a15a3e44d705c687abef13d604d49ad1dd64f5d",
+      "artist": "u/newsflashjackass (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/newsflashjackass",
+      "postUrl": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uol5wy/i_tried_to_give_you_the_sun_and_now_you_are_burned/",
+      "nsfw": false
     },
     {
-      "id": "r-shittygenewolfe-c30e1650",
-      "title": "halfway through my n-1th reading of 5hc, still not sure who my father is",
-      "source": "r/shittygenewolfe",
+      "id": "r-genewolfe-4c445888",
+      "title": "Illustration: A Boy and his Dog",
+      "source": "r/genewolfe",
       "type": "discussion",
       "series": "general",
       "date": "2026-07-05",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uo7g07/halfway_through_my_n1th_reading_of_5hc_still_not/",
-      "desc": "submitted by    /u/CremBrule_  \n [link]   [comments]",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1unrv72/illustration_a_boy_and_his_dog/",
+      "desc": "Finished up another one! I'll probably jump to some scenes from Claw next, though I still have more planned for Shadow!\n    submitted by    /u/deimosremus  \n [link]   [comments]",
       "tags": [],
       "thumbnail": null
     },
@@ -572,26 +163,14 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-shittygenewolfe-2ea7cd37",
-      "title": "How can I skim BOTNS and still appreciate it?",
-      "source": "r/shittygenewolfe",
+      "id": "r-genewolfe-8456e05a",
+      "title": "Illustration: The Necropolis",
+      "source": "r/genewolfe",
       "type": "discussion",
       "series": "general",
-      "date": "2026-07-03",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1um949p/how_can_i_skim_botns_and_still_appreciate_it/",
-      "desc": "Ideally I'd like to spend 20mins tops due to time constraints.\n    submitted by    /u/Inf229  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-shittygenewolfe-bf1bfdd8",
-      "title": "We’ve had a partial BOTNS adaptation for decades.",
-      "source": "r/shittygenewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-01",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1ukpeuq/weve_had_a_partial_botns_adaptation_for_decades/",
-      "desc": "“As a good child to its mother, so is the citizen to the Group of Seventeen.”\n    submitted by    /u/ka1982  \n [link]   [comments]",
+      "date": "2026-06-29",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uj2auf/illustration_the_necropolis/",
+      "desc": "Got another one finished! With the green light and nighttime tones, this one was a bit more difficult to color than the others, but had a lot of fun with it regardless!\n    submitted by    /u/deimosremus  \n [link]   [com",
       "tags": [],
       "thumbnail": null
     },
@@ -606,6 +185,79 @@
       "desc": "Intro - Phil and Metz introduce the next readalong series: The Demon Princes, by Jack Vance Content (13:29) - Discussion of part 1 of Chapter 19 of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Star King, ",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-shittygenewolfe-4837495e",
+      "title": "Baldandersmaxxing",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-06-26",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1ughdmn/baldandersmaxxing/",
+      "desc": "submitted by    /u/obj-g  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-c6aef617",
+      "title": "Book Of The New Sun First Edition Hardcovers Found At Local Bookstore",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-06-25",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uf2l1u/book_of_the_new_sun_first_edition_hardcovers/",
+      "desc": "So a few weeks ago I walked into my local bookstore hoping to find some copy of Book Of The New Sun (I had not read it yet at that point it was just one of my most antcipated reads and currently I'm finishing up Claw of ",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-40567776",
+      "title": "Fan art of misc. characters from New Sun",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-06-22",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1ucwa9z/fan_art_of_misc_characters_from_new_sun/",
+      "desc": "I previously did some fan art of the protagonists of New Sun, Long Sun, and Short Sun, and thought I'd keep it up with some of the supporting characters. So here are Baldanders, Dr. Talos, and two attempts at Typhon. I t",
+      "tags": [
+        "Typhon"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-9d385eed",
+      "title": "The story of Typhon is so fascinating.",
+      "source": "r/shittygenewolfe",
+      "type": "fanart",
+      "series": "general",
+      "date": "2026-06-22",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1ucxfxl/the_story_of_typhon_is_so_fascinating/",
+      "desc": "submitted by    /u/mab0roshi  \n [link]   [comments]",
+      "tags": [
+        "Typhon"
+      ],
+      "thumbnail": "https://preview.redd.it/qx6ratzkiw8h1.jpeg?width=640&crop=smart&auto=webp&s=d30dbcb780ca1815be8062847a53365fa6aa463c",
+      "artist": "u/mab0roshi (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/mab0roshi",
+      "postUrl": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1ucxfxl/the_story_of_typhon_is_so_fascinating/",
+      "nsfw": false
+    },
+    {
+      "id": "r-genewolfe-dde620ba",
+      "title": "Illustration: The House Azure",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-06-21",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1ubuuw0/illustration_the_house_azure/",
+      "desc": "You know the drill! Wanted to put in as much symbolism as I could into this one regarding the Autarchy, in addition to using the 'false Thecla' element in the story as an inspiration behind the Caryatids-- each statue re",
+      "tags": [
+        "Severian",
+        "Thecla"
+      ],
+      "thumbnail": null
     },
     {
       "id": "r-rereadingwolfepodcast-2aa5081f",
@@ -632,47 +284,6 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-rereadingwolfepodcast-fcc46d39",
-      "title": "The first 3 novels in Long Sun thematically match the first 3 seasons of HBO's cult classic The Wire",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-06-16",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1u6zm0b/the_first_3_novels_in_long_sun_thematically_match/",
-      "desc": "Nightside of the Long Sun thematically matches Season 1: it's about the criminal underworld of the city\n Lake of the Long Sun thematically matches Season 2: it's about the waterfront/docks (the polack season everyone hat",
-      "tags": [
-        "Silk"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-0fc831d1",
-      "title": "Don't Starwater Strain Yourself",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-06-14",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1u5xt09/dont_starwater_strain_yourself/",
-      "desc": "I'm glad to report the arrival of the latest installment in my Gene Wolfe Chapter Guide series. Feel free to pick up a paperback or Kindle copy of the Starwater Strains guide with my sincere appreciation.\n You can also f",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-8afae38a",
-      "title": "\"And you were there!\" Wizard of Oz style situation of same actors, different characters across new sun, long sun, and short sun?",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-06-14",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1u5pawl/and_you_were_there_wizard_of_oz_style_situation/",
-      "desc": "\"But it wasn't a dream. It was a place. And you, and you, and you... and you were there.\" -the Wizard of Oz\n I finally finished the solar cycle, including most of the additional short stories James mentions in his solar ",
-      "tags": [
-        "Severian",
-        "Silk"
-      ],
-      "thumbnail": null
-    },
-    {
       "id": "alzabo-soup-2688e0f0",
       "title": "Chapter 17 Part 4 - Gene Wolfe's Return to the Whorl",
       "source": "Alzabo Soup",
@@ -683,18 +294,6 @@
       "desc": "Intro - Phil forces Metz to define perfection in television shows. Content (13:40) - Discussion of part 4 of Chapter 17 of Return to the Whorl, by Gene Wolfe. Current Read-Along - Perhaps the Stars, by Ada Palmer Check o",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "r-rereadingwolfepodcast-edcf23ae",
-      "title": "I've built Star-Crossed Choice with @base44!",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-06-07",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1tzqb3c/ive_built_starcrossed_choice_with_base44/",
-      "desc": "submitted by    /u/Silent_Awareness7477  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "alzabo-soup-2688e0f0",
@@ -721,72 +320,6 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-rereadingwolfepodcast-82c2bf2e",
-      "title": "Do Women Appreciate The Wizard Knight?",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-05-29",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1triwss/do_women_appreciate_the_wizard_knight/",
-      "desc": "submitted by    /u/Imbasrune  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-ff2f8cdf",
-      "title": "My lil Chat GPT rendering of Patera Silk and Maytera Rose.",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-05-20",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1tijqsp/my_lil_chat_gpt_rendering_of_patera_silk_and/",
-      "desc": "submitted by    /u/blackplatt666  \n [link]   [comments]",
-      "tags": [
-        "Silk"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-cc70a060",
-      "title": "Not sure if this has been asked before but have you guys seen the Netflix show Dark?",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-05-14",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1tdelx9/not_sure_if_this_has_been_asked_before_but_have/",
-      "desc": "Love the pod and you guys really opened the book up to me after my first read. As I rewatch the Netflix show dark, it strikes me that there are a number of similarities to BOTNS, which I’ve put below in spoiler tags\n >!t",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-4407f2e3",
-      "title": "Been enjoying the podcast but I just wanted to let you guys know part 3 and 4 episodes of talo's play are missing on Spotify",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-05-09",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1t8genb/been_enjoying_the_podcast_but_i_just_wanted_to/",
-      "desc": "Not a big deal I've just used podbean website for the missing ones.\n    submitted by    /u/Marsupial_Lemur  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-138ac8ee",
-      "title": "tBotNS - 3:10 The Salamander- The Sword of the Lictor - The Book of the New Sun by Gene Wolfe",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-05-03",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1t2728z/tbotns_310_the_salamander_the_sword_of_the_lictor/",
-      "desc": "LISTEN HERE and show notes.\n Severian and Cyriaca continue their date until the archon shows up to third wheel everything.\n Listener comments end at: 28:00\n For Patrons, check out the special super-duper version with sec",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
-    },
-    {
       "id": "rereading-wolfe-7d19375e",
       "title": "tbotns 3-9 \"The Salamander\"",
       "source": "Rereading Wolfe",
@@ -799,14 +332,14 @@
       "thumbnail": "https://i3.ytimg.com/vi/vZD4oR23S_s/hqdefault.jpg"
     },
     {
-      "id": "r-rereadingwolfepodcast-8704d055",
-      "title": "The Mystery of the Guild",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-04-23",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1st97qq/the_mystery_of_the_guild/",
-      "desc": "submitted by    /u/FloatingDisc  \n [link]   [comments]",
+      "id": "reactor-2d651c20",
+      "title": "Jo Walton’s Reading List: February 2026",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2026-03-11",
+      "url": "https://reactormag.com/jo-waltons-reading-list-february-2026/",
+      "desc": "Thoughts on Gene Wolfe, Sharon Shinn, and finally getting the appeal of cosy fantasy!\nThe post Jo Walton’s Reading List: February 2026 appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
     },
@@ -823,32 +356,6 @@
       "thumbnail": "https://i1.ytimg.com/vi/XX2iJ-XeIyk/hqdefault.jpg"
     },
     {
-      "id": "r-rereadingwolfepodcast-61efd03b",
-      "title": "tbotns 3-8 \"Upon the Cliff\"",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-03-08",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1roae8j/tbotns_38_upon_the_cliff/",
-      "desc": "LISTEN HERE and Show Notes\n What is this \"episode\" thing? I guess it actually exists again. ;)\n Severian meanders above town, has some kinda sad, kinda weird stuff happen, and can't really decide how he feels about it.\n ",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-fef1a263",
-      "title": "Is the podcast just going to be BotNS?",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-03-03",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1rjaf8j/is_the_podcast_just_going_to_be_botns/",
-      "desc": "I was just wondering if they were going to tackle BotLS as well. Great podcast though! It really is nice to hear others input on these books. I have just started listening as I have finished the solar cycle. Again great ",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "rereading-wolfe-e880272f",
       "title": "RRW Bonus: CSE Claire Cooney and Carlos Hernandez interview",
       "source": "Rereading Wolfe",
@@ -861,14 +368,14 @@
       "thumbnail": "https://i4.ytimg.com/vi/SYyL0ko4qDk/hqdefault.jpg"
     },
     {
-      "id": "r-shittygenewolfe-7663f680",
-      "title": "As moderator of this subreddit I command all of you to watch and upvote this video or be BANNED",
-      "source": "r/shittygenewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-01-17",
-      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1qfo43w/as_moderator_of_this_subreddit_i_command_all_of/",
-      "desc": "submitted by    /u/pipster818  \n [link]   [comments]",
+      "id": "reactor-f9e1b1f8",
+      "title": "Jo Walton’s Reading List: December 2025",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2026-01-20",
+      "url": "https://reactormag.com/jo-waltons-reading-list-december-2025/",
+      "desc": "Hooray for romantasy, new Penric, Poul Anderson, and movie reviews…\nThe post Jo Walton’s Reading List: December 2025 appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
     },
@@ -883,6 +390,18 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/IHHedq0ruoQ/hqdefault.jpg"
+    },
+    {
+      "id": "reactor-8e2aa426",
+      "title": "Adventures in Tourism: Five SFF Stories About Travel",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2025-09-23",
+      "url": "https://reactormag.com/adventures-in-tourism-five-sff-stories-about-travel/",
+      "desc": "Oh, the joys (and perils) of visiting unfamiliar places and times...\nThe post Adventures in Tourism: Five SFF Stories About Travel appeared first on Reactor.",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-3de0f4be",
@@ -921,6 +440,18 @@
       "thumbnail": "https://i4.ytimg.com/vi/7kcVZGrufpo/hqdefault.jpg"
     },
     {
+      "id": "ultan-s-library-9134967b",
+      "title": "Gene Wolfe and The Pocket Book of Science-Fiction",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2024-05-30",
+      "url": "https://ultan.org.uk/gene-wolfe-and-the-pocket-book-of-science-fiction/",
+      "desc": "Wolfe said that Wollheim's 1943 anthology was his gateway to discovering the science fiction pulps. Here, Michael Andre-Driussi explores one of Wolfe's earliest influences.",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "rereading-wolfe-79d1dba4",
       "title": "tBotNS 3:2 Upon the Cataract",
       "source": "Rereading Wolfe",
@@ -931,18 +462,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/mD0g16I6-Fc/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-66460a72",
-      "title": "Gene Wolfe Author Influences, Recommendations, and \"Correspondences\" Master List",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2023-12-23",
-      "url": "https://www.reddit.com/r/genewolfe/comments/18pgqzc/gene_wolfe_author_influences_recommendations_and/",
-      "desc": "I have recently been going through as many Wolfe interviews as I can find. In these interviews, usually only after being prompted, he frequently listed other authors who either influenced him, that he enjoyed, or who fea",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-19c4690b",
@@ -1005,6 +524,78 @@
       "thumbnail": "https://i2.ytimg.com/vi/avuGzBdZctQ/hqdefault.jpg"
     },
     {
+      "id": "ultan-s-library-bf25b430",
+      "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-11-23",
+      "url": "https://ultan.org.uk/micro-wolfenomics-joan-gordon-reviews-gene-wolfes-first-four-novels-a-chapter-guide-by-michael-andre-driussi/",
+      "desc": "There are two kinds of Wolfeian criticism: macro and micro. Michael Andre-Driussi offers the micro, noting all the small details, word meanings and origins, specific allusions, patterns and inconsistencies in plot, time-",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-c68a226d",
+      "title": "A Curiously Conflicted Book: Craig Brewer reviews ‘Interlibrary Loan’",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-11-09",
+      "url": "https://ultan.org.uk/a-curiously-conflicted-book-craig-brewer-reviews-gene-wolfes-interlibrary-loan/",
+      "desc": "This final work is not simply a coda to Wolfe’s career but an integral part of its working out of some of his most central concerns.",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-5e1a91e0",
+      "title": "A Weird Mystery: James Wynn considers Gene Wolfe’s ‘A Borrowed Man’",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-10-26",
+      "url": "https://ultan.org.uk/a-weird-mystery-james-wynn-considers-gene-wolfes-a-borrowed-man/",
+      "desc": "As a detective novel, this is not a puzzle. It’s a finger-trap.",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-9f37d039",
+      "title": "Review: Gene Wolfe’s ‘Operation ARES’",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-08-03",
+      "url": "https://ultan.org.uk/review-gene-wolfes-operation-ares/",
+      "desc": "A review by Martin Crookall of Gene Wolfe's problematic and rarely discussed first novel.",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-aaf5f4a8",
+      "title": "Standing on the Shoulders of Giants – A Review of Michael Andre-Driussi’s ‘The Book of the New Sun: A Chapter Guide’",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-07-20",
+      "url": "https://ultan.org.uk/standing-on-the-shoulders-of-giants-a-review-of-michael-andre-driussis-the-book-of-the-new-sun-a-chapter-guide/",
+      "desc": "\"While Andre-Driussi acknowledges the complexity and allusiveness of Wolfe’s work, his writing has always seemed to me the most objectively grounded and easiest to digest ... of all the writers and analysts currently exp",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-20ee2c82",
+      "title": "Posthistory 201",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-07-06",
+      "url": "https://ultan.org.uk/posthistory-201/",
+      "desc": "In this new study of how human history is measured and portrayed in Gene Wolfe’s Solar Cycle, Michael Andre-Driussi reassesses the subject of his earlier essay “Posthistory 101” and examines the textual evidence for esti",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "marc-aramini-37cc0f62",
       "title": "Gene Wolfe and Literature Bonus: Tracking Song",
       "source": "Marc Aramini",
@@ -1015,6 +606,18 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
+    },
+    {
+      "id": "ultan-s-library-e377b022",
+      "title": "Everything has to be true somehow",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-06-08",
+      "url": "https://ultan.org.uk/everything-has-to-be-true-somehow/",
+      "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "marc-aramini-ad9a61b2",
@@ -1039,6 +642,66 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/FeLITU7V_l0/hqdefault.jpg"
+    },
+    {
+      "id": "reactor-e700b181",
+      "title": "16 Ecologically-Minded Speculative Fictions!",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2015-04-07",
+      "url": "https://reactormag.com/ecologically-minded-science-fiction-and-fantasy-titles/",
+      "desc": "Even as we’re zipping off to unexplored planets or strolling through the enchanted forests in our favorite novels, we sometimes get a little homesick. So in honor of Earth Day (and to celebrate the fact that it’s finally",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "reactor-fa8379c3",
+      "title": "Five Books About Indelible Cityscapes",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2015-02-26",
+      "url": "https://reactormag.com/five-books-about-indelible-cityscapes/",
+      "desc": "I have always loved cities, always been excited and frightened by them. I never wanted to go on a long journey towards Mordor—I don’t even really like to camp. In my dreams I wander through vast and teeming metropolises,",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "reactor-f1b16eca",
+      "title": "Dave Palumbo Paints (on the) Classics",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2014-09-25",
+      "url": "https://reactormag.com/dave-palumbo-paints-on-the-classics/",
+      "desc": "IlluxCon, an annual science fiction and fantasy illustration showcase, was held this past weekend in Allentown, Pennsylvania. Among all the debuted paintings and drawings was a new series from Dave Palumbo inspired by so",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "reactor-cce83602",
+      "title": "A Dream of Caeli-Amur: Finding Unwrapped Sky",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2014-04-25",
+      "url": "https://reactormag.com/a-dream-of-caeli-amur-finding-unwrapped-sky/",
+      "desc": "Last night I dreamed I went to Caeli-Amur again. It seemed I stood by the Ancient Forum, looking out over the spirit-haunted ruins where the gods Aya and Alerion fought, and for a while I could not enter. The way was bar",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "reactor-2b7dc924",
+      "title": "Cover Reveal for Jay Lake’s The Last Plane to Heaven",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2014-02-21",
+      "url": "https://reactormag.com/cover-reveal-jay-lake-the-last-plane-to-heaven/",
+      "desc": "It’s impossible not to have mixed emotions when presenting this book. Jay has been diagnosed with terminal cancer, and in all likelihood this will be the last collection of his work that he will live to see. But we have ",
+      "tags": [],
+      "thumbnail": null
     }
   ]
 }
