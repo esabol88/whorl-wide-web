@@ -1,6 +1,45 @@
 {
-  "generatedAt": "2026-07-17T16:07:30.677Z",
+  "generatedAt": "2026-07-18T12:48:10.505Z",
   "items": [
+    {
+      "id": "urth-mailing-list-b92588aa",
+      "title": "(urth) Homage to The Changeling?",
+      "source": "Urth Mailing List",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-18",
+      "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
+      "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
+      "tags": []
+    },
+    {
+      "id": "r-genewolfe-f836d779",
+      "title": "Did I just read too many spoilers?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-18",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uznhq9/did_i_just_read_too_many_spoilers/",
+      "desc": "Currently starting Claw. I'm absolutely loving this series, it's nothing like I've ever read before, it's fascinating. Its puzzle aspect makes it addicting, and in said addiction, I have found myself searching in this su",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-067b335b",
+      "title": "Just finished Shadow of the Torturer and I need some info before I continue the series.",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-07-18",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uzoznb/just_finished_shadow_of_the_torturer_and_i_need/",
+      "desc": "Is Severian supposed to be a loser? Like it's really important to me that Gene Wolfe wrote him as a loser on purpose and that he isn't supposed to seem cool at all. \n Is stuff like \"creamy amplitude\" more of a r/Menwriti",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
     {
       "id": "alzabo-soup-2688e0f0",
       "title": "Chapter 20 Part 2 and Afterword - Gene Wolfe's Return to the Whorl",
@@ -14,15 +53,16 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "urth-mailing-list-b92588aa",
-      "title": "(urth) Homage to The Changeling?",
-      "source": "Urth Mailing List",
+      "id": "r-genewolfe-a70fe1c1",
+      "title": "Long Sun personae lists, centralized and expandable",
+      "source": "r/genewolfe",
       "type": "discussion",
-      "series": "general",
+      "series": "long",
       "date": "2026-07-17",
-      "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
-      "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
-      "tags": []
+      "url": "https://www.reddit.com/r/genewolfe/comments/1uz2n5e/long_sun_personae_lists_centralized_and_expandable/",
+      "desc": "https://docs.google.com/spreadsheets/d/1VqgxlrfgSHtLVwtkWNj1K79IZnITzz8uR4IzHQirkAQ/edit?usp=sharing\n I put Long Sun's three lists of \"Gods, Persons, and Animals Mentioned in the Text\" into columns, together with brief n",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "r-genewolfe-e3c1ef36",
@@ -44,15 +84,17 @@
       "thumbnail": null
     },
     {
-      "id": "r-genewolfe-a70fe1c1",
-      "title": "Long Sun personae lists, centralized and expandable",
-      "source": "r/genewolfe",
+      "id": "r-shittygenewolfe-1d604b65",
+      "title": "I have to go now, Severian. My planet needs me.",
+      "source": "r/shittygenewolfe",
       "type": "discussion",
-      "series": "long",
+      "series": "new",
       "date": "2026-07-17",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uz2n5e/long_sun_personae_lists_centralized_and_expandable/",
-      "desc": "https://docs.google.com/spreadsheets/d/1VqgxlrfgSHtLVwtkWNj1K79IZnITzz8uR4IzHQirkAQ/edit?usp=sharing\n I put Long Sun's three lists of \"Gods, Persons, and Animals Mentioned in the Text\" into columns, together with brief n",
-      "tags": [],
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uyl6k3/i_have_to_go_now_severian_my_planet_needs_me/",
+      "desc": "submitted by    /u/Forever_Man  \n [link]   [comments]",
+      "tags": [
+        "Severian"
+      ],
       "thumbnail": null
     },
     {
@@ -155,6 +197,20 @@
       "thumbnail": null
     },
     {
+      "id": "r-shittygenewolfe-3b0ce7a8",
+      "title": "POV: you just watched silk mindmerge with god",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "long",
+      "date": "2026-07-15",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwvtxt/pov_you_just_watched_silk_mindmerge_with_god/",
+      "desc": "submitted by    /u/Massive-Grocery7152  \n [link]   [comments]",
+      "tags": [
+        "Silk"
+      ],
+      "thumbnail": null
+    },
+    {
       "id": "r-genewolfe-ef863459",
       "title": "What is this bullsh;t?",
       "source": "r/genewolfe",
@@ -179,29 +235,53 @@
       "thumbnail": null
     },
     {
-      "id": "r-genewolfe-c925cf22",
-      "title": "Silk and Quetzal blood sharing",
-      "source": "r/genewolfe",
+      "id": "r-shittygenewolfe-394cb14d",
+      "title": "Getting to the Widow's House in Sword of the Lictor made me think of this",
+      "source": "r/shittygenewolfe",
       "type": "discussion",
-      "series": "long",
+      "series": "new",
       "date": "2026-07-14",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uvsrtn/silk_and_quetzal_blood_sharing/",
-      "desc": "I’m reading through long and short sun again, and came across the part in Calde that seems to imply Quetzal gave Silk blood to save him after the tunnel cave in. \n I seem to remember in short sun that sharing blood share",
-      "tags": [
-        "Silk"
-      ],
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwe7v4/getting_to_the_widows_house_in_sword_of_the/",
+      "desc": "submitted by    /u/TheAndyChrist  \n [link]   [comments]",
+      "tags": [],
       "thumbnail": null
     },
     {
-      "id": "r-genewolfe-ee263a73",
-      "title": "Anyone else find BOTNS surprisingly funny sometimes?",
-      "source": "r/genewolfe",
+      "id": "r-shittygenewolfe-b04fc929",
+      "title": "What in the red sun is happening?!",
+      "source": "r/shittygenewolfe",
       "type": "discussion",
       "series": "general",
-      "date": "2026-07-13",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uvrqez/anyone_else_find_botns_surprisingly_funny/",
-      "desc": "Reading Sword of the Lictor and found this amusing - \n 'At the time, however, I was far more concerned with the mechanism that had once fed him. I told myself that ancient machines were often astoundingly durable, and th",
+      "date": "2026-07-14",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwkhuw/what_in_the_red_sun_is_happening/",
+      "desc": "submitted by    /u/tugaim33  \n [link]   [comments]",
       "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-962f1076",
+      "title": "Happened to see this tweet within a few days of finishing The Citadel of the Autarch",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-07-14",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uwhmhn/happened_to_see_this_tweet_within_a_few_days_of/",
+      "desc": "Now the trail will forever be \"The Penis Chopper Machine\" to me \n    submitted by    /u/lulaf0rtune  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-b6441b27",
+      "title": "Dril + BOTNS (please help me)",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-12",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uulykp/dril_botns_please_help_me/",
+      "desc": "Years ago I saw a whole online meme collage of Dril tweets chosen to reflect Severian's journey in book of the new sun. I cannot find it anywhere now. Help!\n    submitted by    /u/Emergency-Sock-2557  \n [link]   [comment",
+      "tags": [
+        "Severian"
+      ],
       "thumbnail": null
     },
     {
@@ -217,6 +297,80 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
+      "id": "r-shittygenewolfe-14dcd870",
+      "title": "Now they tryna say Severian touched Little Severian and that's why he quiet... 🤦🏾‍♂️",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-07-10",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1usv70p/now_they_tryna_say_severian_touched_little/",
+      "desc": "submitted by    /u/CrookdSpokeAdjacent  \n [link]   [comments]",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-03db41d0",
+      "title": "Zero context spoilers for Nightside the long sun",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "long",
+      "date": "2026-07-09",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1us354t/zero_context_spoilers_for_nightside_the_long_sun/",
+      "desc": "submitted by    /u/IntelligentLaw8662  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-85124e62",
+      "title": "THEORY: Nessus was based on Bound Brook, New Jersey",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-07",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1upl9ky/theory_nessus_was_based_on_bound_brook_new_jersey/",
+      "desc": "Lots of evidence points to this being the case\n    submitted by    /u/ihateledzepplin  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-038142fc",
+      "title": "\"I tried to give you the sun, and now you are burned.\"",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-06",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uol5wy/i_tried_to_give_you_the_sun_and_now_you_are_burned/",
+      "desc": "submitted by    /u/newsflashjackass  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-c30e1650",
+      "title": "halfway through my n-1th reading of 5hc, still not sure who my father is",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-05",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uo7g07/halfway_through_my_n1th_reading_of_5hc_still_not/",
+      "desc": "submitted by    /u/CremBrule_  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-a9e022e3",
+      "title": "why don't people address people as \"Optimate\" anymore?",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-04",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1uncmqd/why_dont_people_address_people_as_optimate_anymore/",
+      "desc": "Have we forgotten that we have an Autarch, may his bongwater be our elixir with electrolytes in it? Are we just Peter Watts P-zombie soldiers for the Ascians? \n    submitted by    /u/Deathnote_Blockchain  \n [link]   [com",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "alzabo-soup-2688e0f0",
       "title": "Chapter 19 Part 2 - Gene Wolfe's Return to the Whorl",
       "source": "Alzabo Soup",
@@ -227,6 +381,30 @@
       "desc": "Intro - Phil and Metz celebrate National Hamburger Day Content (7:55) - Discussion of part 2 of Chapter 19 of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Star King, by Jack Vance Check out more at alzabo",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-shittygenewolfe-2ea7cd37",
+      "title": "How can I skim BOTNS and still appreciate it?",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-03",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1um949p/how_can_i_skim_botns_and_still_appreciate_it/",
+      "desc": "Ideally I'd like to spend 20mins tops due to time constraints.\n    submitted by    /u/Inf229  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-shittygenewolfe-bf1bfdd8",
+      "title": "We’ve had a partial BOTNS adaptation for decades.",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-01",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1ukpeuq/weve_had_a_partial_botns_adaptation_for_decades/",
+      "desc": "“As a good child to its mother, so is the citizen to the Group of Seventeen.”\n    submitted by    /u/ka1982  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "alzabo-soup-2688e0f0",
@@ -323,6 +501,18 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i4.ytimg.com/vi/SYyL0ko4qDk/hqdefault.jpg"
+    },
+    {
+      "id": "r-shittygenewolfe-7663f680",
+      "title": "As moderator of this subreddit I command all of you to watch and upvote this video or be BANNED",
+      "source": "r/shittygenewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-01-17",
+      "url": "https://www.reddit.com/r/ShittyGeneWolfe/comments/1qfo43w/as_moderator_of_this_subreddit_i_command_all_of/",
+      "desc": "submitted by    /u/pipster818  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-13c61c86",
