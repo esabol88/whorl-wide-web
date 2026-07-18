@@ -298,11 +298,20 @@ it just no longer decides *which candidates get considered* in the first
 place.
 
 One more thing the item-count logging surfaced, not yet acted on: the
-**Urth Mailing List returned only 1 item** on the same run, well below its
-usual handful. Not obviously broken (no error, no skip) — could just be a
-genuinely quiet month on a list that's already documented as intermittent
-— but worth keeping an eye on over a few more runs rather than assuming
-either way.
+**Urth Mailing List returned only 1 item**, consistently across two
+separate runs. Not obviously broken (no error, no skip) — could just be a
+genuinely quiet stretch on a list that's already documented as
+intermittent, or could be a dedup bug quietly collapsing more messages
+than it should. Rather than guess which, `fetchPipermail` now also logs
+the raw pre-dedup link count (`[debug] Urth Mailing List: N raw
+thread-index links, M unique after dedup`) — same diagnostic instinct that
+found the real Crossref bug. Next run settles it: raw count near 1 means
+genuinely quiet; raw count much higher than 1 means the dedup logic needs
+a real fix.
+
+**Update: confirmed fixed.** A follow-up run showed Crossref returning 7
+items — consistent, non-zero, no more swinging between a full batch and
+nothing.
 
 ## Patreon (specific tracked creators, not a sitewide search)
 

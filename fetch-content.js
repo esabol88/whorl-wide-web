@@ -883,6 +883,13 @@ async function fetchPipermail(source) {
         tags: guessTags(subject)
       });
     }
+    // Two consecutive live runs showed exactly 1 item here — plausible if
+    // the archived month genuinely only had one active thread, but also
+    // exactly the signature a dedup bug would produce (many raw messages
+    // collapsing to one subject incorrectly). Logging the raw pre-dedup
+    // match count settles which one it actually is, the same diagnostic
+    // approach that found the real Crossref bug rather than guessing.
+    console.log(`[debug] ${source.name}: ${matches.length} raw thread-index links, ${items.length} unique after dedup`);
     return items.slice(0, 15); // most recently-listed threads for the month
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
