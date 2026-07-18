@@ -469,8 +469,23 @@ async function fetchSource(source) {
   }
 }
 
+// Wraps any fetchSource call with timing, logged regardless of whether the
+// source succeeds or [skip]s. Two runs in a row took far longer overall
+// (15+ minutes) than the configured per-request timeouts should allow
+// (worst case should be under 2 minutes: the last staggered Reddit request
+// at ~75s, everything else well under that, all running in parallel) — so
+// something is taking much longer than its timeout suggests. Rather than
+// guess a third time, this makes the next run's log show exactly which
+// source(s) are the actual bottleneck.
+async function timedFetch(source) {
+  const start = Date.now();
+  const result = await fetchSource(source);
+  console.log(`[timing] ${source.name}: ${((Date.now() - start) / 1000).toFixed(1)}s`);
+  return result;
+}
+
 async function main() {
-  const results = await Promise.all(SOURCES.map(fetchSource));
+  const results = await Promise.all(SOURCES.map(timedFetch));
   const allItems = results.flat().sort((a, b) => b.date.localeCompare(a.date));
 
   // generatedAt records when the fetcher last actually ran — distinct from

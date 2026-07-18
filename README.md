@@ -100,9 +100,28 @@ whole job down with it. Fixed two ways:
 - Both `fetch()` calls now pass `signal: AbortSignal.timeout(15000)`, so a
   stalled connection gets aborted after 15 seconds like every other source
   instead of hanging indefinitely.
-- The workflow itself now sets `timeout-minutes: 15` on the job as a
+- The workflow itself now sets `timeout-minutes: 20` on the job as a
   backstop — even if some other, unforeseen hang happens in the future,
   GitHub will force-kill the job quickly rather than let it run for hours.
+
+### Still slower than it should be — timing added, not yet solved
+
+Even after the fixes above, a run took **over 15 minutes** to fetch
+everything, when the configured timeouts (15s per source, up to ~75s total
+for the slowest staggered Reddit request) suggest it should take under 2.
+It got cut off by the job timeout right after successfully writing
+`data.json`, before the commit step could run — so that run's real data
+never actually made it to the repo, even though the fetch itself worked.
+
+Rather than guess a third time, `main()` now times every source
+individually (`[timing] SourceName: X.Xs` in the log) so the next run shows
+exactly where the time is actually going instead of leaving it a mystery.
+
+One more data point in the meantime: `r/alzabosoup` returned `429` on one
+run and `403` on the next, for the identical request. An inconsistent
+error code for the same source between runs is more evidence this is
+something happening at Reddit's end (shared IP pool, inconsistent
+rate-limit state) rather than anything wrong with the request itself.
 
 ## Fan art: DeviantArt, not Reddit (or INPRNT, or ArtStation)
 
