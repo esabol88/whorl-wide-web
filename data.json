@@ -1,6 +1,20 @@
 {
-  "generatedAt": "2026-07-18T20:43:56.402Z",
+  "generatedAt": "2026-07-18T21:40:21.491Z",
   "items": [
+    {
+      "id": "rereading-wolfe-509384d0",
+      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 1",
+      "source": "Rereading Wolfe",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-18",
+      "url": "https://www.youtube.com/watch?v=IMI8UyIdbrc",
+      "desc": "",
+      "tags": [
+        "Dorcas"
+      ],
+      "thumbnail": "https://i2.ytimg.com/vi/IMI8UyIdbrc/hqdefault.jpg"
+    },
     {
       "id": "urth-mailing-list-b92588aa",
       "title": "(urth) Homage to The Changeling?",
@@ -368,18 +382,6 @@
       "desc": "Wolfe said that Wollheim's 1943 anthology was his gateway to discovering the science fiction pulps. Here, Michael Andre-Driussi explores one of Wolfe's earliest influences.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-79d1dba4",
-      "title": "tBotNS 3:2 Upon the Cataract",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2024-01-22",
-      "url": "https://www.youtube.com/watch?v=mD0g16I6-Fc",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/mD0g16I6-Fc/hqdefault.jpg"
     },
     {
       "id": "marc-aramini-19c4690b",
