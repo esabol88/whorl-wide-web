@@ -279,6 +279,31 @@ paper whose title/abstract never literally says "Wolfe" would now get
 filtered out too — an acceptable trade, since a missed real paper is a much
 smaller problem than a feed full of unrelated genetics research.
 
+**Second bug, found via the per-source item-count logging added after the
+first fix:** two consecutive live runs of the exact same code returned 15
+items, then 0. Cause: the *candidate pool* (the 50 items fetched before
+the wolfe-content filter runs) was sorted by `published desc` — most
+recently published first, across every field the fuzzy query loosely
+matched. Since "gene" alone is a very common word in unrelated
+high-volume fields like genetics, and actual Wolfe scholarship publishes
+comparatively rarely, whatever happened to be freshly published that
+particular week could completely fill the 50-item window with zero real
+matches, even though relevant papers existed elsewhere in Crossref's
+index. Fixed: the initial query no longer sorts by date at all (left at
+Crossref's default, relevance-to-the-query ranking), so the candidate pool
+is chosen by how well it matches "Gene Wolfe," not by what's newest.
+Date-sorting now happens in a second pass, only among the items that
+survived the wolfe-content filter — recency still decides *display order*,
+it just no longer decides *which candidates get considered* in the first
+place.
+
+One more thing the item-count logging surfaced, not yet acted on: the
+**Urth Mailing List returned only 1 item** on the same run, well below its
+usual handful. Not obviously broken (no error, no skip) — could just be a
+genuinely quiet month on a list that's already documented as intermittent
+— but worth keeping an eye on over a few more runs rather than assuming
+either way.
+
 ## Patreon (specific tracked creators, not a sitewide search)
 
 Empty by default — this is opt-in, not automatic. Patreon has no official

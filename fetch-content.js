@@ -681,11 +681,21 @@ async function fetchCrossref(source) {
     const url = 'https://api.crossref.org/works?' + new URLSearchParams({
       'query.bibliographic': 'Gene Wolfe',
       filter: 'type:journal-article',
-      sort: 'published',
-      order: 'desc',
       rows: '50' // fetch a wide pool — query.bibliographic is fuzzy/tokenized (Crossref
                  // has confirmed no exact-phrase support), so most candidates get filtered
                  // out below; 15 wasn't enough of a pool to reliably find real matches in
+      // No `sort` param here — deliberately left at Crossref's default
+      // (relevance to the query). Two consecutive live runs showed why:
+      // sorting the *candidate pool* by published-date-desc pulled in
+      // whatever's most recently published across ALL fields matching
+      // "gene" loosely — dominated by high-volume unrelated research like
+      // genetics — which pushed genuinely Wolfe-relevant papers (published
+      // far less often) out of the 50-item window entirely. One run
+      // returned a full batch of 15; the very next returned zero, same
+      // query, same code, just different papers happened to be freshly
+      // published that week. Relevance-sorting the candidate pool fixes
+      // this — date-sorting happens below, only among items that actually
+      // survived the wolfe-content filter.
     });
     // Crossref explicitly asks identifying requests be sent to their
     // "polite pool" for better reliability — the opposite ask from
@@ -726,6 +736,7 @@ async function fetchCrossref(source) {
       // a far rarer token, so requiring it specifically is what actually
       // enforces relevance here, not the query itself.
       .filter(item => item._searchText.includes('wolfe') && item.url)
+      .sort((a, b) => b.date.localeCompare(a.date)) // recency among real matches only, now that relevance already picked the candidate pool
       .slice(0, 15)
       .map(({ _searchText, ...item }) => item);
   } catch (err) {
