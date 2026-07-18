@@ -1,6 +1,171 @@
 {
-  "generatedAt": "2026-07-18T13:43:43.439Z",
+  "generatedAt": "2026-07-18T14:16:02.902Z",
   "items": [
+    {
+      "id": "crossref-scholarly-papers-f347f487",
+      "title": "Association between IL13 and IL18 Gene Expression and Allergic Rhinitis Patients in Babylon Province, Iraq",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-07-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.494603.2476",
+      "desc": "By Zinah A. Al-Nidawat, Anwar A. Abdulla — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-777d37e8",
+      "title": "Association of TLR2 (+2477) G&gt;A Gene polymorphism with Chlamydia trachomatis Infection in Infertile Iraqi Women: A Case–Control Study",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-07-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.493155.2458",
+      "desc": "By Amal H. Abdul Mutalib, Heam Q. Muhammed — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-81772e0f",
+      "title": "Biofilm-Forming Capacity and Adhesion-Associated Gene Profiling of Aeromonas Species from Clinical and Environmental Sources in Hilla City, Iraq",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-07-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.495819.2493",
+      "desc": "By Furqan D. Mardan, Azhar O.L. Althahab — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-98ac0eba",
+      "title": "Elevated TLR-9 Gene Expression Correlates with IL-41 and TNF-α Levels and Renal Dysfunction in Iraqi Patients with Chronic Kidney Disease",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-07-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.497345.2513",
+      "desc": "By Fatima A. Habba, Basima Q. ALSaadi — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-5d7a0b5e",
+      "title": "The antibacterial activity of Partially Purified Pyocin and Its Effect on toxA Gene Expression in a Clinical Multidrug-resistant Pseudomonas aeruginosa isolate",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-04-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.482977.2346",
+      "desc": "By Alyaa J. Mohammed, Zainab Z. Khalaf — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-b6925147",
+      "title": "Protein Tyrosine Phosphatase Non-Receptor 22 (PTPN22) Gene Polymorphism in Egyptian Patients with Chronic Spontaneous Urticaria",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-04-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.491451.2445",
+      "desc": "By Rasha G. Mostafa, Amal H. Atta, Azza Z. Labeeb, Eman S. Elgharabawy, Sara M.H. Mousa, Mona S. Sabal — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-f93aa19c",
+      "title": "Investigation of ERG11 gene prevalence among azole-resistant Candida species isolated from otomycosis patients",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-04-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.484841.2370",
+      "desc": "By Haider Abdul Amair Ali, Najwa M. Abu-Mejdad, Abdullah H. Al-Saadoon — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-125ecced",
+      "title": "Comparison of Gene Expression in Klebsiella pneumoniae Urinary Tract Infections Between Type 2 Diabetes Mellitus and Non-Diabetes Mellitus Patients",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-04-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.491254.2442",
+      "desc": "By Yahia F. Fadhil, Ashwak B. Al-Hashimy — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-eafbb495",
+      "title": "Association of kfu Gene with Biofilm Formation, Antibiotic Resistance, and Genetic Diversity in Klebsiella pneumoniae Isolated from Diabetic Patients",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-04-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.483654.2356",
+      "desc": "By Ashwak B. Al-Hashimy, Yaser S. Ahmed — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-21cd8d20",
+      "title": "Evaluation of Colistin Susceptibility in Multiple Resistance Level Gram-Negative Organisms by Broth Microdilution, E-test and Molecular Detection of mcr-1 Gene",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-04-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.474021.2257",
+      "desc": "By Reham Monir, Dalia K. Ismail, Nada N. Nawar, Yasmin Adel — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-a08461f2",
+      "title": "Virulence Gene Distribution and Resistance Profiles of Clinical Klebsiella pneumoniae Isolates from Al-Diwaniyah, Iraq",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-04-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.484397.2361",
+      "desc": "By Noor F. Hameed, Ibtisam H. Al-Azzawi — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-9442368e",
+      "title": "Expression and Polymorphism of the Progesterone-Associated Endometrial Protein Gene and Serum Parameters in Relation to Intracytoplasmic Sperm Injection Outcomes among Iraqi Women",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-01-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.460581.2117",
+      "desc": "By Sara R. Farhan — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-922abb14",
+      "title": "Evaluating circulating tumor DNA methylation patterns of a multi-gene panel for colorectal cancer diagnosis: A pilot study",
+      "source": "Clinica Chimica Acta",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-01-01",
+      "url": "https://doi.org/10.1016/j.cca.2026.121191",
+      "desc": "By Faten Usrof, Karima M. Abu Helal, Mohammed J. Ashour, Hadeer N. Abuwarda, Mazen M. Alzaharna, Fadel A. Sharif — Clinica Chimica Acta",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-ca3f3eb3",
+      "title": "Inter-relationship of CTLA-4+49 A/G Gene Polymorphism and Serum Soluble (CTLA-4) in Vitiligo Patients",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-01-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.483760.2354",
+      "desc": "By Alyaa Y. Ali, Lina S. Adham, Khalid S. Salih, Yasir A. Khamis — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-4d956901",
+      "title": "OX40 (CD134) Activation and fas Ligand Gene Expression in Dialysis Patients with Hepatitis C Virus Infection",
+      "source": "Egyptian Journal of Medical Microbiology",
+      "type": "paper",
+      "series": "general",
+      "date": "2027-01-01",
+      "url": "https://doi.org/10.21608/ejmm.2026.476342.2273",
+      "desc": "By Mays H, Razzaq, Saif J. Yasir — Egyptian Journal of Medical Microbiology",
+      "tags": []
+    },
     {
       "id": "urth-mailing-list-b92588aa",
       "title": "(urth) Homage to The Changeling?",
