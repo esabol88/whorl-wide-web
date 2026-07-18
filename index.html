@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Whorl Wide Web — Gene Wolfe Content Aggregator</title>
+<title>Fuligin — Gene Wolfe Content Aggregator</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="alternate icon" href="favicon.svg">
 <style>
@@ -104,7 +104,7 @@ h1{ font-weight:800; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parch
   transition:all .16s ease;
 }
 .chip:hover{background:rgba(255,255,255,0.09); color:var(--parchment);}
-.chip.active{background:var(--ochre); color:#0e0d0b;}
+.chip.active{background:var(--ochre); color:#0e0d0b; box-shadow:0 2px 6px rgba(0,0,0,0.3);}
 .chip[data-series="new"].active{background:var(--rust); color:#0e0d0b;}
 .chip[data-series="long"].active{background:var(--verdigris); color:#0e0d0b;}
 .chip[data-series="short"].active{background:var(--slate-blue); color:#0e0d0b;}
@@ -126,6 +126,11 @@ h1{ font-weight:800; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parch
   background:rgba(255,255,255,0.06); border:none; color:var(--parchment-dim);
   border-radius:999px; padding:4px 10px; font-size:11.5px; cursor:pointer; font-family:inherit;
 }
+.status-line button{
+  background:rgba(255,255,255,0.06); border:none; color:var(--parchment-dim);
+  border-radius:999px; padding:3px 10px; font-size:11px; cursor:pointer; font-family:inherit; margin-left:4px;
+}
+.status-line button:hover{background:rgba(255,255,255,0.1); color:var(--parchment);}
 
 .divider{
   display:flex; align-items:center; gap:12px; max-width:760px; margin:30px auto 16px; padding:0 24px;
@@ -183,9 +188,11 @@ h1{ font-weight:800; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parch
 main{max-width:760px; margin:0 auto; padding:0 24px; display:grid; gap:10px;}
 .card{
   position:relative; background:var(--surface); border:1px solid var(--hairline); border-radius:16px;
-  padding:20px 22px; display:flex; gap:16px; transition:background .16s ease, border-color .16s ease;
+  padding:20px 22px; display:flex; gap:16px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.25);
+  transition:background .16s ease, border-color .16s ease, box-shadow .16s ease, transform .16s ease;
 }
-.card:hover{background:var(--surface-hover); border-color:var(--hairline-hi);}
+.card:hover{background:var(--surface-hover); border-color:var(--hairline-hi); box-shadow:0 4px 14px rgba(0,0,0,0.35); transform:translateY(-1px);}
 
 .thumb{
   flex:0 0 auto; width:84px; height:84px; border-radius:14px; position:relative; overflow:hidden;
@@ -218,8 +225,11 @@ main{max-width:760px; margin:0 auto; padding:0 24px; display:grid; gap:10px;}
 .top-right{ display:flex; align-items:center; gap:8px; flex:0 0 auto; }
 .meta{font-size:11.5px; font-weight:600; color:var(--muted); white-space:nowrap; letter-spacing:.02em;}
 .save-btn{
-  background:none; border:none; cursor:pointer; font-size:15px; color:var(--muted); padding:2px; line-height:1;
+  background:none; border:none; cursor:pointer; font-size:15px; color:var(--muted); line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  width:30px; height:30px; border-radius:8px; flex:0 0 auto;
 }
+.save-btn:hover{background:rgba(255,255,255,0.06);}
 .save-btn.saved{color:var(--ochre);}
 .source{ font-size:12.5px; font-weight:600; margin-top:6px; color:var(--ochre); }
 .source .quiet-badge{
@@ -243,7 +253,7 @@ main{max-width:760px; margin:0 auto; padding:0 24px; display:grid; gap:10px;}
 .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
 .tag{
   font-size:10.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
-  padding:4px 10px; border-radius:999px; background:rgba(255,255,255,0.05); color:var(--parchment-dim);
+  padding:6px 12px; border-radius:999px; background:rgba(255,255,255,0.05); color:var(--parchment-dim);
   border:none; cursor:pointer; font-family:inherit;
 }
 .tag:hover{background:rgba(255,255,255,0.1); color:var(--parchment);}
@@ -297,7 +307,7 @@ footer{
     </g>
   </svg>
   <div class="eyebrow">Gene Wolfe Content Aggregator</div>
-  <h1>The Whorl Wide Web</h1>
+  <h1>Fuligin</h1>
   <div class="arrow-rule"><span class="tip">&#9666;</span><span class="line"></span><span class="tip">&#9656;</span></div>
   <p class="subtitle">Everything Urth has to say, pulled into one feed.</p>
   <div class="updated-stamp" id="updatedStamp"></div>
@@ -422,6 +432,22 @@ footer{
         <div class="shelf-title">Solar Labyrinth</div>
         <div class="shelf-author">Robert Borski</div>
         <div class="shelf-desc">Essay collection exploring specific puzzles and symbols in The Book of the New Sun.</div>
+      </div>
+      <div class="shelf-arrow">&#8599;</div>
+    </a>
+    <a class="shelf-item" href="https://gwern.net/doc/fiction/gene-wolfe/index" target="_blank" rel="noopener">
+      <div class="shelf-main">
+        <div class="shelf-title">Gene Wolfe archive</div>
+        <div class="shelf-author">Gwern Branwen</div>
+        <div class="shelf-desc">A large compiled index of otherwise-scattered Wolfe interviews and essays, including pieces by John Clute and Marc Aramini.</div>
+      </div>
+      <div class="shelf-arrow">&#8599;</div>
+    </a>
+    <a class="shelf-item" href="https://www.siriusfiction.com/wordhoard.html" target="_blank" rel="noopener">
+      <div class="shelf-main">
+        <div class="shelf-title">Newsun's Word Hoard</div>
+        <div class="shelf-author">Michael Andre-Driussi</div>
+        <div class="shelf-desc">A free Kindle dictionary overlaying Lexicon Urthus definitions directly onto the New Sun ebooks — tap a word, see the definition.</div>
       </div>
       <div class="shelf-arrow">&#8599;</div>
     </a>
@@ -646,7 +672,16 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
   const spoiler = isSpoiler(d) && !revealed.has(d.id);
   const isNew = d.date > lastVisit;
   const isSaved = !!saved[d.id];
-  const dateLabel = new Date(d.date+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'}).toUpperCase();
+  // Bare "MON DAY" is ambiguous once the feed spans multiple years — a
+  // correctly-sorted list of items from different years still *looks*
+  // out of order without a year to disambiguate them, especially next to
+  // quiet-source items that can be years old. Show the year whenever it
+  // isn't the current one, same convention as Gmail/Twitter.
+  const itemYear = new Date(d.date+'T00:00:00').getFullYear();
+  const currentYear = new Date().getFullYear();
+  const dateLabel = new Date(d.date+'T00:00:00').toLocaleDateString('en-US',
+    itemYear === currentYear ? {month:'short', day:'numeric'} : {month:'short', day:'numeric', year:'numeric'}
+  ).toUpperCase();
   const blurred = d.nsfw && !revealedNsfw.has(d.id);
   // Only badge the single newest item from a quiet source, not every one
   // of its (old) items in the feed — one signal per source is plenty.
@@ -667,7 +702,7 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
   const attributionHtml = d.type === 'fanart' ? `
     <div class="attribution">
       <span class="lbl">Art by</span>
-      <a href="${d.artistUrl}" target="_blank" rel="noopener">${d.artist}</a>
+      <a href="${d.artistUrl || d.postUrl}" target="_blank" rel="noopener">${d.artist}</a>
       <span class="sep">&middot;</span>
       <a href="${d.postUrl}" target="_blank" rel="noopener">View original post</a>
     </div>` : '';
@@ -820,12 +855,34 @@ function render(){
   // quiet-sources summary when the pipeline itself is healthy but one or
   // more channels/feeds haven't posted anything in a while
   const newCount = DATA.filter(d => d.date > lastVisit).length;
+  // Once any filter narrows the view, a result count is more useful than
+  // the freshness message — otherwise the person has to manually count
+  // cards to know how much they're actually looking at (NN/g heuristic
+  // #1, Visibility of System Status; #6, Recognition Rather than Recall).
+  const filtersActive = activeSeries!=='all' || activeType!=='all' || !!activeTag || savedOnly || !!activeSearch;
   document.getElementById('statusLine').innerHTML = (usingSampleData ? `<span style="color:var(--ochre)">Showing sample data — data.json not found yet.</span> ` : '')
     + (progressNote ? `<span style="color:var(--ochre)">${progressNote}</span> ` : '')
-    + (newCount > 0
-    ? `<b>${newCount} new</b> since your last visit`
-    : `You're caught up.`)
-    + (quietList.length ? ` &middot; <span title="${quietList.join(', ')}">${quietList.length} source${quietList.length>1?'s':''} quiet ${STALE_DAYS}+ days</span>` : '');
+    + (filtersActive
+      ? `<b>${filtered.length}</b> matching dispatch${filtered.length===1?'':'es'}`
+      : (newCount > 0
+        ? `<b>${newCount} new</b> since your last visit`
+        : `You're caught up.`))
+    + (quietList.length ? ` &middot; <span title="${quietList.join(', ')}">${quietList.length} source${quietList.length>1?'s':''} quiet ${STALE_DAYS}+ days</span>` : '')
+    // A single "start over" action rather than five separate ones (series
+    // chip, format chip, tag Clear, search ×, Saved toggle) — NN/g
+    // heuristic #3, User Control and Freedom: a clearly marked way out
+    // shouldn't require remembering every place state can hide.
+    + (filtersActive ? `<button id="resetFilters">Reset filters</button>` : '');
+  if(filtersActive){
+    document.getElementById('resetFilters').addEventListener('click', () => {
+      activeSeries='all'; activeType='all'; activeTag=null; savedOnly=false; activeSearch='';
+      searchInput.value=''; searchBox.classList.remove('has-query');
+      document.querySelectorAll('#seriesControls .chip').forEach(c=>c.classList.toggle('active', c.dataset.series==='all'));
+      document.querySelectorAll('#typeControls .chip:not(.saved-toggle)').forEach(c=>c.classList.toggle('active', c.dataset.type==='all'));
+      document.getElementById('savedToggle').classList.remove('active');
+      render();
+    });
+  }
   progressNote = null;
   if(!visitMarked && !usingSampleData){
     STORE.set('lastVisit', new Date().toISOString().slice(0, 10));

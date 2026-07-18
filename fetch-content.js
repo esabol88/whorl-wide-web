@@ -703,7 +703,7 @@ async function fetchCrossref(source) {
     // rather than the shared browser one. Add &mailto=you@example.com to
     // the query above if you want the full polite-pool priority.
     const res = await fetch(url, {
-      headers: { 'User-Agent': 'WhorlWideWeb/1.0 (Gene Wolfe fan content aggregator; https://github.com/)' },
+      headers: { 'User-Agent': 'Fuligin/1.0 (Gene Wolfe fan content aggregator; https://github.com/)' },
       signal: AbortSignal.timeout(15000)
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);

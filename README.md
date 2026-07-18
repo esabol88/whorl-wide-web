@@ -1,4 +1,4 @@
-# The Whorl Wide Web
+# Fuligin
 
 A "TV Guide" style tracker for Book of the New / Long / Short Sun content —
 new YouTube videos, podcast episodes, papers, Reddit discussions, fan art,

@@ -1,7 +1,7 @@
 {
   "name": "wolfe-dispatch",
   "version": "1.0.0",
-  "description": "Scheduled fetcher that builds data.json for The Whorl Wide Web",
+  "description": "Scheduled fetcher that builds data.json for Fuligin",
   "main": "fetch-content.js",
   "scripts": {
     "fetch": "node fetch-content.js"
