@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fuligin — Gene Wolfe Content Aggregator</title>
+<title>fuligin.dev — Gene Wolfe Content Aggregator</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="alternate icon" href="favicon.svg">
 <style>
@@ -38,12 +38,11 @@ a{color:inherit;}
 header{ max-width:640px; margin:0 auto; padding:80px 24px 36px; text-align:center; }
 .sun-mark{ width:28px; height:28px; margin:0 auto 24px; opacity:.9; }
 .eyebrow{ font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--rust); margin-bottom:16px; }
-h1{ font-weight:800; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parchment); letter-spacing:-0.025em; line-height:1.05; }
+h1{ font-weight:500; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parchment); letter-spacing:-0.01em; line-height:1.05; }
 .arrow-rule{ display:flex; align-items:center; gap:8px; max-width:120px; margin:20px auto 0; color:var(--rust); opacity:.7; }
 .arrow-rule .line{flex:1; height:1px; background:currentColor;}
 .arrow-rule .tip{font-size:9px; line-height:1;}
-.subtitle{ color:var(--parchment-dim); font-size:16px; font-weight:400; margin-top:18px; line-height:1.55; letter-spacing:-0.005em; }
-.updated-stamp{ margin-top:14px; font-size:11.5px; font-weight:600; letter-spacing:.03em; color:var(--muted); }
+.updated-stamp{ margin-top:22px; font-size:11.5px; font-weight:600; letter-spacing:.03em; color:var(--muted); }
 .updated-stamp:empty{display:none;}
 
 /* ---------- shared: disclosure bars (Start Here / Spoiler Shield) ---------- */
@@ -307,9 +306,8 @@ footer{
     </g>
   </svg>
   <div class="eyebrow">Gene Wolfe Content Aggregator</div>
-  <h1>Fuligin</h1>
+  <h1>fuligin.dev</h1>
   <div class="arrow-rule"><span class="tip">&#9666;</span><span class="line"></span><span class="tip">&#9656;</span></div>
-  <p class="subtitle">Everything Urth has to say, pulled into one feed.</p>
   <div class="updated-stamp" id="updatedStamp"></div>
 </header>
 
@@ -455,7 +453,10 @@ footer{
 </div>
 
 <footer>
-  Sources: YouTube channels, podcast RSS feeds, the <b style="color:var(--parchment-dim)">Urth Mailing List</b> (urth.net, an active Gene Wolfe discussion list running since the 1990s), Reddit (via its plain RSS feed, no login needed), and DeviantArt (fan art, with real artist attribution and content-rating data). Reference Shelf links go to Goodreads — swap for your preferred retailer or library catalog if you'd rather.
+  An unofficial, fan-made feed — video essays, podcasts, the Urth mailing
+  list, Reddit, scholarly journals, and independent criticism, gathered
+  automatically from across the web. Not affiliated with Gene Wolfe's
+  estate or publishers.
 </footer>
 
 <script>
