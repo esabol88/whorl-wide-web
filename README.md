@@ -194,12 +194,13 @@ Content warnings map from Bluesky's own self-applied labels (`porn`,
 `sexual`, `nudity`, `graphic-media`) to the NSFW blur, the same idea as
 DeviantArt's content-rating field, just a different vocabulary.
 
-**Not verified against the live API** — same situation as Crossref: I
-can't reach `public.api.bsky.app` from the sandbox this was built in. The
-endpoint, params, and response shape come from Bluesky's own lexicon
-source and a real example response quoted in a Bluesky GitHub issue, not a
-live test here. Check the first real run's actual results — both the item
-count and whether they're actually art — before trusting this fully.
+**Confirmed blocked on a live run** — `403` in ~0.2s, the identical
+signature to DeviantArt's failure (near-instant, not a rate-limit-style
+delay). That points at the same cause: GitHub Actions' shared IP pool
+being blocked outright by Bluesky's API too, not something pacing or
+headers can fix. Left in `SOURCES` anyway, same reasoning as DeviantArt —
+it could plausibly work from a different environment even though it
+doesn't work here.
 
 ## Scholarly papers (Crossref)
 
@@ -213,11 +214,12 @@ in Crossref via journals like *Extrapolation* or *Science Fiction Studies*.
 The link Crossref returns is the DOI landing page, which is very often
 paywalled — that's expected, not a bug. The point is surfacing that a paper
 exists, the same as a citation would, not guaranteeing free full-text
-access. **Not verified against the live API** — same situation as the
-subreddits originally were: I can't reach api.crossref.org from the
-sandbox this was built in, so the query and response-parsing are built
-from Crossref's own documentation rather than a real test run. Check the
-first live run's actual item count and titles before trusting this fully.
+access. **Confirmed working on a live run** — pulled a full 15-item batch
+cleanly. What's still worth periodically checking is result *relevance*
+rather than the connection itself: `query.bibliographic` is a fuzzy match,
+not exact, so skim actual titles on the site's Paper filter now and then
+for false positives (an unrelated "Gene" or "Wolfe" match) rather than
+assuming every result is really about him.
 
 ## What each item in data.json looks like
 

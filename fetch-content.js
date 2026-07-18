@@ -145,13 +145,12 @@ const SOURCES = [
   // expected and fine here: the goal is to surface *that a paper exists*,
   // same as a citation would, not to guarantee free full-text access.
   //
-  // NOT SPECIFICALLY VERIFIED LIVE: I can't reach api.crossref.org from
-  // the sandbox I built this in (network restrictions, same situation as
-  // Reddit/DeviantArt earlier) — the endpoint and response shape are from
-  // Crossref's own documentation, but this needs a real run to confirm the
-  // "Gene Wolfe" bibliographic query actually surfaces relevant results
-  // and not noise. Check the first live run's item count and a few actual
-  // titles before trusting this fully — same as we did for the subreddits.
+  // CONFIRMED LIVE: succeeded on a real run, pulled a full 15-item batch.
+  // The connection and parsing work — what's still worth checking
+  // periodically is result *relevance*, since query.bibliographic is a
+  // fuzzy match, not exact: skim actual titles on the live site's Paper
+  // filter now and then for false positives (an unrelated "Gene" or
+  // "Wolfe" match) rather than assuming every result is really about him.
   {
     name: 'Crossref (scholarly papers)',
     type: 'paper',
@@ -405,11 +404,14 @@ async function fetchDeviantArt(source) {
 // leaves real noise (book photos, memes, quote screenshots) that
 // DeviantArt's dedicated art search doesn't have to deal with.
 //
-// NOT VERIFIED LIVE — same situation as Crossref below: I can't reach
-// public.api.bsky.app from the sandbox this was built in. The endpoint,
-// params, and response shape are from Bluesky's own lexicon source and a
-// real example response quoted in a Bluesky GitHub issue, not a live test
-// here. Check the first real run's actual results before trusting this.
+// CONFIRMED LIVE: blocked. A real run got `403` in ~0.2s — the identical
+// signature to DeviantArt's failure (near-instant, not a rate-limit-style
+// delay after a wait). That points at the same root cause: GitHub Actions'
+// shared IP pool being blocked outright by Bluesky's API, same as
+// DeviantArt, not something fixable via headers or pacing. Left in rather
+// than removed, same reasoning as DeviantArt — this could plausibly work
+// from a different environment (e.g. a self-hosted runner) even though it
+// doesn't work here.
 function blueskyNsfw(post) {
   const NSFW_LABELS = ['porn', 'sexual', 'nudity', 'graphic-media'];
   return (post.labels || []).some(l => NSFW_LABELS.includes((l.val || '').toLowerCase()));
