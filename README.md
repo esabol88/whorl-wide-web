@@ -104,24 +104,27 @@ whole job down with it. Fixed two ways:
   backstop — even if some other, unforeseen hang happens in the future,
   GitHub will force-kill the job quickly rather than let it run for hours.
 
-### Still slower than it should be — timing added, not yet solved
+### Solved: the timing instrumentation paid off
 
-Even after the fixes above, a run took **over 15 minutes** to fetch
-everything, when the configured timeouts (15s per source, up to ~75s total
-for the slowest staggered Reddit request) suggest it should take under 2.
-It got cut off by the job timeout right after successfully writing
-`data.json`, before the commit step could run — so that run's real data
-never actually made it to the repo, even though the fetch itself worked.
+A run with timing enabled showed exactly what was going on:
 
-Rather than guess a third time, `main()` now times every source
-individually (`[timing] SourceName: X.Xs` in the log) so the next run shows
-exactly where the time is actually going instead of leaving it a mystery.
-
-One more data point in the meantime: `r/alzabosoup` returned `429` on one
-run and `403` on the next, for the identical request. An inconsistent
-error code for the same source between runs is more evidence this is
-something happening at Reddit's end (shared IP pool, inconsistent
-rate-limit state) rather than anything wrong with the request itself.
+- **`r/shittygenewolfe` exists.** It succeeded at the 60-second stagger
+  mark while `r/rereadingwolfepodcast` (20s) and `r/alzabosoup` (40s) both
+  still got `429`. That's a real pattern — Reddit's rate-limit window looks
+  to be somewhere around a minute, not an unconditional IP-pool block after
+  all. Bumped the stagger from 20s to 65s per source based on this
+  evidence, which should be enough margin to get all 4 through cleanly.
+- **The "why is this taking 15+ minutes" mystery had nothing to do with
+  Reddit at all.** Every source's own `[timing]` log finished within about
+  a minute, but the step itself took 5 minutes — a multi-minute gap of dead
+  time *after* the real work was already done and logged. That's Node's
+  process staying alive after `main()` returns, most likely a dangling
+  keep-alive connection somewhere in `rss-parser` or `fetch` that never got
+  explicitly closed. Fixed: `main()` now explicitly calls `process.exit(0)`
+  when it's actually done rather than waiting for the event loop to drain
+  on its own, and `.catch()`s into `process.exit(1)` on failure so errors
+  get a proper non-zero exit code too (the bare `main();` call before this
+  didn't guarantee that).
 
 ## Fan art: DeviantArt, not Reddit (or INPRNT, or ArtStation)
 

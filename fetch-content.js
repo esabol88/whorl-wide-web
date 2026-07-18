@@ -185,7 +185,7 @@ const SOURCES = [
     { name: 'r/genewolfe', subreddit: 'genewolfe' },
     { name: 'r/rereadingwolfepodcast', subreddit: 'rereadingwolfepodcast' }, // TODO: verify — corrected from requested "rereadingwolfe"
     { name: 'r/alzabosoup', subreddit: 'alzabosoup' }, // TODO: verify this exists
-    { name: 'r/shittygenewolfe', subreddit: 'shittygenewolfe' }, // TODO: verify this exists
+    { name: 'r/shittygenewolfe', subreddit: 'shittygenewolfe' }, // confirmed exists — succeeded on a live run
     // Add more the same way — one line each:
     // { name: 'r/subredditname', subreddit: 'subredditname' },
   ].map(({ name, subreddit }, i) => ({
@@ -194,7 +194,7 @@ const SOURCES = [
     series: 'general',
     kind: 'reddit-rss',
     url: `https://www.reddit.com/r/${subreddit}/.rss`,
-    redditDelayMs: i * 20000 // was 3000 — a live run showed identical 429s at 3s spacing, so trying 20s as a last check before concluding this is IP-pool-wide, not pacing
+    redditDelayMs: i * 65000 // was 20000 — real evidence from a live run: the 60s-delayed request succeeded while 20s/40s still got 429'd, suggesting Reddit's window is around a minute. 65s gives margin.
   })),
 
   // --- DeviantArt (fan art, no auth needed) ---
@@ -498,4 +498,13 @@ async function main() {
   console.log(`Wrote ${allItems.length} items to data.json`);
 }
 
-main();
+// Explicit exit rather than letting the process wind down naturally: a
+// live run's own [timing] logs showed every source finishing within ~61s,
+// yet the step took ~5 minutes — a gap of dead time after the real work
+// was done, most likely a dangling keep-alive connection somewhere (rss-
+// parser or fetch) keeping Node's event loop alive. Forcing exit(0) here
+// avoids waiting that out. main().then()/.catch() also gives failures a
+// proper non-zero exit code, which bare `main();` never did.
+main()
+  .then(() => process.exit(0))
+  .catch(err => { console.error(err); process.exit(1); });
