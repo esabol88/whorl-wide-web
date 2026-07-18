@@ -130,6 +130,35 @@ const SOURCES = [
     url: 'https://alzabosoup.libsyn.com/rss' // confirmed live — Libsyn-hosted feed
   },
 
+  // --- Scholarly papers (Crossref) ---
+  // Crossref is the DOI registration agency most academic publishers use —
+  // free, no API key, no signup (https://api.crossref.org). It indexes
+  // metadata (title, authors, journal, date, DOI landing-page URL) across
+  // virtually every field, not just STEM, which is why it's used here
+  // instead of something like the Semantic Scholar API — that one's
+  // excellent but skews hard toward CS/AI coverage, and literary
+  // scholarship on Wolfe is much more likely to turn up in Crossref via
+  // journals like Extrapolation or Science Fiction Studies.
+  //
+  // The URL Crossref returns is the DOI landing page, which is very often
+  // paywalled (a university press or journal's own paper page) — that's
+  // expected and fine here: the goal is to surface *that a paper exists*,
+  // same as a citation would, not to guarantee free full-text access.
+  //
+  // NOT SPECIFICALLY VERIFIED LIVE: I can't reach api.crossref.org from
+  // the sandbox I built this in (network restrictions, same situation as
+  // Reddit/DeviantArt earlier) — the endpoint and response shape are from
+  // Crossref's own documentation, but this needs a real run to confirm the
+  // "Gene Wolfe" bibliographic query actually surfaces relevant results
+  // and not noise. Check the first live run's item count and a few actual
+  // titles before trusting this fully — same as we did for the subreddits.
+  {
+    name: 'Crossref (scholarly papers)',
+    type: 'paper',
+    series: 'general',
+    kind: 'crossref'
+  },
+
   // --- Urth Mailing List (urth.net) ---
   // No RSS feed exists (it runs on Mailman/Pipermail, ~25 years old, never
   // added one) — handled by fetchPipermail below, which reads the current
@@ -155,37 +184,27 @@ const SOURCES = [
   // guessed), so this can't be an automated fan-art source. Fan art comes
   // from DeviantArt instead — see below.
   //
-  // UNVERIFIED NAMES: my search tool isn't surfacing live Reddit pages
-  // right now, so I couldn't directly confirm r/alzabosoup or
-  // r/shittygenewolfe exist. For Rereading Wolfe's subreddit I used
-  // "rereadingwolfepodcast," not "rereadingwolfe" as requested — that's
-  // the name their own Apple Podcasts page lists, which seemed more
-  // trustworthy than a guess. Any of these that 404 will just show up as
-  // a normal [skip] line when you run this — check the actual subreddit
-  // name against reddit.com yourself and fix the entry below if so.
+  // SUBREDDIT NAMES: all confirmed live via real runs against reddit.com.
+  // For Rereading Wolfe's subreddit specifically, "rereadingwolfepodcast"
+  // is used rather than the originally-requested "rereadingwolfe" — that's
+  // the name their own Apple Podcasts page lists. r/alzabosoup was also
+  // requested but confirmed NOT to exist (visited directly — page not
+  // found), so it's not in the list below; if that podcast starts a
+  // subreddit later, add it the same way as the others.
   //
-  // STAGGERED, NOT PARALLEL: a live run against real reddit.com showed 3 of
-  // 4 subreddit requests failing with 429 (Too Many Requests) when fired
-  // simultaneously via Promise.all — only the first got through. That's
-  // Reddit rate-limiting a burst, not evidence those subreddits don't
-  // exist; a 429 tells you nothing about whether the subreddit is real. So
-  // each Reddit source gets an increasing delay (redditDelayMs) before its
-  // request fires — see fetchRedditRss below, which awaits it.
-  //
-  // A first attempt at 3s spacing got the identical result — same 429s,
-  // byte-for-byte same item count — which points away from "our own
-  // requests are bursty" and toward Reddit rate-limiting or blocking
-  // GitHub Actions' whole shared IP pool, a limit our own request pacing
-  // can't do anything about since it's shared across every other Action
-  // in the world hitting reddit.com at the same moment. Bumped to 20s as
-  // a last check before concluding that. If this still doesn't change
-  // anything, the pacing theory is dead and the real fix is a
-  // self-hosted runner (a non-shared IP) rather than more delay-tuning.
+  // STAGGERED, NOT PARALLEL: firing all Reddit requests via Promise.all
+  // simultaneously got most of them rate-limited (429). Real runs showed
+  // Reddit's rate-limit window is roughly a minute — a request delayed 60s+
+  // from the first one succeeds; delayed 20-40s, it doesn't. So each Reddit
+  // source waits an increasing delay (redditDelayMs, 65s apart) before its
+  // request fires — see fetchRedditRss below, which awaits it. This is why
+  // fetching every source takes a few minutes rather than a few seconds;
+  // that's expected, not a hang (see README.md for the full story on how
+  // an actual hang was diagnosed and fixed separately from this).
   ...[
     { name: 'r/genewolfe', subreddit: 'genewolfe' },
-    { name: 'r/rereadingwolfepodcast', subreddit: 'rereadingwolfepodcast' }, // TODO: verify — corrected from requested "rereadingwolfe"
-    { name: 'r/alzabosoup', subreddit: 'alzabosoup' }, // TODO: verify this exists
-    { name: 'r/shittygenewolfe', subreddit: 'shittygenewolfe' }, // confirmed exists — succeeded on a live run
+    { name: 'r/rereadingwolfepodcast', subreddit: 'rereadingwolfepodcast' },
+    { name: 'r/shittygenewolfe', subreddit: 'shittygenewolfe' },
     // Add more the same way — one line each:
     // { name: 'r/subredditname', subreddit: 'subredditname' },
   ].map(({ name, subreddit }, i) => ({
@@ -194,7 +213,7 @@ const SOURCES = [
     series: 'general',
     kind: 'reddit-rss',
     url: `https://www.reddit.com/r/${subreddit}/.rss`,
-    redditDelayMs: i * 65000 // was 20000 — real evidence from a live run: the 60s-delayed request succeeded while 20s/40s still got 429'd, suggesting Reddit's window is around a minute. 65s gives margin.
+    redditDelayMs: i * 65000
   })),
 
   // --- DeviantArt (fan art, no auth needed) ---
@@ -210,6 +229,25 @@ const SOURCES = [
     series: 'general',
     kind: 'deviantart',
     url: 'https://backend.deviantart.com/rss.xml?q=%22gene+wolfe%22&type=deviation'
+  },
+
+  // --- Bluesky (fan art) ---
+  // Unlike Tumblr/ArtStation below, Bluesky's public search API
+  // (public.api.bsky.app) genuinely searches *all* of Bluesky, not just
+  // one account — no login needed for this endpoint. But it searches
+  // *posts*, not art specifically, so this is much noisier than
+  // DeviantArt: most "Gene Wolfe" posts with an image attached are a book
+  // cover photo, a meme, or a screenshotted quote, not fan art. The image-
+  // embed filter in fetchBlueskyArt below is the only thing keeping this
+  // to actual pictures at all — there's no reliable way to filter further
+  // to "this specific image is fan art" from the API alone. Tune `query`
+  // if it's pulling too much noise or missing things.
+  {
+    name: 'Bluesky',
+    type: 'fanart',
+    series: 'general',
+    kind: 'bluesky',
+    query: '"Gene Wolfe" art'
   },
 
   // --- Tumblr (fan art) — only works per-blog, not sitewide ---
@@ -357,6 +395,139 @@ async function fetchDeviantArt(source) {
 }
 
 // ---------------------------------------------------------------------
+// BLUESKY (fan art)
+// ---------------------------------------------------------------------
+// public.api.bsky.app is Bluesky's public AppView — app.bsky.feed.searchPosts
+// works unauthenticated for basic queries (confirmed against the AT
+// Protocol's own lexicon docs). Filtered hard to posts with an image
+// embed (post.embed.images), since this searches all posts, not art
+// specifically — see the comment in SOURCES above for why that still
+// leaves real noise (book photos, memes, quote screenshots) that
+// DeviantArt's dedicated art search doesn't have to deal with.
+//
+// NOT VERIFIED LIVE — same situation as Crossref below: I can't reach
+// public.api.bsky.app from the sandbox this was built in. The endpoint,
+// params, and response shape are from Bluesky's own lexicon source and a
+// real example response quoted in a Bluesky GitHub issue, not a live test
+// here. Check the first real run's actual results before trusting this.
+function blueskyNsfw(post) {
+  const NSFW_LABELS = ['porn', 'sexual', 'nudity', 'graphic-media'];
+  return (post.labels || []).some(l => NSFW_LABELS.includes((l.val || '').toLowerCase()));
+}
+
+async function fetchBlueskyArt(source) {
+  try {
+    const url = 'https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?' + new URLSearchParams({
+      q: source.query,
+      sort: 'latest',
+      limit: '30'
+    });
+    const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(15000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return (data.posts || [])
+      .filter(p => p.embed?.images?.length) // fan art only — drop text-only matches
+      .slice(0, 15)
+      .map(p => {
+        const rkey = (p.uri || '').split('/').pop();
+        const handle = p.author?.handle || 'unknown';
+        const postUrl = `https://bsky.app/profile/${handle}/post/${rkey}`;
+        const text = p.record?.text || '';
+        return {
+          id: makeId(source.name, p.uri),
+          title: text.slice(0, 100) || 'Untitled post',
+          source: source.name,
+          type: 'fanart',
+          series: guessSeries(text, source.series),
+          date: (p.record?.createdAt || p.indexedAt || new Date().toISOString()).slice(0, 10),
+          url: postUrl,
+          desc: text.slice(0, 220),
+          tags: guessTags(text),
+          thumbnail: p.embed.images[0]?.thumb || null,
+          artist: `${p.author?.displayName || handle} (Bluesky)`,
+          artistUrl: `https://bsky.app/profile/${handle}`,
+          postUrl,
+          nsfw: blueskyNsfw(p)
+        };
+      });
+  } catch (err) {
+    console.error(`[skip] ${source.name}: ${err.message}`);
+    return [];
+  }
+}
+
+// ---------------------------------------------------------------------
+// CROSSREF (scholarly papers)
+// ---------------------------------------------------------------------
+// Crossref's REST API (api.crossref.org) is free, keyless JSON — no RSS
+// involved, so this doesn't go through the shared rss-parser instance.
+// query.bibliographic does a fuzzy match across title/author/etc rather
+// than full text, so an occasional false positive (an unrelated "Gene" or
+// "Wolfe" match) is possible; that's an acceptable tradeoff for a feed a
+// person skims rather than something driving automated decisions.
+//
+// Crossref abstracts, when present, come wrapped in JATS XML tags
+// (<jats:p>...</jats:p>) rather than plain text — stripped below.
+function stripJatsTags(str) {
+  return (str || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+// Crossref dates are a { 'date-parts': [[year, month, day]] } structure,
+// and month/day are frequently missing on older or print-only records —
+// pad those down to '01' so every item still gets a valid YYYY-MM-DD for
+// sorting and display, even though the true day is unknown.
+function crossrefDate(work) {
+  const parts = (work.published || work['published-online'] || work['published-print'] || work.created)?.['date-parts']?.[0];
+  if (!parts) return new Date().toISOString().slice(0, 10);
+  const [y, m, d] = parts;
+  return `${y}-${String(m || 1).padStart(2, '0')}-${String(d || 1).padStart(2, '0')}`;
+}
+
+async function fetchCrossref(source) {
+  try {
+    const url = 'https://api.crossref.org/works?' + new URLSearchParams({
+      'query.bibliographic': 'Gene Wolfe',
+      filter: 'type:journal-article',
+      sort: 'published',
+      order: 'desc',
+      rows: '15'
+    });
+    // Crossref explicitly asks identifying requests be sent to their
+    // "polite pool" for better reliability — the opposite ask from
+    // Reddit/DeviantArt, which is why this uses its own descriptive UA
+    // rather than the shared browser one. Add &mailto=you@example.com to
+    // the query above if you want the full polite-pool priority.
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'WhorlWideWeb/1.0 (Gene Wolfe fan content aggregator; https://github.com/)' },
+      signal: AbortSignal.timeout(15000)
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return (data.message?.items || []).map(work => {
+      const title = (work.title?.[0] || 'Untitled').trim();
+      const authors = (work.author || []).map(a => [a.given, a.family].filter(Boolean).join(' ')).filter(Boolean);
+      const journal = work['container-title']?.[0] || null;
+      const abstract = stripJatsTags(work.abstract).slice(0, 220);
+      const byline = authors.length ? `By ${authors.join(', ')}${journal ? ` — ${journal}` : ''}` : (journal || '');
+      return {
+        id: makeId(source.name, work.URL || work.DOI),
+        title,
+        source: journal || source.name,
+        type: 'paper',
+        series: guessSeries(`${title} ${abstract}`, source.series),
+        date: crossrefDate(work),
+        url: work.URL || (work.DOI ? `https://doi.org/${work.DOI}` : null),
+        desc: abstract || byline,
+        tags: guessTags(`${title} ${abstract}`)
+      };
+    }).filter(item => item.url);
+  } catch (err) {
+    console.error(`[skip] ${source.name}: ${err.message}`);
+    return [];
+  }
+}
+
+// ---------------------------------------------------------------------
 // URTH MAILING LIST (Pipermail)
 // ---------------------------------------------------------------------
 // Pipermail's monthly archive has a predictable, unchanged-in-decades HTML
@@ -447,6 +618,8 @@ async function fetchSource(source) {
   if (source.kind === 'pipermail') return fetchPipermail(source);
   if (source.kind === 'reddit-rss') return fetchRedditRss(source);
   if (source.kind === 'deviantart') return fetchDeviantArt(source);
+  if (source.kind === 'bluesky') return fetchBlueskyArt(source);
+  if (source.kind === 'crossref') return fetchCrossref(source);
 
   const feedUrl = source.kind === 'youtube' ? youtubeFeedUrl(source.channelId) : source.url;
   try {

@@ -37,16 +37,14 @@ was still open at the time this was written, no registration needed.
 Reddit has signaled RSS could be locked down next, so if these sources
 start failing later, that's the likely cause.
 
-Four subreddits are configured: r/genewolfe, r/rereadingwolfepodcast,
-r/alzabosoup, and r/shittygenewolfe. **The last three are still unverified**
-— reddit.com isn't reachable from the tools I have available either, so I
-couldn't directly confirm they exist. (For Rereading Wolfe specifically, I
-used `rereadingwolfepodcast` rather than the requested `rereadingwolfe`,
-since that's the name their own Apple Podcasts page lists.) Any that don't
-exist will just show up as an ordinary `[skip]` line — check the actual
-name against reddit.com and fix the `SOURCES` entry if one 404s. Adding
-more subreddits is one line each, in the array right above the Reddit
-source block in `fetch-content.js`.
+Three subreddits are configured: r/genewolfe, r/rereadingwolfepodcast, and
+r/shittygenewolfe — all confirmed live via real runs against reddit.com
+(see "All three originally-unverified subreddits: resolved" further down
+for the full story, including why `r/alzabosoup` isn't in the list).
+Requests to Reddit are deliberately staggered 65 seconds apart rather than
+fired all at once — see the comment above the Reddit source list in
+`fetch-content.js` for why. Adding more subreddits is one line each, in
+that same array.
 
 Two real trade-offs versus the JSON API:
 - **No thumbnails.** Reddit's RSS doesn't expose a usable image field, so
@@ -113,7 +111,7 @@ A run with timing enabled showed exactly what was going on:
   still got `429`. That's a real pattern — Reddit's rate-limit window looks
   to be somewhere around a minute, not an unconditional IP-pool block after
   all. Bumped the stagger from 20s to 65s per source based on this
-  evidence, which should be enough margin to get all 4 through cleanly.
+  evidence.
 - **The "why is this taking 15+ minutes" mystery had nothing to do with
   Reddit at all.** Every source's own `[timing]` log finished within about
   a minute, but the step itself took 5 minutes — a multi-minute gap of dead
@@ -125,6 +123,31 @@ A run with timing enabled showed exactly what was going on:
   on its own, and `.catch()`s into `process.exit(1)` on failure so errors
   get a proper non-zero exit code too (the bare `main();` call before this
   didn't guarantee that).
+
+### All three originally-unverified subreddits: resolved
+
+With the 65s stagger and the process-exit fix in place, a clean run
+confirmed the last open questions from the very start of this project:
+
+- **`r/rereadingwolfepodcast` — exists.** Succeeded at 65s.
+- **`r/shittygenewolfe` — exists.** Succeeded consistently across two runs.
+- **`r/alzabosoup` — confirmed NOT to exist.** Failed with `403` (not
+  `429`) on two separate runs despite a 130s delay — a `403` on Reddit
+  usually means private/banned/quarantined/gone rather than rate-limited,
+  and visiting the URL directly in a browser confirmed it: page not found.
+  Removed from `SOURCES` entirely rather than left in as a permanent
+  `[skip]` line — no point re-querying a subreddit that's confirmed to not
+  exist on every hourly run. If Alzabo Soup ever starts a subreddit, add it
+  back the same way as the others.
+
+DeviantArt's `403` stayed completely consistent across every run — same
+error, same near-instant (~0.1–0.2s) failure every time, regardless of
+User-Agent or timing changes. That consistency points at IP-range blocking
+of GitHub Actions' shared runner pool specifically, which isn't fixable
+from inside a GitHub-hosted Action. Left the source in `SOURCES` rather
+than removing it, since — unlike a confirmed-nonexistent subreddit — this
+could plausibly work again from a different environment (e.g. a
+self-hosted runner on a non-shared IP) even though it doesn't work here.
 
 ## Fan art: DeviantArt, not Reddit (or INPRNT, or ArtStation)
 
@@ -152,6 +175,49 @@ the way DeviantArt is:
 All three have a commented example in `SOURCES` for adding a *specific*
 known artist/blog by hand — genuinely useful if you know one, not
 something worth guessing at blind.
+
+## Fan art: Bluesky, in addition to DeviantArt
+
+Unlike Tumblr/ArtStation, Bluesky has a genuinely different option: a
+public, unauthenticated search API
+(`public.api.bsky.app/xrpc/app.bsky.feed.searchPosts`) that searches *all*
+of Bluesky for a query, not just one account. Implemented in
+`fetchBlueskyArt` — filtered hard to posts that actually have an image
+embed, since this searches all posts matching the query text, not art
+specifically. That filter is the only thing keeping this to pictures at
+all; there's no way to tell "this image is fan art" from "this image is a
+photo of the book cover" or "this image is an unrelated meme" from the API
+alone, so expect more noise here than from DeviantArt's dedicated art
+search. Tune the `query` in `SOURCES` if it needs adjusting.
+
+Content warnings map from Bluesky's own self-applied labels (`porn`,
+`sexual`, `nudity`, `graphic-media`) to the NSFW blur, the same idea as
+DeviantArt's content-rating field, just a different vocabulary.
+
+**Not verified against the live API** — same situation as Crossref: I
+can't reach `public.api.bsky.app` from the sandbox this was built in. The
+endpoint, params, and response shape come from Bluesky's own lexicon
+source and a real example response quoted in a Bluesky GitHub issue, not a
+live test here. Check the first real run's actual results — both the item
+count and whether they're actually art — before trusting this fully.
+
+## Scholarly papers (Crossref)
+
+Pulls recent journal-article metadata matching "Gene Wolfe" from
+[Crossref](https://www.crossref.org) — the same DOI registry most academic
+publishers use, free and keyless. Deliberately used instead of something
+like the Semantic Scholar API, which is excellent but skews hard toward
+CS/AI coverage; literary scholarship on Wolfe is far more likely to turn up
+in Crossref via journals like *Extrapolation* or *Science Fiction Studies*.
+
+The link Crossref returns is the DOI landing page, which is very often
+paywalled — that's expected, not a bug. The point is surfacing that a paper
+exists, the same as a citation would, not guaranteeing free full-text
+access. **Not verified against the live API** — same situation as the
+subreddits originally were: I can't reach api.crossref.org from the
+sandbox this was built in, so the query and response-parsing are built
+from Crossref's own documentation rather than a real test run. Check the
+first live run's actual item count and titles before trusting this fully.
 
 ## What each item in data.json looks like
 
