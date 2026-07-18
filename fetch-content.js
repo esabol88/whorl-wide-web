@@ -145,18 +145,48 @@ const SOURCES = [
   // expected and fine here: the goal is to surface *that a paper exists*,
   // same as a citation would, not to guarantee free full-text access.
   //
-  // CONFIRMED LIVE: succeeded on a real run, pulled a full 15-item batch.
-  // The connection and parsing work — what's still worth checking
-  // periodically is result *relevance*, since query.bibliographic is a
-  // fuzzy match, not exact: skim actual titles on the live site's Paper
-  // filter now and then for false positives (an unrelated "Gene" or
-  // "Wolfe" match) rather than assuming every result is really about him.
+  // CONFIRMED LIVE, then confirmed broken in a specific way: the
+  // connection works, but query.bibliographic turned out to be too fuzzy
+  // to trust — a real run returned a feed full of unrelated genetics
+  // papers ("Gene Expression," "IL13 and IL18 Gene," etc.), because
+  // Crossref has no exact-phrase support (confirmed against their own
+  // issue tracker) and was matching on the common word "gene" alone.
+  // Fixed in fetchCrossref below: fetch a much wider candidate pool, then
+  // hard-filter to results that actually contain "wolfe" in the title or
+  // abstract — a far rarer, more specific token than "gene," which is
+  // what actually enforces relevance here, not the query itself. Tradeoff
+  // worth knowing: a genuine Wolfe paper whose title/abstract never
+  // literally says "Wolfe" would get filtered out too. That's an
+  // acceptable trade — a missed real paper is a much smaller problem than
+  // a feed full of unrelated genetics research.
   {
     name: 'Crossref (scholarly papers)',
     type: 'paper',
     series: 'general',
     kind: 'crossref'
   },
+
+  // --- Patreon (specific tracked creators — see fetchPatreon above) ---
+  // Empty by default — add creators you specifically want tracked, one
+  // line each. Each needs the creator's numeric Patreon ID, not their
+  // username; there's no simple username-to-ID lookup, it has to come
+  // from viewing the creator's actual Patreon page. Two ways to find it:
+  //   1. View page source on their Patreon page, search for
+  //      "https://www.patreon.com/api/user/" — the number right after it
+  //      is the ID.
+  //   2. On their page, open the browser console and type:
+  //      patreon.bootstrap.campaign.data.relationships.creator.data.id
+  // Example shape once you have one (Rereading Wolfe is the obvious first
+  // candidate given the Start Here reading-order link elsewhere on this
+  // site, but I don't have their numeric ID — it isn't something search
+  // engines index, has to come from the steps above):
+  // {
+  //   name: 'Rereading Wolfe (Patreon)',
+  //   type: 'article',
+  //   series: 'general',
+  //   kind: 'patreon',
+  //   creatorId: 'PUT_THE_NUMERIC_ID_HERE'
+  // },
 
   // --- Urth Mailing List (urth.net) ---
   // No RSS feed exists (it runs on Mailman/Pipermail, ~25 years old, never
@@ -200,6 +230,18 @@ const SOURCES = [
   // fetching every source takes a few minutes rather than a few seconds;
   // that's expected, not a hang (see README.md for the full story on how
   // an actual hang was diagnosed and fixed separately from this).
+  //
+  // TOP, NOT EVERYTHING: this deliberately uses each subreddit's /top/.rss
+  // (with a time window) instead of the bare /.rss feed. Reddit's plain RSS
+  // never exposes the actual score number — that's still true — but /top/
+  // is sorted using Reddit's own real vote data server-side before it ever
+  // reaches us, so the *ranking* itself is a genuine engagement signal even
+  // though we never see the raw count. Practically: bare /.rss pulls
+  // whatever's merely recent; /top/.rss?t=month pulls whatever actually
+  // stood out relative to everything else posted that month. `topWindow`
+  // below is the time filter (hour/day/week/month/year/all) — month is a
+  // reasonable default for a niche fandom subreddit that doesn't post
+  // often enough for "week" to reliably surface anything.
   ...[
     { name: 'r/genewolfe', subreddit: 'genewolfe' },
     { name: 'r/rereadingwolfepodcast', subreddit: 'rereadingwolfepodcast' },
@@ -211,7 +253,7 @@ const SOURCES = [
     type: 'discussion',
     series: 'general',
     kind: 'reddit-rss',
-    url: `https://www.reddit.com/r/${subreddit}/.rss`,
+    url: `https://www.reddit.com/r/${subreddit}/top/.rss?t=month`,
     redditDelayMs: i * 65000
   })),
 
@@ -283,7 +325,92 @@ const SOURCES = [
   // see real content without running an actual browser (a much heavier
   // tool than anything else in this file). Not included.
 
-  // --- Any blog/site with an RSS feed ---
+  // --- "Wolf" by radicaledward (Substack) ---
+  // Not a dedicated Wolfe blog — it's a general personal newsletter
+  // (games, a parenting podcast, serialized fiction, thousands of
+  // subscribers) that happened to run a chapter-by-chapter Book of the
+  // New Sun read as one section, now on hiatus. Rather than exclude it
+  // for being general-interest, requireKeyword scopes it down to just the
+  // posts that actually mention Wolfe — same fix as Crossref's "must
+  // contain 'wolfe'" filter, applied here via the generic mechanism above
+  // instead of a one-off. Hiatus means don't expect much *new* here, but
+  // the archive itself (well into The Claw of the Conciliator) will
+  // surface correctly whenever this does eventually resume.
+  {
+    name: 'Wolf (radicaledward)',
+    type: 'article',
+    series: 'new',
+    kind: 'rss',
+    url: 'https://radicaledward.substack.com/feed',
+    requireKeyword: 'wolfe'
+  },
+
+  // --- Ultan's Library (ultan.org.uk) ---
+  // A WordPress-based site wholly dedicated to Wolfe scholarship since
+  // 2000, edited by Jonathan Laidlow and Nigel Price — essays, reviews,
+  // bibliographical info, occasional news. Confirmed WordPress (standard
+  // "Powered by WordPress" footer), so /feed/ should be the real RSS
+  // endpoint the same way it is for any WordPress site — not individually
+  // fetch-tested against the live feed itself, though, so treat this the
+  // same as the other "confirm on first real run" sources.
+  {
+    name: "Ultan's Library",
+    type: 'article',
+    series: 'new', // most of the archive is New Sun-focused, though it does cover the wider Urth Cycle
+    kind: 'rss',
+    url: 'https://ultan.org.uk/feed/'
+  },
+
+  // --- Reactor (reactormag.com, formerly Tor.com) — Gene Wolfe tag ---
+  // Reactor is a major, professional SFF outlet — pulling their whole
+  // front-page feed would be almost entirely non-Wolfe content, so this
+  // uses their Gene Wolfe tag archive specifically
+  // (reactormag.com/tag/gene-wolfe/), which is real editorial coverage by
+  // named critics (Brian Evenson, Fabio Fernandes, and others), not
+  // reader-submitted content. Confirmed this tag-scoped feed pattern
+  // works on this exact site (a comparable reactormag.com/tag/.../feed
+  // URL showed up independently for a different tag), so higher
+  // confidence than most "not verified live" sources in this file, but
+  // still worth checking against the first real run.
+  {
+    name: 'Reactor',
+    type: 'article',
+    series: 'new',
+    kind: 'rss',
+    url: 'https://reactormag.com/tag/gene-wolfe/feed/'
+  },
+
+  // --- Martin Crookall's blog ---
+  // Real, substantial Wolfe coverage over the years, but the blog spans
+  // many subjects. Originally thought this needed a Gene-Wolfe-specific
+  // tag URL the way Reactor did — but requireKeyword makes that
+  // unnecessary: same fix as Wolf above, applied to the blog's plain feed
+  // instead of hunting for a tag archive that may not even exist.
+  // mbc1955.wordpress.com — confirmed WordPress, so /feed/ should be real,
+  // same confidence level as Ultan's Library's feed.
+  {
+    name: 'Martin Crookall',
+    type: 'article',
+    series: 'general',
+    kind: 'rss',
+    url: 'https://mbc1955.wordpress.com/feed/',
+    requireKeyword: 'wolfe'
+  },
+
+  // --- Michael Andre-Driussi's Goodreads author blog — promising, unconfirmed ---
+  // Andre-Driussi (Lexicon Urthus — already on the Reference Shelf) is
+  // actively posting real Wolfe analysis here as recently as this year,
+  // tagged "gene-wolfe" and "book-of-the-new-sun" — genuinely exciting
+  // find. But I could not confirm Goodreads exposes RSS for an
+  // individual author's blog specifically (their per-shelf book RSS is
+  // real and well-documented; their blog/"News" RSS is a different,
+  // murkier feature — one direct account from someone who looked into
+  // this exact question says Goodreads' own blog section has no RSS at
+  // all). Not confident enough to wire in a guessed URL. Worth checking
+  // by hand: visit https://www.goodreads.com/author/show/52075 and look
+  // for an RSS link on the blog tab; if one exists, it's a strong add.
+
+  // --- Any other blog/site with an RSS feed ---
   // {
   //   name: 'Some Wolfe Blog',
   //   type: 'article',
@@ -327,22 +454,88 @@ function guessSeries(text, fallback) {
 // expose any of that as a usable field, so there's nothing to fake here.
 function delay(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
 
+// Reddit's RSS entries carry a rendered HTML snippet per post (rss-parser
+// exposes it as item.content, separate from the plain-text
+// item.contentSnippet) — for link/image posts, that snippet embeds an
+// <img> thumbnail. Extracting it is how this tells "someone posted a
+// picture" apart from "someone posted a text discussion," using the same
+// RSS feed for both rather than needing a separate art-specific source.
+//
+// NOT VERIFIED LIVE — I can't reach reddit.com from the sandbox this was
+// built in, so this is built from the documented/observed shape of
+// Reddit's RSS output, not a real test run. Check the first live run:
+// does the Fan Art filter actually show real images pulled from Reddit,
+// or does nothing show up (meaning the <img> extraction didn't match)?
+function extractRedditThumbnail(html) {
+  const match = (html || '').match(/<img[^>]+src="([^"]+)"/i);
+  return match ? match[1].replace(/&amp;/g, '&') : null;
+}
+
+// Re-examining the "Reddit's RSS has no author field" claim rather than
+// taking it as settled — it was inherited from the original project
+// handoff, not verified firsthand. Reddit's feed is Atom, and Atom
+// entries commonly carry <author><name>/u/username</name></author>,
+// which rss-parser normalizes into item.creator by default; this was
+// simply never checked before. Two independent signals, tried in order:
+//   1. item.creator — the structured field, if Reddit actually populates it.
+//   2. A "submitted by /u/username" pattern in the same embedded content
+//      HTML already used for thumbnail extraction — Reddit's rendered
+//      snippet typically includes this as visible text.
+// Falls back to null (→ "Unknown artist") only if neither is present.
+//
+// NOT VERIFIED LIVE — same caveat as everything else Reddit-related built
+// in this sandbox: can't reach reddit.com to confirm which signal (if
+// either) actually fires. Check the next live run's Fan Art cards for
+// real usernames instead of "Unknown artist."
+function extractRedditAuthor(item) {
+  const creator = (item.creator || item.author || '').replace(/^\/?u\//, '').trim();
+  if (creator) return creator;
+  const match = (item.content || '').match(/\/u\/([\w-]+)/);
+  return match ? match[1] : null;
+}
+
+// Reddit's RSS gives no structured content-rating field the way
+// DeviantArt's media:rating does — this is a weak, best-effort fallback:
+// flag as NSFW only if the post visibly self-labels as such in its own
+// title. This WILL miss real NSFW content that isn't self-tagged; it's
+// not a substitute for a real rating field, because Reddit's RSS simply
+// doesn't have one to check. Worth specifically watching once this is
+// live, given what's at stake if it under-flags something.
+function redditTitleNsfw(title) {
+  return /\bnsfw\b/i.test(title || '');
+}
+
 async function fetchRedditRss(source) {
   try {
     if (source.redditDelayMs) await delay(source.redditDelayMs);
     const feed = await parser.parseURL(source.url);
-    return feed.items.slice(0, 15).map(item => ({
-      id: makeId(source.name, item.link),
-      title: (item.title || 'Untitled').trim(),
-      source: source.name,
-      type: source.type,
-      series: guessSeries(item.title || '', source.series),
-      date: (item.isoDate || item.pubDate || new Date().toISOString()).slice(0, 10),
-      url: item.link,
-      desc: (item.contentSnippet || '').slice(0, 220),
-      tags: guessTags(`${item.title || ''} ${item.contentSnippet || ''}`),
-      thumbnail: null // not available via Reddit's RSS — see comment above
-    }));
+    // 6, not 15 — /top/.rss already filters for quality, but capping the
+    // count too keeps a niche subreddit's whole month of "top" posts from
+    // still outnumbering every other source in the feed by sheer volume.
+    return feed.items.slice(0, 6).map(item => {
+      const title = (item.title || 'Untitled').trim();
+      const thumbnail = extractRedditThumbnail(item.content);
+      const isArt = !!thumbnail;
+      const author = isArt ? extractRedditAuthor(item) : null;
+      return {
+        id: makeId(source.name, item.link),
+        title,
+        source: source.name,
+        type: isArt ? 'fanart' : source.type,
+        series: guessSeries(title, source.series),
+        date: (item.isoDate || item.pubDate || new Date().toISOString()).slice(0, 10),
+        url: item.link,
+        desc: (item.contentSnippet || '').slice(0, 220),
+        tags: guessTags(`${title} ${item.contentSnippet || ''}`),
+        thumbnail,
+        ...(isArt ? {
+          artist: author ? `u/${author} (Reddit)` : 'Unknown artist (via Reddit)',
+          artistUrl: author ? `https://www.reddit.com/user/${author}` : null,
+          postUrl: item.link,
+          nsfw: redditTitleNsfw(title)
+        } : {})
+      };
+    });
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
     return [];
@@ -469,8 +662,9 @@ async function fetchBlueskyArt(source) {
 // person skims rather than something driving automated decisions.
 //
 // Crossref abstracts, when present, come wrapped in JATS XML tags
-// (<jats:p>...</jats:p>) rather than plain text — stripped below.
-function stripJatsTags(str) {
+// (<jats:p>...</jats:p>) rather than plain text. Generic enough (just a
+// tag-stripper) that it's reused for Patreon's HTML post content below too.
+function stripHtmlTags(str) {
   return (str || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
@@ -492,7 +686,9 @@ async function fetchCrossref(source) {
       filter: 'type:journal-article',
       sort: 'published',
       order: 'desc',
-      rows: '15'
+      rows: '50' // fetch a wide pool — query.bibliographic is fuzzy/tokenized (Crossref
+                 // has confirmed no exact-phrase support), so most candidates get filtered
+                 // out below; 15 wasn't enough of a pool to reliably find real matches in
     });
     // Crossref explicitly asks identifying requests be sent to their
     // "polite pool" for better reliability — the opposite ask from
@@ -505,22 +701,104 @@ async function fetchCrossref(source) {
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    return (data.message?.items || []).map(work => {
-      const title = (work.title?.[0] || 'Untitled').trim();
-      const authors = (work.author || []).map(a => [a.given, a.family].filter(Boolean).join(' ')).filter(Boolean);
-      const journal = work['container-title']?.[0] || null;
-      const abstract = stripJatsTags(work.abstract).slice(0, 220);
-      const byline = authors.length ? `By ${authors.join(', ')}${journal ? ` — ${journal}` : ''}` : (journal || '');
+    return (data.message?.items || [])
+      .map(work => {
+        const title = (work.title?.[0] || 'Untitled').trim();
+        const authors = (work.author || []).map(a => [a.given, a.family].filter(Boolean).join(' ')).filter(Boolean);
+        const journal = work['container-title']?.[0] || null;
+        const abstract = stripHtmlTags(work.abstract).slice(0, 220);
+        const byline = authors.length ? `By ${authors.join(', ')}${journal ? ` — ${journal}` : ''}` : (journal || '');
+        return {
+          id: makeId(source.name, work.URL || work.DOI),
+          title,
+          source: journal || source.name,
+          type: 'paper',
+          series: guessSeries(`${title} ${abstract}`, source.series),
+          date: crossrefDate(work),
+          url: work.URL || (work.DOI ? `https://doi.org/${work.DOI}` : null),
+          desc: abstract || byline,
+          tags: guessTags(`${title} ${abstract}`),
+          _searchText: `${title} ${abstract}`.toLowerCase() // used for the filter below, not kept on the final item
+        };
+      })
+      // The real filter: query.bibliographic being fuzzy means a plain
+      // "Gene Wolfe" search ranks any paper containing the common word
+      // "gene" (genetics, gene expression, etc.) as a loose match even
+      // with zero connection to the author — confirmed live, this was
+      // returning entirely unrelated medical/genetics papers. "Wolfe" is
+      // a far rarer token, so requiring it specifically is what actually
+      // enforces relevance here, not the query itself.
+      .filter(item => item._searchText.includes('wolfe') && item.url)
+      .slice(0, 15)
+      .map(({ _searchText, ...item }) => item);
+  } catch (err) {
+    console.error(`[skip] ${source.name}: ${err.message}`);
+    return [];
+  }
+}
+
+// ---------------------------------------------------------------------
+// PATREON (specific tracked creators — not a sitewide search)
+// ---------------------------------------------------------------------
+// Patreon has no official public feed for a creator's general posts — its
+// "Public RSS" feature is opt-in, per-creator, and audio-podcast-episodes
+// only, so it wouldn't cover a text/announcement post even if a creator
+// enabled it. This instead uses the same undocumented internal API
+// Patreon's own website calls to load a creator's page — reverse-
+// engineered by a few open-source projects (patreon-rss, patreon-feed),
+// not something Patreon publishes or supports for third parties. This is
+// meaningfully more fragile than every other source in this file: no
+// stability guarantee, could change shape or get blocked without notice,
+// the way an officially-documented API wouldn't. Scoped deliberately to a
+// fixed list of creators by numeric ID (see SOURCES below), not a
+// sitewide search — Patreon doesn't offer sitewide search via this API
+// even if we wanted it.
+//
+// Paid/members-only posts still come through with a title and link even
+// without auth — their `content` is typically empty, handled below by
+// falling back to a "members-only" note rather than a blank card, same
+// spirit as Crossref surfacing a paywalled DOI link.
+//
+// NOT VERIFIED LIVE — I can't reach api.patreon.com from the sandbox this
+// was built in. Built from a real, working open-source implementation's
+// source code, not a guess, but still needs a real run to confirm.
+async function fetchPatreon(source) {
+  try {
+    const fields = {
+      post: ['title', 'content', 'published_at', 'url', 'is_paid'],
+      user: ['full_name', 'url']
+    };
+    const params = new URLSearchParams({ 'json-api-version': '1.0' });
+    Object.entries(fields).forEach(([type, list]) => params.append(`fields[${type}]`, list.join(',')));
+    params.append('filter[is_by_creator]', 'true');
+    params.append('filter[is_following]', 'false');
+    params.append('filter[creator_id]', source.creatorId);
+    params.append('filter[contains_exclusive_posts]', 'true');
+    params.append('page[cursor]', 'null');
+
+    const res = await fetch(`https://api.patreon.com/stream?${params.toString()}`, {
+      headers: { 'User-Agent': USER_AGENT },
+      signal: AbortSignal.timeout(15000)
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return (data.data || []).slice(0, 10).map(item => {
+      const a = item.attributes || {};
+      const title = (a.title || 'Untitled post').trim();
+      const content = stripHtmlTags(a.content);
+      const desc = content
+        ? content.slice(0, 220)
+        : (a.is_paid ? 'Members-only post — view on Patreon for the full text.' : '');
       return {
-        id: makeId(source.name, work.URL || work.DOI),
+        id: makeId(source.name, a.url),
         title,
-        source: journal || source.name,
-        type: 'paper',
-        series: guessSeries(`${title} ${abstract}`, source.series),
-        date: crossrefDate(work),
-        url: work.URL || (work.DOI ? `https://doi.org/${work.DOI}` : null),
-        desc: abstract || byline,
-        tags: guessTags(`${title} ${abstract}`)
+        source: source.name,
+        type: 'article',
+        series: guessSeries(`${title} ${content}`, source.series),
+        date: (a.published_at || new Date().toISOString()).slice(0, 10),
+        url: a.url || null,
+        desc,
+        tags: guessTags(`${title} ${content}`)
       };
     }).filter(item => item.url);
   } catch (err) {
@@ -622,22 +900,33 @@ async function fetchSource(source) {
   if (source.kind === 'deviantart') return fetchDeviantArt(source);
   if (source.kind === 'bluesky') return fetchBlueskyArt(source);
   if (source.kind === 'crossref') return fetchCrossref(source);
+  if (source.kind === 'patreon') return fetchPatreon(source);
 
   const feedUrl = source.kind === 'youtube' ? youtubeFeedUrl(source.channelId) : source.url;
   try {
     const feed = await parser.parseURL(feedUrl);
-    return feed.items.slice(0, 8).map(item => ({
-      id: makeId(source.name, item.link),
-      title: item.title || 'Untitled',
-      source: source.name,
-      type: source.type,
-      series: guessSeries(`${item.title} ${item.contentSnippet || ''}`, source.series),
-      date: (item.isoDate || item.pubDate || new Date().toISOString()).slice(0, 10),
-      url: item.link,
-      desc: (item.contentSnippet || '').slice(0, 220),
-      tags: guessTags(`${item.title || ''} ${item.contentSnippet || ''}`),
-      thumbnail: extractThumbnail(item, feed, source)
-    }));
+    return feed.items
+      // Some sources are general-interest, not Wolfe-dedicated — same
+      // situation Crossref was in with "gene" matching unrelated genetics
+      // papers. requireKeyword filters a source's *own* items down to the
+      // ones actually relevant, the same fix, applied generically instead
+      // of writing a one-off for each noisy source. Optional — sources
+      // without it (the dedicated ones) are unaffected.
+      .filter(item => !source.requireKeyword ||
+        `${item.title || ''} ${item.contentSnippet || ''}`.toLowerCase().includes(source.requireKeyword.toLowerCase()))
+      .slice(0, 8)
+      .map(item => ({
+        id: makeId(source.name, item.link),
+        title: item.title || 'Untitled',
+        source: source.name,
+        type: source.type,
+        series: guessSeries(`${item.title} ${item.contentSnippet || ''}`, source.series),
+        date: (item.isoDate || item.pubDate || new Date().toISOString()).slice(0, 10),
+        url: item.link,
+        desc: (item.contentSnippet || '').slice(0, 220),
+        tags: guessTags(`${item.title || ''} ${item.contentSnippet || ''}`),
+        thumbnail: extractThumbnail(item, feed, source)
+      }));
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
     return [];

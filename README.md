@@ -46,12 +46,21 @@ fired all at once — see the comment above the Reddit source list in
 `fetch-content.js` for why. Adding more subreddits is one line each, in
 that same array.
 
-Two real trade-offs versus the JSON API:
-- **No thumbnails.** Reddit's RSS doesn't expose a usable image field, so
-  Reddit items always show the fallback icon tile.
-- **No attention filtering.** RSS doesn't expose vote counts, so this pulls
-  whatever Reddit's RSS returns by default (its own front-page sort) rather
-  than an explicit "only threads above N upvotes" cutoff.
+One real trade-off versus the JSON API remains: **no thumbnails.** Reddit's
+RSS doesn't expose a usable image field, so Reddit items always show the
+fallback icon tile.
+
+The other original trade-off — no attention filtering, since RSS never
+exposes raw vote counts — turned out to have a real fix: each subreddit
+uses `/top/.rss?t=month` instead of the default feed. Reddit computes that
+ranking from real vote data server-side before the feed ever reaches us,
+so the *ordering* is a genuine engagement signal even though the raw score
+number is still invisible to us — "top of the month" versus "whatever's
+merely recent." Capped at 6 items per subreddit rather than 15, too, so a
+slow month's worth of "top" posts doesn't still outnumber every other
+source by sheer volume. `t=month` is tunable to `week`/`year`/etc. in the
+Reddit source list if a subreddit's posting frequency wants a different
+window.
 
 ### A note from the first live run
 
@@ -149,21 +158,61 @@ than removing it, since — unlike a confirmed-nonexistent subreddit — this
 could plausibly work again from a different environment (e.g. a
 self-hosted runner on a non-shared IP) even though it doesn't work here.
 
-## Fan art: DeviantArt, not Reddit (or INPRNT, or ArtStation)
+## Fan art: DeviantArt, Bluesky, and now Reddit
 
-Reddit's RSS can't reliably tell you "this post is an image" or who made
-it, so fan art is pulled from **DeviantArt** instead
-(`backend.deviantart.com/rss.xml`), which is a public search-as-RSS
-endpoint — no login needed. It gives real structured data Reddit's RSS
-doesn't: an actual image URL, the artist's username (attribution!), and a
-content rating (`adult`/`nonadult`) that drives the NSFW blur directly,
-rather than the title-text guess Reddit would've required.
+Fan art comes from three places. **DeviantArt**
+(`backend.deviantart.com/rss.xml`) is the most structured — a public
+search-as-RSS endpoint, no login needed, with real fields Reddit's RSS
+doesn't have: an actual image URL, the artist's username for attribution,
+and a content rating (`adult`/`nonadult`) that drives the NSFW blur
+directly.
 
-The default query searches for `"gene wolfe"` — tune it in `SOURCES` if it's
-pulling irrelevant results or missing good ones.
+The default DeviantArt query searches for `"gene wolfe"` — tune it in
+`SOURCES` if it's pulling irrelevant results or missing good ones.
 
-I checked two other likely candidates and neither can be a sitewide source
-the way DeviantArt is:
+**Reddit fan art** was added after noticing r/genewolfe actually gets a
+decent amount of it — detected within the same `/top/.rss` feed already
+used for discussion threads, not a separate source. Reddit's RSS embeds a
+rendered HTML snippet per post (exposed as `item.content` by rss-parser,
+separate from the plain-text `item.contentSnippet`); for image/link posts
+that snippet includes an `<img>` thumbnail. `extractRedditThumbnail` in
+`fetch-content.js` pulls that out, and any post where it finds one gets
+reclassified from `discussion` to `fanart` automatically — same feed,
+split by content rather than a second fetch.
+
+One real gap versus DeviantArt, and one that turned out fixable on a
+second look:
+- **Artist attribution was fixed, not accepted.** The original "Reddit's
+  RSS doesn't expose the poster's username" claim was inherited from the
+  very first project handoff and never actually re-verified against real
+  code — on a closer look, Reddit's feed is Atom format, and Atom entries
+  commonly carry a structured `<author><name>` field, which `rss-parser`
+  normalizes into `item.creator` automatically. `extractRedditAuthor` in
+  `fetch-content.js` now tries that first, and falls back to a
+  `/u/username` text pattern in the same embedded content HTML already
+  used for thumbnail extraction if the structured field isn't populated.
+  Still falls back to "Unknown artist" if genuinely neither signal is
+  present — but that's now a real fallback for missing data, not a
+  permanent ceiling.
+- **No real NSFW signal.** There's no content-rating field to check the
+  way DeviantArt's `media:rating` provides. The fallback
+  (`redditTitleNsfw`) only flags a post if its own title literally
+  contains the word "nsfw" — a weak, best-effort heuristic that **will
+  miss real NSFW content that isn't self-tagged in the title.** Worth
+  actually watching once this is live, given what's at stake if it
+  under-flags something the Spoiler Shield's NSFW blur was supposed to
+  catch.
+
+**Not verified against the live API** — same situation as Crossref and
+Bluesky originally were: I can't reach reddit.com from the sandbox this
+was built in, so both the `<img>`-extraction and the new author-extraction
+logic are built from the documented shape of Reddit's RSS output, not a
+real test run. Check the first live
+run: does the Fan Art filter actually show real Reddit-sourced images, or
+does nothing show up (meaning the extraction didn't match anything)?
+
+I also checked two other likely fan-art candidates, and neither can be a
+sitewide source the way DeviantArt is:
 - **ArtStation** has RSS, but only per-artist (`username.artstation.com/rss`)
   — no sitewide search/tag feed exists. ArtStation's own team has said
   algorithmic feeds (trending, search) don't work well as RSS.
@@ -214,12 +263,134 @@ in Crossref via journals like *Extrapolation* or *Science Fiction Studies*.
 The link Crossref returns is the DOI landing page, which is very often
 paywalled — that's expected, not a bug. The point is surfacing that a paper
 exists, the same as a citation would, not guaranteeing free full-text
-access. **Confirmed working on a live run** — pulled a full 15-item batch
-cleanly. What's still worth periodically checking is result *relevance*
-rather than the connection itself: `query.bibliographic` is a fuzzy match,
-not exact, so skim actual titles on the site's Paper filter now and then
-for false positives (an unrelated "Gene" or "Wolfe" match) rather than
-assuming every result is really about him.
+access.
+
+**The connection worked on the first live run, but the results didn't** —
+the feed filled up with completely unrelated genetics papers ("Gene
+Expression," "IL13 and IL18 Gene," and similar). Cause: Crossref's
+`query.bibliographic` has no exact-phrase support (confirmed against their
+own issue tracker), so a "Gene Wolfe" query was matching on the common
+word "gene" alone, with no real requirement that "Wolfe" appear anywhere.
+Fixed: `fetchCrossref` now pulls a much wider candidate pool (50 instead of
+15) and hard-filters to results that actually contain "wolfe" in the title
+or abstract — a far rarer, more specific token, which is what actually
+enforces relevance here, not the query. Worth knowing: a genuine Wolfe
+paper whose title/abstract never literally says "Wolfe" would now get
+filtered out too — an acceptable trade, since a missed real paper is a much
+smaller problem than a feed full of unrelated genetics research.
+
+## Patreon (specific tracked creators, not a sitewide search)
+
+Empty by default — this is opt-in, not automatic. Patreon has no official
+public feed for a creator's general posts (its "Public RSS" feature is
+opt-in per creator and audio-podcast-episodes only, so it wouldn't cover
+Rereading Wolfe's text posts even if enabled). What this uses instead is
+the same **undocumented internal API** Patreon's own website calls to load
+a creator's page — the same approach a couple of open-source projects
+(`patreon-rss`, `patreon-feed`) have reverse-engineered, not something
+Patreon publishes or supports for third parties.
+
+**This is meaningfully more fragile than every other source in this
+file.** Everything else here is built against a real, documented,
+supported API or a stable, decades-old HTML structure. This one has no
+stability guarantee at all — it could change shape or get blocked without
+any notice, since Patreon isn't maintaining a contract with third parties
+the way Crossref or Bluesky are. Went ahead with it anyway on request, with
+that tradeoff made explicit rather than glossed over.
+
+**To add a creator**, you need their numeric Patreon ID — not their
+username, there's no simple lookup for it. Two ways to find it:
+1. View page source on their Patreon page, search for
+   `https://www.patreon.com/api/user/` — the number right after it is the
+   ID.
+2. On their page, open the browser console and type:
+   `patreon.bootstrap.campaign.data.relationships.creator.data.id`
+
+Then add one line to the (currently-empty, commented-out example) Patreon
+section in `SOURCES` in `fetch-content.js`. Rereading Wolfe is the obvious
+first candidate given the Start Here reading-order link elsewhere on this
+site, but I don't have their numeric ID — it isn't something search
+engines index.
+
+Paid/members-only posts still come through with a title and a link even
+without authentication — their content field is typically empty, which
+falls back to a plain "Members-only post" note rather than showing a blank
+card, the same spirit as Crossref surfacing a paywalled DOI link.
+
+**Not verified against the live API** — same situation as Crossref and
+Bluesky originally were: I can't reach api.patreon.com from the sandbox
+this was built in. Built from a real, working open-source implementation's
+source code, not a guess — but still needs a real run (once you've added a
+creator ID) to actually confirm.
+
+## Written Wolfe content beyond Patreon
+
+Prompted by a round of research into where else serious written Wolfe
+content lives, beyond what was already covered. Two real additions, one
+promising lead I didn't wire in, and several deliberate skips — the same
+"don't become an undifferentiated dump" judgment call already made for
+Reddit (top-of-month only) and Bluesky (image-embed filter only).
+
+**Added:**
+- **Ultan's Library** (`ultan.org.uk`) — wholly Wolfe-dedicated since 2000,
+  essays and reviews from real Wolfe scholars, confirmed WordPress so
+  `/feed/` should be the real endpoint. Infrequent (its own most recent
+  visible post was from mid-2024 at the time of writing) but genuine —
+  same category as Alzabo Soup or the Urth Mailing List: real signal, low
+  volume, not a reason to exclude it.
+- **Reactor's Gene Wolfe tag** (`reactormag.com/tag/gene-wolfe/`) — a
+  major professional SFF outlet (formerly Tor.com), scoped to their Gene
+  Wolfe tag specifically rather than their whole front page, which would
+  be almost entirely unrelated content otherwise. Real editorial writing
+  by named critics, not reader submissions.
+- **"Wolf" by radicaledward** (Substack) — not a dedicated Wolfe blog, a
+  general personal newsletter (games, a parenting podcast, serialized
+  fiction, thousands of subscribers) that ran a Book of the New Sun
+  chapter-by-chapter read as one section, now on hiatus. Originally left
+  this off entirely for being general-interest — correctly pushed back on:
+  excluding a whole source because *most* of it is irrelevant throws away
+  the part that isn't, when filtering the noise out is just as available
+  here as it was for Crossref. Added a general mechanism for this rather
+  than a one-off: any RSS source can now set `requireKeyword` in
+  `SOURCES`, and only items whose title/description actually contain that
+  word survive. Wolf uses `requireKeyword: 'wolfe'`. Hiatus means don't
+  expect much *new* here right now, but the existing archive (well into
+  *The Claw of the Conciliator*) will surface correctly, and this'll pick
+  back up on its own if the read resumes.
+- **Martin Crookall's blog** (`mbc1955.wordpress.com`) — same situation
+  and same fix as Wolf: general-subject blog, real Wolfe coverage,
+  `requireKeyword: 'wolfe'` scoping it down. No tag-URL hunting needed
+  once the filter can do the scoping itself — confirmed WordPress, so
+  `/feed/` should be the real endpoint, same confidence as Ultan's
+  Library's.
+
+**Found but not wired in — worth checking by hand:**
+- **Michael Andre-Driussi's Goodreads author blog.** Genuinely exciting —
+  he's the Lexicon Urthus author already on the Reference Shelf, and he's
+  actively posting real Wolfe analysis there, as recently as this year. I
+  couldn't confirm Goodreads exposes RSS for an individual author's blog
+  specifically, though (their per-book-shelf RSS is real and
+  well-documented; the blog/"News" section appears to be a different,
+  RSS-less feature based on someone else's direct account of researching
+  this same question). Didn't want to wire in a guessed URL. Worth five
+  minutes checking by hand: `goodreads.com/author/show/52075` — if there's
+  a real feed, this is a strong add.
+
+**Deliberately not added as automated feeds** (would pull mostly
+unrelated content even with keyword filtering, since Wolfe coverage here
+is a single one-off post rather than an ongoing, findable pattern):
+- **Don Beck's The Reading Room, Synthesized Sunsets, Counter Craft, The
+  Hobbyhorse** — general SFF/literary newsletters that have each published
+  one worthwhile Wolfe essay at some point, not dedicated Wolfe sources.
+  Pulling any of their full feeds would be almost entirely non-Wolfe
+  content for the sake of one good post.
+
+**Added to the Reference Shelf instead of as feeds** (static resources,
+not ongoing publications):
+- **Gwern's Gene Wolfe archive** — a large compiled index of otherwise-
+  scattered interviews and essays.
+- **Newsun's Word Hoard** — Andre-Driussi's free Kindle dictionary
+  overlaying Lexicon Urthus definitions directly onto the New Sun ebooks.
 
 ## What each item in data.json looks like
 
@@ -321,6 +492,49 @@ fetch-content.js tracking anything new. This was the exact failure mode
 visible in a friend's similar site (WoTV Guide) — channels frozen at 30+
 months with nothing in the UI flagging it — so this makes it visible
 instead of silent.
+
+### Date labels now show the year when it's not the current one
+
+A card's date used to always show as bare "MON DAY" with no year. The feed
+is correctly sorted by full date underneath, but once it mixes recent
+items with a quiet source's years-old ones, a bare "MON DAY" label made a
+genuinely correctly-ordered list *look* shuffled — e.g. "JAN 22" sitting
+between two items both labeled "AUG 7" reads as broken chronology unless
+you know one January is 2026 and the other August is 2021. Fixed: the
+label now includes the year whenever it isn't the current calendar year
+(same convention as Gmail or Twitter), so "JAN 22, 2026" and "AUG 7, 2021"
+are each unambiguous at a glance instead of colliding on "MON DAY" alone.
+
+## A UX pass, grounded in specific named principles
+
+Read through Laws of UX, the UX Design Institute's breakdown of the same,
+and Nielsen Norman Group's 10 usability heuristics, then checked the actual
+code against them rather than restyling on vibes. Three genuine gaps found:
+
+- **Fitts's Law** (time to hit a target is a function of its size and
+  distance): the save-star button was a ~19px tap target — 2px of padding
+  around a 15px glyph, on every single card. Well under the ~44px commonly
+  recommended minimum, especially rough on mobile. Now 30×30px with a
+  hover state, same visual glyph size, just a real hit area around it. Tag
+  pills got a smaller version of the same fix (4px→6px vertical padding).
+- **NN/g heuristic #1 (Visibility of System Status) and #6 (Recognition
+  Rather than Recall)**: filtering the feed down gave no count anywhere —
+  you'd have to actually count cards to know how many results you were
+  looking at. The status line now shows "N matching dispatches" whenever
+  any filter is narrowing the view, replacing the freshness message (which
+  isn't the relevant fact anymore once you're mid-filter).
+- **NN/g heuristic #3 (User Control and Freedom)**: five independent
+  filter mechanisms — series, format, character tag, search, saved-only —
+  each had their own individual reset, but no single "start over." A
+  "Reset filters" button now appears next to the result count whenever any
+  filter is active, clearing all five at once.
+
+Not every principle in those three sources applies here — Miller's Law
+(7±2 items in working memory) would argue against the filter row having
+13 simultaneous chip options, for instance, but splitting series and
+format into two visually distinct rows already chunks that choice in a way
+that seemed to make restructuring it not worth the disruption. Mentioned
+for transparency, not silently skipped.
 
 ## Setup
 
