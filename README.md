@@ -329,6 +329,25 @@ a real fix.
 items — consistent, non-zero, no more swinging between a full batch and
 nothing.
 
+**Separately, a real accuracy problem with this source's dates.**
+Pipermail's monthly thread-index page lists subjects and authors, but not
+dates — so every Urth Mailing List item used to just get stamped with
+whatever day the Action happened to run, as an approximation. A direct
+report showed how bad that actually got in practice: a post from June 4th
+displaying as "JUL 18" — six weeks off, not a rounding error. Fixed:
+`fetchMessageDate()` now fetches each kept item's own message page and
+pulls its real date from there, run in parallel across all of them so it
+doesn't meaningfully add to total runtime. Targets Pipermail/Mailman's
+classic italicized email-style timestamp near the top of a message's page
+(e.g. "Wed Jun  4 12:34:56 CDT 2026") — **not verified live**, since
+urth.net isn't reachable from the sandbox this was built in, so the exact
+markup is unconfirmed. Fails safe either way: a page that doesn't match
+the expected pattern just falls back to today's date, the same as before
+this fix existed, rather than breaking. A new debug line
+(`[debug] Urth Mailing List: resolved real dates for N/M items`) shows
+next run whether this actually worked — if it says 0/N, the regex needs
+adjusting against the real markup.
+
 ## Patreon (specific tracked creators, not a sitewide search)
 
 Empty by default — this is opt-in, not automatic. Patreon has no official
@@ -686,6 +705,36 @@ doesn't let a click bypass the Spoiler Shield either: the spoiler overlay
 is a solid, absolutely-positioned layer sitting on top of the card's real
 content in normal stacking order, so it intercepts clicks before they ever
 reach the title link underneath — nothing needed to change there.
+
+## Alzabo Soup links went to a category page, not the episode
+
+Direct report, right after the clickable-cards fix above made this
+actually testable: Alzabo Soup's cards linked to
+`alzabosoup.com/categories/the-book-of-the-short-sun/` — a real page on
+their site, a category archive of every Short Sun episode, described as
+"the playlist," not the specific episode. Their `<link>` field appears to
+be populated with a book-category URL rather than a true per-episode
+permalink.
+
+Added `resolveItemUrl()` to the generic RSS path: for any source with
+`preferGuidUrl: true` set (currently just Alzabo Soup), it tries the
+item's own `<guid>` first, since GUIDs are frequently real permalinks even
+when `<link>` isn't — but only if the guid actually looks like a
+well-formed URL, since plenty of feeds use an opaque non-URL string as
+their guid instead. Falls back to `<link>` either way if the guid isn't
+usable. Every other RSS source is completely unaffected — `preferGuidUrl`
+defaults to unset, which keeps the exact same `item.link` behavior as
+before.
+
+**Not verified live** — couldn't inspect Alzabo Soup's raw RSS XML
+directly to confirm what's actually in their `<guid>` field; both direct
+fetch attempts returned it as binary data rather than parseable text, and
+the domain isn't reachable from the sandbox this was built in either.
+This is a reasoned attempt from strong circumstantial evidence (the
+category-page URL matches the reported behavior exactly), not a confirmed
+fix. Check Alzabo Soup's links by hand after the next real run — if
+they're still pointing at the category page, the guid probably isn't a
+usable URL either, and this needs a different approach.
 
 ## A UX pass, grounded in specific named principles
 

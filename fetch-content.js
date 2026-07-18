@@ -262,7 +262,13 @@ const SOURCES = [
     type: 'podcast',
     series: 'general',
     kind: 'rss',
-    url: 'https://alzabosoup.libsyn.com/rss' // confirmed live — Libsyn-hosted feed
+    url: 'https://alzabosoup.libsyn.com/rss', // confirmed live — Libsyn-hosted feed
+    // Direct report: episode links were routing to a book-category
+    // "playlist" page on their site instead of the specific episode. See
+    // resolveItemUrl above fetchSource's generic RSS handler for the
+    // reasoning — tries <guid> first if it looks like a real URL, an
+    // unverified but reasoned attempt at a fix.
+    preferGuidUrl: true
   },
 
   // --- Scholarly papers (Crossref) ---
@@ -1067,6 +1073,36 @@ function decodeHtmlEntities(str) {
   return str.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 }
 
+// Pipermail's monthly thread-index page lists subjects and authors, but
+// not dates — the reason fetchPipermail used to just stamp every item
+// with today's date as an approximation. A direct report showed how bad
+// that approximation actually was in practice: a post from June 4th
+// showing as "JUL 18," six weeks off, not a rounding error. This fetches
+// each message's own page and pulls its real date instead.
+//
+// NOT VERIFIED LIVE against Urth's actual page structure — urth.net isn't
+// reachable from the sandbox this was built in. Pipermail/Mailman
+// classically renders a message's date as an italicized email-style
+// timestamp near the top of its own page (e.g. "Wed Jun  4 12:34:56 CDT
+// 2026") — the regex below targets that pattern, but if the real markup
+// differs, this fails safe: falls back to today's date exactly like
+// before, it doesn't break or crash. Check real dates against real posts
+// after the next run, the same way every other "not verified live" fix
+// in this file has been confirmed.
+async function fetchMessageDate(url) {
+  try {
+    const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(10000) });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const match = html.match(/<I>\s*([A-Za-z]{3}\s+[A-Za-z]{3}\s+\d{1,2}\s+[\d:]+\s+\d{4})\s*<\/I>/);
+    if (!match) return null;
+    const parsed = new Date(match[1]);
+    return isNaN(parsed.getTime()) ? null : parsed.toISOString().slice(0, 10);
+  } catch {
+    return null;
+  }
+}
+
 async function fetchPipermail(source) {
   try {
     const indexUrl = await findLatestPipermailMonth();
@@ -1087,7 +1123,7 @@ async function fetchPipermail(source) {
         source: source.name,
         type: 'discussion',
         series: guessSeries(subject, source.series),
-        date: new Date().toISOString().slice(0, 10), // approximate — see comment above
+        date: new Date().toISOString().slice(0, 10), // placeholder — replaced below if the real date resolves
         url,
         desc: 'Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.',
         tags: guessTags(subject)
@@ -1100,11 +1136,46 @@ async function fetchPipermail(source) {
     // match count settles which one it actually is, the same diagnostic
     // approach that found the real Crossref bug rather than guessing.
     console.log(`[debug] ${source.name}: ${matches.length} raw thread-index links, ${items.length} unique after dedup`);
-    return items.slice(0, 15); // most recently-listed threads for the month
+    const kept = items.slice(0, 15); // most recently-listed threads for the month
+    // Fetch each kept item's own page in parallel for its real date —
+    // only the ones actually being kept, not the full pre-slice set, to
+    // avoid wasting requests on items that get discarded anyway.
+    let resolvedCount = 0;
+    await Promise.all(kept.map(async item => {
+      const realDate = await fetchMessageDate(item.url);
+      if (realDate) { item.date = realDate; resolvedCount++; }
+    }));
+    console.log(`[debug] ${source.name}: resolved real dates for ${resolvedCount}/${kept.length} items`);
+    return kept;
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
     return [];
   }
+}
+
+// Most RSS feeds' <link> is a genuine per-item permalink, but some podcast
+// hosts populate it with a category/show-level URL instead of the
+// specific episode's own page. Confirmed for Alzabo Soup by direct report:
+// their <link> was routing to a book-specific category archive
+// (alzabosoup.com/categories/the-book-of-the-short-sun/ — a real page on
+// their site) instead of the actual episode, described as "goes to the
+// playlist, not straight to the episode." For sources with
+// preferGuidUrl set, this tries the item's own <guid> first, since GUIDs
+// are more often true permalinks even when <link> isn't — but only if
+// it's actually a well-formed URL, since some feeds use an opaque
+// non-URL string as their guid instead. Falls back to <link> either way
+// if guid isn't usable.
+//
+// NOT VERIFIED LIVE — couldn't inspect Alzabo Soup's raw RSS XML directly
+// to confirm what's actually in their <guid> (fetch tools returned it as
+// binary, and the domain isn't reachable from the sandbox this was built
+// in either). A reasoned attempt from circumstantial evidence, not a
+// confirmed fix — check the next real run's Alzabo Soup links by hand.
+function resolveItemUrl(item, source) {
+  if (source.preferGuidUrl && item.guid && /^https?:\/\//i.test(item.guid)) {
+    return item.guid;
+  }
+  return item.link;
 }
 
 // Pulls a thumbnail out of a parsed RSS item: YouTube's <media:thumbnail>,
@@ -1141,18 +1212,21 @@ async function fetchSource(source) {
       .filter(item => !source.requireKeyword ||
         `${item.title || ''} ${item.contentSnippet || ''}`.toLowerCase().includes(source.requireKeyword.toLowerCase()))
       .slice(0, 8)
-      .map(item => ({
-        id: makeId(source.name, item.link),
-        title: item.title || 'Untitled',
-        source: source.name,
-        type: source.type,
-        series: guessSeries(`${item.title} ${item.contentSnippet || ''}`, source.series),
-        date: (item.isoDate || item.pubDate || new Date().toISOString()).slice(0, 10),
-        url: item.link,
-        desc: (item.contentSnippet || '').slice(0, 220),
-        tags: guessTags(`${item.title || ''} ${item.contentSnippet || ''}`),
-        thumbnail: extractThumbnail(item, feed, source)
-      }));
+      .map(item => {
+        const url = resolveItemUrl(item, source);
+        return {
+          id: makeId(source.name, url),
+          title: item.title || 'Untitled',
+          source: source.name,
+          type: source.type,
+          series: guessSeries(`${item.title} ${item.contentSnippet || ''}`, source.series),
+          date: (item.isoDate || item.pubDate || new Date().toISOString()).slice(0, 10),
+          url,
+          desc: (item.contentSnippet || '').slice(0, 220),
+          tags: guessTags(`${item.title || ''} ${item.contentSnippet || ''}`),
+          thumbnail: extractThumbnail(item, feed, source)
+        };
+      });
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
     return [];
