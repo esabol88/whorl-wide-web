@@ -228,6 +228,10 @@ main{max-width:760px; margin:0 auto; padding:0 24px; display:grid; gap:10px;}
 .body{flex:1; min-width:0;}
 .top{display:flex; justify-content:space-between; gap:10px; align-items:flex-start;}
 .title{ font-weight:650; font-size:16.5px; letter-spacing:-0.01em; color:var(--parchment); margin:0; line-height:1.35; }
+.title a{ color:inherit; text-decoration:none; }
+.title a:hover{ color:var(--rust); text-decoration:underline; }
+a.thumb{ cursor:pointer; }
+a.thumb:hover .thumb-icon{ opacity:0.7; }
 .top-right{ display:flex; align-items:center; gap:8px; flex:0 0 auto; }
 .meta{font-size:11.5px; font-weight:600; color:var(--muted); white-space:nowrap; letter-spacing:.02em;}
 .save-btn{
@@ -711,13 +715,18 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
      or a podcast's itunes:image). Falls back to the tinted icon tile if
      there isn't one, or if the image fails to load. Fan art thumbnails are
      manually added for now — see the README. */
-  const thumbHtml = `
-    <div class="thumb ${blurred ? 'nsfw' : ''}">
+  const thumbInner = `
       <div class="thumb-icon">${ICONS[d.type]}</div>
       ${d.thumbnail ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.remove()">` : ''}
       ${blurred ? `<div class="nsfw-badge" data-nsfw-reveal="${d.id}"><span class="warn">&#128683;</span><span class="lbl">Sensitive&nbsp;content</span></div>` : ''}
-      ${isNew ? '<span class="new-dot"></span>' : ''}
-    </div>`;
+      ${isNew ? '<span class="new-dot"></span>' : ''}`;
+  // Blurred thumbnails stay a plain div — the reveal badge inside needs
+  // its own click to work without navigating away first. A missing URL
+  // (shouldn't happen; every fetcher filters these out, but be defensive)
+  // also falls back to non-clickable rather than a broken href="undefined".
+  const thumbHtml = (blurred || !d.url)
+    ? `<div class="thumb ${blurred ? 'nsfw' : ''}">${thumbInner}</div>`
+    : `<a class="thumb" href="${d.url}" target="_blank" rel="noopener">${thumbInner}</a>`;
 
   const attributionHtml = d.type === 'fanart' ? `
     <div class="attribution">
@@ -738,7 +747,7 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
       ${thumbHtml}
       <div class="body">
         <div class="top">
-          <p class="title">${d.title}</p>
+          <p class="title">${d.url ? `<a href="${d.url}" target="_blank" rel="noopener">${d.title}</a>` : d.title}</p>
           <div class="top-right">
             <span class="meta">${dateLabel}</span>
             <button class="save-btn ${isSaved?'saved':''}" data-save="${d.id}">${isSaved ? '&#9733;' : '&#9734;'}</button>

@@ -37,14 +37,17 @@ was still open at the time this was written, no registration needed.
 Reddit has signaled RSS could be locked down next, so if these sources
 start failing later, that's the likely cause.
 
-Three subreddits are configured: r/genewolfe, r/rereadingwolfepodcast, and
-r/shittygenewolfe — all confirmed live via real runs against reddit.com
-(see "All three originally-unverified subreddits: resolved" further down
-for the full story, including why `r/alzabosoup` isn't in the list).
-Requests to Reddit are deliberately staggered 65 seconds apart rather than
-fired all at once — see the comment above the Reddit source list in
-`fetch-content.js` for why. Adding more subreddits is one line each, in
-that same array.
+Two subreddits are currently configured: r/genewolfe and
+r/rereadingwolfepodcast (see "All three originally-unverified subreddits:
+resolved" further down for the full story of how these were confirmed,
+and why `r/alzabosoup` isn't in the list). A third, r/shittygenewolfe, was
+confirmed live the same way but was removed later on direct feedback that
+it wasn't adding value — a meme/joke subreddit contributing mostly noise
+once it was actually seen in the live feed regularly, not something
+obvious from just confirming it existed. Requests to Reddit are
+deliberately staggered 65 seconds apart rather than fired all at once —
+see the comment above the Reddit source list in `fetch-content.js` for
+why. Adding more subreddits is one line each, in that same array.
 
 One real trade-off versus the JSON API remains: **no thumbnails.** Reddit's
 RSS doesn't expose a usable image field, so Reddit items always show the
@@ -660,6 +663,29 @@ you know one January is 2026 and the other August is 2021. Fixed: the
 label now includes the year whenever it isn't the current calendar year
 (same convention as Gmail or Twitter), so "JAN 22, 2026" and "AUG 7, 2021"
 are each unambiguous at a glance instead of colliding on "MON DAY" alone.
+
+## Cards weren't actually clickable — a real, significant bug
+
+Every card had a title, a thumbnail, tags, a save button — but no actual
+link to the thing it was about. Nothing in `cardHtml()` ever connected a
+card to `d.url` except the fan-art attribution row, which only exists on
+`fanart`-type cards. For every video, podcast, discussion, article, and
+paper, there was simply no way to get from the card to the actual content
+by clicking anything on it. This had been true since the very first
+version of this site, missed the whole time because testing focused on
+data and layout, not on actually clicking through to content.
+
+Fixed: the title is now a real link, and the thumbnail is too, *except*
+when it's showing the NSFW-blur badge — in that case it deliberately stays
+a plain, non-navigating element so clicking it still reveals the image
+first rather than immediately leaving the site. A missing `url` (shouldn't
+happen — every fetcher already filters these out before they reach
+`data.json` — but defensively handled anyway) falls back to plain,
+non-linked text rather than a broken `href="undefined"`. Verified the fix
+doesn't let a click bypass the Spoiler Shield either: the spoiler overlay
+is a solid, absolutely-positioned layer sitting on top of the card's real
+content in normal stacking order, so it intercepts clicks before they ever
+reach the title link underneath — nothing needed to change there.
 
 ## A UX pass, grounded in specific named principles
 

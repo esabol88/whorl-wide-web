@@ -380,7 +380,6 @@ const SOURCES = [
   ...[
     { name: 'r/genewolfe', subreddit: 'genewolfe' },
     { name: 'r/rereadingwolfepodcast', subreddit: 'rereadingwolfepodcast' },
-    { name: 'r/shittygenewolfe', subreddit: 'shittygenewolfe' },
     // Add more the same way — one line each:
     // { name: 'r/subredditname', subreddit: 'subredditname' },
   ].map(({ name, subreddit }, i) => ({
