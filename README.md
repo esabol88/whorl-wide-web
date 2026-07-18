@@ -331,18 +331,29 @@ promising lead I didn't wire in, and several deliberate skips — the same
 "don't become an undifferentiated dump" judgment call already made for
 Reddit (top-of-month only) and Bluesky (image-embed filter only).
 
+The `[timing]` log line for every source now also shows how many items it
+actually contributed (`[timing] SourceName: 1.2s (4 items)`), not just how
+long it took — added after a run where the total item count dropped even
+though *more* sources succeeded than the previous run, and there was no
+way to tell which source's contribution shrank without this.
+
 **Added:**
 - **Ultan's Library** (`ultan.org.uk`) — wholly Wolfe-dedicated since 2000,
-  essays and reviews from real Wolfe scholars, confirmed WordPress so
-  `/feed/` should be the real endpoint. Infrequent (its own most recent
-  visible post was from mid-2024 at the time of writing) but genuine —
-  same category as Alzabo Soup or the Urth Mailing List: real signal, low
-  volume, not a reason to exclude it.
+  essays and reviews from real Wolfe scholars. **Confirmed live** —
+  succeeded on a real run. Infrequent (its own most recent visible post
+  was from mid-2024 at the time of writing) but genuine — same category as
+  Alzabo Soup or the Urth Mailing List: real signal, low volume, not a
+  reason to exclude it.
 - **Reactor's Gene Wolfe tag** (`reactormag.com/tag/gene-wolfe/`) — a
   major professional SFF outlet (formerly Tor.com), scoped to their Gene
   Wolfe tag specifically rather than their whole front page, which would
   be almost entirely unrelated content otherwise. Real editorial writing
-  by named critics, not reader submissions.
+  by named critics, not reader submissions. **Confirmed live.**
+- **Martin Crookall's blog** (`mbc1955.wordpress.com`) — general-subject
+  blog, real Wolfe coverage, scoped down with `requireKeyword: 'wolfe'`
+  the same way Wolf is below. **Confirmed live.**
+
+**Added, but confirmed blocked — same as DeviantArt and Bluesky:**
 - **"Wolf" by radicaledward** (Substack) — not a dedicated Wolfe blog, a
   general personal newsletter (games, a parenting podcast, serialized
   fiction, thousands of subscribers) that ran a Book of the New Sun
@@ -353,16 +364,12 @@ Reddit (top-of-month only) and Bluesky (image-embed filter only).
   here as it was for Crossref. Added a general mechanism for this rather
   than a one-off: any RSS source can now set `requireKeyword` in
   `SOURCES`, and only items whose title/description actually contain that
-  word survive. Wolf uses `requireKeyword: 'wolfe'`. Hiatus means don't
-  expect much *new* here right now, but the existing archive (well into
-  *The Claw of the Conciliator*) will surface correctly, and this'll pick
-  back up on its own if the read resumes.
-- **Martin Crookall's blog** (`mbc1955.wordpress.com`) — same situation
-  and same fix as Wolf: general-subject blog, real Wolfe coverage,
-  `requireKeyword: 'wolfe'` scoping it down. No tag-URL hunting needed
-  once the filter can do the scoping itself — confirmed WordPress, so
-  `/feed/` should be the real endpoint, same confidence as Ultan's
-  Library's.
+  word survive — Wolf and Crookall above both use it. But on a live run,
+  Wolf came back `403` in ~0.4s — the same near-instant signature as
+  DeviantArt and Bluesky, a third platform now pointing at the same root
+  cause (GitHub Actions' shared IP pool blocked outright, not anything
+  fixable here). Left in `SOURCES` anyway, same reasoning as the other
+  two — could plausibly work from a different environment.
 
 **Found but not wired in — worth checking by hand:**
 - **Michael Andre-Driussi's Goodreads author blog.** Genuinely exciting —

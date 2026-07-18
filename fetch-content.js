@@ -333,9 +333,14 @@ const SOURCES = [
   // for being general-interest, requireKeyword scopes it down to just the
   // posts that actually mention Wolfe — same fix as Crossref's "must
   // contain 'wolfe'" filter, applied here via the generic mechanism above
-  // instead of a one-off. Hiatus means don't expect much *new* here, but
-  // the archive itself (well into The Claw of the Conciliator) will
-  // surface correctly whenever this does eventually resume.
+  // instead of a one-off.
+  //
+  // CONFIRMED BLOCKED on a live run: 403 in ~0.4s, the same near-instant
+  // signature as DeviantArt and Bluesky — a third platform now pointing
+  // at the same root cause, GitHub Actions' shared IP pool being blocked
+  // outright rather than anything fixable from this file. Left in rather
+  // than removed, same reasoning as the other two: could plausibly work
+  // from a different environment even though it doesn't work here.
   {
     name: 'Wolf (radicaledward)',
     type: 'article',
@@ -348,11 +353,8 @@ const SOURCES = [
   // --- Ultan's Library (ultan.org.uk) ---
   // A WordPress-based site wholly dedicated to Wolfe scholarship since
   // 2000, edited by Jonathan Laidlow and Nigel Price — essays, reviews,
-  // bibliographical info, occasional news. Confirmed WordPress (standard
-  // "Powered by WordPress" footer), so /feed/ should be the real RSS
-  // endpoint the same way it is for any WordPress site — not individually
-  // fetch-tested against the live feed itself, though, so treat this the
-  // same as the other "confirm on first real run" sources.
+  // bibliographical info, occasional news. CONFIRMED LIVE — succeeded on
+  // a real run.
   {
     name: "Ultan's Library",
     type: 'article',
@@ -367,11 +369,7 @@ const SOURCES = [
   // uses their Gene Wolfe tag archive specifically
   // (reactormag.com/tag/gene-wolfe/), which is real editorial coverage by
   // named critics (Brian Evenson, Fabio Fernandes, and others), not
-  // reader-submitted content. Confirmed this tag-scoped feed pattern
-  // works on this exact site (a comparable reactormag.com/tag/.../feed
-  // URL showed up independently for a different tag), so higher
-  // confidence than most "not verified live" sources in this file, but
-  // still worth checking against the first real run.
+  // reader-submitted content. CONFIRMED LIVE — succeeded on a real run.
   {
     name: 'Reactor',
     type: 'article',
@@ -386,8 +384,7 @@ const SOURCES = [
   // tag URL the way Reactor did — but requireKeyword makes that
   // unnecessary: same fix as Wolf above, applied to the blog's plain feed
   // instead of hunting for a tag archive that may not even exist.
-  // mbc1955.wordpress.com — confirmed WordPress, so /feed/ should be real,
-  // same confidence level as Ultan's Library's feed.
+  // CONFIRMED LIVE — succeeded on a real run.
   {
     name: 'Martin Crookall',
     type: 'article',
@@ -944,7 +941,7 @@ async function fetchSource(source) {
 async function timedFetch(source) {
   const start = Date.now();
   const result = await fetchSource(source);
-  console.log(`[timing] ${source.name}: ${((Date.now() - start) / 1000).toFixed(1)}s`);
+  console.log(`[timing] ${source.name}: ${((Date.now() - start) / 1000).toFixed(1)}s (${result.length} item${result.length===1?'':'s'})`);
   return result;
 }
 
