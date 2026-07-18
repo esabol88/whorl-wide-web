@@ -82,11 +82,27 @@ locally) surfaced two things worth knowing:
 - Both sources were also using a bot-labeled User-Agent
   (`wolfe-dispatch-bot/1.0`), which is exactly the kind of signal that
   invites this treatment. Fixed: switched to a realistic browser UA
-  (shared across every fetch in this file via the `USER_AGENT` constant),
-  which alone may resolve DeviantArt's block too, though IP-range blocking
-  — if that's what's actually happening — wouldn't be fixable from within
-  GitHub Actions at all. Run it again and check the log for whether the
-  403 persists.
+  (shared across every fetch in this file via the `USER_AGENT` constant).
+  Didn't change the outcome on the second run — consistent with this being
+  IP-based rather than UA-based.
+
+### A run that hung for 19 hours
+
+One run got stuck "in progress" for 19 hours instead of finishing in a few
+minutes. Root cause: the two raw `fetch()` calls used to scrape the Urth
+Mailing List's Pipermail archive (it has no RSS feed, so this reads plain
+HTML instead) had no timeout at all. Unlike the `rss-parser` instance,
+which explicitly sets `timeout: 15000`, Node's built-in `fetch()` doesn't
+time out on its own — if a connection stalls after the TCP handshake but
+before any response arrives, it waits forever, and since everything else
+in `main()` is waiting on the same `Promise.all`, one stuck source took the
+whole job down with it. Fixed two ways:
+- Both `fetch()` calls now pass `signal: AbortSignal.timeout(15000)`, so a
+  stalled connection gets aborted after 15 seconds like every other source
+  instead of hanging indefinitely.
+- The workflow itself now sets `timeout-minutes: 15` on the job as a
+  backstop — even if some other, unforeseen hang happens in the future,
+  GitHub will force-kill the job quickly rather than let it run for hours.
 
 ## Fan art: DeviantArt, not Reddit (or INPRNT, or ArtStation)
 

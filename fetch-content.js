@@ -377,7 +377,7 @@ const MONTHS = ['January','February','March','April','May','June','July','August
 const PIPERMAIL_BASE = 'http://lists.urth.net/pipermail/urth-urth.net/';
 
 async function findLatestPipermailMonth() {
-  const res = await fetch(PIPERMAIL_BASE, { headers: { 'User-Agent': USER_AGENT } });
+  const res = await fetch(PIPERMAIL_BASE, { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(15000) });
   if (!res.ok) throw new Error(`HTTP ${res.status} reading archive index`);
   const html = await res.text();
   const matches = [...html.matchAll(/href="(\d{4})-([A-Za-z]+)\/?(?:thread\.html)?"/gi)];
@@ -401,7 +401,7 @@ function decodeHtmlEntities(str) {
 async function fetchPipermail(source) {
   try {
     const indexUrl = await findLatestPipermailMonth();
-    const res = await fetch(indexUrl, { headers: { 'User-Agent': USER_AGENT } });
+    const res = await fetch(indexUrl, { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(15000) });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const html = await res.text();
     const matches = [...html.matchAll(/<A HREF="(\d+\.html)">([^<]+)<\/A>/gi)];
