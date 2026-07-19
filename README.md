@@ -222,6 +222,31 @@ the image-detection step, the keyword-matching step, or aren't in the
 three genuinely different problems that would need three different fixes,
 rather than one more guess at the same regex.
 
+**Resolution, from a real run's diagnostic output:** the one image post
+that showed up ("Deeper Dive - Bibliomen Summary") correctly scored
+`signal=false` — a podcast episode discussion post with its own cover
+thumbnail, not fan art, correctly excluded. The content filter itself was
+working. `categories=[none]` also settled the flair question: Reddit's
+RSS doesn't expose post flair, at least not for this item, ruling that out
+as a viable signal. But none of the specifically-reported posts showed up
+in the debug output *at all* — meaning the real problem was scope, not
+detection: only the top 6 posts by vote count were ever being scanned in
+the first place, so a real art post outside that narrow window was never
+even looked at, regardless of how good the content filter was.
+
+Fixed by separating the scanning window from the output cap, the same
+shape of fix already used for Crossref: `fetchRedditRss` now scans the
+top 20 posts instead of 6, so a lower-vote-ranked but genuine art post has
+a real chance of being found. The final output cap stays at 6 for the
+original reason (one niche subreddit's whole month of posts shouldn't
+outnumber every other source in the feed) — but a naive `slice(0, 6)`
+after scanning 20 would've just reproduced the exact same top-6 result and
+defeated the point, so art matches now get priority for those 6 slots,
+backfilled with top-ranked regular posts. Costs nothing extra
+network-wise — `feed.items` already contains the full response from the
+one RSS request already being made; this just processes more of the
+array already downloaded, not additional requests to Reddit.
+
 Fan art comes from three places. **DeviantArt**
 (`backend.deviantart.com/rss.xml`) is the most structured — a public
 search-as-RSS endpoint, no login needed, with real fields Reddit's RSS
@@ -509,6 +534,49 @@ can't reach googleapis.com from the sandbox this was built in. Built
 directly from Google's own API documentation for `search.list`, not a
 guess, but this genuinely needs a real run (once the secret's set) to
 confirm the response shape and result quality match what's expected here.
+
+## A Substack/Medium research pass — 6 new ongoing sources, 2 archival essays
+
+A large research pass turned up a genuinely healthy ecosystem of current
+Wolfe writing, especially on Substack. Rather than add all of it — many
+were single Wolfe pieces inside an otherwise-unrelated general newsletter
+— scoped this to two different treatments based on whether someone's
+shown a pattern of writing about Wolfe repeatedly (or was flagged as
+likely to keep doing so) versus wrote one good piece and probably won't
+again. An aggregator's actual value is in the former; the latter is
+better served by a permanent link than a feed slot that might never fire
+again.
+
+**Added as ongoing sources** (all general-interest, all `requireKeyword:
+'wolfe'`): Mannish Boy (Medium, an active chapter-by-chapter Book of the
+New Sun analysis series), Don Beck (Substack, multiple New Sun essays
+already), Floyd Holland (Substack, prose/craft analysis), Lincoln Michel
+(Substack, "Counter Craft" — a literary craft newsletter with demonstrated
+serious Wolfe interest), Andy Lee (Substack, the newest strong essay
+found, on *Peace*), and Dave Hook (WordPress, recent attention to Wolfe's
+short story collections specifically, distinct from the usual New-Sun-only
+focus). Substack and Medium both expose a guaranteed, platform-wide RSS
+pattern (`[name].substack.com/feed`, `medium.com/feed/@username`)
+regardless of the individual site, unlike a custom WordPress install where
+`/feed/` has to be checked per-site — higher baseline confidence than
+usual for these six specifically, though still not individually
+fetch-tested against each live feed.
+
+**Added to the Reference Shelf instead** — the two standout one-off
+essays from the batch: Adam Roberts' Medium piece ("easily the most
+substantial Medium essay" found in the research) and Peter Bebergal's 2015
+New Yorker profile ("still perhaps the most important mainstream
+profile"). Both evergreen, both worth a permanent link rather than an
+ongoing feed slot for a source that produced exactly one relevant piece.
+
+**Not added, for now:** the many other real, good essays the research
+surfaced (Nicholas Russell, Kevin Kodama/Synthesized Sunsets, Jessie
+Lethaby, Tobias Carroll, Max Gladstone, Joan Gordon's two LARB pieces, and
+several more) — genuinely worth reading, just not added as either feed
+sources or Reference Shelf links in this pass, to avoid either diluting
+the Reference Shelf into an undifferentiated link dump or adding feed
+sources unlikely to ever fire again. Worth a second pass if any of these
+specifically turn out to matter.
 
 ## More YouTube channels, and a real bug fix
 

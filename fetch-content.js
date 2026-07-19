@@ -539,6 +539,65 @@ const SOURCES = [
     requireKeyword: 'wolfe'
   },
 
+  // Six more added from a research pass specifically on Substack/Medium
+  // Wolfe writing — scoped to people shown to have written about Wolfe
+  // more than once, or flagged as likely to keep doing so, rather than
+  // adding every one-off essay found (many are one Wolfe piece inside an
+  // otherwise-unrelated newsletter — those went to the Reference Shelf
+  // instead, see index.html, not here as ongoing feeds). All general-
+  // interest, all get requireKeyword. Substack and Medium both expose a
+  // guaranteed platform-wide RSS pattern regardless of the individual
+  // site, unlike a custom WordPress install where /feed/ has to be
+  // checked per-site — higher confidence than usual for these six.
+  {
+    name: 'Mannish Boy',
+    type: 'article',
+    series: 'new',
+    kind: 'rss',
+    url: 'https://medium.com/feed/@mannishboywrites',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'Don Beck',
+    type: 'article',
+    series: 'general',
+    kind: 'rss',
+    url: 'https://donbeck1.substack.com/feed',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'Floyd Holland',
+    type: 'article',
+    series: 'general',
+    kind: 'rss',
+    url: 'https://floydholland.substack.com/feed',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'Lincoln Michel',
+    type: 'article',
+    series: 'general',
+    kind: 'rss',
+    url: 'https://countercraft.substack.com/feed',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'Andy Lee',
+    type: 'article',
+    series: 'general',
+    kind: 'rss',
+    url: 'https://litandchess.substack.com/feed',
+    requireKeyword: 'wolfe'
+  },
+  {
+    name: 'Dave Hook',
+    type: 'article',
+    series: 'general',
+    kind: 'rss',
+    url: 'https://adeeplookbydavehook.wordpress.com/feed/',
+    requireKeyword: 'wolfe'
+  },
+
   // --- Michael Andre-Driussi's Goodreads author blog — promising, unconfirmed ---
   // Andre-Driussi (Lexicon Urthus — already on the Reference Shelf) is
   // actively posting real Wolfe analysis here as recently as this year,
@@ -665,10 +724,16 @@ async function fetchRedditRss(source) {
   try {
     if (source.redditDelayMs) await delay(source.redditDelayMs);
     const feed = await parser.parseURL(source.url);
-    // 6, not 15 — /top/.rss already filters for quality, but capping the
-    // count too keeps a niche subreddit's whole month of "top" posts from
-    // still outnumbering every other source in the feed by sheer volume.
-    const items = feed.items.slice(0, 6).map(item => {
+    // Scans a wider pool (20) than it ultimately keeps (6) — a real
+    // report of specific art posts not showing up traced back to this:
+    // they simply weren't among the top 6 most-upvoted posts of the
+    // month, so they were never even looked at, regardless of the
+    // content filter. Same shape of fix as Crossref's wide-candidate-
+    // pool-then-filter approach. The final cap stays 6 for the original
+    // reason (keeping one niche subreddit's whole month of posts from
+    // outnumbering every other source in the feed by sheer volume) — only
+    // the scanning window widened, not the output volume.
+    const items = feed.items.slice(0, 20).map(item => {
       const title = (item.title || 'Untitled').trim();
       const snippet = item.contentSnippet || '';
       const thumbnail = extractRedditThumbnail(item.content);
@@ -708,7 +773,17 @@ async function fetchRedditRss(source) {
         } : {})
       };
     });
-    return items;
+    // A plain slice(0,6) here would just reproduce the original top-6-by-
+    // votes result and defeat the point of scanning 20 — an art post
+    // found further down the list needs to actually displace something
+    // to matter. Art matches get priority for the 6 final slots;
+    // remaining slots backfill with top-ranked regular posts. Order
+    // within this array doesn't affect what the reader sees either way —
+    // everything gets re-sorted by date once merged with every other
+    // source in main() — only which items get kept here matters.
+    const artItems = items.filter(i => i.type === 'fanart');
+    const nonArtItems = items.filter(i => i.type !== 'fanart');
+    return [...artItems, ...nonArtItems].slice(0, 6);
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
     return [];
