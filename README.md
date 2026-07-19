@@ -1022,6 +1022,33 @@ specifically will see them regardless of date, since that filter isn't
 time-limited. The discovery path for evergreen content like this is
 filtering by type, not happening to scroll past it in "Latest."
 
+## The feed is paginated, 25 items per page
+
+The whole filtered result set used to render in one long scroll,
+regardless of size. Now capped at `PAGE_SIZE = 25` per page, with
+explicit numbered page controls below the feed (not infinite scroll or a
+"load more" button, by request) — Previous/Next plus a button per page,
+shown only when there's more than one page.
+
+Pagination applies *after* filtering — clicking a series/format chip,
+searching, or filtering by tag re-paginates the narrowed set from page 1,
+not the other way around. This meant finding every place state that
+changes what's being shown: series chips, format chips, the tag filter,
+search (input, Escape-to-clear, and the × button), the Saved toggle, and
+the "Reset filters" and "Clear" tag buttons all explicitly reset
+`currentPage = 1` at the point of change. `render()` itself has no way to
+tell "a filter just changed" apart from "the user clicked page 2," so this
+couldn't be handled centrally in one place — each mutation point resets
+it individually. A defensive clamp in `render()` also catches the case
+where `currentPage` is somehow left pointing past the end of a newly-
+shrunk result set, as a backstop beyond the explicit resets.
+
+Clicking a page number scrolls back up to the top of the feed
+(specifically the "Latest" divider, the first `.divider` element in
+document order — there are two on the page, this one and "Further
+Reading" further down) rather than leaving the reader wherever their
+previous scroll position happened to end up on the new page.
+
 ## Scroll position resets on refresh
 
 Browsers try to preserve scroll position across a reload by default —

@@ -285,6 +285,19 @@ a.thumb:hover .thumb-icon{ opacity:0.7; }
 
 .empty{ text-align:center; color:var(--muted); font-size:13px; padding:50px 0; }
 
+.pagination{
+  max-width:760px; margin:24px auto 0; padding:0 24px;
+  display:flex; align-items:center; justify-content:center; gap:6px;
+}
+.pagination button{
+  background:rgba(255,255,255,0.05); border:none; color:var(--parchment-dim);
+  border-radius:999px; min-width:34px; height:34px; padding:0 12px;
+  font-size:13px; font-weight:600; cursor:pointer; font-family:inherit;
+}
+.pagination button:hover:not(:disabled){background:rgba(255,255,255,0.09); color:var(--parchment);}
+.pagination button:disabled{opacity:0.3; cursor:default;}
+.pagination button.active{background:var(--ochre); color:#0e0d0b;}
+
 /* ---------- reference shelf ---------- */
 .shelf{ max-width:760px; margin:60px auto 0; padding:0 24px; }
 .shelf-list{ display:grid; gap:2px; border-top:1px solid var(--hairline); }
@@ -403,6 +416,7 @@ footer{
 <div class="divider"><span class="line"></span>latest<span class="line"></span></div>
 
 <main id="feed"></main>
+<div class="pagination" id="pagination"></div>
 
 <div class="shelf">
   <div class="divider"><span class="line"></span>further reading<span class="line"></span></div>
@@ -619,6 +633,8 @@ fetch('./data.json')
   });
 
 let activeSeries='all', activeType='all', activeTag=null, savedOnly=false, activeSearch='';
+let currentPage = 1;
+const PAGE_SIZE = 25;
 const revealed = new Set();
 const revealedNsfw = new Set();
 let visitMarked = false; // only stamp lastVisit once per page load, not on every re-render
@@ -714,6 +730,7 @@ document.getElementById('onboardClose').addEventListener('click', dismissOnboard
 document.getElementById('savedToggle').addEventListener('click', e => {
   savedOnly = !savedOnly;
   e.currentTarget.classList.toggle('active', savedOnly);
+  currentPage = 1;
   render();
 });
 
@@ -723,13 +740,14 @@ const searchBox = document.getElementById('searchBox');
 searchInput.addEventListener('input', () => {
   activeSearch = searchInput.value.trim().toLowerCase();
   searchBox.classList.toggle('has-query', activeSearch.length > 0);
+  currentPage = 1;
   render();
 });
 searchInput.addEventListener('keydown', e => {
-  if(e.key === 'Escape' && activeSearch){ searchInput.value=''; activeSearch=''; searchBox.classList.remove('has-query'); render(); }
+  if(e.key === 'Escape' && activeSearch){ searchInput.value=''; activeSearch=''; searchBox.classList.remove('has-query'); currentPage = 1; render(); }
 });
 document.getElementById('searchClear').addEventListener('click', () => {
-  searchInput.value=''; activeSearch=''; searchBox.classList.remove('has-query'); searchInput.focus(); render();
+  searchInput.value=''; activeSearch=''; searchBox.classList.remove('has-query'); searchInput.focus(); currentPage = 1; render();
 });
 
 // Matches an item against the search query across title, description,
@@ -871,7 +889,7 @@ function wireCardEvents(container){
     });
   });
   container.querySelectorAll('[data-tag]').forEach(btn => {
-    btn.addEventListener('click', () => { activeTag = btn.dataset.tag; render(); });
+    btn.addEventListener('click', () => { activeTag = btn.dataset.tag; currentPage = 1; render(); });
   });
   container.querySelectorAll('[data-reveal]').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -971,6 +989,7 @@ function render(){
       document.querySelectorAll('#seriesControls .chip').forEach(c=>c.classList.toggle('active', c.dataset.series==='all'));
       document.querySelectorAll('#typeControls .chip:not(.saved-toggle)').forEach(c=>c.classList.toggle('active', c.dataset.type==='all'));
       document.getElementById('savedToggle').classList.remove('active');
+      currentPage = 1;
       render();
     });
   }
@@ -985,7 +1004,7 @@ function render(){
   if(activeTag){
     tagLine.classList.add('active');
     tagLine.innerHTML = `Filtering by <b style="color:var(--parchment)">${activeTag}</b> &nbsp;<button id="clearTag">Clear</button>`;
-    document.getElementById('clearTag').addEventListener('click', () => { activeTag=null; render(); });
+    document.getElementById('clearTag').addEventListener('click', () => { activeTag=null; currentPage = 1; render(); });
   } else {
     tagLine.classList.remove('active'); tagLine.innerHTML='';
   }
@@ -994,11 +1013,42 @@ function render(){
     feed.innerHTML = activeSearch
       ? `<div class="empty">No dispatches match "${searchInput.value.trim()}"${(activeSeries!=='all'||activeType!=='all'||activeTag||savedOnly) ? ' with the current filters' : ''}.</div>`
       : '<div class="empty">No dispatches match this filter.</div>';
+    document.getElementById('pagination').innerHTML = '';
     return;
   }
 
-  feed.innerHTML = filtered.map(d => cardHtml(d, { saved, lastVisit, quietSources })).join('');
+  // Paginated, not infinite-scrolled — 25 per page by default, with
+  // explicit page-number navigation rather than a "load more" pattern.
+  // Every filter-mutating action elsewhere (chips, search, tags, saved
+  // toggle, reset) explicitly resets currentPage to 1 at the point of
+  // change, since render() itself has no way to tell "the filter just
+  // changed" apart from "the user clicked page 2" — but this clamp is a
+  // defensive backstop regardless, in case currentPage is ever left
+  // pointing past the end of a newly-shrunk result set.
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  if(currentPage > totalPages) currentPage = totalPages;
+  const pageItems = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+
+  feed.innerHTML = pageItems.map(d => cardHtml(d, { saved, lastVisit, quietSources })).join('');
   wireCardEvents(feed);
+
+  const pagination = document.getElementById('pagination');
+  if(totalPages <= 1){
+    pagination.innerHTML = '';
+  } else {
+    const goToPage = p => { currentPage = p; render(); window.scrollTo({top: document.querySelector('.divider').offsetTop - 20, behavior: 'smooth'}); };
+    let html = `<button id="pagePrev" ${currentPage===1?'disabled':''}>&#8249;</button>`;
+    for(let p=1; p<=totalPages; p++){
+      html += `<button data-page="${p}" class="${p===currentPage?'active':''}">${p}</button>`;
+    }
+    html += `<button id="pageNext" ${currentPage===totalPages?'disabled':''}>&#8250;</button>`;
+    pagination.innerHTML = html;
+    pagination.querySelectorAll('[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => goToPage(Number(btn.dataset.page)));
+    });
+    document.getElementById('pagePrev').addEventListener('click', () => { if(currentPage>1) goToPage(currentPage-1); });
+    document.getElementById('pageNext').addEventListener('click', () => { if(currentPage<totalPages) goToPage(currentPage+1); });
+  }
 }
 
 document.getElementById('seriesControls').addEventListener('click', e=>{
@@ -1006,6 +1056,7 @@ document.getElementById('seriesControls').addEventListener('click', e=>{
   document.querySelectorAll('#seriesControls .chip').forEach(c=>c.classList.remove('active'));
   e.target.classList.add('active');
   activeSeries = e.target.dataset.series;
+  currentPage = 1;
   render();
 });
 document.getElementById('typeControls').addEventListener('click', e=>{
@@ -1013,6 +1064,7 @@ document.getElementById('typeControls').addEventListener('click', e=>{
   document.querySelectorAll('#typeControls .chip:not(.saved-toggle)').forEach(c=>c.classList.remove('active'));
   e.target.classList.add('active');
   activeType = e.target.dataset.type;
+  currentPage = 1;
   render();
 });
 
