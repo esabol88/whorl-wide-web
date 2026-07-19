@@ -687,14 +687,22 @@ function delay(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
 // picture" apart from "someone posted a text discussion," using the same
 // RSS feed for both rather than needing a separate art-specific source.
 //
-// NOT VERIFIED LIVE — I can't reach reddit.com from the sandbox this was
-// built in, so this is built from the documented/observed shape of
-// Reddit's RSS output, not a real test run. Check the first live run:
-// does the Fan Art filter actually show real images pulled from Reddit,
-// or does nothing show up (meaning the <img> extraction didn't match)?
+// CONFIRMED LIVE, and fixed based on real evidence rather than left as a
+// guess: a first version of this function (just an <img> search) missed
+// images on posts that clearly have one (title "Illustration: A Boy and
+// his Dog," genuine original art) — the raw content snippet cut off right
+// at "<span><a href=", strongly suggesting Reddit's RSS links to the
+// image via a plain <a href="..."> anchor for these posts, not an <img>
+// tag at all. Now checks both: the original <img> pattern first, then
+// falls back to an <a href="..."> whose URL is an image file or a known
+// Reddit/imgur image host — catching the link-only case the old version
+// completely missed.
 function extractRedditThumbnail(html) {
-  const match = (html || '').match(/<img[^>]+src="([^"]+)"/i);
-  return match ? match[1].replace(/&amp;/g, '&') : null;
+  const content = html || '';
+  const imgMatch = content.match(/<img[^>]+src="([^"]+)"/i);
+  if (imgMatch) return imgMatch[1].replace(/&amp;/g, '&');
+  const linkMatch = content.match(/<a href="(https:\/\/(?:i\.redd\.it|i\.imgur\.com|preview\.redd\.it|external-preview\.redd\.it)\/[^"]+|[^"]+\.(?:jpg|jpeg|png|gif|webp))"/i);
+  return linkMatch ? linkMatch[1].replace(/&amp;/g, '&') : null;
 }
 
 // Re-examining the "Reddit's RSS has no author field" claim rather than
@@ -781,9 +789,9 @@ async function fetchRedditRss(source) {
       // extraction failed.
       if (hasImage) {
         const cats = (item.categories || []).join(',') || 'none';
-        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=yes signal=${signalMatch} categories=[${cats}]`);
+        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=yes (${thumbnail.slice(0,80)}) signal=${signalMatch} categories=[${cats}]`);
       } else if (signalMatch) {
-        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=NO signal=yes — raw content: ${(item.content || '').slice(0,300)}`);
+        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=NO signal=yes — raw content: ${(item.content || '').slice(0,600)}`);
       }
       const author = isArt ? extractRedditAuthor(item) : null;
       return {

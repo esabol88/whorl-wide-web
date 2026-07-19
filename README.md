@@ -274,6 +274,23 @@ repeatedly in this file (Crossref, the Urth Mailing List dates, the
 scan-window fix above): see the real data first, then make one precise
 fix instead of another speculative regex change.
 
+**Resolution.** The next run's raw content snippets confirmed it directly
+— the same four posts, all cut off right at `<span><a href=`, meaning the
+image comes through Reddit's RSS as a plain `<a href="...">` link, not an
+`<img>` tag at all. Fixed `extractRedditThumbnail` to check both: the
+original `<img>` pattern first, then a fallback matching an `<a href>`
+whose URL is either a known Reddit/imgur image host
+(`i.redd.it`/`i.imgur.com`/`preview.redd.it`/`external-preview.redd.it`)
+or simply ends in an image extension. Tested locally against a realistic
+completion of the actual truncated evidence before shipping (not just
+reasoned about) — extracts the image correctly, still works on the
+original `<img>`-based case, and correctly returns nothing for a plain
+text post with only a comments link, no false positive there. The debug
+logging also grew a bit more useful either way: the "found an image" case
+now prints the actual extracted URL, so a future check can directly
+confirm extraction is finding the *right* image, not just confirm
+something was found.
+
 Fan art comes from three places. **DeviantArt**
 (`backend.deviantart.com/rss.xml`) is the most structured — a public
 search-as-RSS endpoint, no login needed, with real fields Reddit's RSS
