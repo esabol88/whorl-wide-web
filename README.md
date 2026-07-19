@@ -993,6 +993,16 @@ here at all. It's a server-side fetching problem; these URLs are just
 plain data sitting in the source, rendered as ordinary links in an actual
 visitor's browser, which isn't on GitHub's blocked IP range.
 
+**A second, later move for the same reason**: The Ringer's 2019
+retrospective, Adam Roberts' Medium essay, and Peter Bebergal's New Yorker
+profile all started out on the Reference Shelf too, alongside the four
+books and Gwern's archive — moved into `MANUAL_ITEMS` for the same reason
+as the batch above: these are dated articles, not durable reference
+material, so they belong in the feed. Their real known publish dates are
+used (The Ringer: April 25, 2019; Adam Roberts: July 3, 2023), except
+Bebergal's, which is approximate — the original research only gave "April
+2015," no specific day.
+
 ## Backfilling art without a verified image URL — a generic icon instead
 
 Tried to backfill Don Maitz's and Bruce Pennington's original New Sun
@@ -1021,6 +1031,31 @@ through the feed, which is fine: anyone using the **Art** filter chip
 specifically will see them regardless of date, since that filter isn't
 time-limited. The discovery path for evergreen content like this is
 filtering by type, not happening to scroll past it in "Latest."
+
+**Extended to eight more artists** from the original research batch —
+Alexander Preuss, Nathan J. Anderson, Ramón Perales Cano, Eric He, Sam
+Weber, Vega Draws, Floating Disc, and Andrea Kalfas — all `type: 'fanart'`,
+all using the same icon fallback, no image-URL verification needed for any
+of them now that the fallback is an accepted, deliberate treatment rather
+than a gap to fill. Dates are explicitly approximate/illustrative
+(staggered across recent months) for all eight, flagged as such in the
+code — none of these have a specific confirmed publish date from the
+original research. Nathan J. Anderson's individual posts (as
+u/deimosremus) already come through automatically via r/genewolfe's own
+feed — his `MANUAL_ITEMS` entry here is his broader portfolio site
+specifically, not a duplicate of what the live feed already finds.
+
+**The Reference Shelf got the same icon treatment.** Its remaining seven
+entries (the four books, Gwern's archive, the Word Hoard tool, and
+Chiarello's chapter guide) were plain text with no visual anchor at all —
+tried finding real book-cover images the same way as Maitz/Pennington,
+hit the identical verification wall (no live browser access to grab a
+real Goodreads cover URL), so applied the same honest fallback instead: a
+small `.shelf-thumb` icon tile per entry, book emoji for the five actual
+books, a folder icon for Gwern's archive, an open-book icon for the Word
+Hoard dictionary tool. Restructured `.shelf-item` from `align-items:
+baseline` to `align-items: center` to accommodate a fixed-size icon
+alongside the text without breaking the row's vertical alignment.
 
 ## Responding to an external UX/accessibility audit
 

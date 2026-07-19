@@ -1625,6 +1625,170 @@ const MANUAL_ITEMS = [
     artistUrl: 'https://www.brucepennington.co.uk/',
     postUrl: 'https://www.brucepennington.co.uk/',
     nsfw: false
+  },
+  {
+    id: 'manual-theringer-highart',
+    title: 'Gene Wolfe Turned Science Fiction Into High Art',
+    source: 'The Ringer',
+    type: 'article',
+    series: 'general',
+    date: '2019-04-25',
+    url: 'https://theringer.com/platform/amp/2019/4/25/18515675/gene-wolfe-science-fiction-author',
+    desc: "A retrospective written the week Wolfe died in 2019, framing his life and work for readers who'd never heard the name — a good one to hand someone who's curious but hasn't started.",
+    tags: guessTags('Gene Wolfe science fiction retrospective')
+  },
+  {
+    id: 'manual-adamroberts-newsun',
+    title: 'Gene Wolfe, "The Book of the New Sun" (1980-83)',
+    source: 'Adam Roberts',
+    type: 'article',
+    series: 'new',
+    date: '2023-07-03',
+    url: 'https://medium.com/adams-notebook/gene-wolfe-the-book-of-the-new-sun-1980-83-ee4cc6d18410',
+    desc: 'A substantial essay treating the tetralogy as perhaps the major fantasy sequence of its era — fantasy vs. science fiction, memory, structure, symbolism, the wider Solar Cycle.',
+    tags: guessTags('Book of the New Sun fantasy science fiction')
+  },
+  {
+    // Date approximate — original research gave "April 2015," no specific day.
+    id: 'manual-bebergal-difficultgenius',
+    title: "Sci-Fi's Difficult Genius",
+    source: 'Peter Bebergal',
+    type: 'article',
+    series: 'general',
+    date: '2015-04-15',
+    url: 'https://www.newyorker.com/books/page-turner/sci-fis-difficult-genius',
+    desc: "Still probably the most important mainstream profile — memory, unreliability, Catholicism, and Wolfe's own comments about his work and his wife Rosemary.",
+    tags: guessTags('Gene Wolfe profile memory Catholicism')
+  },
+  // Eight more artists from the original research batch — same treatment
+  // as Maitz/Pennington above: no `thumbnail` field, falls back to the
+  // palette icon. All dates below are approximate/illustrative (staggered
+  // across recent months) since none of these have a specific confirmed
+  // publish date from the original research — flagged here rather than
+  // presented as precise.
+  {
+    id: 'manual-alexanderpreuss-newsun',
+    title: 'The Book of the New Sun — illustrations for Centipede Press',
+    source: 'Alexander Preuss',
+    type: 'fanart',
+    series: 'new',
+    date: '2025-03-01',
+    url: 'https://www.artstation.com/artwork/a01qvz',
+    desc: "Illustrating Wolfe's books for Centipede Press since 2006 — detailed, cinematic work unusually attentive to Wolfe's concealed science-fiction architecture.",
+    tags: guessTags('Book of the New Sun illustration Centipede Press'),
+    artist: 'Alexander Preuss',
+    artistUrl: 'https://www.abalakin.de/',
+    postUrl: 'https://www.artstation.com/artwork/a01qvz',
+    nsfw: false
+  },
+  {
+    // Nathan J. Anderson's own individual Reddit posts (as u/deimosremus)
+    // already come through automatically via r/genewolfe — this entry is
+    // his broader portfolio site specifically, a fuller "character bible"
+    // overview rather than duplicating what the live feed already finds.
+    id: 'manual-nathananderson-characterbible',
+    title: 'The Book of the New Sun — character bible',
+    source: 'Nathan J. Anderson (DeimosRemus)',
+    type: 'fanart',
+    series: 'new',
+    date: '2025-04-01',
+    url: 'https://www.nathanandersonart.com/newsun',
+    desc: 'An extensive, ongoing character bible — Severian, the guild, weapons, creatures, costumes, architecture, and environments, useful for seeing how a described object might actually be constructed.',
+    tags: guessTags('Book of the New Sun Severian character design'),
+    artist: 'Nathan J. Anderson',
+    artistUrl: 'https://www.nathanandersonart.com/newsun',
+    postUrl: 'https://www.nathanandersonart.com/newsun',
+    nsfw: false
+  },
+  {
+    id: 'manual-ramonperales-fuligin',
+    title: 'Book of Fuligin — illustrated anthology',
+    source: 'Ramón Perales Cano (Ramonkey)',
+    type: 'fanart',
+    series: 'new',
+    date: '2025-05-01',
+    url: 'https://www.artstation.com/ramonkey',
+    desc: 'Conceived, edited, and contributed to by Perales — a large illustrated anthology honoring Wolfe with nearly forty participating artists. Bold, graphic, comics-derived imagery.',
+    tags: guessTags('Book of Fuligin anthology comics'),
+    artist: 'Ramón Perales Cano',
+    artistUrl: 'https://ramonkeyperales.com/',
+    postUrl: 'https://www.artstation.com/ramonkey',
+    nsfw: false
+  },
+  {
+    id: 'manual-erichewang-shadow',
+    title: 'The Shadow of the Torturer — pen-and-ink series',
+    source: 'Eric He',
+    type: 'fanart',
+    series: 'new',
+    date: '2025-06-01',
+    url: 'https://www.artstation.com/artwork/4d692',
+    desc: 'Originally an Inktober project — stark blacks and medieval engraving quality, particularly compatible with a minimal, emblematic visual direction.',
+    tags: guessTags('Shadow of the Torturer ink illustration'),
+    artist: 'Eric He',
+    artistUrl: 'https://eriche.artstation.com/',
+    postUrl: 'https://www.artstation.com/artwork/4d692',
+    nsfw: false
+  },
+  {
+    id: 'manual-samweber-folio',
+    title: 'The Book of the New Sun — Folio Society illustrated edition',
+    source: 'Sam Weber',
+    type: 'fanart',
+    series: 'new',
+    date: '2018-01-01',
+    url: 'https://sampaints.com/',
+    desc: "Weber spent almost a year illustrating the Folio Society's complete New Sun — literal textual investigation combined with surreal, art-historical symbolism.",
+    tags: guessTags('Book of the New Sun Folio Society illustration'),
+    artist: 'Sam Weber',
+    artistUrl: 'https://sampaints.com/',
+    postUrl: 'https://sampaints.com/',
+    nsfw: false
+  },
+  {
+    id: 'manual-vegadraws-gyoll',
+    title: 'The River Gyoll',
+    source: 'Vega Draws',
+    type: 'fanart',
+    series: 'new',
+    date: '2025-08-01',
+    url: 'https://vegadraws.art/',
+    desc: 'Part of a self-described "slow, long-term project" to illustrate the Book of the New Sun — the site includes substantial process journals developing each composition directly from the text.',
+    tags: guessTags('Book of the New Sun River Gyoll illustration'),
+    artist: 'Vega Draws',
+    artistUrl: 'https://vegadraws.art/',
+    postUrl: 'https://vegadraws.art/blog/',
+    nsfw: false
+  },
+  {
+    id: 'manual-floatingdisc-lakeofbirds',
+    title: 'Severian and Dorcas at the Lake of Birds',
+    source: 'Floating Disc',
+    type: 'fanart',
+    series: 'new',
+    date: '2025-09-01',
+    url: 'https://floatingdisc.com/',
+    desc: 'A currently active fan artist with a dedicated New Sun category and multiple pieces available as prints, not a single isolated illustration.',
+    tags: guessTags('Severian Dorcas Lake of Birds'),
+    artist: 'Floating Disc',
+    artistUrl: 'https://floatingdisc.com/',
+    postUrl: 'https://floatingdisc.com/',
+    nsfw: false
+  },
+  {
+    id: 'manual-andreakalfas-undine',
+    title: 'Severian and the Undine',
+    source: 'Andrea Kalfas',
+    type: 'fanart',
+    series: 'new',
+    date: '2025-10-01',
+    url: 'https://www.andreakalfas.com/',
+    desc: 'Not a Wolfe-focused artist overall, but a memorable, decorative, medieval-modern illustration of Severian confronted by an undine.',
+    tags: guessTags('Severian undine illustration'),
+    artist: 'Andrea Kalfas',
+    artistUrl: 'https://www.andreakalfas.com/',
+    postUrl: 'https://www.andreakalfas.com/',
+    nsfw: false
   }
 ];
 
