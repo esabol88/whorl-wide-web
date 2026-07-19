@@ -765,18 +765,25 @@ async function fetchRedditRss(source) {
       const hasImage = !!thumbnail;
       const signalMatch = ART_SIGNAL_RE.test(`${title} ${snippet}`);
       const isArt = FAN_ART_ENABLED && hasImage && signalMatch;
-      // Direct reports of specific posts that should have qualified but
-      // didn't led here — rather than guess again, this shows exactly
-      // where each item lands in the funnel (has an image? does the
-      // title/text actually match?) on the next real run. Also logs
-      // item.categories in case Reddit's RSS exposes post flair there —
-      // unconfirmed whether it does, or whether r/genewolfe even uses a
-      // "Fan Art" flair, but if it's present and populated, that's a
-      // much more reliable signal than guessing from title keywords and
-      // worth switching to.
+      // Direct reports of art posts miscategorized as Discussion turned
+      // out to mostly have a strong keyword match already ("cover art
+      // by...", "Illustration: ...") — meaning the previous version of
+      // this diagnostic had a real blind spot: it only logged posts that
+      // *already* had a detected image, so a post failing at the image-
+      // detection step (extractRedditThumbnail finding no <img> tag —
+      // plausible for gallery posts or externally-hosted images, e.g. a
+      // post crediting an artist on Bluesky rather than hosting the image
+      // on Reddit itself) would never show up in the log at all, keyword
+      // match or not. Now logs both directions: the original "has an
+      // image" case, and this new "keyword matched but no image found"
+      // case — the latter includes a raw content snippet so the actual
+      // HTML Reddit's RSS sent is visible, instead of guessing why
+      // extraction failed.
       if (hasImage) {
         const cats = (item.categories || []).join(',') || 'none';
         console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=yes signal=${signalMatch} categories=[${cats}]`);
+      } else if (signalMatch) {
+        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=NO signal=yes — raw content: ${(item.content || '').slice(0,300)}`);
       }
       const author = isArt ? extractRedditAuthor(item) : null;
       return {

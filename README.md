@@ -247,6 +247,33 @@ network-wise — `feed.items` already contains the full response from the
 one RSS request already being made; this just processes more of the
 array already downloaded, not additional requests to Reddit.
 
+**Second round, after another direct report** of specific art posts still
+showing as Discussion — this time with actual titles to check, unlike
+before. Two of three had "Illustration" right in the title (already in
+`ART_SIGNAL_RE`); the third said "cover art by [artist]" outright. A
+strong keyword match failing anyway meant the keyword filter almost
+certainly wasn't the problem this time — pointing instead at the image-
+detection step, `extractRedditThumbnail`, which just searches for a
+literal `<img src="...">` tag. Plausible failure modes: a Reddit gallery
+post's RSS content may not embed a plain `<img>` tag the same way a
+single-image post does, and the Amano cover-art post specifically credits
+an artist on Bluesky rather than hosting the image on Reddit itself — an
+externally-linked image Reddit's RSS may not generate a preview for at
+all.
+
+Confirmed the previous diagnostic had a real blind spot causing this: it
+only logged posts that *already* had a detected image, so a post failing
+at the image-detection step — keyword match or not — never appeared in
+the log either way. Fixed the diagnostic itself before touching the
+detection logic: it now also logs any post where the title/text matches
+`ART_SIGNAL_RE` but no image was found, including a raw content snippet,
+so the actual HTML Reddit's RSS sent is visible on the next run instead of
+guessing why extraction failed. Deliberately didn't guess-fix
+`extractRedditThumbnail` itself yet — same discipline that's paid off
+repeatedly in this file (Crossref, the Urth Mailing List dates, the
+scan-window fix above): see the real data first, then make one precise
+fix instead of another speculative regex change.
+
 Fan art comes from three places. **DeviantArt**
 (`backend.deviantart.com/rss.xml`) is the most structured — a public
 search-as-RSS endpoint, no login needed, with real fields Reddit's RSS
