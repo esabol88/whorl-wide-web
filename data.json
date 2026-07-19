@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T18:48:55.154Z",
+  "generatedAt": "2026-07-19T18:52:34.818Z",
   "items": [
     {
       "id": "rereading-wolfe-509384d0",
@@ -120,25 +120,33 @@
       "id": "r-genewolfe-4c445888",
       "title": "Illustration: A Boy and his Dog",
       "source": "r/genewolfe",
-      "type": "discussion",
+      "type": "fanart",
       "series": "general",
       "date": "2026-07-05",
       "url": "https://www.reddit.com/r/genewolfe/comments/1unrv72/illustration_a_boy_and_his_dog/",
       "desc": "Finished up another one! I'll probably jump to some scenes from Claw next, though I still have more planned for Shadow!\n    submitted by    /u/deimosremus  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": null
+      "thumbnail": "https://i.redd.it/dcufu8jz0cbh1.jpeg",
+      "artist": "u/deimosremus (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/deimosremus",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1unrv72/illustration_a_boy_and_his_dog/",
+      "nsfw": false
     },
     {
       "id": "r-genewolfe-8456e05a",
       "title": "Illustration: The Necropolis",
       "source": "r/genewolfe",
-      "type": "discussion",
+      "type": "fanart",
       "series": "general",
       "date": "2026-06-29",
       "url": "https://www.reddit.com/r/genewolfe/comments/1uj2auf/illustration_the_necropolis/",
       "desc": "Got another one finished! With the green light and nighttime tones, this one was a bit more difficult to color than the others, but had a lot of fun with it regardless!\n    submitted by    /u/deimosremus  \n [link]   [com",
       "tags": [],
-      "thumbnail": null
+      "thumbnail": "https://i.redd.it/nev6jg0dw9ah1.jpeg",
+      "artist": "u/deimosremus (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/deimosremus",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1uj2auf/illustration_the_necropolis/",
+      "nsfw": false
     },
     {
       "id": "r-genewolfe-c6aef617",
@@ -172,7 +180,7 @@
       "id": "r-genewolfe-dde620ba",
       "title": "Illustration: The House Azure",
       "source": "r/genewolfe",
-      "type": "discussion",
+      "type": "fanart",
       "series": "general",
       "date": "2026-06-21",
       "url": "https://www.reddit.com/r/genewolfe/comments/1ubuuw0/illustration_the_house_azure/",
@@ -181,7 +189,11 @@
         "Severian",
         "Thecla"
       ],
-      "thumbnail": null
+      "thumbnail": "https://i.redd.it/d9run2350o8h1.jpeg",
+      "artist": "u/deimosremus (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/deimosremus",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1ubuuw0/illustration_the_house_azure/",
+      "nsfw": false
     },
     {
       "id": "r-rereadingwolfepodcast-2aa5081f",
