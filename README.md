@@ -198,6 +198,30 @@ be missed — but a missed real post is a much smaller problem than a feed
 full of memes and unrelated photos, the same trade already made for
 Crossref's "must say wolfe" filter.
 
+**Renamed "Fan Art" to just "Art"** — real posts flagged as missing turned
+out to include what looks like official/published art (a specific gallery
+post the person felt should count "makes me think we should rename it"),
+not just amateur original work. "Fan Art" implied a narrower category than
+what actually belongs here. `TYPE_LABEL` in `index.html` handles the
+display text now (`fanart` stays the internal type key for schema
+stability — matches what's already in `data.json` and the filter chip's
+`data-type` attribute — only what's shown to a reader changed).
+
+**Diagnosed rather than guessed again, when specific posts were reported
+as missing.** Couldn't inspect the actual posts directly (no live access
+to reddit.com), so rather than adjust the regex blind a second time,
+added per-item diagnostic logging instead: for every Reddit item that
+does have an image, `fetchRedditRss` now logs its title, whether
+`ART_SIGNAL_RE` matched, and its raw `categories` field (in case Reddit's
+RSS exposes post flair there — unconfirmed either way, but if it's
+present and populated, that's a far more reliable signal than guessing
+from title keywords, and worth switching to if it's real). This will show
+directly, on the next run, whether currently-missed posts are failing at
+the image-detection step, the keyword-matching step, or aren't in the
+`/top/.rss?t=month`-scoped, 6-item-capped window being fetched at all —
+three genuinely different problems that would need three different fixes,
+rather than one more guess at the same regex.
+
 Fan art comes from three places. **DeviantArt**
 (`backend.deviantart.com/rss.xml`) is the most structured — a public
 search-as-RSS endpoint, no login needed, with real fields Reddit's RSS

@@ -668,11 +668,26 @@ async function fetchRedditRss(source) {
     // 6, not 15 — /top/.rss already filters for quality, but capping the
     // count too keeps a niche subreddit's whole month of "top" posts from
     // still outnumbering every other source in the feed by sheer volume.
-    return feed.items.slice(0, 6).map(item => {
+    const items = feed.items.slice(0, 6).map(item => {
       const title = (item.title || 'Untitled').trim();
       const snippet = item.contentSnippet || '';
       const thumbnail = extractRedditThumbnail(item.content);
-      const isArt = FAN_ART_ENABLED && !!thumbnail && ART_SIGNAL_RE.test(`${title} ${snippet}`);
+      const hasImage = !!thumbnail;
+      const signalMatch = ART_SIGNAL_RE.test(`${title} ${snippet}`);
+      const isArt = FAN_ART_ENABLED && hasImage && signalMatch;
+      // Direct reports of specific posts that should have qualified but
+      // didn't led here — rather than guess again, this shows exactly
+      // where each item lands in the funnel (has an image? does the
+      // title/text actually match?) on the next real run. Also logs
+      // item.categories in case Reddit's RSS exposes post flair there —
+      // unconfirmed whether it does, or whether r/genewolfe even uses a
+      // "Fan Art" flair, but if it's present and populated, that's a
+      // much more reliable signal than guessing from title keywords and
+      // worth switching to.
+      if (hasImage) {
+        const cats = (item.categories || []).join(',') || 'none';
+        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=yes signal=${signalMatch} categories=[${cats}]`);
+      }
       const author = isArt ? extractRedditAuthor(item) : null;
       return {
         id: makeId(source.name, item.link),
@@ -693,6 +708,7 @@ async function fetchRedditRss(source) {
         } : {})
       };
     });
+    return items;
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
     return [];
