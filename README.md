@@ -555,12 +555,63 @@ already), Floyd Holland (Substack, prose/craft analysis), Lincoln Michel
 serious Wolfe interest), Andy Lee (Substack, the newest strong essay
 found, on *Peace*), and Dave Hook (WordPress, recent attention to Wolfe's
 short story collections specifically, distinct from the usual New-Sun-only
-focus). Substack and Medium both expose a guaranteed, platform-wide RSS
-pattern (`[name].substack.com/feed`, `medium.com/feed/@username`)
-regardless of the individual site, unlike a custom WordPress install where
-`/feed/` has to be checked per-site — higher baseline confidence than
-usual for these six specifically, though still not individually
-fetch-tested against each live feed.
+focus).
+
+**Update: confirmed — Substack as a whole platform blocks GitHub Actions'
+IP range, not just one blog.** Wolf (radicaledward) was already known
+blocked from an earlier round. A live run of this batch then showed all
+four *other* Substack sources here (Don Beck, Floyd Holland, Lincoln
+Michel, Andy Lee) failing with the exact same instant 403, in the same
+run. Five independent Substack blogs, same platform, same failure,
+same signature as DeviantArt and Bluesky — strong enough evidence now to
+call this a platform-level block rather than coincidence across five
+separate blogs. Left all five in `SOURCES` anyway, same reasoning as
+DeviantArt and Bluesky: could plausibly work from a different environment
+even though it doesn't work here. Medium and WordPress are unaffected —
+Mannish Boy and Dave Hook both reach their servers fine, they just haven't
+had recent Wolfe-tagged posts in their current feed window, a completely
+different (and unremarkable) situation from an access block.
+
+## Routing around the Substack block via Google Alerts
+
+Rather than accept five Substack sources sitting permanently at zero, or
+take on real infrastructure (a VPS, a self-hosted runner) just to dodge an
+IP block, `fetchGoogleAlerts` sidesteps the problem entirely: instead of
+fetching Substack directly, it consumes a Google Alerts RSS feed for a
+search query scoped to that specific writer (e.g. `"Gene Wolfe"
+site:donbeck1.substack.com`) — Google's own crawler does the actual
+Substack-fetching, we just read Google's already-public alert-result feed.
+The request goes to `google.com`, never to `substack.com`, so the
+confirmed block shouldn't apply at all.
+
+**Proof of concept, Don Beck first** — `kind: 'google-alerts'`, added
+alongside (not replacing) his direct, still-blocked source, so the direct
+one keeps recording a real `[skip]` line if the block is ever lifted
+rather than silently vanishing from the log. If a live run shows both
+returning the same post, the existing global URL dedup (built earlier for
+the YouTube Search / named-channel overlap) already handles it — no new
+code needed there.
+
+Two known quirks of Google Alerts feeds, handled defensively rather than
+confirmed against a real example: Google often wraps result links in a
+redirect (`google.com/url?q=REAL_URL&...`), unwrapped here by extracting
+the real URL from the `q` parameter so readers land on the actual post,
+not an intermediate Google page. Google Alerts also bolds matching search
+terms directly in the title using literal `<b>` tags, stripped here via
+the same `stripHtmlTags` helper already used for Crossref abstracts and
+Patreon post content.
+
+**Not verified against a real feed at all** — Google's robots.txt blocks
+even read-only tooling from fetching an alerts feed directly, a courtesy
+convention this project's own `fetch()` calls don't follow (very few
+things besides well-behaved crawlers respect robots.txt), so there was no
+way to preview this feed's actual structure before wiring it in. Built
+from general knowledge of how Google Alerts feeds are typically
+structured, not a confirmed example — needs a real run to know if it
+works at all, let alone whether the two quirks above were handled
+correctly. If Don Beck's version works, extending this to the other four
+blocked Substack writers is the same five-minute alert setup repeated,
+not more building.
 
 **Added to the Reference Shelf instead** — the two standout one-off
 essays from the batch: Adam Roberts' Medium piece ("easily the most

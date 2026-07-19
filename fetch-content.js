@@ -481,11 +481,15 @@ const SOURCES = [
   // instead of a one-off.
   //
   // CONFIRMED BLOCKED on a live run: 403 in ~0.4s, the same near-instant
-  // signature as DeviantArt and Bluesky — a third platform now pointing
-  // at the same root cause, GitHub Actions' shared IP pool being blocked
-  // outright rather than anything fixable from this file. Left in rather
-  // than removed, same reasoning as the other two: could plausibly work
-  // from a different environment even though it doesn't work here.
+  // signature as DeviantArt and Bluesky — a third platform pointing at the
+  // same root cause, GitHub Actions' shared IP pool being blocked outright
+  // rather than anything fixable from this file. Later confirmed to be a
+  // platform-wide Substack block, not specific to this blog — see the
+  // comment above the "Six more added" block further down, where four
+  // more independent Substack sources failed identically in the same run.
+  // Left in rather than removed, same reasoning as DeviantArt/Bluesky:
+  // could plausibly work from a different environment even though it
+  // doesn't work here.
   {
     name: 'Wolf (radicaledward)',
     type: 'article',
@@ -544,11 +548,19 @@ const SOURCES = [
   // more than once, or flagged as likely to keep doing so, rather than
   // adding every one-off essay found (many are one Wolfe piece inside an
   // otherwise-unrelated newsletter — those went to the Reference Shelf
-  // instead, see index.html, not here as ongoing feeds). All general-
-  // interest, all get requireKeyword. Substack and Medium both expose a
-  // guaranteed platform-wide RSS pattern regardless of the individual
-  // site, unlike a custom WordPress install where /feed/ has to be
-  // checked per-site — higher confidence than usual for these six.
+  // instead, see index.html, not here as ongoing feeds).
+  //
+  // CONFIRMED: Substack as a whole platform blocks GitHub Actions' IP
+  // range, not just one blog. Wolf (radicaledward) was already known
+  // blocked; a live run then showed all four *other* Substack sources
+  // below (Don Beck, Floyd Holland, Lincoln Michel, Andy Lee) failing
+  // with the identical instant 403 in the same run — five separate
+  // Substack blogs, same platform, same failure, same signature as
+  // DeviantArt and Bluesky. Left in anyway, same reasoning as those two:
+  // could plausibly work from a different environment even though it
+  // doesn't work here. Medium and WordPress are NOT affected by this —
+  // Mannish Boy (Medium) and Dave Hook (WordPress) below both reach their
+  // servers fine, they just haven't had recent Wolfe-tagged posts.
   {
     name: 'Mannish Boy',
     type: 'article',
@@ -558,15 +570,28 @@ const SOURCES = [
     requireKeyword: 'wolfe'
   },
   {
-    name: 'Don Beck',
+    name: 'Don Beck', // CONFIRMED BLOCKED — Substack, see comment block above
     type: 'article',
     series: 'general',
     kind: 'rss',
     url: 'https://donbeck1.substack.com/feed',
     requireKeyword: 'wolfe'
   },
+  // Proof-of-concept for routing around the Substack block via Google
+  // Alerts — see fetchGoogleAlerts above for the full explanation. Kept
+  // as a separate source entry alongside the direct (blocked) one above
+  // rather than replacing it outright, so the direct source keeps
+  // recording a real skip line if the block is ever lifted, instead of
+  // silently disappearing from the log.
   {
-    name: 'Floyd Holland',
+    name: 'Don Beck (via Google Alerts)',
+    type: 'article',
+    series: 'general',
+    kind: 'google-alerts',
+    url: 'https://www.google.com/alerts/feeds/15672596926670156383/13794794078402339525'
+  },
+  {
+    name: 'Floyd Holland', // CONFIRMED BLOCKED — Substack, see comment block above
     type: 'article',
     series: 'general',
     kind: 'rss',
@@ -574,7 +599,7 @@ const SOURCES = [
     requireKeyword: 'wolfe'
   },
   {
-    name: 'Lincoln Michel',
+    name: 'Lincoln Michel', // CONFIRMED BLOCKED — Substack, see comment block above
     type: 'article',
     series: 'general',
     kind: 'rss',
@@ -582,7 +607,7 @@ const SOURCES = [
     requireKeyword: 'wolfe'
   },
   {
-    name: 'Andy Lee',
+    name: 'Andy Lee', // CONFIRMED BLOCKED — Substack, see comment block above
     type: 'article',
     series: 'general',
     kind: 'rss',
@@ -1143,6 +1168,60 @@ async function fetchYouTubeSearch(source) {
 }
 
 // ---------------------------------------------------------------------
+// GOOGLE ALERTS (routes around Substack's confirmed IP block)
+// ---------------------------------------------------------------------
+// Every Substack source in this file is blocked outright — GitHub
+// Actions' IP range, confirmed across five separate blogs (see comments
+// near Wolf/radicaledward and the "Six more added" block above). This
+// sidesteps the block entirely rather than trying to defeat it: instead
+// of fetching Substack directly, it consumes a Google Alerts RSS feed —
+// a search alert (e.g. "Gene Wolfe" site:donbeck1.substack.com) that
+// *Google's own crawler* keeps fresh, delivered as RSS. We're making a
+// request to google.com, not substack.com, so the Substack-specific
+// block shouldn't apply at all.
+//
+// Two known quirks specific to this feed format, handled defensively
+// since a live preview wasn't possible to confirm against (Google's
+// robots.txt blocks even read-only tooling from fetching an alerts feed
+// directly, a courtesy convention our own fetch() call doesn't follow —
+// so this is informed by how Google Alerts feeds are generally
+// structured, not confirmed against this specific one):
+//   1. Google often wraps the result link in a redirect
+//      ("google.com/url?q=REAL_URL&..."), which would otherwise send a
+//      reader to an intermediate Google page instead of the actual post.
+//      Unwrapped below by pulling the real URL out of the `q` parameter.
+//   2. Google Alerts bolds matching search terms directly in the title
+//      using literal <b> tags, which would otherwise leak as visible
+//      "<b>Gene</b> <b>Wolfe</b>" markup in the card — stripped below.
+// NOT VERIFIED LIVE for either of these — needs a real run to confirm.
+async function fetchGoogleAlerts(source) {
+  try {
+    const feed = await parser.parseURL(source.url);
+    return feed.items.slice(0, 10).map(item => {
+      const title = stripHtmlTags(item.title || 'Untitled');
+      const snippet = stripHtmlTags(item.contentSnippet || item.content || '');
+      let url = item.link || '';
+      const redirectMatch = url.match(/[?&]q=([^&]+)/);
+      if (redirectMatch) url = decodeURIComponent(redirectMatch[1]);
+      return {
+        id: makeId(source.name, url),
+        title,
+        source: source.name,
+        type: 'article',
+        series: guessSeries(`${title} ${snippet}`, source.series),
+        date: (item.isoDate || item.pubDate || new Date().toISOString()).slice(0, 10),
+        url,
+        desc: snippet.slice(0, 220),
+        tags: guessTags(`${title} ${snippet}`)
+      };
+    }).filter(item => item.url);
+  } catch (err) {
+    console.error(`[skip] ${source.name}: ${err.message}`);
+    return [];
+  }
+}
+
+// ---------------------------------------------------------------------
 // URTH MAILING LIST (Pipermail)
 // ---------------------------------------------------------------------
 // Pipermail's monthly archive has a predictable, unchanged-in-decades HTML
@@ -1321,6 +1400,7 @@ async function fetchSource(source) {
   if (source.kind === 'crossref') return fetchCrossref(source);
   if (source.kind === 'patreon') return fetchPatreon(source);
   if (source.kind === 'youtube-search') return fetchYouTubeSearch(source);
+  if (source.kind === 'google-alerts') return fetchGoogleAlerts(source);
 
   const feedUrl = source.kind === 'youtube' ? youtubeFeedUrl(source.channelId) : source.url;
   try {
