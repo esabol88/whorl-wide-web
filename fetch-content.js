@@ -1077,24 +1077,36 @@ function decodeHtmlEntities(str) {
 // not dates — the reason fetchPipermail used to just stamp every item
 // with today's date as an approximation. A direct report showed how bad
 // that approximation actually was in practice: a post from June 4th
-// showing as "JUL 18," six weeks off, not a rounding error. This fetches
-// each message's own page and pulls its real date instead.
+// showing as "JUL 18," six weeks off, not a rounding error.
 //
-// NOT VERIFIED LIVE against Urth's actual page structure — urth.net isn't
-// reachable from the sandbox this was built in. Pipermail/Mailman
-// classically renders a message's date as an italicized email-style
-// timestamp near the top of its own page (e.g. "Wed Jun  4 12:34:56 CDT
-// 2026") — the regex below targets that pattern, but if the real markup
-// differs, this fails safe: falls back to today's date exactly like
-// before, it doesn't break or crash. Check real dates against real posts
-// after the next run, the same way every other "not verified live" fix
-// in this file has been confirmed.
+// First attempt at fetching each message's own page for its real date
+// used a regex assuming "Day Mon DD HH:MM:SS YYYY" wrapped in <I> tags —
+// still not showing real dates on a live run, so that guess was wrong.
+// Found actual evidence this time instead of guessing again: an archived
+// message page turned up in search with the literal text "Roy C. Lackey
+// rclackey at stic.net Tue Dec 23 13:45:24 PST 2008" — confirming the
+// real format has a timezone abbreviation (PST) sitting BETWEEN the time
+// and the year, which the old regex had no room for at all. Fixed the
+// pattern to account for it, and loosened the <I>-tag requirement too
+// (still unconfirmed whether that's the actual wrapper) by searching the
+// whole page for this fairly distinctive date shape rather than requiring
+// specific surrounding markup — safe to do since Mailman's own rendered
+// date uses "Tue Dec 23 13:45:24 PST 2008" (no comma, TZ abbreviation),
+// clearly different from a quoted reply's "Date:" header further down the
+// page, which uses RFC 2822's comma-and-numeric-offset format instead
+// ("Fri, 18 Jul 2014 17:09:38 -0700") — so this shouldn't accidentally
+// latch onto a quoted date buried in someone's reply text.
+//
+// STILL NOT FULLY VERIFIED LIVE — evidence came from search-engine text
+// extraction, not the raw HTML itself, so the exact tag structure remains
+// unconfirmed. Fails safe either way: falls back to today's date exactly
+// like before if nothing matches, same as the first attempt.
 async function fetchMessageDate(url) {
   try {
     const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(10000) });
     if (!res.ok) return null;
     const html = await res.text();
-    const match = html.match(/<I>\s*([A-Za-z]{3}\s+[A-Za-z]{3}\s+\d{1,2}\s+[\d:]+\s+\d{4})\s*<\/I>/);
+    const match = html.match(/\b([A-Za-z]{3}\s+[A-Za-z]{3}\s+\d{1,2}\s+\d{1,2}:\d{2}:\d{2}\s+[A-Z]{2,5}\s+\d{4})\b/);
     if (!match) return null;
     const parsed = new Date(match[1]);
     return isNaN(parsed.getTime()) ? null : parsed.toISOString().slice(0, 10);

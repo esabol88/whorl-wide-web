@@ -335,18 +335,33 @@ dates — so every Urth Mailing List item used to just get stamped with
 whatever day the Action happened to run, as an approximation. A direct
 report showed how bad that actually got in practice: a post from June 4th
 displaying as "JUL 18" — six weeks off, not a rounding error. Fixed:
-`fetchMessageDate()` now fetches each kept item's own message page and
-pulls its real date from there, run in parallel across all of them so it
-doesn't meaningfully add to total runtime. Targets Pipermail/Mailman's
-classic italicized email-style timestamp near the top of a message's page
-(e.g. "Wed Jun  4 12:34:56 CDT 2026") — **not verified live**, since
-urth.net isn't reachable from the sandbox this was built in, so the exact
-markup is unconfirmed. Fails safe either way: a page that doesn't match
-the expected pattern just falls back to today's date, the same as before
-this fix existed, rather than breaking. A new debug line
+`fetchMessageDate()` fetches each kept item's own message page and pulls
+its real date from there, run in parallel across all of them so it
+doesn't meaningfully add to total runtime.
+
+**First attempt didn't work** — a live run still showed today's date, no
+better than before. Rather than guess again blind, found real evidence
+this time: an archived Urth message page turned up in a search result
+with the literal text "Roy C. Lackey rclackey at stic.net Tue Dec 23
+13:45:24 PST 2008" — confirming the actual format has a timezone
+abbreviation sitting *between* the time and the year, which the first
+regex had no room for at all (it expected the year immediately after the
+time). Fixed the pattern accordingly, and tested it directly against that
+real sample plus a synthetic case matching the exact June 4th scenario
+from the original report — both parse correctly now, confirmed locally
+before shipping this time, not just reasoned about.
+
+**Still not fully verified live**, though — the evidence came from a
+search engine's text extraction, not the raw HTML itself, so the exact
+surrounding tag structure remains unconfirmed (the regex was loosened to
+not require a specific wrapper for this reason). Fails safe either way: a
+page that doesn't match just falls back to today's date, same as before
+either fix existed. The debug line
 (`[debug] Urth Mailing List: resolved real dates for N/M items`) shows
-next run whether this actually worked — if it says 0/N, the regex needs
-adjusting against the real markup.
+next run whether this attempt actually worked. If it's still 0/N after
+this, that's a reasonable point to stop iterating blind and either drop
+this source or find another way to get real per-message dates (e.g.
+scraping the date.html sort index instead of each message's own page).
 
 ## Patreon (specific tracked creators, not a sitewide search)
 
@@ -705,6 +720,32 @@ doesn't let a click bypass the Spoiler Shield either: the spoiler overlay
 is a solid, absolutely-positioned layer sitting on top of the card's real
 content in normal stacking order, so it intercepts clicks before they ever
 reach the title link underneath — nothing needed to change there.
+
+## Real subreddit icons, upgraded from a gradient-color placeholder
+
+Both subreddits are tagged `series:'general'`, so their cards used to
+share the exact same tinted tile as every other general-Wolfe item —
+indistinguishable from each other at a glance once there was more than
+one. First attempt was fetching actual subreddit icons automatically,
+which turned out to be a dead end worth documenting: Reddit's JSON API
+(the normal way to get a subreddit's icon) is the same API already
+confirmed to block anonymous requests, and web search doesn't index these
+small binary image assets well enough to find the current URLs by hand
+either. Landed on a fully self-contained placeholder instead — each
+subreddit got its own flat gradient color, distinct from the four series
+colors, applied as an inline style override.
+
+**Upgraded again shortly after** — the real icon images got supplied
+directly, sidestepping the whole fetching problem entirely. Both saved as
+static files under `assets/` (`subreddit-genewolfe.png`,
+`subreddit-rereadingwolfepodcast.png`), checked into the repo rather than
+fetched at runtime, so nothing here depends on Reddit's API at all.
+`SUBREDDIT_LOGO` in `index.html` now maps each subreddit to its real
+image, used as the thumbnail whenever a Reddit item doesn't have its own
+per-item thumbnail (which is always, currently — Reddit's RSS doesn't
+expose one). Falls back gracefully to the old tinted tile if an image
+ever fails to load. Add more subreddits the same way if they're added to
+`SOURCES`: drop the image in `assets/`, add a line to `SUBREDDIT_LOGO`.
 
 ## Alzabo Soup links went to a category page, not the episode
 
