@@ -1499,9 +1499,138 @@ async function timedFetch(source) {
   return result;
 }
 
+// Known pieces no automated source can discover on its own — either
+// predating any feed/alert that could have caught them, or behind the
+// confirmed Substack block regardless. Originally added to the Reference
+// Shelf, moved here on request: these are dated articles, not durable
+// reference material, so they belong in the feed as real cards — sortable
+// by date, filterable by type/series/tag — not a separate static list.
+// Unlike data.json, which gets fully regenerated every run, this array
+// lives in the source code, so these persist permanently without needing
+// rediscovery. Two dates below are approximate — flagged individually —
+// where the original research only gave a month, not an exact day.
+const MANUAL_ITEMS = [
+  {
+    id: 'manual-donbeck-nextread',
+    title: 'Your Next Read: The Book of the New Sun',
+    source: 'Don Beck',
+    type: 'article',
+    series: 'new',
+    date: '2025-05-23',
+    url: 'https://donbeck1.substack.com/p/your-next-read-the-book-of-the-new',
+    desc: "An enthusiastic, accessible first-reader case for New Sun being genuinely life-changing, without pretending it'll suit everyone.",
+    tags: guessTags('Your Next Read: The Book of the New Sun')
+  },
+  {
+    // Date approximate — original research described this as a
+    // craft-oriented follow-up to the piece above, no exact date given.
+    id: 'manual-donbeck-structure',
+    title: 'Structure of the New Sun',
+    source: 'Don Beck',
+    type: 'article',
+    series: 'new',
+    date: '2025-06-01',
+    url: 'https://donbeck1.substack.com/p/structure-of-the-new-sun',
+    desc: "A craft-oriented follow-up on Wolfe's unconventional placement of rising action, climax, and structural turns.",
+    tags: guessTags('Structure of the New Sun')
+  },
+  {
+    // Date approximate — original research only gave "January 2025," no
+    // specific day.
+    id: 'manual-floydholland-prose',
+    title: 'The Enchanting Prose of Gene Wolfe',
+    source: 'Floyd Holland',
+    type: 'article',
+    series: 'general',
+    date: '2025-01-15',
+    url: 'https://floydholland.substack.com/p/the-enchanting-prose-of-gene-wolfe',
+    desc: 'A close prose analysis using The Fifth Head of Cerberus — sentence density, parenthetical complication, memory, and perspective.',
+    tags: guessTags('The Enchanting Prose of Gene Wolfe Fifth Head of Cerberus')
+  },
+  {
+    id: 'manual-lincolnmichel-whyread',
+    title: 'Why You Should Read Gene Wolfe (and Where to Start)',
+    source: 'Lincoln Michel',
+    type: 'article',
+    series: 'general',
+    date: '2026-01-08',
+    url: 'https://countercraft.substack.com/p/why-you-should-read-gene-wolfe-and',
+    desc: 'Probably the best recent general introduction — Peace for literary readers, Fifth Head for established SF readers, plus the short fiction.',
+    tags: guessTags('Why You Should Read Gene Wolfe Peace Fifth Head of Cerberus')
+  },
+  {
+    id: 'manual-andylee-peace',
+    title: "Gene Wolfe's Peace",
+    source: 'Andy Lee',
+    type: 'article',
+    series: 'general',
+    date: '2026-07-12',
+    url: 'https://litandchess.substack.com/p/gene-wolfes-peace',
+    desc: "A literary treatment of narrative voice, concealed violence, and memory — and Peace's relationship to Poe, Nabokov, and postmodern fiction.",
+    tags: guessTags("Gene Wolfe's Peace")
+  },
+  {
+    // This is a representative entry point into a many-post ongoing (now
+    // paused) chapter-by-chapter project, not a single dated essay like
+    // everything else in this list — the date is a rough approximation,
+    // not tied to a specific confirmed publish date the way the other
+    // entries are.
+    id: 'manual-radicaledward-newsun',
+    title: 'The Book of the New Sun (chapter-by-chapter read)',
+    source: 'Wolf (radicaledward)',
+    type: 'article',
+    series: 'new',
+    date: '2025-02-01',
+    url: 'https://radicaledward.substack.com/p/the-book-of-the-new-sun',
+    desc: 'A slow, chapter-by-chapter literary read — voice, structure, and imagery — getting well into The Claw of the Conciliator before going on hiatus. Start here for the whole archive.',
+    tags: guessTags('The Book of the New Sun chapter by chapter Severian')
+  },
+  {
+    // No `thumbnail` field, deliberately — a verified, stable, hotlink-
+    // safe image URL for this specific piece wasn't findable through
+    // available tools (auction houses, Pinterest, and gallery sites don't
+    // expose that kind of URL to search, and there's no live browser
+    // access here to grab one directly from Goodreads). Rather than guess
+    // a plausible-looking image URL and risk it breaking on the live
+    // site, this falls back to the palette icon tile — the same fallback
+    // every fan art card already uses before a real thumbnail loads, now
+    // deliberately relied on here instead of treated as a rare edge case.
+    id: 'manual-donmaitz-newsun',
+    title: 'The Book of the New Sun — original US cover paintings',
+    source: 'Don Maitz',
+    type: 'fanart',
+    series: 'new',
+    date: '1980-05-01',
+    url: 'https://en.wikipedia.org/wiki/The_Shadow_of_the_Torturer',
+    desc: "The original American cover paintings for all four New Sun volumes — the foundational visual interpretation of Severian, still in print on many editions decades later.",
+    tags: guessTags('Book of the New Sun cover art Severian'),
+    artist: 'Don Maitz',
+    artistUrl: 'https://www.paravia.com/DonMaitz/',
+    postUrl: 'https://en.wikipedia.org/wiki/The_Shadow_of_the_Torturer',
+    nsfw: false
+  },
+  {
+    // Same situation as Maitz above — no verified image URL, deliberately
+    // falls back to the palette icon.
+    id: 'manual-brucepennington-newsun',
+    title: 'The Book of the New Sun — original UK cover paintings',
+    source: 'Bruce Pennington',
+    type: 'fanart',
+    series: 'new',
+    date: '1980-06-01',
+    url: 'https://www.brucepennington.co.uk/',
+    desc: 'The original British cover paintings — immense, ancient landscapes and cosmic decay rather than character portraiture, a very different visual take from the American edition.',
+    tags: guessTags('Book of the New Sun cover art landscape'),
+    artist: 'Bruce Pennington',
+    artistUrl: 'https://www.brucepennington.co.uk/',
+    postUrl: 'https://www.brucepennington.co.uk/',
+    nsfw: false
+  }
+];
+
 async function main() {
   const results = await Promise.all(SOURCES.map(timedFetch));
-  let allItems = results.flat().sort((a, b) => b.date.localeCompare(a.date));
+  let allItems = [...results.flat(), ...MANUAL_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
 
   // Global dedup by URL, across all sources — needed now that the YouTube
   // search source (see fetchYouTubeSearch) can surface the exact same

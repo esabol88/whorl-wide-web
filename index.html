@@ -498,6 +498,13 @@ footer{
 </footer>
 
 <script>
+// Browsers try to preserve scroll position across a reload by default —
+// undesired here, every load (including a plain refresh) should start at
+// the top. Has to run before anything else, synchronously, so the
+// browser never gets a chance to restore a remembered position first.
+if('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 /* ---------------------------------------------------------------------
    STORAGE
    Real localStorage — this file is now deployed outside the Claude.ai
@@ -513,7 +520,7 @@ const STORE = {
   set(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
 };
 
-const ICONS = {video:'&#9654;', podcast:'&#9834;', discussion:'&#128172;', article:'&#9998;', paper:'&#167;', fanart:'&#10086;'};
+const ICONS = {video:'&#9654;', podcast:'&#9834;', discussion:'&#128172;', article:'&#9998;', paper:'&#167;', fanart:'&#127912;'};
 const SERIES_LABEL = {new:'New Sun', long:'Long Sun', short:'Short Sun', general:'General Wolfe'};
 // Display text only — the internal type key (used for filtering and in
 // data.json) stays as 'fanart' for schema stability, but shows as just

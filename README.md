@@ -955,6 +955,83 @@ is a solid, absolutely-positioned layer sitting on top of the card's real
 content in normal stacking order, so it intercepts clicks before they ever
 reach the title link underneath — nothing needed to change there.
 
+## Backfilling known back-catalog pieces — as real feed items, not shelf links
+
+RSS feeds and Google Alerts both only ever surface *new* content going
+forward — a writer's entire existing body of work is otherwise invisible
+to this project permanently, not just until an alert catches up. Since
+the earlier research pass already surfaced specific known Wolfe pieces
+from the writers now being tracked via Google Alerts, first instinct was
+adding those to the Reference Shelf, the same mechanism already used for
+Adam Roberts and Bebergal. Corrected on direct feedback: these are dated
+articles, not durable reference material like a dictionary or a chapter
+guide — they belong in the feed as real, sortable, filterable cards, not
+a separate static list.
+
+`MANUAL_ITEMS` in `fetch-content.js` holds them instead — a small
+hardcoded array merged into every run's output in `main()`, right
+alongside whatever gets fetched. Unlike `data.json`, which gets fully
+regenerated every single run (any hand-edit to it would vanish on the
+next hourly Action run), this array lives in the source code itself, so
+it persists permanently without needing rediscovery by any fetcher. Five
+pieces currently: two from Don Beck, one each from Floyd Holland, Lincoln
+Michel, and Andy Lee. Two dates are approximate, flagged individually in
+the code — the original research gave only a month for Floyd Holland's
+piece, and no date at all for Don Beck's second piece beyond "a follow-up"
+to the first.
+
+**Resolved: Wolf (radicaledward)'s chapter-by-chapter New Sun read** —
+added as a sixth `MANUAL_ITEMS` entry, a representative entry point into
+the whole (now-paused) archive rather than a single essay, with a rough
+approximate date flagged in the code as standing in for the project as a
+whole rather than tied to a specific confirmed publish date.
+
+Worth being explicit about something that might not be obvious: several
+of these entries are Substack URLs — the exact platform confirmed blocked
+from GitHub Actions elsewhere in this file. That block doesn't apply
+here at all. It's a server-side fetching problem; these URLs are just
+plain data sitting in the source, rendered as ordinary links in an actual
+visitor's browser, which isn't on GitHub's blocked IP range.
+
+## Backfilling art without a verified image URL — a generic icon instead
+
+Tried to backfill Don Maitz's and Bruce Pennington's original New Sun
+cover paintings the same way as the articles above, but hit a real,
+different problem: articles just need a URL to *link* to, art needs a URL
+that actually *displays as an image*. Couldn't find a verified, stable,
+hotlink-safe image URL through available tools — auction houses,
+Pinterest, and gallery sites don't expose that kind of URL to search, and
+there's no live browser access here to grab one directly from a source
+like Goodreads. Rather than guess a plausible-looking image URL and risk
+a broken image on the live site, landed on a simpler fix instead: these
+two `MANUAL_ITEMS` entries (`type: 'fanart'`) simply have no `thumbnail`
+field, falling back to the same tinted icon tile every fan art card
+already uses before a real thumbnail loads — not a new mechanism, just
+deliberately relied on here instead of treated as a rare edge case.
+Swapped `ICONS.fanart` from a generic diamond to an artist's palette
+(`&#127912;`) to actually look like art at a glance, since this fallback
+is now doing real, permanent work for these two entries, not just
+covering a brief loading flicker.
+
+Both use their true original 1980 publication dates rather than a
+recent/fake date to force visibility in the main "Latest" scroll — using
+a fake date to inflate recency would misrepresent genuinely historical
+content. This means neither shows up near the top of a normal scroll
+through the feed, which is fine: anyone using the **Art** filter chip
+specifically will see them regardless of date, since that filter isn't
+time-limited. The discovery path for evergreen content like this is
+filtering by type, not happening to scroll past it in "Latest."
+
+## Scroll position resets on refresh
+
+Browsers try to preserve scroll position across a reload by default —
+undesired here, by request: every load, including a plain refresh, should
+start at the top. `history.scrollRestoration = 'manual'` disables the
+browser's automatic restore, paired with an explicit `window.scrollTo(0,
+0)`. Both run synchronously at the very top of the script, before
+anything else, so the browser never gets a chance to jump to a remembered
+position first.
+
 ## Real subreddit icons, upgraded from a gradient-color placeholder
 
 Both subreddits are tagged `series:'general'`, so their cards used to
