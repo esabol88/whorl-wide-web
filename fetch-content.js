@@ -590,6 +590,39 @@ const SOURCES = [
     kind: 'google-alerts',
     url: 'https://www.google.com/alerts/feeds/15672596926670156383/13794794078402339525'
   },
+  // Same route-around, extended to the other four confirmed-blocked
+  // Substack sources — see fetchGoogleAlerts and the comment above Don
+  // Beck's entry for the full explanation. Each kept alongside its direct
+  // (blocked) source rather than replacing it, same reasoning: the direct
+  // one keeps recording a real skip line if the block is ever lifted.
+  {
+    name: 'Floyd Holland (via Google Alerts)',
+    type: 'article',
+    series: 'general',
+    kind: 'google-alerts',
+    url: 'https://www.google.com/alerts/feeds/15672596926670156383/17407109298692797003'
+  },
+  {
+    name: 'Lincoln Michel (via Google Alerts)',
+    type: 'article',
+    series: 'general',
+    kind: 'google-alerts',
+    url: 'https://www.google.com/alerts/feeds/15672596926670156383/9768491324716782172'
+  },
+  {
+    name: 'Andy Lee (via Google Alerts)',
+    type: 'article',
+    series: 'general',
+    kind: 'google-alerts',
+    url: 'https://www.google.com/alerts/feeds/15672596926670156383/12132993125103068978'
+  },
+  {
+    name: 'Wolf (radicaledward, via Google Alerts)',
+    type: 'article',
+    series: 'new',
+    kind: 'google-alerts',
+    url: 'https://www.google.com/alerts/feeds/15672596926670156383/16046406100643461909'
+  },
   {
     name: 'Floyd Holland', // CONFIRMED BLOCKED — Substack, see comment block above
     type: 'article',

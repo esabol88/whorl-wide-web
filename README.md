@@ -657,6 +657,17 @@ correctly. If Don Beck's version works, extending this to the other four
 blocked Substack writers is the same five-minute alert setup repeated,
 not more building.
 
+**Extended to the other four confirmed-blocked Substack sources**: Floyd
+Holland, Lincoln Michel, Andy Lee, and Wolf (radicaledward) — same
+`kind: 'google-alerts'` pattern, same "alongside, not replacing" approach.
+Don Beck's version reached Google fine (no 403) but hadn't surfaced any
+items yet at the time these four were added — Google Alerts doesn't
+backfill, so a brand-new, narrow (`site:`-scoped) alert can take anywhere
+from hours to a few days to start returning results, not a sign it's
+broken. All five: the real thing being confirmed is that the *request*
+succeeds — whether content actually flows through is still an open
+question being watched over time, not something a single run settles.
+
 **Added to the Reference Shelf instead** — the two standout one-off
 essays from the batch: Adam Roberts' Medium piece ("easily the most
 substantial Medium essay" found in the research) and Peter Bebergal's 2015
