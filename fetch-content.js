@@ -32,19 +32,24 @@ const Parser = require('rss-parser');
 const fs = require('fs');
 const crypto = require('crypto');
 
-// Fan art detection turned off, 2026 — the heuristics for it (Reddit:
-// "does this post have an embedded image," Bluesky: same) can't tell real
-// fan art apart from memes, screenshots, or reaction images. r/shittygenewolfe
-// especially — it's a joke/meme subreddit by name, and every image post
-// there was getting reclassified as "fan art" with nothing to stop it.
-// DeviantArt (real image + artist attribution + a real content rating,
-// not a blunt "has an image" guess) is unaffected in principle, but it's
-// also currently blocked from GitHub Actions anyway (see fetchDeviantArt),
-// so this flag being off changes nothing for it right now either way.
-// Flip back to true once Reddit/Bluesky detection is actually tightened —
-// this suppresses the *output*, not the underlying detection code, so
-// nothing needs to be rebuilt to turn it back on.
-const FAN_ART_ENABLED = false;
+// Fan art detection: re-enabled. Originally turned off because the
+// detection heuristic (Reddit: "does this post have an embedded image,"
+// Bluesky: same) can't tell real fan art apart from memes, screenshots, or
+// reaction images — r/shittygenewolfe made this especially bad, since it's
+// a joke/meme subreddit by name and every image post there was getting
+// reclassified as "fan art" with nothing to stop it. That subreddit has
+// since been removed from SOURCES entirely (separate decision, on direct
+// feedback that it wasn't adding value generally) — the two subreddits
+// still tracked (r/genewolfe, r/rereadingwolfepodcast) are a general
+// discussion sub and a podcast companion sub, not a meme sub, so the
+// specific thing that made this noisy is gone. Worth trying again under
+// meaningfully different conditions, not just flipping the same switch
+// back blind. Bluesky is still blocked from GitHub Actions regardless
+// (see fetchBlueskyArt), so this mostly just re-enables Reddit's
+// detection in practice. DeviantArt (real image + artist attribution + a
+// real content rating, not a blunt "has an image" guess) was never the
+// problem and is also still blocked separately either way.
+const FAN_ART_ENABLED = true;
 
 // index.html needs a stable `id` per item (used as the key for saved-item
 // stars, spoiler-reveal state, and NSFW-reveal state) — derive one from the
@@ -642,6 +647,20 @@ function redditTitleNsfw(title) {
   return /\bnsfw\b/i.test(title || '');
 }
 
+// "Has an embedded image" alone was the whole problem before — it can't
+// tell real fan art apart from a meme, a screenshot, or someone's photo
+// of a red-looking sunset captioned "New Sun vibes." Requiring the
+// title/text to actually say something art-related fixes this directly:
+// real fan art posts overwhelmingly say so ("[OC] Severian portrait,"
+// "my art of...", "posted on DeviantArt") in a way a meme or an unrelated
+// photo essentially never does. Word-boundary matched so short entries
+// like "art" or "oc" don't false-positive inside unrelated words (won't
+// match inside "Arthur" or "chocolate"). Not foolproof — a real art post
+// with a caption-free title could still be missed — but a missed real
+// post is a much smaller problem than a feed full of memes, the same
+// trade made for Crossref's "must say wolfe" filter.
+const ART_SIGNAL_RE = /\b(art|artwork|fanart|fan art|drawing|draw|redraw|painting|paint|sketch|illustration|doodle|portrait|lineart|line art|commission|oc|deviantart|artstation|pixiv|tumblr|instagram)\b/i;
+
 async function fetchRedditRss(source) {
   try {
     if (source.redditDelayMs) await delay(source.redditDelayMs);
@@ -651,8 +670,9 @@ async function fetchRedditRss(source) {
     // still outnumbering every other source in the feed by sheer volume.
     return feed.items.slice(0, 6).map(item => {
       const title = (item.title || 'Untitled').trim();
+      const snippet = item.contentSnippet || '';
       const thumbnail = extractRedditThumbnail(item.content);
-      const isArt = FAN_ART_ENABLED && !!thumbnail;
+      const isArt = FAN_ART_ENABLED && !!thumbnail && ART_SIGNAL_RE.test(`${title} ${snippet}`);
       const author = isArt ? extractRedditAuthor(item) : null;
       return {
         id: makeId(source.name, item.link),
@@ -662,8 +682,8 @@ async function fetchRedditRss(source) {
         series: guessSeries(title, source.series),
         date: (item.isoDate || item.pubDate || new Date().toISOString()).slice(0, 10),
         url: item.link,
-        desc: (item.contentSnippet || '').slice(0, 220),
-        tags: guessTags(`${title} ${item.contentSnippet || ''}`),
+        desc: snippet.slice(0, 220),
+        tags: guessTags(`${title} ${snippet}`),
         thumbnail,
         ...(isArt ? {
           artist: author ? `u/${author} (Reddit)` : 'Unknown artist (via Reddit)',

@@ -163,18 +163,40 @@ self-hosted runner on a non-shared IP) even though it doesn't work here.
 
 ## Fan art: DeviantArt, Bluesky, and now Reddit
 
-**Currently disabled** — `FAN_ART_ENABLED = false` near the top of
-`fetch-content.js`. Live use surfaced exactly the risk that was flagged
-when Reddit and Bluesky fan art were built: neither can actually tell real
-art apart from memes, screenshots, or reaction images, they just check
-"does this post have an embedded image." r/shittygenewolfe made it worse
-by being a joke/meme subreddit in the first place — every image post there
-was getting reclassified as fan art with nothing to stop it. The flag
-suppresses *output* from all three sources (Reddit's image-reclassification,
-Bluesky, and DeviantArt, even though DeviantArt's own detection is real —
-see below — and isn't actually the problem), not the underlying detection
-code, so flipping it back to `true` needs no rebuilding once Reddit/Bluesky
-detection is actually tightened.
+**Re-enabled** — `FAN_ART_ENABLED = true` near the top of
+`fetch-content.js`. Was disabled after live use surfaced exactly the risk
+that was flagged when Reddit and Bluesky fan art were built: neither can
+actually tell real art apart from memes, screenshots, or reaction images,
+they just check "does this post have an embedded image." r/shittygenewolfe
+made it worse by being a joke/meme subreddit in the first place — every
+image post there was getting reclassified as fan art with nothing to stop
+it. That subreddit has since been removed from `SOURCES` entirely (a
+separate decision, on direct feedback that it wasn't adding value
+generally) — worth trying fan art again specifically *because* the actual
+noise source is gone, not just flipping the same switch back blind. The
+two subreddits still tracked are a general discussion sub and a podcast
+companion sub, a meaningfully different situation than before. Bluesky
+stays blocked from GitHub Actions regardless of this flag (see
+`fetchBlueskyArt`), so in practice this mostly just re-enables Reddit's
+detection; DeviantArt was never actually the problem and is also still
+separately blocked either way.
+
+**A real content filter, not just re-enabling the old check.** Even
+without a meme subreddit in the mix, "has an embedded image" alone still
+can't tell fan art apart from a random relevant-looking photo — someone's
+picture of a red sunset captioned "felt very New Sun today" has an image
+and is completely on-topic, but it isn't fan art. `ART_SIGNAL_RE` now
+requires the title/text to actually say something art-related — a direct
+word ("art," "drawing," "sketch," "commission," "OC," etc.) or a named art
+platform ("DeviantArt," "ArtStation," "Instagram," "Tumblr," "Pixiv") —
+before an image post gets classified as fan art at all. Word-boundary
+matched specifically so short entries like "art" or "oc" can't
+false-positive inside unrelated words ("Arthur," "chocolate" both
+correctly don't match, tested directly rather than assumed). Not
+foolproof — a real art post with a bare, caption-free title could still
+be missed — but a missed real post is a much smaller problem than a feed
+full of memes and unrelated photos, the same trade already made for
+Crossref's "must say wolfe" filter.
 
 Fan art comes from three places. **DeviantArt**
 (`backend.deviantart.com/rss.xml`) is the most structured — a public
@@ -606,6 +628,20 @@ the fetcher has no way to judge "this is a big drop," so nothing is
 featured by default. Only one item can be featured at a time (the first one
 found); un-set the old one before setting a new one if you're doing this by
 hand in `data.json`.
+
+## Series/format filters no longer persist — Spoiler Shield still does
+
+Every filter used to save to `localStorage` and restore on the next
+visit, including series and format — meaning a visit could quietly start
+pre-filtered to whatever was selected last time, with no visible reason
+why the feed looked different from what "no filter" should show. By
+request, series and format now reset to "All Series / All Formats" on
+every fresh visit — `restoreFilters()` in `index.html` deliberately skips
+them. The character-tag filter and the Saved toggle still persist as
+before, since those weren't part of the ask. **Spoiler Shield progress is
+a separate, untouched concern** — it lives under its own `STORE` key
+(`'progress'`, not `'filters'`) and keeps carrying over exactly as it
+always has; nothing about that changed here.
 
 ## Search
 
