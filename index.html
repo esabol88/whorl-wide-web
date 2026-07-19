@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>fuligin.dev — Gene Wolfe Content Aggregator</title>
+<meta name="description" content="A Gene Wolfe content aggregator that pulls from YouTube, podcasts, Reddit, scholarly papers, and independent criticism into one feed — with a Spoiler Shield that blurs anything ahead of where you've read.">
+<meta property="og:title" content="fuligin.dev — Gene Wolfe Content Aggregator">
+<meta property="og:description" content="Everything findable about Gene Wolfe, pulled into one feed — with a Spoiler Shield that blurs anything ahead of where you've read.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fuligin.dev">
+<!-- og:image deliberately omitted — no actual branded social-preview
+     image exists yet. Pointing this at favicon.svg wouldn't work well:
+     most platforms (Discord, Reddit, Twitter/X) want a raster JPG/PNG at
+     roughly 1200x630, not an SVG, so a real image needs to be designed
+     and added here rather than reusing the favicon as a placeholder. -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="fuligin.dev — Gene Wolfe Content Aggregator">
+<meta name="twitter:description" content="Everything findable about Gene Wolfe, pulled into one feed — with a Spoiler Shield that blurs anything ahead of where you've read.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="alternate icon" href="favicon.svg">
 <style>
@@ -17,13 +30,18 @@
   --hairline-hi:#302d26;
   --parchment:#efe9db;
   --parchment-dim:#8a8474;
-  --muted:#5f5a4d;
+  --muted:#857f6f; /* was #5f5a4d — that failed WCAG AA (2.83-2.98:1 vs the 4.5:1 minimum for small text), verified with real contrast math, not assumed. This passes at 4.87-5.13:1. */
   --ochre:#b6924f;
   --verdigris:#6a9c83;
   --rust:#c2703f;
   --slate-blue:#6f93c2;
 }
 *{box-sizing:border-box;}
+/* Keyboard-focus only (not mouse clicks) — one consistent ring across
+   every interactive element, same ochre accent already used for the
+   search box's own focus-within state, rather than leaving it to
+   inconsistent browser defaults on a near-black background. */
+:focus-visible{ outline:2px solid var(--ochre); outline-offset:2px; }
 body{
   margin:0;
   background:var(--fuligin);
@@ -36,6 +54,9 @@ a{color:inherit;}
 
 /* ---------- masthead ---------- */
 header{ max-width:640px; margin:0 auto; padding:80px 24px 36px; text-align:center; }
+@media (max-width:480px){
+  header{ padding-top:36px; }
+}
 .sun-mark{ width:28px; height:28px; margin:0 auto 24px; opacity:.9; }
 h1{ font-weight:500; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parchment); letter-spacing:-0.01em; line-height:1.05; }
 .arrow-rule{ display:flex; align-items:center; gap:8px; max-width:120px; margin:20px auto 0; color:var(--rust); opacity:.7; }
@@ -291,7 +312,7 @@ a.thumb:hover .thumb-icon{ opacity:0.7; }
 }
 .pagination button{
   background:rgba(255,255,255,0.05); border:none; color:var(--parchment-dim);
-  border-radius:999px; min-width:34px; height:34px; padding:0 12px;
+  border-radius:999px; min-width:44px; height:44px; padding:0 14px;
   font-size:13px; font-weight:600; cursor:pointer; font-family:inherit;
 }
 .pagination button:hover:not(:disabled){background:rgba(255,255,255,0.09); color:var(--parchment);}
@@ -354,7 +375,7 @@ footer{
     <span class="chev">&#9656;</span>
   </button>
   <span class="bar-sep">&middot;</span>
-  <button class="disc-toggle" id="shieldToggle">
+  <button class="disc-toggle" id="shieldToggle" title="Hides plot details for series you haven't finished reading yet">
     <span class="ic">&#128737;</span>
     <span class="txt">Spoiler Shield</span>
     <span class="status" id="shieldStatus">Off</span>
@@ -385,7 +406,7 @@ footer{
 <div class="search-wrap">
   <div class="search-box" id="searchBox">
     <span class="ic">&#128269;</span>
-    <input type="text" id="searchInput" placeholder="Search titles, descriptions, sources, tags…" autocomplete="off">
+    <input type="text" id="searchInput" placeholder="Search titles, descriptions, sources, tags…" aria-label="Search titles, descriptions, sources, tags" autocomplete="off">
     <button class="clear" id="searchClear" aria-label="Clear search">&#10005;</button>
   </div>
 </div>
@@ -824,7 +845,7 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
           <p class="title">${d.url ? `<a href="${d.url}" target="_blank" rel="noopener">${d.title}</a>` : d.title}</p>
           <div class="top-right">
             <span class="meta">${dateLabel}</span>
-            <button class="save-btn ${isSaved?'saved':''}" data-save="${d.id}">${isSaved ? '&#9733;' : '&#9734;'}</button>
+            <button class="save-btn ${isSaved?'saved':''}" data-save="${d.id}" aria-label="${isSaved ? 'Remove from saved' : 'Save this item'}">${isSaved ? '&#9733;' : '&#9734;'}</button>
           </div>
         </div>
         <div class="source">${d.source} &middot; ${TYPE_LABEL[d.type] || d.type}${isQuietFlag ? `<span class="quiet-badge">quiet ${relativeTime(d.date)}</span>` : ''}</div>

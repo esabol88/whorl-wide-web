@@ -1022,6 +1022,75 @@ specifically will see them regardless of date, since that filter isn't
 time-limited. The discovery path for evergreen content like this is
 filtering by type, not happening to scroll past it in "Latest."
 
+## Responding to an external UX/accessibility audit
+
+A large, itemized audit came in covering accessibility, SEO, and visual
+design across the whole site. Rather than implement it wholesale, checked
+each claim against the actual code first, and split the list into three
+real categories.
+
+**Implemented — genuinely good, no conflict with anything already
+decided:**
+- `aria-label`s on the save-star button (state-reflecting: "Save this
+  item" vs. "Remove from saved") and the search input, plus a hover
+  `title` tooltip on Spoiler Shield explaining what it does
+- `meta name="description"`, Open Graph tags, and a Twitter card (`og:image`
+  deliberately left out — no actual branded social-preview image exists
+  yet, and pointing it at the SVG favicon wouldn't render well in
+  Discord/Reddit/Twitter previews, which want a raster JPG/PNG; needs a
+  real designed image before this is complete)
+- A global `:focus-visible` style (2px ochre outline) so keyboard focus is
+  consistently visible across every interactive element, not left to
+  inconsistent browser defaults
+- Pagination buttons grew from 34px to 44px, the same Fitts's Law minimum
+  already established elsewhere in this file (the save-star and card
+  touch-target fixes)
+- Mobile header padding reduced from 80px to 36px on screens ≤480px — the
+  first media query in this file
+- **A real, verified contrast fix**: actually computed WCAG contrast
+  ratios rather than trusting the audit's claim at face value.
+  `--parchment-dim` (bylines, descriptions) was already fine at 5.2-5.5:1.
+  `--muted` (timestamps, status line, quiet-source badges) genuinely
+  failed at 2.83-2.98:1 against the 4.5:1 minimum — lightened to `#857f6f`
+  (4.87-5.13:1), computed directly, not guessed at.
+
+**Declined — contradicts a decision already made deliberately, with real
+reasoning behind it:**
+- Replacing numbered pagination with infinite scroll. This one's
+  significant: numbered pagination exists *specifically* because of an
+  explicit, recent request ("users can elect to see page 2 or 3 or
+  whatever") — reversing that on an external audit's say-so without
+  checking first would have overridden a direct instruction silently.
+- Moving Format filters into a collapsed dropdown, colored format/series
+  badge systems, card borders on the Reference Shelf, a bigger "You're
+  caught up" indicator with its own divider — all push toward more visual
+  complexity on a site whose whole design direction has deliberately gone
+  the other way, repeatedly, with specific reasoning already documented
+  elsewhere in this file (the Miller's Law chunking discussion, "just a
+  SMIDGE" style pass, minimal Spoiler Shield utility row).
+
+**Already true, or already satisfied — the audit's premise didn't match
+the actual code:**
+- Thumbnails are already fixed 1:1 (84×84, 120×120 featured) — the "mixed
+  aspect ratios" claim doesn't hold.
+- The search placeholder already exists ("Search titles, descriptions,
+  sources, tags…").
+- Every `target="_blank"` is already paired with `rel="noopener"` (15/15,
+  counted directly).
+- "No focus states visible" is essentially unfalsifiable from a static
+  screenshot — screenshots don't capture keyboard-focus state at all.
+  Added the global rule above anyway, since it's good practice regardless
+  of whether a real gap existed.
+- The `◂▸` symbol is the decorative arrow-rule under the masthead, not a
+  functional pagination or carousel control — nothing to fix there, the
+  audit seems to have misread it as interactive.
+
+**Left as open decisions, not implemented either way:** live item counts
+per series pill, relative dates for items <7 days old, source-type icons
+on the Reference Shelf, and a footer "About" page explaining sourcing —
+each is a real, reasonable idea, just a genuine product decision rather
+than an obvious fix, worth a direct answer rather than a unilateral call.
+
 ## The feed is paginated, 25 items per page
 
 The whole filtered result set used to render in one long scroll,
