@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T20:02:29.426Z",
+  "generatedAt": "2026-07-19T20:41:28.521Z",
   "items": [
     {
       "id": "rereading-wolfe-509384d0",
@@ -91,6 +91,17 @@
         "the Claw"
       ],
       "thumbnail": "https://i.ytimg.com/vi/NuEZgSuHj3o/hqdefault.jpg"
+    },
+    {
+      "id": "manual-andylee-peace",
+      "title": "Gene Wolfe's Peace",
+      "source": "Andy Lee",
+      "type": "article",
+      "series": "general",
+      "date": "2026-07-12",
+      "url": "https://litandchess.substack.com/p/gene-wolfes-peace",
+      "desc": "A literary treatment of narrative voice, concealed violence, and memory — and Peace's relationship to Poe, Nabokov, and postmodern fiction.",
+      "tags": []
     },
     {
       "id": "r-genewolfe-75b71a73",
@@ -315,6 +326,17 @@
       "thumbnail": null
     },
     {
+      "id": "manual-lincolnmichel-whyread",
+      "title": "Why You Should Read Gene Wolfe (and Where to Start)",
+      "source": "Lincoln Michel",
+      "type": "article",
+      "series": "general",
+      "date": "2026-01-08",
+      "url": "https://countercraft.substack.com/p/why-you-should-read-gene-wolfe-and",
+      "desc": "Probably the best recent general introduction — Peace for literary readers, Fifth Head for established SF readers, plus the short fiction.",
+      "tags": []
+    },
+    {
       "id": "rereading-wolfe-13c61c86",
       "title": "tbotns 3-11 and 12 Cyriaca's Wrap Up",
       "source": "Rereading Wolfe",
@@ -387,6 +409,28 @@
       "thumbnail": "https://i4.ytimg.com/vi/7kcVZGrufpo/hqdefault.jpg"
     },
     {
+      "id": "manual-donbeck-structure",
+      "title": "Structure of the New Sun",
+      "source": "Don Beck",
+      "type": "article",
+      "series": "new",
+      "date": "2025-06-01",
+      "url": "https://donbeck1.substack.com/p/structure-of-the-new-sun",
+      "desc": "A craft-oriented follow-up on Wolfe's unconventional placement of rising action, climax, and structural turns.",
+      "tags": []
+    },
+    {
+      "id": "manual-donbeck-nextread",
+      "title": "Your Next Read: The Book of the New Sun",
+      "source": "Don Beck",
+      "type": "article",
+      "series": "new",
+      "date": "2025-05-23",
+      "url": "https://donbeck1.substack.com/p/your-next-read-the-book-of-the-new",
+      "desc": "An enthusiastic, accessible first-reader case for New Sun being genuinely life-changing, without pretending it'll suit everyone.",
+      "tags": []
+    },
+    {
       "id": "sunbeamsjess-13c57c37",
       "title": "april 2025 reading review · gene wolfe, marilynne robinson, isabella hammad",
       "source": "sunbeamsjess",
@@ -397,6 +441,30 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/zccp6_rw7Lg/hqdefault.jpg"
+    },
+    {
+      "id": "manual-radicaledward-newsun",
+      "title": "The Book of the New Sun (chapter-by-chapter read)",
+      "source": "Wolf (radicaledward)",
+      "type": "article",
+      "series": "new",
+      "date": "2025-02-01",
+      "url": "https://radicaledward.substack.com/p/the-book-of-the-new-sun",
+      "desc": "A slow, chapter-by-chapter literary read — voice, structure, and imagery — getting well into The Claw of the Conciliator before going on hiatus. Start here for the whole archive.",
+      "tags": [
+        "Severian"
+      ]
+    },
+    {
+      "id": "manual-floydholland-prose",
+      "title": "The Enchanting Prose of Gene Wolfe",
+      "source": "Floyd Holland",
+      "type": "article",
+      "series": "general",
+      "date": "2025-01-15",
+      "url": "https://floydholland.substack.com/p/the-enchanting-prose-of-gene-wolfe",
+      "desc": "A close prose analysis using The Fifth Head of Cerberus — sentence density, parenthetical complication, memory, and perspective.",
+      "tags": []
     },
     {
       "id": "ultan-s-library-9134967b",
@@ -726,6 +794,38 @@
       "url": "https://doi.org/10.1525/sfs.14.1.0115",
       "desc": "By Donald M. Hassler — Science Fiction Studies",
       "tags": []
+    },
+    {
+      "id": "manual-brucepennington-newsun",
+      "title": "The Book of the New Sun — original UK cover paintings",
+      "source": "Bruce Pennington",
+      "type": "fanart",
+      "series": "new",
+      "date": "1980-06-01",
+      "url": "https://www.brucepennington.co.uk/",
+      "desc": "The original British cover paintings — immense, ancient landscapes and cosmic decay rather than character portraiture, a very different visual take from the American edition.",
+      "tags": [],
+      "artist": "Bruce Pennington",
+      "artistUrl": "https://www.brucepennington.co.uk/",
+      "postUrl": "https://www.brucepennington.co.uk/",
+      "nsfw": false
+    },
+    {
+      "id": "manual-donmaitz-newsun",
+      "title": "The Book of the New Sun — original US cover paintings",
+      "source": "Don Maitz",
+      "type": "fanart",
+      "series": "new",
+      "date": "1980-05-01",
+      "url": "https://en.wikipedia.org/wiki/The_Shadow_of_the_Torturer",
+      "desc": "The original American cover paintings for all four New Sun volumes — the foundational visual interpretation of Severian, still in print on many editions decades later.",
+      "tags": [
+        "Severian"
+      ],
+      "artist": "Don Maitz",
+      "artistUrl": "https://www.paravia.com/DonMaitz/",
+      "postUrl": "https://en.wikipedia.org/wiki/The_Shadow_of_the_Torturer",
+      "nsfw": false
     }
   ]
 }
