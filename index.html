@@ -329,10 +329,11 @@ a.thumb:hover .thumb-icon{ opacity:0.7; }
 }
 .shelf-item:hover .shelf-title{color:var(--rust);}
 .shelf-thumb{
-  flex:0 0 auto; width:40px; height:40px; border-radius:9px;
+  flex:0 0 auto; width:40px; height:40px; border-radius:9px; overflow:hidden;
   display:flex; align-items:center; justify-content:center; font-size:17px;
-  background:linear-gradient(155deg, var(--ochre), #6e5a28);
+  background:linear-gradient(155deg, var(--ochre), #6e5a28); position:relative;
 }
+.shelf-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .shelf-main{min-width:0; flex:1;}
 .shelf-title{ font-weight:650; font-size:14.5px; color:var(--parchment); transition:color .15s ease; }
 .shelf-author{ font-size:12.5px; color:var(--muted); margin-top:2px; }
@@ -450,7 +451,7 @@ footer{
   <div class="divider"><span class="line"></span>further reading<span class="line"></span></div>
   <div class="shelf-list">
     <a class="shelf-item" href="https://www.goodreads.com/book/show/5970607-lexicon-urthus" target="_blank" rel="noopener">
-      <div class="shelf-thumb">&#128213;</div>
+      <div class="shelf-thumb">&#128213;<img src="https://covers.openlibrary.org/b/isbn/9780964279506-M.jpg?default=false" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="shelf-main">
         <div class="shelf-title">Lexicon Urthus</div>
         <div class="shelf-author">Michael Andre-Driussi</div>
