@@ -1098,8 +1098,12 @@ the title changed to match what's actually being linked), Andrea Kalfas
 (now points to her own Tumblr post about the specific "Severian and the
 Undine" piece), and Ramón Perales Cano (now points to a specific
 Book of Fuligin page on ArtStation instead of his profile). Bruce
-Pennington and Floating Disc remain unresolved — couldn't find a more
-specific page for either through search.
+Pennington remains unresolved — couldn't find a more specific page
+through search. Floating Disc was removed outright rather than left
+pointing at a homepage — after repeated attempts (both search-based and
+asking directly whether a working link could be found by hand) turned up
+nothing, a missing entry is more honest than one linking to the wrong
+thing.
 
 **Follow-up, after being asked to feature "all" of each portfolio's
 work.** Explained the real constraint first rather than attempting it
@@ -1325,6 +1329,30 @@ Clicking a page number scrolls back up to the top of the feed
 document order — there are two on the page, this one and "Further
 Reading" further down) rather than leaving the reader wherever their
 previous scroll position happened to end up on the new page.
+
+## Value-prop rewording, and a more archaic heading font
+
+Two small requests done together. The value-prop line changed from
+"Every Gene Wolfe essay..." to "Essays, podcasts, videos, and discussions
+about Gene Wolfe, pulled into one feed." — tighter, and reads less like
+an overpromise ("every") for a feed that's necessarily incomplete by
+nature.
+
+The `fuligin.dev` heading switched from Inter to **Cinzel**, a serif
+modeled on ancient Roman carved inscriptions — added as a second Google
+Fonts family alongside Inter, not a replacement for it, and scoped
+narrowly to the `h1` selector only. Everything else on the site (body
+text, cards, buttons, the Reference Shelf) stays on Inter untouched.
+Cinzel reads as archaic/monumental in a way that fits a guild-seal,
+carved-stone mood — evokes "Autarch," "Citadel," "Urth" — without going
+as far as an actual blackletter/gothic face, which would fight legibility
+at heading size and clash with the site's otherwise restrained,
+minimal-first direction. Bumped the weight to 600 (Cinzel's lighter
+weights read thin at display size), added a touch of positive
+letter-spacing and slightly more line-height than Inter's heading style
+used (Cinzel's more ornate serifs read cramped at tight spacing), and
+pulled the size down slightly in the `clamp()` since Cinzel runs visually
+wider than Inter at the same point size.
 
 ## Scroll position resets on refresh
 

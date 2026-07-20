@@ -1776,21 +1776,6 @@ const MANUAL_ITEMS = [
     nsfw: false
   },
   {
-    id: 'manual-floatingdisc-lakeofbirds',
-    title: 'Severian and Dorcas at the Lake of Birds',
-    source: 'Floating Disc',
-    type: 'fanart',
-    series: 'new',
-    date: '2025-09-01',
-    url: 'https://floatingdisc.com/',
-    desc: 'A currently active fan artist with a dedicated New Sun category and multiple pieces available as prints, not a single isolated illustration.',
-    tags: guessTags('Severian Dorcas Lake of Birds'),
-    artist: 'Floating Disc',
-    artistUrl: 'https://floatingdisc.com/',
-    postUrl: 'https://floatingdisc.com/',
-    nsfw: false
-  },
-  {
     id: 'manual-andreakalfas-undine',
     title: 'Severian and the Undine',
     source: 'Andrea Kalfas',
