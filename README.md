@@ -1085,7 +1085,52 @@ Hoard dictionary tool. Restructured `.shelf-item` from `align-items:
 baseline` to `align-items: center` to accommodate a fixed-size icon
 alongside the text without breaking the row's vertical alignment.
 
+## Art links now point at the actual artwork, not artist homepages
+
+Real complaint, real fix: several `MANUAL_ITEMS` fanart entries linked to
+an artist's general homepage or ArtStation profile instead of the
+specific piece being described. Researched and fixed four of six: Sam
+Weber (now points to the specific Claw of the Conciliator Folio Society
+binding page, not `sampaints.com/`), Vega Draws (now points to a
+confirmed "Morwenna's Execution" process journal — the original "River
+Gyoll" reference didn't have its own page, only a homepage thumbnail, so
+the title changed to match what's actually being linked), Andrea Kalfas
+(now points to her own Tumblr post about the specific "Severian and the
+Undine" piece), and Ramón Perales Cano (now points to a specific
+Book of Fuligin page on ArtStation instead of his profile). Bruce
+Pennington and Floating Disc remain unresolved — couldn't find a more
+specific page for either through search.
+
+## Start Here and Spoiler Shield removed entirely
+
+A deliberate product decision, not a bug fix — removed by request after
+consideration. This was a large removal touching most of the file, so
+worth recording what actually came out: the onboarding banner (first-time
+visitor prompt), both disclosure panels (Start Here's reading-order link,
+Spoiler Shield's presets and per-series dropdowns), the `BOOKS` constant,
+`isSpoiler()`, `maybeAdvanceProgress()`, `updateShieldStatus()`,
+`buildSelect()`, `wireDisclosure()`, the spoiler-overlay card markup and
+its `data-reveal` handler, the `revealed` Set, and the `progress` /
+`onboarded` keys from `STORE._defaults`. The value-prop line and all
+three meta-description tags referenced the Shield directly and needed
+rewriting too, since they were now describing a feature that no longer
+exists.
+
+**What stayed, deliberately**: the NSFW content-rating blur
+(`revealedNsfw`, `data-nsfw-reveal`) is a completely separate mechanism —
+driven by a source's own content rating, not reading progress — and
+doesn't touch anything related to Spoiler Shield. `SAMPLE_DATA` and
+real fetched items still carry a `book` field on each item; left as
+harmless unused metadata rather than stripped out, since removing it
+served no purpose and touching every source in `fetch-content.js` for a
+field nothing reads anymore was pure risk with no benefit.
+
 ## Spoiler Shield: quick-start presets and a visible hidden-item count
+
+**Superseded** — Spoiler Shield was removed entirely in a later round (see
+above). Kept this section rather than deleting it, since it's still an
+accurate record of the reasoning at the time.
+
 
 Two of four proposed improvements, chosen deliberately over the other
 two: a checkbox-based redesign was rejected outright — progress through a

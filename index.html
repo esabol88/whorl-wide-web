@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>fuligin.dev — Gene Wolfe Content Aggregator</title>
-<meta name="description" content="A Gene Wolfe content aggregator that pulls from YouTube, podcasts, Reddit, scholarly papers, and independent criticism into one feed — with a Spoiler Shield that blurs anything ahead of where you've read.">
+<meta name="description" content="A Gene Wolfe content aggregator that pulls essays, podcasts, videos, discussions, scholarship, and art from across the web into one feed.">
 <meta property="og:title" content="fuligin.dev — Gene Wolfe Content Aggregator">
-<meta property="og:description" content="Everything findable about Gene Wolfe, pulled into one feed — with a Spoiler Shield that blurs anything ahead of where you've read.">
+<meta property="og:description" content="Everything findable about Gene Wolfe, pulled into one feed.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fuligin.dev">
 <!-- og:image deliberately omitted — no actual branded social-preview
@@ -16,7 +16,7 @@
      and added here rather than reusing the favicon as a placeholder. -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fuligin.dev — Gene Wolfe Content Aggregator">
-<meta name="twitter:description" content="Everything findable about Gene Wolfe, pulled into one feed — with a Spoiler Shield that blurs anything ahead of where you've read.">
+<meta name="twitter:description" content="Everything findable about Gene Wolfe, pulled into one feed.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="alternate icon" href="favicon.svg">
 <style>
@@ -65,71 +65,6 @@ h1{ font-weight:500; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parch
 .arrow-rule .tip{font-size:9px; line-height:1;}
 .updated-stamp{ margin-top:22px; font-size:11.5px; font-weight:600; letter-spacing:.03em; color:var(--muted); }
 .updated-stamp:empty{display:none;}
-
-/* ---------- shared: disclosure toggles (Start Here / Spoiler Shield) ---------- */
-/* Deliberately minimal — these are occasional settings, not primary
-   controls, so they read as a slim utility row rather than full-width
-   bars competing with search/filters for attention. */
-.bar-wrap{ max-width:640px; margin:0 auto 28px; padding:0 24px; display:flex; justify-content:center; align-items:center; gap:18px; flex-wrap:wrap; }
-.bar-sep{ color:var(--hairline-hi); font-size:12px; }
-.disc-toggle{
-  display:inline-flex; align-items:center; gap:7px;
-  padding:4px 2px; background:none; border:none; color:var(--muted);
-  font-family:inherit; font-size:12.5px; font-weight:600; cursor:pointer;
-}
-.disc-toggle:hover{color:var(--parchment-dim);}
-.disc-toggle .ic{font-size:13px; color:var(--rust); flex:0 0 auto;}
-.disc-toggle .status{font-size:10.5px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.04em;}
-.disc-toggle .chev{transition:transform .15s ease; color:var(--muted); font-size:9px;}
-.disc-toggle.open .chev{transform:rotate(90deg);}
-/* The body panel gets the contained-card treatment only while open, since
-   the toggle itself is now too minimal to visually "hold" content under it. */
-.disc-body{
-  max-width:640px; margin:10px auto 0; padding:16px 18px;
-  border:1px solid var(--hairline); border-radius:12px; background:var(--surface);
-  font-size:13.5px; color:var(--parchment-dim); line-height:1.65;
-}
-.disc-body p{margin:0 0 10px;}
-.disc-body p:last-child{margin-bottom:0;}
-.disc-body a{color:var(--parchment); font-weight:650; text-decoration:none; border-bottom:1px solid var(--hairline-hi);}
-.disc-body a:hover{border-color:var(--rust); color:var(--rust);}
-.shield-presets{ display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 4px; }
-.shield-presets button{
-  background:rgba(255,255,255,0.05); border:none; color:var(--parchment-dim);
-  border-radius:999px; padding:6px 12px; font-size:11.5px; font-weight:600;
-  cursor:pointer; font-family:inherit;
-}
-.shield-presets button:hover{ background:rgba(255,255,255,0.09); color:var(--parchment); }
-.shield-row{ display:flex; gap:14px; flex-wrap:wrap; padding-top:4px; }
-.shield-field{ display:flex; flex-direction:column; gap:5px; }
-.shield-field label{ font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
-.shield-field select{
-  background:var(--fuligin); color:var(--parchment); border:1px solid var(--hairline-hi);
-  border-radius:7px; padding:7px 10px; font-family:inherit; font-size:12.5px;
-}
-
-/* ---------- first-visit onboarding banner ---------- */
-.onboard-banner{
-  max-width:640px; margin:0 auto 24px; padding:20px 22px;
-  background:var(--surface); border:1px solid var(--hairline-hi); border-left:3px solid var(--rust);
-  border-radius:14px; display:flex; align-items:flex-start; gap:14px;
-}
-.onboard-banner[hidden]{ display:none; } /* our own display:flex above otherwise beats the browser's default [hidden] rule */
-.onboard-banner .ic{font-size:18px; flex:0 0 auto; margin-top:1px;}
-.onboard-banner .body{flex:1; min-width:0;}
-.onboard-banner .headline{font-weight:650; font-size:14.5px; color:var(--parchment); margin:0 0 4px;}
-.onboard-banner .sub{font-size:13px; color:var(--parchment-dim); line-height:1.5; margin:0 0 12px;}
-.onboard-banner .actions{display:flex; flex-wrap:wrap; gap:8px;}
-.onboard-banner button{
-  font-family:inherit; font-size:12.5px; font-weight:600; border-radius:999px; cursor:pointer; border:none; padding:8px 14px;
-}
-.onboard-banner .primary{background:var(--rust); color:#0e0d0b;}
-.onboard-banner .secondary{background:rgba(255,255,255,0.06); color:var(--parchment-dim);}
-.onboard-banner .secondary:hover{background:rgba(255,255,255,0.1); color:var(--parchment);}
-.onboard-banner .close{
-  flex:0 0 auto; background:none; border:none; color:var(--muted); cursor:pointer; font-size:13px; padding:2px;
-}
-.onboard-banner .close:hover{color:var(--parchment);}
 
 /* ---------- controls: pill chips ---------- */
 .controls{ max-width:760px; margin:0 auto; padding:22px 24px 4px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; }
@@ -299,19 +234,6 @@ a.thumb:hover .thumb-icon{ opacity:0.7; }
 .tag.series-tag{cursor:default;}
 .tag.series-tag:hover{background:rgba(255,255,255,0.05); color:var(--parchment-dim);}
 
-/* spoiler overlay */
-.spoiler-overlay{
-  position:absolute; inset:0; border-radius:16px; background:rgba(5,4,3,0.94);
-  display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px;
-  backdrop-filter:blur(3px);
-}
-.spoiler-overlay .lock{font-size:15px; color:var(--rust);}
-.spoiler-overlay button{
-  background:rgba(255,255,255,0.07); border:none; color:var(--parchment);
-  padding:8px 16px; border-radius:999px; font-size:12.5px; font-weight:600; cursor:pointer; font-family:inherit;
-}
-.spoiler-overlay .note{font-size:11px; color:var(--muted); max-width:220px; text-align:center; line-height:1.5;}
-
 .empty{ text-align:center; color:var(--muted); font-size:13px; padding:50px 0; }
 
 .pagination{
@@ -365,64 +287,10 @@ footer{
     </g>
   </svg>
   <h1>fuligin.dev</h1>
-  <p class="value-prop">Every Gene Wolfe essay, podcast, video, and discussion — filtered to how far you've read.</p>
+  <p class="value-prop">Every Gene Wolfe essay, podcast, video, and discussion, pulled into one feed.</p>
   <div class="arrow-rule"><span class="tip">&#9666;</span><span class="line"></span><span class="tip">&#9656;</span></div>
   <div class="updated-stamp" id="updatedStamp"></div>
 </header>
-
-<div class="onboard-banner" id="onboardBanner" hidden>
-  <span class="ic">&#128737;</span>
-  <div class="body">
-    <p class="headline">First time here? Let's avoid spoiling anything.</p>
-    <p class="sub">By default, everything's blurred until you tell us how far you've read in each series. You can change this any time in Spoiler Shield below.</p>
-    <div class="actions">
-      <button class="primary" id="onboardSetup">Set my reading progress</button>
-      <button class="secondary" id="onboardCaughtUp">Show everything, including spoilers</button>
-    </div>
-  </div>
-  <button class="close" id="onboardClose" aria-label="Dismiss">&#10005;</button>
-</div>
-
-<div class="bar-wrap">
-  <button class="disc-toggle" id="startHereToggle">
-    <span class="ic">&#128214;</span>
-    <span class="txt">Start here</span>
-    <span class="chev">&#9656;</span>
-  </button>
-  <span class="bar-sep">&middot;</span>
-  <button class="disc-toggle" id="shieldToggle" title="Hides plot details for series you haven't finished reading yet">
-    <span class="ic">&#128737;</span>
-    <span class="txt">Spoiler Shield</span>
-    <span class="status" id="shieldStatus">Off</span>
-    <span class="chev">&#9656;</span>
-  </button>
-</div>
-<div class="disc-body" id="startHereBody" hidden>
-  <p>Not sure where to start, or what fits where? Rereading Wolfe's <a href="https://www.patreon.com/rereadingwolfe/posts/solar-cycle-49850386" target="_blank" rel="noopener">Solar Cycle reading order</a> lays out the whole path — start there.</p>
-</div>
-<div class="disc-body" id="shieldBody" hidden>
-  <p>Tell it how far you've read in each series. Anything further ahead gets blurred in your feed until you choose to reveal it.</p>
-  <div class="shield-presets" id="shieldPresets">
-    <button data-preset="none">Haven't started</button>
-    <button data-preset="new">Finished New Sun</button>
-    <button data-preset="new-long">Finished New &amp; Long Sun</button>
-    <button data-preset="all">Read everything</button>
-  </div>
-  <div class="shield-row">
-    <div class="shield-field">
-      <label>New Sun</label>
-      <select id="progNew"></select>
-    </div>
-    <div class="shield-field">
-      <label>Long Sun</label>
-      <select id="progLong"></select>
-    </div>
-    <div class="shield-field">
-      <label>Short Sun</label>
-      <select id="progShort"></select>
-    </div>
-  </div>
-</div>
 
 <div class="search-wrap">
   <div class="search-box" id="searchBox">
@@ -542,7 +410,7 @@ window.scrollTo(0, 0);
    items, spoiler progress, and "last visit" persist across sessions.
 --------------------------------------------------------------------- */
 const STORE = {
-  _defaults: { saved:{}, lastVisit:'2026-07-11', progress:{new:'none', long:'none', short:'none'}, filters:null, onboarded:false },
+  _defaults: { saved:{}, lastVisit:'2026-07-11', filters:null },
   get(key){
     const raw = localStorage.getItem(key);
     return raw !== null ? JSON.parse(raw) : this._defaults[key];
@@ -597,12 +465,6 @@ function relativeTime(isoString){
   return `${Math.floor(months / 12)}y ago`;
 }
 
-const BOOKS = {
-  new:   [['shadow','Shadow of the Torturer'], ['claw','Claw of the Conciliator'], ['sword','Sword of the Lictor'], ['citadel','Citadel of the Autarch'], ['urth','Urth of the New Sun']],
-  long:  [['nightside','Nightside the Long Sun'], ['lake','Lake of the Long Sun'], ['calde','Cald\u00e9 of the Long Sun'], ['exodus','Exodus from the Long Sun']],
-  short: [['blue',"On Blue's Waters"], ['green',"In Green's Jungles"], ['return','Return to the Whorl']],
-};
-
 // Sample data — used as a fallback if data.json hasn't been generated yet
 // (first local run, or the Action hasn't fired) or fails to load. Once the
 // Action commits a real data.json, that always takes priority.
@@ -651,124 +513,8 @@ fetch('./data.json')
 let activeSeries='all', activeType='all', activeTag=null, savedOnly=false, activeSearch='';
 let currentPage = 1;
 const PAGE_SIZE = 15;
-const revealed = new Set();
 const revealedNsfw = new Set();
 let visitMarked = false; // only stamp lastVisit once per page load, not on every re-render
-
-/* ---------- populate spoiler-shield selects ---------- */
-function buildSelect(id, series){
-  const sel = document.getElementById(id);
-  // The last book in a series is excluded from the picker on purpose —
-  // "through" the final book is functionally identical to "All caught
-  // up" (nothing can be further ahead), so showing both as separate
-  // options was pure redundancy, not a real distinction. BOOKS itself
-  // stays whole — isSpoiler() below still needs the full list to compare
-  // against items actually tagged with that final book.
-  const selectable = BOOKS[series].slice(0, -1);
-  let html = `<option value="all">All caught up</option>`;
-  html += `<option value="none">Haven't started</option>`;
-  selectable.forEach(([code,label]) => { html += `<option value="${code}">Through ${label}</option>`; });
-  sel.innerHTML = html;
-  const stored = STORE.get('progress')[series];
-  const lastBookCode = BOOKS[series][BOOKS[series].length - 1][0];
-  sel.value = stored === lastBookCode ? 'all' : stored; // normalize an old selection of the now-removed redundant option
-  sel.addEventListener('change', () => {
-    const p = STORE.get('progress'); p[series] = sel.value; STORE.set('progress', p);
-    STORE.set('onboarded', true); // they've engaged with progress directly — no need for the banner anymore
-    if(onboardBanner) onboardBanner.hidden = true;
-    updateShieldStatus(); render();
-  });
-}
-buildSelect('progNew','new'); buildSelect('progLong','long'); buildSelect('progShort','short');
-
-document.getElementById('shieldPresets').addEventListener('click', e => {
-  if(e.target.tagName !== 'BUTTON') return;
-  const preset = e.target.dataset.preset;
-  // Presets follow the actual reading order (New Sun, then Long Sun, then
-  // Short Sun) — someone who's "finished New Sun" hasn't necessarily
-  // started Long/Short, so those stay at 'none' rather than guessing.
-  const byPreset = {
-    'none':     { new:'none', long:'none',  short:'none' },
-    'new':      { new:'all',  long:'none',  short:'none' },
-    'new-long': { new:'all',  long:'all',   short:'none' },
-    'all':      { new:'all',  long:'all',   short:'all'  }
-  };
-  const p = byPreset[preset];
-  if(!p) return;
-  STORE.set('progress', p);
-  document.getElementById('progNew').value = p.new;
-  document.getElementById('progLong').value = p.long;
-  document.getElementById('progShort').value = p.short;
-  STORE.set('onboarded', true);
-  if(onboardBanner) onboardBanner.hidden = true;
-  currentPage = 1;
-  updateShieldStatus();
-  render();
-});
-
-function updateShieldStatus(){
-  const p = STORE.get('progress');
-  const active = Object.values(p).some(v => v !== 'all');
-  const el = document.getElementById('shieldStatus');
-  if(!active){ el.textContent = 'Off'; return; }
-  const hiddenCount = DATA.filter(d => isSpoiler(d) && !revealed.has(d.id)).length;
-  el.textContent = hiddenCount > 0 ? `On · ${hiddenCount} hidden` : 'On';
-}
-updateShieldStatus();
-
-function isSpoiler(item){
-  if(!item.book) return false;
-  const p = STORE.get('progress')[item.series];
-  if(p === 'all') return false;
-  const order = BOOKS[item.series].map(b => b[0]);
-  const itemIdx = order.indexOf(item.book);
-  if(p === 'none') return true;
-  const progIdx = order.indexOf(p);
-  return itemIdx > progIdx;
-}
-
-/* ---------- disclosures ---------- */
-function wireDisclosure(toggleId, bodyId){
-  const t = document.getElementById(toggleId), b = document.getElementById(bodyId);
-  t.addEventListener('click', () => {
-    const open = !b.hidden;
-    b.hidden = open;
-    t.classList.toggle('open', !open);
-  });
-}
-wireDisclosure('startHereToggle','startHereBody');
-wireDisclosure('shieldToggle','shieldBody');
-
-/* ---------- first-visit onboarding banner ---------- */
-// Only shown to genuinely new visitors (STORE.get('onboarded') is false —
-// the localStorage default, never explicitly set true yet). The safe
-// default is already maximum spoiler protection (see STORE._defaults), so
-// doing nothing here is never dangerous — this banner exists purely to
-// surface that choice immediately instead of leaving it buried in a
-// collapsed panel someone might not find until after they've been spoiled.
-const onboardBanner = document.getElementById('onboardBanner');
-if(!STORE.get('onboarded')){
-  onboardBanner.hidden = false;
-}
-function dismissOnboarding(){
-  STORE.set('onboarded', true);
-  onboardBanner.hidden = true;
-}
-document.getElementById('onboardSetup').addEventListener('click', () => {
-  dismissOnboarding();
-  const toggle = document.getElementById('shieldToggle'), body = document.getElementById('shieldBody');
-  body.hidden = false;
-  toggle.classList.add('open');
-  toggle.scrollIntoView({ behavior:'smooth', block:'center' });
-});
-document.getElementById('onboardCaughtUp').addEventListener('click', () => {
-  STORE.set('progress', { new:'all', long:'all', short:'all' });
-  ['progNew','progLong','progShort'].forEach(id => { const s=document.getElementById(id); if(s) s.value='all'; });
-  updateShieldStatus();
-  dismissOnboarding();
-  render();
-});
-document.getElementById('onboardClose').addEventListener('click', dismissOnboarding);
 
 /* ---------- saved toggle ---------- */
 document.getElementById('savedToggle').addEventListener('click', e => {
@@ -808,7 +554,6 @@ function matchesSearch(d, query){
 // Builds one card's HTML. Shared by the regular feed and the featured slot
 // so spoiler/NSFW/save/tag behavior stays identical in both places.
 function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } = {}){
-  const spoiler = isSpoiler(d) && !revealed.has(d.id);
   const isNew = d.date > lastVisit;
   const isSaved = !!saved[d.id];
   // Bare "MON DAY" is ambiguous once the feed spans multiple years — a
@@ -854,23 +599,8 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
       <a href="${d.postUrl}" target="_blank" rel="noopener">View original post</a>
     </div>` : '';
 
-  // States the specific reason when the item's tagged to a particular
-  // book (e.g. "discusses Urth of the New Sun"), not just a generic
-  // "ahead of your progress" note — the data for this already existed in
-  // d.book, just wasn't being surfaced in the message before.
-  const bookLabel = (spoiler && d.book) ? BOOKS[d.series]?.find(b => b[0] === d.book)?.[1] : null;
-  const spoilerReason = bookLabel
-    ? `Discusses ${bookLabel} — adjust in Spoiler Shield above.`
-    : `Ahead of your ${SERIES_LABEL[d.series]} progress — adjust in Spoiler Shield above.`;
-
   return `
     <div class="card ${d.series} ${featured ? 'featured' : ''}">
-      ${spoiler ? `
-        <div class="spoiler-overlay">
-          <span class="lock">&#128737;</span>
-          <button data-reveal="${d.id}">Reveal spoiler</button>
-          <span class="note">${spoilerReason}</span>
-        </div>` : ''}
       ${thumbHtml}
       <div class="body">
         <div class="top">
@@ -889,40 +619,6 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
         </div>
       </div>
     </div>`;
-}
-
-// Revealing a spoiler-blurred card is a direct signal: you've read at
-// least that far. Rather than making you separately remember to update the
-// Spoiler Shield dropdown, quietly advance your tracked progress to match
-// — but only forward, never backward, and only for the series that item
-// belongs to. A one-line note surfaces in the status line for this render
-// only, so it's not a silent, unexplained change.
-let progressNote = null;
-function maybeAdvanceProgress(id){
-  const item = DATA.find(x => x.id === id);
-  if(!item || !item.book) return;
-  const order = BOOKS[item.series].map(b => b[0]);
-  const itemIdx = order.indexOf(item.book);
-  if(itemIdx === -1) return;
-  const p = STORE.get('progress');
-  const cur = p[item.series];
-  const curIdx = cur === 'none' ? -1 : cur === 'all' ? order.length : order.indexOf(cur);
-  if(itemIdx > curIdx){
-    // Revealing the last book in a series means "fully caught up" — store
-    // that as 'all' rather than the book's own code, since the dropdown
-    // no longer offers "through <last book>" as a separate option (it was
-    // redundant with "All caught up," nothing can be further ahead).
-    const isLastBook = itemIdx === order.length - 1;
-    const newValue = isLastBook ? 'all' : item.book;
-    p[item.series] = newValue;
-    STORE.set('progress', p);
-    const selId = { new:'progNew', long:'progLong', short:'progShort' }[item.series];
-    const sel = document.getElementById(selId);
-    if(sel) sel.value = newValue;
-    updateShieldStatus();
-    const noteText = isLastBook ? 'all caught up' : `through ${BOOKS[item.series].find(b => b[0]===item.book)[1]}`;
-    progressNote = `Spoiler Shield for ${SERIES_LABEL[item.series]} updated to <b>${noteText}</b>.`;
-  }
 }
 
 // Wires up the interactive bits (save/reveal/nsfw-reveal/tag-filter) for
@@ -944,13 +640,6 @@ function wireCardEvents(container){
   container.querySelectorAll('[data-tag]').forEach(btn => {
     btn.addEventListener('click', () => { activeTag = btn.dataset.tag; currentPage = 1; render(); });
   });
-  container.querySelectorAll('[data-reveal]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      revealed.add(btn.dataset.reveal);
-      maybeAdvanceProgress(btn.dataset.reveal);
-      render();
-    });
-  });
 }
 
 function render(){
@@ -958,7 +647,6 @@ function render(){
   const featuredSlot = document.getElementById('featuredSlot');
   const saved = STORE.get('saved');
   const lastVisit = STORE.get('lastVisit');
-  updateShieldStatus(); // keeps the "N hidden" count in sync with real data, reveals, and progress — every render, not just specific action handlers
 
   // "Updated Xh ago" — when the fetcher itself last actually ran, not the
   // date of any particular item. Only meaningful once real data.json has
@@ -1013,10 +701,9 @@ function render(){
     featuredSlot.innerHTML = '';
   }
 
-  // status line: new-since-last-visit, plus a one-time note if Spoiler
-  // Shield progress just auto-advanced from revealing something, plus a
-  // quiet-sources summary when the pipeline itself is healthy but one or
-  // more channels/feeds haven't posted anything in a while
+  // status line: new-since-last-visit, plus a quiet-sources summary when
+  // the pipeline itself is healthy but one or more channels/feeds haven't
+  // posted anything in a while
   const newCount = DATA.filter(d => d.date > lastVisit).length;
   // Once any filter narrows the view, a result count is more useful than
   // the freshness message — otherwise the person has to manually count
@@ -1024,7 +711,6 @@ function render(){
   // #1, Visibility of System Status; #6, Recognition Rather than Recall).
   const filtersActive = activeSeries!=='all' || activeType!=='all' || !!activeTag || savedOnly || !!activeSearch;
   document.getElementById('statusLine').innerHTML = (usingSampleData ? `<span style="color:var(--ochre)">Showing sample data — data.json not found yet.</span> ` : '')
-    + (progressNote ? `<span style="color:var(--ochre)">${progressNote}</span> ` : '')
     + (filtersActive
       ? `<b>${filtered.length}</b> matching dispatch${filtered.length===1?'':'es'}`
       : (newCount > 0
@@ -1047,7 +733,6 @@ function render(){
       render();
     });
   }
-  progressNote = null;
   if(!visitMarked && !usingSampleData){
     STORE.set('lastVisit', new Date().toISOString().slice(0, 10));
     visitMarked = true;
@@ -1130,9 +815,7 @@ function restoreFilters(){
   if(!f) return;
   // series/type intentionally NOT restored — every visit starts at "All
   // Series / All Formats" by request, even though the tag filter and
-  // Saved toggle still carry over below. Spoiler Shield progress is a
-  // separate STORE key ('progress') and keeps persisting exactly as
-  // before — untouched by this function either way.
+  // Saved toggle still carry over below.
   if(f.tag) activeTag = f.tag; // the tag-filter-line banner itself is (re)built inside render(), nothing to sync here
   if(f.savedOnly){
     savedOnly = true;
