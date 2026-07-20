@@ -1057,7 +1057,52 @@ Hoard dictionary tool. Restructured `.shelf-item` from `align-items:
 baseline` to `align-items: center` to accommodate a fixed-size icon
 alongside the text without breaking the row's vertical alignment.
 
-## Responding to an external UX/accessibility audit
+## Responding to a second, much larger audit — three compatible items
+
+A second, far more comprehensive audit arrived — genuinely well-reasoned
+product strategy, but sized for a staffed platform with user accounts, an
+editorial team, and a CMS, not a static site regenerated hourly by a
+GitHub Action. Server-rendering, creator pages with stable URLs, a
+submissions review queue, a "This Week in Wolfe" digest — none of these
+are features to add to what exists, they're a different, much bigger
+project. Declined the vast majority of it on that basis, explained
+directly rather than either implementing blindly or dismissing without
+engaging.
+
+One item directly contradicted a decision already made explicitly on a
+prior audit two rounds earlier — collapsing Format/date/topic filters
+into a "Refine panel" is the same idea as the collapsed-dropdown
+suggestion already declined, for the same Miller's Law chunking reasoning
+already documented. Not reversing that just because a second audit phrased
+it differently.
+
+Three items were genuinely good and actually compatible with what
+exists, though:
+
+- **A one-line value prop under the wordmark** (`.value-prop`) — "Every
+  Gene Wolfe essay, podcast, video, and discussion — filtered to how far
+  you've read." Different from the vague subtitle removed much earlier in
+  this file for being generic; this one is specifically functional,
+  stating both the aggregation scope and the Spoiler Shield angle in one
+  line. Kept deliberately small and quiet rather than a return to a
+  prominent tagline treatment.
+- **The spoiler overlay now states the specific reason**, not just a
+  generic "ahead of your progress" note — "Discusses [book]" when the item
+  has a specific book tag, using data (`item.book`, `BOOKS`) that already
+  existed and was already used elsewhere (`maybeAdvanceProgress`), just
+  wasn't surfaced in this message before. Falls back to the previous
+  generic series-level message only if a book code doesn't resolve — an
+  effectively unreachable case, since `isSpoiler()` already requires
+  `item.book` to be set before anything can be flagged as a spoiler at
+  all, confirmed by reading that function directly rather than assumed.
+- **Onboarding's "I'm caught up on everything — skip this" now says "Show
+  everything, including spoilers"** — checked the actual click handler
+  first to confirm this phrasing is accurate to what the button really
+  does (sets every series' progress to "all," which is exactly what
+  disables all spoiler blurring) rather than just adopting the audit's
+  suggested wording on faith.
+
+
 
 A large, itemized audit came in covering accessibility, SEO, and visual
 design across the whole site. Rather than implement it wholesale, checked

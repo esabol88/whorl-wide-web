@@ -59,6 +59,7 @@ header{ max-width:640px; margin:0 auto; padding:80px 24px 36px; text-align:cente
 }
 .sun-mark{ width:28px; height:28px; margin:0 auto 24px; opacity:.9; }
 h1{ font-weight:500; font-size:clamp(34px,6vw,54px); margin:0; color:var(--parchment); letter-spacing:-0.01em; line-height:1.05; }
+.value-prop{ font-size:14px; color:var(--parchment-dim); margin:14px 0 0; line-height:1.5; max-width:38ch; margin-left:auto; margin-right:auto; }
 .arrow-rule{ display:flex; align-items:center; gap:8px; max-width:120px; margin:20px auto 0; color:var(--rust); opacity:.7; }
 .arrow-rule .line{flex:1; height:1px; background:currentColor;}
 .arrow-rule .tip{font-size:9px; line-height:1;}
@@ -356,6 +357,7 @@ footer{
     </g>
   </svg>
   <h1>fuligin.dev</h1>
+  <p class="value-prop">Every Gene Wolfe essay, podcast, video, and discussion — filtered to how far you've read.</p>
   <div class="arrow-rule"><span class="tip">&#9666;</span><span class="line"></span><span class="tip">&#9656;</span></div>
   <div class="updated-stamp" id="updatedStamp"></div>
 </header>
@@ -367,7 +369,7 @@ footer{
     <p class="sub">By default, everything's blurred until you tell us how far you've read in each series. You can change this any time in Spoiler Shield below.</p>
     <div class="actions">
       <button class="primary" id="onboardSetup">Set my reading progress</button>
-      <button class="secondary" id="onboardCaughtUp">I'm caught up on everything — skip this</button>
+      <button class="secondary" id="onboardCaughtUp">Show everything, including spoilers</button>
     </div>
   </div>
   <button class="close" id="onboardClose" aria-label="Dismiss">&#10005;</button>
@@ -819,13 +821,22 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
       <a href="${d.postUrl}" target="_blank" rel="noopener">View original post</a>
     </div>` : '';
 
+  // States the specific reason when the item's tagged to a particular
+  // book (e.g. "discusses Urth of the New Sun"), not just a generic
+  // "ahead of your progress" note — the data for this already existed in
+  // d.book, just wasn't being surfaced in the message before.
+  const bookLabel = (spoiler && d.book) ? BOOKS[d.series]?.find(b => b[0] === d.book)?.[1] : null;
+  const spoilerReason = bookLabel
+    ? `Discusses ${bookLabel} — adjust in Spoiler Shield above.`
+    : `Ahead of your ${SERIES_LABEL[d.series]} progress — adjust in Spoiler Shield above.`;
+
   return `
     <div class="card ${d.series} ${featured ? 'featured' : ''}">
       ${spoiler ? `
         <div class="spoiler-overlay">
           <span class="lock">&#128737;</span>
           <button data-reveal="${d.id}">Reveal spoiler</button>
-          <span class="note">Ahead of your New/Long/Short Sun progress — adjust in Spoiler Shield above.</span>
+          <span class="note">${spoilerReason}</span>
         </div>` : ''}
       ${thumbHtml}
       <div class="body">
