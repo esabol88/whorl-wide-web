@@ -1682,22 +1682,37 @@ const MANUAL_ITEMS = [
     nsfw: false
   },
   {
+    id: 'manual-alexanderpreuss-typhon',
+    title: 'Typhon',
+    source: 'Alexander Preuss',
+    type: 'fanart',
+    series: 'new',
+    date: '2025-03-15',
+    url: 'https://www.artstation.com/artwork/koAkl',
+    desc: "Cover artwork for Centipede Press's limited edition of The Sword of the Lictor — Preuss illustrated all three of Centipede's New Sun volumes, not just Shadow.",
+    tags: guessTags('Sword of the Lictor Typhon cover illustration'),
+    artist: 'Alexander Preuss',
+    artistUrl: 'https://www.abalakin.de/',
+    postUrl: 'https://www.artstation.com/artwork/koAkl',
+    nsfw: false
+  },
+  {
     // Nathan J. Anderson's own individual Reddit posts (as u/deimosremus)
     // already come through automatically via r/genewolfe — this entry is
     // his broader portfolio site specifically, a fuller "character bible"
     // overview rather than duplicating what the live feed already finds.
     id: 'manual-nathananderson-characterbible',
-    title: 'The Book of the New Sun — character bible',
+    title: 'Dorcas & Triskele',
     source: 'Nathan J. Anderson (DeimosRemus)',
     type: 'fanart',
     series: 'new',
     date: '2025-04-01',
-    url: 'https://www.nathanandersonart.com/newsun',
-    desc: 'An extensive, ongoing character bible — Severian, the guild, weapons, creatures, costumes, architecture, and environments, useful for seeing how a described object might actually be constructed.',
-    tags: guessTags('Book of the New Sun Severian character design'),
+    url: 'https://www.artstation.com/artwork/N5lgNP',
+    desc: "Dorcas, the mysterious young woman whom Severian unwittingly resurrects from the dead, and Triskele, a battered beast on the brink of death and one of young Severian's first friends. Part of an extensive, ongoing character bible — see his site for the rest.",
+    tags: guessTags('Book of the New Sun Dorcas Triskele character design'),
     artist: 'Nathan J. Anderson',
     artistUrl: 'https://www.nathanandersonart.com/newsun',
-    postUrl: 'https://www.nathanandersonart.com/newsun',
+    postUrl: 'https://www.artstation.com/artwork/N5lgNP',
     nsfw: false
   },
   {

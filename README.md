@@ -1101,6 +1101,28 @@ Book of Fuligin page on ArtStation instead of his profile). Bruce
 Pennington and Floating Disc remain unresolved — couldn't find a more
 specific page for either through search.
 
+**Follow-up, after being asked to feature "all" of each portfolio's
+work.** Explained the real constraint first rather than attempting it
+literally: no browsing/crawling capability means no way to enumerate a
+complete gallery, only individual pieces that happen to surface in
+targeted search — and even if that were possible, dozens of hardcoded
+entries per artist would be a different scale of thing than anything else
+in `MANUAL_ITEMS`, more "whatever a search session happened to find" than
+a curated set. Checked for real RSS feeds on the portfolio sites as the
+honest alternative (would mean *actual* ongoing coverage instead of a
+growing hand-typed list) — found nothing confirmed, including for Vega
+Draws specifically despite it having an active blog.
+
+Landed on a middle path: a further, individually-verified research pass
+rather than either extreme. Two solid results — Nathan J. Anderson's
+entry swapped from his general `/newsun` portfolio section to a specific,
+confirmed piece ("Dorcas & Triskele," ArtStation), and a second Alexander
+Preuss piece added ("Typhon," his cover art for *The Sword of the
+Lictor* — Centipede Press's own site confirms he illustrated all three of
+their New Sun volumes, not just *Shadow*, which is what led to finding
+this one). Explicitly not "all" of either artist's relevant work — just
+more than before, each confirmed rather than assumed.
+
 ## Start Here and Spoiler Shield removed entirely
 
 A deliberate product decision, not a bug fix — removed by request after
