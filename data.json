@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-07-19T20:59:26.010Z",
+  "generatedAt": "2026-07-20T11:35:35.095Z",
   "items": [
+    {
+      "id": "youtube-search-fec359d1",
+      "title": "Let&#39;s Read - The Island of Doctor Death and Other Stories and Other Stories and Book of the New Sun",
+      "source": "Worm Girl",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-20",
+      "url": "https://www.youtube.com/watch?v=s8ifOdIq_YE",
+      "desc": "Gene Wolfe is my favorite author. I have an entire shelf dedicated just to him! His best known work is the four-volume Book of the ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/s8ifOdIq_YE/hqdefault.jpg"
+    },
     {
       "id": "rereading-wolfe-509384d0",
       "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 1",
@@ -77,20 +89,6 @@
       "desc": "Is Gene Wolfe's Book of the New Sun the most spiritually rewarding sci-fi fantasy ever written? Full spoiler-free analysis of The ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/BFkBSDjVHow/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-d251c6da",
-      "title": "Book of the New Sun: The claw of the conciliator analysis and review",
-      "source": "SHRIKANT THE NOSTALGIC DRAGON",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-13",
-      "url": "https://www.youtube.com/watch?v=NuEZgSuHj3o",
-      "desc": "Is Gene Wolfe's Book of the New Sun the most spiritually rewarding science fantasy ever written? In this spoiler-free review, I dive ...",
-      "tags": [
-        "the Claw"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/NuEZgSuHj3o/hqdefault.jpg"
     },
     {
       "id": "manual-andylee-peace",
@@ -349,6 +347,23 @@
       "thumbnail": "https://i2.ytimg.com/vi/IHHedq0ruoQ/hqdefault.jpg"
     },
     {
+      "id": "manual-andreakalfas-undine",
+      "title": "Severian and the Undine",
+      "source": "Andrea Kalfas",
+      "type": "fanart",
+      "series": "new",
+      "date": "2025-10-01",
+      "url": "https://www.andreakalfas.com/",
+      "desc": "Not a Wolfe-focused artist overall, but a memorable, decorative, medieval-modern illustration of Severian confronted by an undine.",
+      "tags": [
+        "Severian"
+      ],
+      "artist": "Andrea Kalfas",
+      "artistUrl": "https://www.andreakalfas.com/",
+      "postUrl": "https://www.andreakalfas.com/",
+      "nsfw": false
+    },
+    {
       "id": "reactor-8e2aa426",
       "title": "Adventures in Tourism: Five SFF Stories About Travel",
       "source": "Reactor",
@@ -371,6 +386,24 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/z0NiLq0ymGM/hqdefault.jpg"
+    },
+    {
+      "id": "manual-floatingdisc-lakeofbirds",
+      "title": "Severian and Dorcas at the Lake of Birds",
+      "source": "Floating Disc",
+      "type": "fanart",
+      "series": "new",
+      "date": "2025-09-01",
+      "url": "https://floatingdisc.com/",
+      "desc": "A currently active fan artist with a dedicated New Sun category and multiple pieces available as prints, not a single isolated illustration.",
+      "tags": [
+        "Severian",
+        "Dorcas"
+      ],
+      "artist": "Floating Disc",
+      "artistUrl": "https://floatingdisc.com/",
+      "postUrl": "https://floatingdisc.com/",
+      "nsfw": false
     },
     {
       "id": "rereading-wolfe-d0f62367",
@@ -409,6 +442,21 @@
       "thumbnail": "https://i4.ytimg.com/vi/7kcVZGrufpo/hqdefault.jpg"
     },
     {
+      "id": "manual-vegadraws-gyoll",
+      "title": "The River Gyoll",
+      "source": "Vega Draws",
+      "type": "fanart",
+      "series": "new",
+      "date": "2025-08-01",
+      "url": "https://vegadraws.art/",
+      "desc": "Part of a self-described \"slow, long-term project\" to illustrate the Book of the New Sun — the site includes substantial process journals developing each composition directly from the text.",
+      "tags": [],
+      "artist": "Vega Draws",
+      "artistUrl": "https://vegadraws.art/",
+      "postUrl": "https://vegadraws.art/blog/",
+      "nsfw": false
+    },
+    {
       "id": "manual-donbeck-structure",
       "title": "Structure of the New Sun",
       "source": "Don Beck",
@@ -418,6 +466,21 @@
       "url": "https://donbeck1.substack.com/p/structure-of-the-new-sun",
       "desc": "A craft-oriented follow-up on Wolfe's unconventional placement of rising action, climax, and structural turns.",
       "tags": []
+    },
+    {
+      "id": "manual-erichewang-shadow",
+      "title": "The Shadow of the Torturer — pen-and-ink series",
+      "source": "Eric He",
+      "type": "fanart",
+      "series": "new",
+      "date": "2025-06-01",
+      "url": "https://www.artstation.com/artwork/4d692",
+      "desc": "Originally an Inktober project — stark blacks and medieval engraving quality, particularly compatible with a minimal, emblematic visual direction.",
+      "tags": [],
+      "artist": "Eric He",
+      "artistUrl": "https://eriche.artstation.com/",
+      "postUrl": "https://www.artstation.com/artwork/4d692",
+      "nsfw": false
     },
     {
       "id": "manual-donbeck-nextread",
@@ -441,6 +504,53 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/zccp6_rw7Lg/hqdefault.jpg"
+    },
+    {
+      "id": "manual-ramonperales-fuligin",
+      "title": "Book of Fuligin — illustrated anthology",
+      "source": "Ramón Perales Cano (Ramonkey)",
+      "type": "fanart",
+      "series": "new",
+      "date": "2025-05-01",
+      "url": "https://www.artstation.com/ramonkey",
+      "desc": "Conceived, edited, and contributed to by Perales — a large illustrated anthology honoring Wolfe with nearly forty participating artists. Bold, graphic, comics-derived imagery.",
+      "tags": [],
+      "artist": "Ramón Perales Cano",
+      "artistUrl": "https://ramonkeyperales.com/",
+      "postUrl": "https://www.artstation.com/ramonkey",
+      "nsfw": false
+    },
+    {
+      "id": "manual-nathananderson-characterbible",
+      "title": "The Book of the New Sun — character bible",
+      "source": "Nathan J. Anderson (DeimosRemus)",
+      "type": "fanart",
+      "series": "new",
+      "date": "2025-04-01",
+      "url": "https://www.nathanandersonart.com/newsun",
+      "desc": "An extensive, ongoing character bible — Severian, the guild, weapons, creatures, costumes, architecture, and environments, useful for seeing how a described object might actually be constructed.",
+      "tags": [
+        "Severian"
+      ],
+      "artist": "Nathan J. Anderson",
+      "artistUrl": "https://www.nathanandersonart.com/newsun",
+      "postUrl": "https://www.nathanandersonart.com/newsun",
+      "nsfw": false
+    },
+    {
+      "id": "manual-alexanderpreuss-newsun",
+      "title": "The Book of the New Sun — illustrations for Centipede Press",
+      "source": "Alexander Preuss",
+      "type": "fanart",
+      "series": "new",
+      "date": "2025-03-01",
+      "url": "https://www.artstation.com/artwork/a01qvz",
+      "desc": "Illustrating Wolfe's books for Centipede Press since 2006 — detailed, cinematic work unusually attentive to Wolfe's concealed science-fiction architecture.",
+      "tags": [],
+      "artist": "Alexander Preuss",
+      "artistUrl": "https://www.abalakin.de/",
+      "postUrl": "https://www.artstation.com/artwork/a01qvz",
+      "nsfw": false
     },
     {
       "id": "manual-radicaledward-newsun",
@@ -467,16 +577,15 @@
       "tags": []
     },
     {
-      "id": "ultan-s-library-9134967b",
-      "title": "Gene Wolfe and The Pocket Book of Science-Fiction",
-      "source": "Ultan's Library",
+      "id": "manual-adamroberts-newsun",
+      "title": "Gene Wolfe, \"The Book of the New Sun\" (1980-83)",
+      "source": "Adam Roberts",
       "type": "article",
       "series": "new",
-      "date": "2024-05-30",
-      "url": "https://ultan.org.uk/gene-wolfe-and-the-pocket-book-of-science-fiction/",
-      "desc": "Wolfe said that Wollheim's 1943 anthology was his gateway to discovering the science fiction pulps. Here, Michael Andre-Driussi explores one of Wolfe's earliest influences.",
-      "tags": [],
-      "thumbnail": null
+      "date": "2023-07-03",
+      "url": "https://medium.com/adams-notebook/gene-wolfe-the-book-of-the-new-sun-1980-83-ee4cc6d18410",
+      "desc": "A substantial essay treating the tetralogy as perhaps the major fantasy sequence of its era — fantasy vs. science fiction, memory, structure, symbolism, the wider Solar Cycle.",
+      "tags": []
     },
     {
       "id": "marc-aramini-19c4690b",
@@ -527,42 +636,6 @@
       "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
     },
     {
-      "id": "ultan-s-library-bf25b430",
-      "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-11-23",
-      "url": "https://ultan.org.uk/micro-wolfenomics-joan-gordon-reviews-gene-wolfes-first-four-novels-a-chapter-guide-by-michael-andre-driussi/",
-      "desc": "There are two kinds of Wolfeian criticism: macro and micro. Michael Andre-Driussi offers the micro, noting all the small details, word meanings and origins, specific allusions, patterns and inconsistencies in plot, time-",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-c68a226d",
-      "title": "A Curiously Conflicted Book: Craig Brewer reviews ‘Interlibrary Loan’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-11-09",
-      "url": "https://ultan.org.uk/a-curiously-conflicted-book-craig-brewer-reviews-gene-wolfes-interlibrary-loan/",
-      "desc": "This final work is not simply a coda to Wolfe’s career but an integral part of its working out of some of his most central concerns.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-5e1a91e0",
-      "title": "A Weird Mystery: James Wynn considers Gene Wolfe’s ‘A Borrowed Man’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-10-26",
-      "url": "https://ultan.org.uk/a-weird-mystery-james-wynn-considers-gene-wolfes-a-borrowed-man/",
-      "desc": "As a detective novel, this is not a puzzle. It’s a finger-trap.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "crossref-scholarly-papers-188184c2",
       "title": "Time After Time: On the speculative fiction of Gene Wolfe",
       "source": "Critical Quarterly",
@@ -572,42 +645,6 @@
       "url": "https://doi.org/10.1111/criq.12563",
       "desc": "By Francis Gooding — Critical Quarterly",
       "tags": []
-    },
-    {
-      "id": "ultan-s-library-9f37d039",
-      "title": "Review: Gene Wolfe’s ‘Operation ARES’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-08-03",
-      "url": "https://ultan.org.uk/review-gene-wolfes-operation-ares/",
-      "desc": "A review by Martin Crookall of Gene Wolfe's problematic and rarely discussed first novel.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-aaf5f4a8",
-      "title": "Standing on the Shoulders of Giants – A Review of Michael Andre-Driussi’s ‘The Book of the New Sun: A Chapter Guide’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-07-20",
-      "url": "https://ultan.org.uk/standing-on-the-shoulders-of-giants-a-review-of-michael-andre-driussis-the-book-of-the-new-sun-a-chapter-guide/",
-      "desc": "\"While Andre-Driussi acknowledges the complexity and allusiveness of Wolfe’s work, his writing has always seemed to me the most objectively grounded and easiest to digest ... of all the writers and analysts currently exp",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-20ee2c82",
-      "title": "Posthistory 201",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-07-06",
-      "url": "https://ultan.org.uk/posthistory-201/",
-      "desc": "In this new study of how human history is measured and portrayed in Gene Wolfe’s Solar Cycle, Michael Andre-Driussi reassesses the subject of his earlier essay “Posthistory 101” and examines the textual evidence for esti",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-37cc0f62",
@@ -620,18 +657,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
-    },
-    {
-      "id": "ultan-s-library-e377b022",
-      "title": "Everything has to be true somehow",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-06-08",
-      "url": "https://ultan.org.uk/everything-has-to-be-true-somehow/",
-      "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-166c4cdf",
@@ -670,6 +695,17 @@
       "thumbnail": "https://i4.ytimg.com/vi/wvUlG2I4PEI/hqdefault.jpg"
     },
     {
+      "id": "manual-theringer-highart",
+      "title": "Gene Wolfe Turned Science Fiction Into High Art",
+      "source": "The Ringer",
+      "type": "article",
+      "series": "general",
+      "date": "2019-04-25",
+      "url": "https://theringer.com/platform/amp/2019/4/25/18515675/gene-wolfe-science-fiction-author",
+      "desc": "A retrospective written the week Wolfe died in 2019, framing his life and work for readers who'd never heard the name — a good one to hand someone who's curious but hasn't started.",
+      "tags": []
+    },
+    {
       "id": "crossref-scholarly-papers-8dab90c2",
       "title": "Remembering Gene Wolfe, 1931-2019",
       "source": "Science Fiction Studies",
@@ -678,6 +714,32 @@
       "date": "2019-01-01",
       "url": "https://doi.org/10.1353/sfs.2019.0080",
       "desc": "By Joan Gordon — Science Fiction Studies",
+      "tags": []
+    },
+    {
+      "id": "manual-samweber-folio",
+      "title": "The Book of the New Sun — Folio Society illustrated edition",
+      "source": "Sam Weber",
+      "type": "fanart",
+      "series": "new",
+      "date": "2018-01-01",
+      "url": "https://sampaints.com/",
+      "desc": "Weber spent almost a year illustrating the Folio Society's complete New Sun — literal textual investigation combined with surreal, art-historical symbolism.",
+      "tags": [],
+      "artist": "Sam Weber",
+      "artistUrl": "https://sampaints.com/",
+      "postUrl": "https://sampaints.com/",
+      "nsfw": false
+    },
+    {
+      "id": "manual-bebergal-difficultgenius",
+      "title": "Sci-Fi's Difficult Genius",
+      "source": "Peter Bebergal",
+      "type": "article",
+      "series": "general",
+      "date": "2015-04-15",
+      "url": "https://www.newyorker.com/books/page-turner/sci-fis-difficult-genius",
+      "desc": "Still probably the most important mainstream profile — memory, unreliability, Catholicism, and Wolfe's own comments about his work and his wife Rosemary.",
       "tags": []
     },
     {
