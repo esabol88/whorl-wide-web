@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T17:19:40.639Z",
+  "generatedAt": "2026-07-20T18:57:51.554Z",
   "items": [
     {
       "id": "youtube-search-fec359d1",
@@ -77,18 +77,6 @@
       "desc": "I'm glad to report the arrival of the latest installment in my Gene Wolfe Chapter Guide series. Feel free to pick up a paperback or Kindle copy of the Bibliomen guide with my sincere appreciation. \n This one is short, so",
       "tags": [],
       "thumbnail": "https://preview.redd.it/9l2vkpcrjadh1.jpeg?width=640&crop=smart&auto=webp&s=4348049db3ff5e36a375bbeebd00cdbd5ec47a96"
-    },
-    {
-      "id": "youtube-search-d9217514",
-      "title": "This 40-year-old book is still the most spiritually complex thing I&#39;ve read #booktube #scifi",
-      "source": "SHRIKANT THE NOSTALGIC DRAGON",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-13",
-      "url": "https://www.youtube.com/watch?v=BFkBSDjVHow",
-      "desc": "Is Gene Wolfe's Book of the New Sun the most spiritually rewarding sci-fi fantasy ever written? Full spoiler-free analysis of The ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/BFkBSDjVHow/hqdefault.jpg"
     },
     {
       "id": "manual-andylee-peace",
@@ -353,14 +341,14 @@
       "type": "fanart",
       "series": "new",
       "date": "2025-10-01",
-      "url": "https://www.andreakalfas.com/",
-      "desc": "Not a Wolfe-focused artist overall, but a memorable, decorative, medieval-modern illustration of Severian confronted by an undine.",
+      "url": "https://andreakalfas.tumblr.com/post/25648964563/severian-and-the-undine-a-scene-from-book-of-the",
+      "desc": "Not a Wolfe-focused artist overall, but a memorable, decorative, medieval-modern illustration of Severian confronted by an undine — painted for a Paris gallery show, \"The Book Show.\"",
       "tags": [
         "Severian"
       ],
       "artist": "Andrea Kalfas",
       "artistUrl": "https://www.andreakalfas.com/",
-      "postUrl": "https://www.andreakalfas.com/",
+      "postUrl": "https://andreakalfas.tumblr.com/post/25648964563/severian-and-the-undine-a-scene-from-book-of-the",
       "nsfw": false
     },
     {
@@ -443,17 +431,17 @@
     },
     {
       "id": "manual-vegadraws-gyoll",
-      "title": "The River Gyoll",
+      "title": "Morwenna's Execution — process journal",
       "source": "Vega Draws",
       "type": "fanart",
       "series": "new",
       "date": "2025-08-01",
-      "url": "https://vegadraws.art/",
-      "desc": "Part of a self-described \"slow, long-term project\" to illustrate the Book of the New Sun — the site includes substantial process journals developing each composition directly from the text.",
+      "url": "https://vegadraws.art/blog/morwenna-s-execution-art-process-journal",
+      "desc": "Part of a self-described \"slow, long-term project\" to illustrate the Book of the New Sun — a detailed process journal developing the composition directly from the text.",
       "tags": [],
       "artist": "Vega Draws",
       "artistUrl": "https://vegadraws.art/",
-      "postUrl": "https://vegadraws.art/blog/",
+      "postUrl": "https://vegadraws.art/blog/morwenna-s-execution-art-process-journal",
       "nsfw": false
     },
     {
@@ -512,12 +500,12 @@
       "type": "fanart",
       "series": "new",
       "date": "2025-05-01",
-      "url": "https://www.artstation.com/ramonkey",
-      "desc": "Conceived, edited, and contributed to by Perales — a large illustrated anthology honoring Wolfe with nearly forty participating artists. Bold, graphic, comics-derived imagery.",
+      "url": "https://www.artstation.com/artwork/eJgg53",
+      "desc": "Conceived, edited, and contributed to by Perales — a large illustrated anthology honoring Wolfe with nearly forty participating artists. Bold, graphic, comics-derived imagery. One page from the book; see his profile for more.",
       "tags": [],
       "artist": "Ramón Perales Cano",
       "artistUrl": "https://ramonkeyperales.com/",
-      "postUrl": "https://www.artstation.com/ramonkey",
+      "postUrl": "https://www.artstation.com/artwork/eJgg53",
       "nsfw": false
     },
     {
@@ -814,17 +802,17 @@
     },
     {
       "id": "manual-samweber-folio",
-      "title": "The Book of the New Sun — Folio Society illustrated edition",
+      "title": "The Claw of the Conciliator — Folio Society binding art",
       "source": "Sam Weber",
       "type": "fanart",
       "series": "new",
       "date": "2018-01-01",
-      "url": "https://sampaints.com/",
-      "desc": "Weber spent almost a year illustrating the Folio Society's complete New Sun — literal textual investigation combined with surreal, art-historical symbolism.",
+      "url": "https://sampaints.com/Book-of-The-New-Sun-Bindings-Claw",
+      "desc": "Weber spent almost a year illustrating the Folio Society's complete New Sun — literal textual investigation combined with surreal, art-historical symbolism. One binding of four; see his site for the full set.",
       "tags": [],
       "artist": "Sam Weber",
       "artistUrl": "https://sampaints.com/",
-      "postUrl": "https://sampaints.com/",
+      "postUrl": "https://sampaints.com/Book-of-The-New-Sun-Bindings-Claw",
       "nsfw": false
     },
     {
