@@ -1003,6 +1003,34 @@ used (The Ringer: April 25, 2019; Adam Roberts: July 3, 2023), except
 Bebergal's, which is approximate — the original research only gave "April
 2015," no specific day.
 
+## Real Reference Shelf covers, not just icons
+
+The icon fallback (previous section) was always meant to be a graceful
+degradation, not a final answer. Two follow-up attempts to find real
+cover images: first tried Open Library's Covers API
+(`covers.openlibrary.org/b/isbn/{ISBN}-M.jpg`) — a real, documented,
+deterministic pattern, genuinely better than guessing at Goodreads' CDN
+structure, and confirmed working for Lexicon Urthus with a real ISBN
+(9780964279506). But finding confirmed ISBNs for the smaller-press titles
+(*Between Light and Shadow*, *Attending Daedalus*, *Solar Labyrinth*) by
+search alone kept coming up short — these aren't as cleanly indexed as
+mainstream titles.
+
+**Resolved with direct, ground-truth image URLs supplied directly** —
+Goodreads CDN links, an Amazon product image for Chiarello's guide, and
+Gwern's own site logo. All six remaining shelf items (after removing the
+Word Hoard, redundant to Lexicon Urthus and removed entirely) now show
+real cover art or a real logo. Kept the `onerror="this.remove()"` fallback
+to the icon tile on every one anyway, even the confirmed URLs — cheap
+insurance if a link ever goes stale, same defensive pattern used
+everywhere else images appear in this project.
+
+One real mistake caught and fixed during this: an early edit's `old_str`
+accidentally captured and deleted the `<a>` opening tag for one shelf item
+while only meaning to replace its thumbnail — caught immediately by
+viewing the result rather than assuming the edit landed cleanly, fixed
+before it ever reached a commit.
+
 ## Backfilling art without a verified image URL — a generic icon instead
 
 Tried to backfill Don Maitz's and Bruce Pennington's original New Sun
