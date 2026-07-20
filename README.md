@@ -1085,6 +1085,37 @@ Hoard dictionary tool. Restructured `.shelf-item` from `align-items:
 baseline` to `align-items: center` to accommodate a fixed-size icon
 alongside the text without breaking the row's vertical alignment.
 
+## Spoiler Shield: quick-start presets and a visible hidden-item count
+
+Two of four proposed improvements, chosen deliberately over the other
+two: a checkbox-based redesign was rejected outright — progress through a
+series is sequential, not independent selections, so checkboxes would let
+someone represent a state the data model can't actually use (e.g. "read
+Sword but not Claw"). A visual stepper and an always-visible progress
+summary were both real, reasonable ideas but bigger changes than these
+two — left for later rather than bundled in.
+
+**Quick-start presets** (`.shield-presets`, four buttons above the
+per-series dropdowns): "Haven't started," "Finished New Sun," "Finished
+New & Long Sun," "Read everything." Deliberately follow the actual
+reading order — "Finished New Sun" only sets `new` to `'all'`, leaving
+Long and Short at `'none'` rather than guessing someone's also read
+further, since finishing New Sun doesn't imply anything about Long or
+Short Sun specifically. One click sets all three `STORE.progress` values
+at once and updates the visible dropdowns to match — the dropdowns
+underneath still work normally for anyone whose situation doesn't fit a
+preset.
+
+**A real hidden-item count**, not just On/Off. `updateShieldStatus()` now
+computes `DATA.filter(d => isSpoiler(d) && !revealed.has(d.id)).length`
+and shows it next to the status ("On · 12 hidden"), the same "make system
+state visible" principle already behind the "N matching dispatches" line
+added for filters earlier. Called from the top of `render()` itself now,
+not just from the specific action handlers that used to call it — keeps
+the count in sync with real data, reveals, and progress changes
+automatically, rather than needing every future call site to remember to
+update it individually.
+
 ## Responding to a second, much larger audit — three compatible items
 
 A second, far more comprehensive audit arrived — genuinely well-reasoned
@@ -1199,7 +1230,9 @@ on the Reference Shelf, and a footer "About" page explaining sourcing —
 each is a real, reasonable idea, just a genuine product decision rather
 than an obvious fix, worth a direct answer rather than a unilateral call.
 
-## The feed is paginated, 25 items per page
+## The feed is paginated, 15 items per page
+
+Started at 25, reduced to 15 by request.
 
 The whole filtered result set used to render in one long scroll,
 regardless of size. Now capped at `PAGE_SIZE = 25` per page, with
