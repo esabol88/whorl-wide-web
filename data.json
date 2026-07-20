@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T19:23:56.389Z",
+  "generatedAt": "2026-07-20T19:43:18.489Z",
   "items": [
     {
       "id": "youtube-search-fec359d1",
@@ -374,24 +374,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/z0NiLq0ymGM/hqdefault.jpg"
-    },
-    {
-      "id": "manual-floatingdisc-lakeofbirds",
-      "title": "Severian and Dorcas at the Lake of Birds",
-      "source": "Floating Disc",
-      "type": "fanart",
-      "series": "new",
-      "date": "2025-09-01",
-      "url": "https://floatingdisc.com/",
-      "desc": "A currently active fan artist with a dedicated New Sun category and multiple pieces available as prints, not a single isolated illustration.",
-      "tags": [
-        "Severian",
-        "Dorcas"
-      ],
-      "artist": "Floating Disc",
-      "artistUrl": "https://floatingdisc.com/",
-      "postUrl": "https://floatingdisc.com/",
-      "nsfw": false
     },
     {
       "id": "rereading-wolfe-d0f62367",
