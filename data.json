@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-07-20T05:30:03.080Z",
+  "generatedAt": "2026-07-20T08:38:12.582Z",
   "items": [
+    {
+      "id": "youtube-search-fec359d1",
+      "title": "Let&#39;s Read - The Island of Doctor Death and Other Stories and Other Stories and Book of the New Sun",
+      "source": "Worm Girl",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-20",
+      "url": "https://www.youtube.com/watch?v=s8ifOdIq_YE",
+      "desc": "Gene Wolfe is my favorite author. I have an entire shelf dedicated just to him! His best known work is the four-volume Book of the ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/s8ifOdIq_YE/hqdefault.jpg"
+    },
     {
       "id": "rereading-wolfe-509384d0",
       "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 1",
@@ -77,20 +89,6 @@
       "desc": "Is Gene Wolfe's Book of the New Sun the most spiritually rewarding sci-fi fantasy ever written? Full spoiler-free analysis of The ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/BFkBSDjVHow/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-d251c6da",
-      "title": "Book of the New Sun: The claw of the conciliator analysis and review",
-      "source": "SHRIKANT THE NOSTALGIC DRAGON",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-13",
-      "url": "https://www.youtube.com/watch?v=NuEZgSuHj3o",
-      "desc": "Is Gene Wolfe's Book of the New Sun the most spiritually rewarding science fantasy ever written? In this spoiler-free review, I dive ...",
-      "tags": [
-        "the Claw"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/NuEZgSuHj3o/hqdefault.jpg"
     },
     {
       "id": "manual-andylee-peace",
