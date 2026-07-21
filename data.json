@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T12:19:21.077Z",
+  "generatedAt": "2026-07-21T14:55:30.466Z",
   "items": [
     {
       "id": "r-genewolfe-91c54335",
@@ -18,8 +18,20 @@
       "nsfw": false
     },
     {
+      "id": "r-rereadingwolfepodcast-ddaa1410",
+      "title": "Reading Recommendations",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-21",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1v25iaq/reading_recommendations/",
+      "desc": "Have the James and Craig ever compiled lists of their favourite novels, speculative fiction or otherwise? I just finished \"Little, Big\" by John Crowley because they mentioned it in an episode one time. It was great! I be",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "youtube-search-fec359d1",
-      "title": "Let&#39;s Read - The Island of Doctor Death and Other Stories and Other Stories and Book of the New Sun",
+      "title": "Reading New Sun and The Island of Doctor Death and Other Stories and Other Stories",
       "source": "Worm Girl",
       "type": "video",
       "series": "new",
@@ -66,7 +78,7 @@
       "series": "long",
       "date": "2026-07-17",
       "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Metz and Phil talk about Skigill. Content (7:30) - Discussion of part 2 of Chapter 20 and the Afteroword of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance Check out mo",
+      "desc": "Intro - Metz and Phil talk about Skigill. Content (7:30) - Discussion of part 2 of Chapter 20 and the Afterword of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance Check out mor",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
