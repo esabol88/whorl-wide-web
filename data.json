@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T22:54:08.100Z",
+  "generatedAt": "2026-07-22T23:54:42.613Z",
   "items": [
     {
       "id": "r-rereadingwolfepodcast-39553c25",
@@ -213,6 +213,17 @@
         "the Claw"
       ],
       "thumbnail": null
+    },
+    {
+      "id": "urth-mailing-list-b92588aa",
+      "title": "(urth) Homage to The Changeling?",
+      "source": "Urth Mailing List",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-06-04",
+      "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
+      "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
+      "tags": []
     },
     {
       "id": "high-low-brow-002378fd",
