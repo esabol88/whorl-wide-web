@@ -1330,6 +1330,27 @@ document order — there are two on the page, this one and "Further
 Reading" further down) rather than leaving the reader wherever their
 previous scroll position happened to end up on the new page.
 
+## Cache-busted data.json so a revisit shows the actual latest feed
+
+Real symptom: revisiting the site showed whatever the feed looked like on
+the *last* visit, requiring a manual refresh to see anything new — even
+though `data.json` genuinely does update hourly. A plain
+`fetch('./data.json')` is just an ordinary HTTP request, and browsers are
+free to serve it straight from cache on a revisit rather than checking
+the server, which is exactly this symptom. Fixed by making every request
+a distinct URL: `fetch(\`./data.json?t=${Date.now()}\`, { cache:
+'no-store' })` — the timestamp query param means the browser has never
+cached *this exact* URL before, and `cache: 'no-store'` is a second,
+explicit "don't cache this at all" instruction layered on top.
+
+Scoped specifically to the `data.json` fetch, not the whole page — that's
+the file that actually changes hourly and the one driving the "stale
+feed" complaint. `index.html` itself changing (a genuine code deploy) is
+a different, much rarer situation than "the feed looks old," and GitHub
+Pages doesn't expose a way to set custom cache-control headers on static
+files at all, so there's no equivalent lever to pull for the page shell
+itself even if it mattered here.
+
 ## Value-prop rewording, and a more archaic heading font
 
 Two small requests done together. The value-prop line changed from

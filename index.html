@@ -495,7 +495,14 @@ let DATA = SAMPLE_DATA;
 let usingSampleData = true;
 let generatedAt = null; // ISO timestamp from the fetcher's last run — drives the "Updated Xh ago" stamp
 
-fetch('./data.json')
+// Cache-busted deliberately — data.json changes hourly (the GitHub Action
+// updates it), but a plain `fetch('./data.json')` is just a normal HTTP
+// request the browser is free to serve from its own cache on a revisit,
+// which is exactly the "shows what I saw last time" symptom this fixes.
+// The timestamp query param makes every request a distinct URL the
+// browser has never cached; cache:'no-store' is a second, explicit
+// instruct-the-browser-not-to-cache-this-at-all signal on top of that.
+fetch(`./data.json?t=${Date.now()}`, { cache: 'no-store' })
   .then(r => { if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
   .then(data => {
     if(data && Array.isArray(data.items) && data.items.length){
