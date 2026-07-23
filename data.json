@@ -1,6 +1,20 @@
 {
-  "generatedAt": "2026-07-23T21:56:35.922Z",
+  "generatedAt": "2026-07-23T22:47:22.745Z",
   "items": [
+    {
+      "id": "youtube-search-ab53cb9f",
+      "title": "The Claw of the Conciliator by Gene Wolfe - Audiobook",
+      "source": "Pacoco",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-23",
+      "url": "https://www.youtube.com/watch?v=_ewinevlofI",
+      "desc": "Book 2 of 'The Book of the New Sun'. An epic science fantasy masterpiece read by Roy Avers.",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/_ewinevlofI/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-076964e8",
       "title": "The Mysteries of the Faceless King is an Epic Worthy of Wolfe and Tolkien - But Only 20 Pages!",
