@@ -1330,6 +1330,47 @@ document order — there are two on the page, this one and "Further
 Reading" further down) rather than leaving the reader wherever their
 previous scroll position happened to end up on the new page.
 
+## Wolfelike — designed, then paused before shipping
+
+A "Wolfelike" category was proposed after a specific example (Darrell
+Schweitzer) — a `wolfelike` series bucket, a fifth filter chip, a new
+accent color, and a first Google Alerts source scoped to a compound query
+(`"Gene Wolfe" "Darrell Schweitzer"`) so it stayed about Wolfe-adjacent
+discovery specifically rather than pulling in an author's whole general
+fanbase. Put on hold before the source had a real URL — cleanly reverted
+rather than left half-built: the placeholder source (which would have
+errored every run trying to fetch a non-URL), the chip, its CSS, and the
+`--violet` accent variable were all removed, not just commented out.
+Confirmed zero remaining references in either file before moving on. If
+this comes back later, the intended author list was Jack Vance, M. John
+Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
+Dunsany, each as its own compound-query alert alongside Schweitzer.
+
+## Trusted Reddit posters, named directly
+
+Five specific posters (SiriusFiction, and illustrators FloatingDisc,
+phantom_toad_, David_Browie, apesoenn) named directly as people whose
+posts should almost always make it in, rather than trying to make the
+general-purpose filters somehow infer that. `TRUSTED_ART_AUTHORS` bypasses
+the title-keyword requirement for the four illustrators — still requires
+an actual image (`hasImage`), since "art" with no image makes no sense
+regardless of who posted it, but skips `ART_SIGNAL_RE` entirely for them.
+`TRUSTED_CONTRIBUTORS` doesn't touch classification at all, just priority
+for the final 6 slots — SiriusFiction is very likely Michael
+Andre-Driussi (Lexicon Urthus, the Word Hoard, already on the Reference
+Shelf), worth surfacing even when a post wouldn't otherwise stand out by
+vote count.
+
+The final slot-selection in `fetchRedditRss` now has three priority
+tiers instead of two: trusted-poster items first, then regular art
+matches, then everything else backfilling the remaining slots — same
+6-item cap as before, just reordered priority within it. Tested against
+three synthetic cases before shipping: a trusted artist with a bare,
+keyword-free title correctly classifies as art; an *untrusted* user with
+the identical bare title correctly does not (confirming the bypass
+doesn't leak into general behavior); and a trusted contributor with no
+image at all correctly gets priority without being miscategorized as art.
+
 ## Cache-busted data.json so a revisit shows the actual latest feed
 
 Real symptom: revisiting the site showed whatever the feed looked like on

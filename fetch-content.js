@@ -786,6 +786,19 @@ function redditTitleNsfw(title) {
 // trade made for Crossref's "must say wolfe" filter.
 const ART_SIGNAL_RE = /\b(art|artwork|fanart|fan art|drawing|draw|redraw|painting|paint|sketch|illustration|doodle|portrait|lineart|line art|commission|oc|deviantart|artstation|pixiv|tumblr|instagram)\b/i;
 
+// Named directly by request — specific Reddit posters known to be
+// reliably worth including, bypassing the general-purpose filters built
+// for anonymous/unknown posters rather than trying to make those filters
+// somehow read intent. FloatingDisc, phantom_toad_, David_Browie, and
+// apesoenn are illustrators whose posts should count as art even without
+// a title that happens to say "art" or "illustration." SiriusFiction is
+// very likely Michael Andre-Driussi — Lexicon Urthus, the Word Hoard,
+// already on the Reference Shelf — a known high-value contributor whose
+// posts are worth surfacing even when they wouldn't otherwise stand out
+// by vote count.
+const TRUSTED_ART_AUTHORS = new Set(['FloatingDisc', 'phantom_toad_', 'David_Browie', 'apesoenn']);
+const TRUSTED_CONTRIBUTORS = new Set(['SiriusFiction']);
+
 async function fetchRedditRss(source) {
   try {
     if (source.redditDelayMs) await delay(source.redditDelayMs);
@@ -805,7 +818,23 @@ async function fetchRedditRss(source) {
       const thumbnail = extractRedditThumbnail(item.content);
       const hasImage = !!thumbnail;
       const signalMatch = ART_SIGNAL_RE.test(`${title} ${snippet}`);
-      const isArt = FAN_ART_ENABLED && hasImage && signalMatch;
+      const author = extractRedditAuthor(item);
+      // Specific known-good posters, named directly by request — bypass
+      // the usual keyword/signal checks rather than trying to make the
+      // general-purpose filters somehow smarter for these particular
+      // people. TRUSTED_ART_AUTHORS still requires hasImage (calling
+      // something "art" with no image makes no sense regardless of who
+      // posted it) but skips the title-keyword requirement — these are
+      // vetted illustrators, not posts that need a second-guessing check.
+      // TRUSTED_CONTRIBUTORS doesn't change classification at all, just
+      // priority for the final 6 slots below — SiriusFiction is very
+      // likely Michael Andre-Driussi (Lexicon Urthus, the Word Hoard,
+      // already featured on the Reference Shelf), a known high-value
+      // contributor worth surfacing even when a post wouldn't otherwise
+      // stand out by vote count alone.
+      const isTrustedArtist = author && TRUSTED_ART_AUTHORS.has(author) && hasImage;
+      const isTrustedContributor = author && TRUSTED_CONTRIBUTORS.has(author);
+      const isArt = FAN_ART_ENABLED && hasImage && (signalMatch || isTrustedArtist);
       // Direct reports of art posts miscategorized as Discussion turned
       // out to mostly have a strong keyword match already ("cover art
       // by...", "Illustration: ...") — meaning the previous version of
@@ -822,11 +851,10 @@ async function fetchRedditRss(source) {
       // extraction failed.
       if (hasImage) {
         const cats = (item.categories || []).join(',') || 'none';
-        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=yes (${thumbnail.slice(0,80)}) signal=${signalMatch} categories=[${cats}]`);
+        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=yes (${thumbnail.slice(0,80)}) signal=${signalMatch} trusted=${isTrustedArtist} categories=[${cats}]`);
       } else if (signalMatch) {
         console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=NO signal=yes — raw content: ${(item.content || '').slice(0,600)}`);
       }
-      const author = isArt ? extractRedditAuthor(item) : null;
       return {
         id: makeId(source.name, item.link),
         title,
@@ -838,6 +866,7 @@ async function fetchRedditRss(source) {
         desc: snippet.slice(0, 220),
         tags: guessTags(`${title} ${snippet}`),
         thumbnail,
+        _trustedPriority: isTrustedArtist || isTrustedContributor, // consumed below when picking the final 6, stripped before the item is returned to main()
         ...(isArt ? {
           artist: author ? `u/${author} (Reddit)` : 'Unknown artist (via Reddit)',
           artistUrl: author ? `https://www.reddit.com/user/${author}` : null,
@@ -849,14 +878,18 @@ async function fetchRedditRss(source) {
     // A plain slice(0,6) here would just reproduce the original top-6-by-
     // votes result and defeat the point of scanning 20 — an art post
     // found further down the list needs to actually displace something
-    // to matter. Art matches get priority for the 6 final slots;
-    // remaining slots backfill with top-ranked regular posts. Order
-    // within this array doesn't affect what the reader sees either way —
-    // everything gets re-sorted by date once merged with every other
-    // source in main() — only which items get kept here matters.
-    const artItems = items.filter(i => i.type === 'fanart');
-    const nonArtItems = items.filter(i => i.type !== 'fanart');
-    return [...artItems, ...nonArtItems].slice(0, 6);
+    // to matter. Trusted-poster items (named directly by request) get top
+    // priority, then regular art matches, then everything else backfills
+    // the remaining slots. Order within this array doesn't affect what
+    // the reader sees either way — everything gets re-sorted by date once
+    // merged with every other source in main() — only which items get
+    // kept here matters. _trustedPriority is internal bookkeeping only,
+    // stripped before the item is returned — it has no meaning to the
+    // frontend and shouldn't end up in data.json.
+    const trustedItems = items.filter(i => i._trustedPriority);
+    const artItems = items.filter(i => i.type === 'fanart' && !i._trustedPriority);
+    const nonArtItems = items.filter(i => i.type !== 'fanart' && !i._trustedPriority);
+    return [...trustedItems, ...artItems, ...nonArtItems].slice(0, 6).map(({ _trustedPriority, ...rest }) => rest);
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
     return [];
