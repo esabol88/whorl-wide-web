@@ -1371,6 +1371,32 @@ the identical bare title correctly does not (confirming the bypass
 doesn't leak into general behavior); and a trusted contributor with no
 image at all correctly gets priority without being miscategorized as art.
 
+**Follow-up, after a real report that SiriusFiction's post wasn't showing
+up.** The existing debug logging turned out to have a genuine blind spot
+for exactly this case: it only ever fired for posts with an image or an
+art-keyword match, so a plain text/link post from a trusted contributor
+(no image, nothing in the title matching `ART_SIGNAL_RE`) would scan
+through completely invisibly — no way to tell from the log whether it was
+even in the scanned window, let alone whether the trusted-author check
+fired. Two real, different possible causes were in play and the old log
+couldn't distinguish either: the post might simply not be in the top-20
+scan window yet, or `Set.has()` (case-sensitive) might be silently
+failing against whatever casing Reddit's RSS actually reports for that
+account — the exact casing was never independently verified against what
+got hardcoded.
+
+Added a third, unconditional debug line that fires for *every* scanned
+item with an author, logging the raw author string plus an explicit
+case-insensitive check against both trusted lists — if a post's author
+matches one of the trusted names ignoring case but not exactly, it now
+prints a `CASE MISMATCH` warning naming which trusted entry it almost
+matched. Verified with a synthetic test before shipping: the exact-match,
+lowercase, and mixed-case variants all resolve to the correct trusted name
+with the right mismatch flag, and a genuinely unrelated username
+correctly returns nothing. The next run's log will show directly whether
+this is a scan-window timing issue or a real casing bug, instead of
+guessing at either.
+
 ## Cache-busted data.json so a revisit shows the actual latest feed
 
 Real symptom: revisiting the site showed whatever the feed looked like on

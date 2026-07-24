@@ -835,20 +835,26 @@ async function fetchRedditRss(source) {
       const isTrustedArtist = author && TRUSTED_ART_AUTHORS.has(author) && hasImage;
       const isTrustedContributor = author && TRUSTED_CONTRIBUTORS.has(author);
       const isArt = FAN_ART_ENABLED && hasImage && (signalMatch || isTrustedArtist);
-      // Direct reports of art posts miscategorized as Discussion turned
-      // out to mostly have a strong keyword match already ("cover art
-      // by...", "Illustration: ...") — meaning the previous version of
-      // this diagnostic had a real blind spot: it only logged posts that
-      // *already* had a detected image, so a post failing at the image-
-      // detection step (extractRedditThumbnail finding no <img> tag —
-      // plausible for gallery posts or externally-hosted images, e.g. a
-      // post crediting an artist on Bluesky rather than hosting the image
-      // on Reddit itself) would never show up in the log at all, keyword
-      // match or not. Now logs both directions: the original "has an
-      // image" case, and this new "keyword matched but no image found"
-      // case — the latter includes a raw content snippet so the actual
-      // HTML Reddit's RSS sent is visible, instead of guessing why
-      // extraction failed.
+      // A real report of a trusted contributor's post not showing up
+      // exposed a genuine blind spot here: the two debug lines below only
+      // ever fired for posts with an image or an art-keyword match — a
+      // plain text/link post from a trusted contributor (no image, no
+      // "art" in the title) would scan through completely invisibly, with
+      // no way to tell whether it was even in the scanned window at all,
+      // let alone whether the trusted-author match fired correctly. This
+      // line now logs every scanned item unconditionally with its raw
+      // author string, plus an explicit case-insensitive check against
+      // both trusted lists — Set.has() is case-sensitive, and the exact
+      // casing Reddit's RSS reports for a given account was never actually
+      // verified against what was hardcoded, so a silent mismatch
+      // (e.g. "siriusfiction" vs "SiriusFiction") is a real, live
+      // possibility this makes directly visible instead of guessed at.
+      if (author) {
+        const looseTrusted = [...TRUSTED_ART_AUTHORS, ...TRUSTED_CONTRIBUTORS]
+          .find(name => name.toLowerCase() === author.toLowerCase());
+        const caseMismatch = looseTrusted && looseTrusted !== author;
+        console.log(`[debug] ${source.name}: "${title.slice(0,50)}" by u/${author}${caseMismatch ? ` — CASE MISMATCH: hardcoded as "${looseTrusted}"` : ''}`);
+      }
       if (hasImage) {
         const cats = (item.categories || []).join(',') || 'none';
         console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=yes (${thumbnail.slice(0,80)}) signal=${signalMatch} trusted=${isTrustedArtist} categories=[${cats}]`);
