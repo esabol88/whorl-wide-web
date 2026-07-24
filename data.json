@@ -1,6 +1,56 @@
 {
-  "generatedAt": "2026-07-23T12:24:22.173Z",
+  "generatedAt": "2026-07-24T12:12:31.937Z",
   "items": [
+    {
+      "id": "alzabo-soup-2688e0f0",
+      "title": "General Discussion - Gene Wolfe's Return to the Whorl",
+      "source": "Alzabo Soup",
+      "type": "podcast",
+      "series": "long",
+      "date": "2026-07-24",
+      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
+      "desc": "Intro - Phil and Metz discuss the early summer box office and the success of YouTube filmmakers. Content (9:42) - Discussion of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance ",
+      "tags": [],
+      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "youtube-search-ab53cb9f",
+      "title": "The Claw of the Conciliator by Gene Wolfe - Audiobook",
+      "source": "Pacoco",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-23",
+      "url": "https://www.youtube.com/watch?v=_ewinevlofI",
+      "desc": "Book 2 of 'The Book of the New Sun'. An epic science fantasy masterpiece read by Roy Avers.",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/_ewinevlofI/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-076964e8",
+      "title": "The Mysteries of the Faceless King is an Epic Worthy of Wolfe and Tolkien - But Only 20 Pages!",
+      "source": "Liminal Spaces",
+      "type": "video",
+      "series": "general",
+      "date": "2026-07-23",
+      "url": "https://www.youtube.com/watch?v=aYFLWHz6anw",
+      "desc": "Darrell Schweitzer's short story, The Mysteries of the Faceless King is a master class in pace and plot. This short story felt every bit ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/aYFLWHz6anw/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-932c3faf",
+      "title": "The Urth of the New Sun by Gene Wolfe [ Full Audiobook Free ]",
+      "source": "Book Flow",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-23",
+      "url": "https://www.youtube.com/watch?v=le3t2QVHNw8",
+      "desc": "The Urth of the New Sun by Gene Wolfe [ Full Audiobook Free ] Listen this Full Audiobook for FREE https://amzn.to/3Socbuz ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/le3t2QVHNw8/hqdefault.jpg"
+    },
     {
       "id": "r-rereadingwolfepodcast-39553c25",
       "title": "thoughts on the ethics and function of the Seekers of Truth and Penitence",
@@ -84,30 +134,6 @@
         "Dorcas"
       ],
       "thumbnail": null
-    },
-    {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "Chapter 20 Part 2 and Afterword - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-07-17",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Metz and Phil talk about Skigill. Content (7:30) - Discussion of part 2 of Chapter 20 and the Afterword of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance Check out mor",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "youtube-search-b1c4f8b1",
-      "title": "BOOK OF THE NEW SUN - No Spoilers | Experience, Ranking, Male Gaze, &amp; More 🐺",
-      "source": "Johanna Reads",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-16",
-      "url": "https://www.youtube.com/watch?v=PP5KRaiezNo",
-      "desc": "Welcome to my spoiler-free review of Book of the New Sun and Urth of the New Sun by Gene Wolfe! Timestamps: 0:00 Intro 0:20 ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/PP5KRaiezNo/hqdefault.jpg"
     },
     {
       "id": "r-rereadingwolfepodcast-99a1ad43",
