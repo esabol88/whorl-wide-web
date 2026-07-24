@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T14:44:14.153Z",
+  "generatedAt": "2026-07-24T18:10:54.437Z",
   "items": [
     {
       "id": "alzabo-soup-2688e0f0",
@@ -108,6 +108,22 @@
       "thumbnail": null
     },
     {
+      "id": "r-genewolfe-91c54335",
+      "title": "Illustration: Eschatology and Genesis",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "general",
+      "date": "2026-07-21",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1v24rm9/illustration_eschatology_and_genesis/",
+      "desc": "Back at it! Really wanted to go all out on this one, and it's definitely one of my favorite pieces so far! Tagged NSFW for obvious reasons. \n    submitted by    /u/deimosremus  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/bo6iukhtnheh1.jpeg",
+      "artist": "u/deimosremus (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/deimosremus",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1v24rm9/illustration_eschatology_and_genesis/",
+      "nsfw": false
+    },
+    {
       "id": "r-genewolfe-279c26bf",
       "title": "Latro is finally here!",
       "source": "r/genewolfe",
@@ -142,18 +158,6 @@
       "desc": "Gene Wolfe is my favorite author. I have an entire shelf dedicated just to him! His best known work is the four-volume Book of the ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/s8ifOdIq_YE/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-8a0ac682",
-      "title": "3rd Volume of The Book of The New Sun Collection",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-19",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v0ptww/3rd_volume_of_the_book_of_the_new_sun_collection/",
-      "desc": "submitted by    /u/pvspit25  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-509384d0",
