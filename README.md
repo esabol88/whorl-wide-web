@@ -1346,6 +1346,27 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## Reddit's top-post window: month → week
+
+The SiriusFiction investigation ended up somewhere more useful than the
+trusted-author code itself — that logic was already confirmed working
+correctly (see above). The real cause, found once a specific post was
+supplied to check against: 20 hours old, 14 upvotes, still not showing
+up. Not a scan-width problem — `/top/.rss?t=month` meant it was ranked
+against a full month's worth of accumulated vote leaders, not just that
+week's posts, so a perfectly good recent post could lose that competition
+regardless of how many items get scanned.
+
+Switched both Reddit sources from `t=month` to `t=week`. Worth recording
+why `month` was chosen originally, since it wasn't arbitrary: it was
+picked specifically to avoid an empty/sparse `week` window, on the
+assumption a niche subreddit wouldn't post often enough for that to
+reliably work. That assumption didn't hold up against real data —
+r/genewolfe has never once come back with 0 items across dozens of actual
+logged runs throughout this project. The original concern was reasonable
+to have upfront; it just turned out to be wrong once there was real
+evidence to check it against.
+
 ## Trusted Reddit posters, named directly
 
 Five specific posters (SiriusFiction, and illustrators FloatingDisc,

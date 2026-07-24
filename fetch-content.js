@@ -383,11 +383,16 @@ const SOURCES = [
   // is sorted using Reddit's own real vote data server-side before it ever
   // reaches us, so the *ranking* itself is a genuine engagement signal even
   // though we never see the raw count. Practically: bare /.rss pulls
-  // whatever's merely recent; /top/.rss?t=month pulls whatever actually
-  // stood out relative to everything else posted that month. `topWindow`
-  // below is the time filter (hour/day/week/month/year/all) — month is a
-  // reasonable default for a niche fandom subreddit that doesn't post
-  // often enough for "week" to reliably surface anything.
+  // whatever's merely recent; /top/.rss pulls whatever actually stood out
+  // relative to everything else posted in the window. `topWindow` below is
+  // the time filter (hour/day/week/month/year/all) — originally set to
+  // month, switched to week after a real report: a post 20 hours old with
+  // 14 upvotes wasn't showing up, because a month-long window meant it was
+  // competing against a full month's accumulated vote leaders, not just
+  // that week's. Month was picked to avoid a sparse/empty week window on a
+  // subreddit assumed to post infrequently, but that assumption didn't
+  // hold up against real run data — r/genewolfe has never come back with
+  // 0 items across dozens of actual logged runs.
   ...[
     { name: 'r/genewolfe', subreddit: 'genewolfe' },
     { name: 'r/rereadingwolfepodcast', subreddit: 'rereadingwolfepodcast' },
@@ -398,7 +403,20 @@ const SOURCES = [
     type: 'discussion',
     series: 'general',
     kind: 'reddit-rss',
-    url: `https://www.reddit.com/r/${subreddit}/top/.rss?t=month`,
+    // Switched from t=month to t=week after a real, reported case: a post
+    // 20 hours old with 14 upvotes still wasn't showing up. The scan
+    // window (top 20) wasn't the problem — a month-long ranking window
+    // meant it was competing against a full month's worth of accumulated
+    // vote leaders, not just that week's posts, so a perfectly good recent
+    // post could get buried regardless of how wide the scan was. The
+    // original choice of "month" was deliberate too, worth recording why
+    // it changed: it was picked specifically to avoid a sparse/empty
+    // "week" window on a subreddit assumed to post infrequently — but
+    // that assumption was made before observing real run data. Across
+    // dozens of actual runs logged throughout this project, r/genewolfe
+    // has never once come back with 0 items — the sparse-week concern
+    // didn't hold up against what actually happened in practice.
+    url: `https://www.reddit.com/r/${subreddit}/top/.rss?t=week`,
     redditDelayMs: i * 65000
   })),
 
