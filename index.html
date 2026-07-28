@@ -17,8 +17,28 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fuligin.dev — Gene Wolfe Content Aggregator">
 <meta name="twitter:description" content="Everything findable about Gene Wolfe, pulled into one feed.">
+<link rel="canonical" href="https://fuligin.dev/">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- CSP via meta tag — real, but partial. A few directives (notably
+     frame-ancestors, which is how clickjacking/X-Frame-Options-style
+     protection works) are only honored as a true HTTP header, silently
+     ignored when set via meta — and GitHub Pages doesn't expose any way
+     to set custom HTTP response headers on static files at all. This is
+     a genuine, unavoidable gap on this hosting setup, not something a
+     better meta tag fixes. What IS achievable this way still matters:
+     restricting where scripts/styles/images/fonts can load from. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self'; base-uri 'self'; object-src 'none';">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="alternate icon" href="favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "fuligin.dev",
+  "url": "https://fuligin.dev/",
+  "description": "A Gene Wolfe content aggregator that pulls essays, podcasts, videos, discussions, scholarship, and art from across the web into one feed."
+}
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Cinzel:wght@500;600&display=swap');
 
@@ -560,6 +580,24 @@ function matchesSearch(d, query){
 
 // Builds one card's HTML. Shared by the regular feed and the featured slot
 // so spoiler/NSFW/save/tag behavior stays identical in both places.
+// Every card is built as a template literal and injected via innerHTML —
+// any dynamic field that comes from an external source (Reddit post
+// titles, RSS titles/descriptions, a username extracted from Reddit's own
+// markup) is a real XSS vector if inserted raw: a malicious or merely
+// compromised source could put a <script> tag or an onerror= handler
+// directly in a title, and it would execute in a visitor's browser
+// exactly as if this project had written it. This wasn't being escaped
+// anywhere before — a real, found-during-a-security-review gap, not a
+// theoretical one. Escapes both the five HTML-special characters (safe
+// for text content) and double quotes specifically (safe for attribute
+// values like href="..." too, since &quot; can't break out of a
+// double-quoted attribute the way a raw " could).
+function escapeHtml(str){
+  return String(str ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
 function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } = {}){
   const isNew = d.date > lastVisit;
   const isSaved = !!saved[d.id];
@@ -596,14 +634,14 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
   // also falls back to non-clickable rather than a broken href="undefined".
   const thumbHtml = (blurred || !d.url)
     ? `<div class="thumb ${blurred ? 'nsfw' : ''}">${thumbInner}</div>`
-    : `<a class="thumb" href="${d.url}" target="_blank" rel="noopener">${thumbInner}</a>`;
+    : `<a class="thumb" href="${escapeHtml(d.url)}" target="_blank" rel="noopener">${thumbInner}</a>`;
 
   const attributionHtml = d.type === 'fanart' ? `
     <div class="attribution">
       <span class="lbl">Art by</span>
-      <a href="${d.artistUrl || d.postUrl}" target="_blank" rel="noopener">${d.artist}</a>
+      <a href="${escapeHtml(d.artistUrl || d.postUrl)}" target="_blank" rel="noopener">${escapeHtml(d.artist)}</a>
       <span class="sep">&middot;</span>
-      <a href="${d.postUrl}" target="_blank" rel="noopener">View original post</a>
+      <a href="${escapeHtml(d.postUrl)}" target="_blank" rel="noopener">View original post</a>
     </div>` : '';
 
   return `
@@ -611,18 +649,18 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
       ${thumbHtml}
       <div class="body">
         <div class="top">
-          <p class="title">${d.url ? `<a href="${d.url}" target="_blank" rel="noopener">${d.title}</a>` : d.title}</p>
+          <p class="title">${d.url ? `<a href="${escapeHtml(d.url)}" target="_blank" rel="noopener">${escapeHtml(d.title)}</a>` : escapeHtml(d.title)}</p>
           <div class="top-right">
             <span class="meta">${dateLabel}</span>
-            <button class="save-btn ${isSaved?'saved':''}" data-save="${d.id}" aria-label="${isSaved ? 'Remove from saved' : 'Save this item'}">${isSaved ? '&#9733;' : '&#9734;'}</button>
+            <button class="save-btn ${isSaved?'saved':''}" data-save="${escapeHtml(d.id)}" aria-label="${isSaved ? 'Remove from saved' : 'Save this item'}">${isSaved ? '&#9733;' : '&#9734;'}</button>
           </div>
         </div>
-        <div class="source">${d.source} &middot; ${TYPE_LABEL[d.type] || d.type}${isQuietFlag ? `<span class="quiet-badge">quiet ${relativeTime(d.date)}</span>` : ''}</div>
-        <div class="desc">${d.desc}</div>
+        <div class="source">${escapeHtml(d.source)} &middot; ${TYPE_LABEL[d.type] || d.type}${isQuietFlag ? `<span class="quiet-badge">quiet ${relativeTime(d.date)}</span>` : ''}</div>
+        <div class="desc">${escapeHtml(d.desc)}</div>
         ${attributionHtml}
         <div class="tags">
           <span class="tag series-tag">${SERIES_LABEL[d.series]}</span>
-          ${(d.tags||[]).map(t => `<button class="tag" data-tag="${t}">${t}</button>`).join('')}
+          ${(d.tags||[]).map(t => `<button class="tag" data-tag="${escapeHtml(t)}">${escapeHtml(t)}</button>`).join('')}
         </div>
       </div>
     </div>`;

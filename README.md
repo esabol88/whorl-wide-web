@@ -1346,6 +1346,102 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## SEO and security pass
+
+**The important part first — a real XSS vulnerability, not a
+hardening nice-to-have.** Every card is built as a template literal and
+injected via `innerHTML`. `d.title`, `d.desc`, and `d.artist` all come
+from external sources this project doesn't control — Reddit post titles,
+RSS titles and descriptions, a username extracted from Reddit's own
+markup — and none of it was being escaped before insertion. A malicious
+or merely compromised source could put a `<script>` tag or an `onerror=`
+handler directly in a title and it would execute in a visitor's browser
+exactly as if this project had written it. Added `escapeHtml()` and
+applied it to every externally-sourced field, including URLs used in
+`href` attributes (a stray `"` in a URL could otherwise break out of the
+attribute and inject new ones). Tested against real payloads before
+shipping — a script tag, an attribute-breakout attempt, and two pieces of
+entirely legitimate content with special characters (an ampersand, an
+apostrophe) — confirming the dangerous cases get neutralized while normal
+content still displays correctly rather than getting mangled.
+
+**SEO additions**: `robots.txt` (allows everything, points at the
+sitemap), a minimal `sitemap.xml` (honestly just the one URL — this is a
+single-page site, a multi-page sitemap would be fiction), a canonical
+`<link>` tag, and valid `WebSite` JSON-LD structured data (checked with
+`JSON.parse` before shipping, not just eyeballed).
+
+**Security headers, with an honest gap.** Added what's achievable via
+`<meta http-equiv>`: a Content-Security-Policy and a referrer-policy.
+What's *not* achievable this way, and worth being direct about:
+`X-Frame-Options` and CSP's `frame-ancestors` directive (clickjacking
+protection) are only ever honored as a true HTTP response header, silently
+ignored if set via meta tag — and GitHub Pages doesn't expose any way to
+set custom HTTP headers on static files at all. This is a real,
+unavoidable gap on this specific hosting setup, not something a
+better-written meta tag fixes.
+
+The CSP itself involved two real tradeoffs, not free wins:
+- `script-src` needs `'unsafe-inline'` — confirmed the site actually
+  relies on this (8 inline `onerror` handlers driving the thumbnail
+  fallback mechanism), so removing it would break real functionality, not
+  just a theoretical convenience. Worth being honest this weakens the
+  CSP's own anti-XSS value substantially — the escaping fix above is the
+  actual primary defense against injected content; the CSP mainly guards
+  against a compromised *external* script source, and the site doesn't
+  currently load any scripts from anywhere but itself, so today this is
+  more future-proofing than an active protection.
+- `img-src` allows any `https:` source rather than a narrow per-domain
+  allowlist — deliberate, not an oversight. This project pulls thumbnails
+  from a genuinely large and still-growing set of hosts (i.redd.it,
+  YouTube, podcast artwork CDNs, Amazon, Tumblr, ArtStation, Gwern's own
+  site...), and a strict allowlist would need editing every time a new
+  source gets added, which happens often. A real security/maintenance
+  tradeoff, made in favor of maintainability.
+
+**Not tested live** — the syntax checks confirm the file parses and the
+JSON-LD is valid JSON, but actual CSP enforcement only shows up in a real
+browser. Worth checking the browser console after deploying for any CSP
+violation warnings, same "verify, don't just claim" discipline as
+everything else in this file.
+
+**Two things only the person running this repo can do, not something I
+can check or set from here**: confirm GitHub Pages' "Enforce HTTPS"
+setting is checked (Settings → Pages), and know that even with all of the
+above, the actual feed content (every card's title, description, link) is
+rendered entirely client-side by JavaScript after `data.json` loads —
+meaning it's genuinely uncertain how well any of it gets indexed by
+search engines or unfurled by crawlers that don't execute JavaScript.
+The static `<head>` tags (title, description, OG, canonical, JSON-LD) are
+real and will be seen by everything; the actual per-item content underneath
+might not be. This is the same structural limitation already flagged when
+"stable per-work pages" was declined during the earlier large audit
+response — nothing here changes that, it's an architecture question, not
+a meta-tag question.
+
+
+
+A specific report: "Tried my hand at a cover for the solar cycle" —
+genuine original fan art (already confirmed `image=yes` in a prior debug
+log) — wasn't showing up under Art. The title matched none of
+`ART_SIGNAL_RE`'s existing keywords; "cover" wasn't in the list at all.
+
+Tested before shipping rather than just adding "cover" on instinct: bare
+"cover" matches the real post, but also "Just got this beautiful UK cover
+edition!" (a photo of a purchased book, not art) and "What is the best
+Shadow of the Torturer cover?" (a discussion, not art) — real
+false-positive risk in a book-focused subreddit where people photograph
+their purchases constantly. "tried my hand" tested clean against all of
+the same cases while still catching the actual reported post —
+idiomatically it's almost always about attempting to make something
+yourself, rarely used to describe something bought or found. Shipped that
+instead of the riskier bare word.
+
+**Follow-up**: added "try my hand" alongside "tried my hand" to also
+cover present-tense phrasing ("Trying my hand at..."), tested against the
+same false-positive cases plus the original reported post to confirm
+nothing regressed.
+
 ## Reddit's top-post window: month → week
 
 The SiriusFiction investigation ended up somewhere more useful than the
