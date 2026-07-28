@@ -1,6 +1,59 @@
 {
-  "generatedAt": "2026-07-24T14:29:43.207Z",
+  "generatedAt": "2026-07-28T12:30:53.922Z",
   "items": [
+    {
+      "id": "r-rereadingwolfepodcast-95b862cf",
+      "title": "Why Are Episode Releases Inconsistent Across Platforms?",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-27",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1v82d0f/why_are_episode_releases_inconsistent_across/",
+      "desc": "Do we have a reason why not all episodes are available on all podcast platforms equally?\n I understand bonus episodes on Patreon (which I subscribe to), but not every episode is on Spotify.\n For example, 2:17a, The Tale ",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "rereading-wolfe-c309e24a",
+      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
+      "source": "Rereading Wolfe",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-26",
+      "url": "https://www.youtube.com/watch?v=mrELZBYENuY",
+      "desc": "",
+      "tags": [
+        "Dorcas"
+      ],
+      "thumbnail": "https://i2.ytimg.com/vi/mrELZBYENuY/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-e10599f7",
+      "title": "Tell me you’re reading BotNS without telling me you’re reading BotNS",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-26",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1v7inb2/tell_me_youre_reading_botns_without_telling_me/",
+      "desc": "submitted by    /u/Pooglio17  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/5i4a6cxjknfh1.jpeg"
+    },
+    {
+      "id": "r-rereadingwolfepodcast-5a18c2e6",
+      "title": "The Dorcas Break-up Episode 2 - tBotNS - 3:11,12 - The Sword of the Lictor - The Book of the New Sun by Gene Wolfe",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-07-26",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1v7hnq7/the_dorcas_breakup_episode_2_tbotns_31112_the/",
+      "desc": "Edit: I corrected the link to the episode. - James\n LISTEN HERE and show notes.\n The second part of Dorcas and Severian's breakup, in which... honestly, it's too sad to be snarky.\n No listener comments in this one, so no",
+      "tags": [
+        "Severian",
+        "Dorcas"
+      ],
+      "thumbnail": null
+    },
     {
       "id": "alzabo-soup-2688e0f0",
       "title": "General Discussion - Gene Wolfe's Return to the Whorl",
@@ -12,6 +65,18 @@
       "desc": "Intro - Phil and Metz discuss the early summer box office and the success of YouTube filmmakers. Content (9:42) - Discussion of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance ",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-genewolfe-e9721b82",
+      "title": "Going for the second read (just finished Shadow)",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-24",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1v55t32/going_for_the_second_read_just_finished_shadow/",
+      "desc": "Got the Folio Society edition for my birthday ☺️\n    submitted by    /u/InamortaBetwixt  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-ab53cb9f",
@@ -52,6 +117,47 @@
       "thumbnail": "https://i.ytimg.com/vi/le3t2QVHNw8/hqdefault.jpg"
     },
     {
+      "id": "r-genewolfe-a42af4a9",
+      "title": "New Sun Religion #11",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-07-23",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1v4m1aa/new_sun_religion_11/",
+      "desc": "Obvious, Lesser, and Obscure: Groping toward a taxonomy of identifying Christian elements in Severian’s narrative.\n  \n We have gone over seven obvious cases linking Severian to Jesus: \n  \nThe water into wine transmutatio",
+      "tags": [
+        "Severian",
+        "Dorcas",
+        "Typhon",
+        "Thecla"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-74b8ae16",
+      "title": "Tried my hand at a cover for the solar cycle",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-23",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1v44sql/tried_my_hand_at_a_cover_for_the_solar_cycle/",
+      "desc": "submitted by    /u/Icy-Independent-5407  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/lpo15hwl2xeh1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-3a01f6b5",
+      "title": "SPOILER: Kim Stanley Robinson Cracked Number Five's Name, but Gene Wolfe Still Had Secrets",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-23",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1v4u8uz/spoiler_kim_stanley_robinson_cracked_number_fives/",
+      "desc": "Kim Stanley Robinson guessed Number Five's name in The Fifth of Cerberus.\n  \nThe authors of the books on his father's shelf at the library all started with Ws. One was was even Bernard Wolfe. The exception was misshelved",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "r-rereadingwolfepodcast-39553c25",
       "title": "thoughts on the ethics and function of the Seekers of Truth and Penitence",
       "source": "r/rereadingwolfepodcast",
@@ -67,44 +173,16 @@
       "thumbnail": null
     },
     {
-      "id": "r-genewolfe-91c54335",
-      "title": "Illustration: Eschatology and Genesis",
+      "id": "r-genewolfe-279c26bf",
+      "title": "Latro is finally here!",
       "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-07-21",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v24rm9/illustration_eschatology_and_genesis/",
-      "desc": "Back at it! Really wanted to go all out on this one, and it's definitely one of my favorite pieces so far! Tagged NSFW for obvious reasons. \n    submitted by    /u/deimosremus  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/bo6iukhtnheh1.jpeg",
-      "artist": "u/deimosremus (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/deimosremus",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1v24rm9/illustration_eschatology_and_genesis/",
-      "nsfw": false
-    },
-    {
-      "id": "r-rereadingwolfepodcast-ddaa1410",
-      "title": "Reading Recommendations",
-      "source": "r/rereadingwolfepodcast",
       "type": "discussion",
       "series": "general",
       "date": "2026-07-21",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1v25iaq/reading_recommendations/",
-      "desc": "Have the James and Craig ever compiled lists of their favourite novels, speculative fiction or otherwise? I just finished \"Little, Big\" by John Crowley because they mentioned it in an episode one time. It was great! I be",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1v2p7gv/latro_is_finally_here/",
+      "desc": "I don't know when I'll get the chance to read them (there's so much backlog, and I have to re-read New Sun plus first-read Long Sun and Short Sun), but the premise alone convinced me to buy them blindly.\n    submitted by",
       "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "youtube-search-fec359d1",
-      "title": "Reading New Sun and The Island of Doctor Death and Other Stories and Other Stories",
-      "source": "Worm Girl",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-20",
-      "url": "https://www.youtube.com/watch?v=s8ifOdIq_YE",
-      "desc": "Gene Wolfe is my favorite author. I have an entire shelf dedicated just to him! His best known work is the four-volume Book of the ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/s8ifOdIq_YE/hqdefault.jpg"
+      "thumbnail": "https://i.redd.it/ezdb0k4vbmeh1.jpeg"
     },
     {
       "id": "rereading-wolfe-509384d0",
@@ -121,33 +199,6 @@
       "thumbnail": "https://i2.ytimg.com/vi/IMI8UyIdbrc/hqdefault.jpg"
     },
     {
-      "id": "r-rereadingwolfepodcast-70eb3b39",
-      "title": "The Dorcas Break-up Episode 1 - tBotNS - 3:10,11,12 - The Sword of the Lictor - The Book of the New Sun by Gene Wolfe",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-18",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1v05gja/the_dorcas_breakup_episode_1_tbotns_3101112_the/",
-      "desc": "LISTEN HERE and show notes.\n The first part of Dorcas and Severian's breakup, along with some drama about vomiting odd things.\n Listener comments end at: 24:25\n For patrons only at the end of the episode, we go through t",
-      "tags": [
-        "Severian",
-        "Dorcas"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-99a1ad43",
-      "title": "Deeper Dive - Bibliomen Summary",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-15",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1uwqvb0/deeper_dive_bibliomen_summary/",
-      "desc": "I'm glad to report the arrival of the latest installment in my Gene Wolfe Chapter Guide series. Feel free to pick up a paperback or Kindle copy of the Bibliomen guide with my sincere appreciation. \n This one is short, so",
-      "tags": [],
-      "thumbnail": "https://preview.redd.it/9l2vkpcrjadh1.jpeg?width=640&crop=smart&auto=webp&s=4348049db3ff5e36a375bbeebd00cdbd5ec47a96"
-    },
-    {
       "id": "manual-andylee-peace",
       "title": "Gene Wolfe's Peace",
       "source": "Andy Lee",
@@ -157,88 +208,6 @@
       "url": "https://litandchess.substack.com/p/gene-wolfes-peace",
       "desc": "A literary treatment of narrative voice, concealed violence, and memory — and Peace's relationship to Poe, Nabokov, and postmodern fiction.",
       "tags": []
-    },
-    {
-      "id": "r-genewolfe-75b71a73",
-      "title": "The Book Of The New Sun cover art by Yoshitaka Amano",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-11",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1ut6q1h/the_book_of_the_new_sun_cover_art_by_yoshitaka/",
-      "desc": "The Book Of The New Sun vols.1-4 (cover art by Yoshitaka Amano)\n Credits to @wallacepolsom.bsky.social on Bluesky (link)\n    submitted by    /u/meltdrome  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-b2846ec6",
-      "title": "Just finished Shadow of the Torturer for the first time.",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-10",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1usmug6/just_finished_shadow_of_the_torturer_for_the/",
-      "desc": "Just kidding, I don't care if he ever gets there. 🥰\n    submitted by    /u/Miraedus  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/dbo87yz5gech1.jpeg"
-    },
-    {
-      "id": "r-rereadingwolfepodcast-df61d285",
-      "title": "Bells and the shape of truth...",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-07",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1uqagkh/bells_and_the_shape_of_truth/",
-      "desc": "\"It is not always needful for truth to take a definite shape; it is enough if it hovers about us like a spirit and produces harmony; if it is wafted through the air like the sound of a bell, grave and kindly.\" -- Goethe\n",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-4c445888",
-      "title": "Illustration: A Boy and his Dog",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-07-05",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1unrv72/illustration_a_boy_and_his_dog/",
-      "desc": "Finished up another one! I'll probably jump to some scenes from Claw next, though I still have more planned for Shadow!\n    submitted by    /u/deimosremus  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/dcufu8jz0cbh1.jpeg",
-      "artist": "u/deimosremus (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/deimosremus",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1unrv72/illustration_a_boy_and_his_dog/",
-      "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-8456e05a",
-      "title": "Illustration: The Necropolis",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-06-29",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uj2auf/illustration_the_necropolis/",
-      "desc": "Got another one finished! With the green light and nighttime tones, this one was a bit more difficult to color than the others, but had a lot of fun with it regardless!\n    submitted by    /u/deimosremus  \n [link]   [com",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/nev6jg0dw9ah1.jpeg",
-      "artist": "u/deimosremus (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/deimosremus",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1uj2auf/illustration_the_necropolis/",
-      "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-c6aef617",
-      "title": "Book Of The New Sun First Edition Hardcovers Found At Local Bookstore",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-06-25",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1uf2l1u/book_of_the_new_sun_first_edition_hardcovers/",
-      "desc": "So a few weeks ago I walked into my local bookstore hoping to find some copy of Book Of The New Sun (I had not read it yet at that point it was just one of my most antcipated reads and currently I'm finishing up Claw of ",
-      "tags": [
-        "the Claw"
-      ],
-      "thumbnail": null
     },
     {
       "id": "urth-mailing-list-b92588aa",
@@ -434,18 +403,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i4.ytimg.com/vi/W93DwkQvIw4/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-66efad4d",
-      "title": "tbotns 3-6 \"The Library of the Citadel\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-08-07",
-      "url": "https://www.youtube.com/watch?v=7kcVZGrufpo",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/7kcVZGrufpo/hqdefault.jpg"
     },
     {
       "id": "manual-vegadraws-gyoll",
