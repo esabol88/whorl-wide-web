@@ -1346,7 +1346,7 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
-## Experimental: resolving images inside gallery posts
+## Gallery post images: confirmed blocked, not an open question anymore
 
 Two separate real reports (a cover-art post, then a tattoo post) hit the
 same documented gap: Reddit gallery posts (multi-image) never expose a
@@ -1403,9 +1403,19 @@ an HTTP failure (`HTTP 403`, etc.), a thrown error, and — the case that
 actually needed evidence — a successful fetch that simply didn't contain
 either recognized image-CDN pattern anywhere in the page, which now logs
 an 800-character snippet of the real page content instead of a dead end.
-The next real run's log will show directly which of these it actually
-is, rather than guessing at a second pattern blind the way the first
-attempt had to.
+
+**Resolved, cleanly, on the very next real run**: `HTTP 403` — the exact
+same signature as DeviantArt, Bluesky, and every blocked Substack source
+in this file. GitHub Actions' IP range, not a wrong pattern guess. This
+means the regex-matching logic in `fetchGalleryImage` was never actually
+tested against real gallery-page content at all — the block happens
+before any content is ever returned to check, so whether that pattern
+guess was even right remains genuinely unknown. Left the code in place
+regardless, same reasoning as every other confirmed-blocked source here:
+could plausibly work from different infrastructure even though it
+doesn't work on this one. The better diagnostic did exactly its job —
+turned "gallery resolution failed" (a dead end) into a definitive answer
+on the very next run, instead of another round of guessing.
 
 Only triggers for items that are already plausible art candidates (no
 direct image found, but the title/text matches `ART_SIGNAL_RE`) — not

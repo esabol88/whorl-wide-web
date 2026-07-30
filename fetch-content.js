@@ -759,24 +759,19 @@ function extractRedditThumbnail(html) {
 // A gallery post's RSS content never links to an actual image, only to
 // the gallery viewer page itself (e.g. reddit.com/gallery/1vadhal) — two
 // separate real reports (a cover-art post, then a tattoo post) hit this
-// exact same wall. EXPERIMENTAL, genuinely unverified against a real
-// gallery page: my own tools are completely blocked from reddit.com, the
-// same as GitHub Actions' IP range is for the other blocked sources in
-// this file, so there was no way to inspect the actual HTML before
-// writing this. Built defensively because of that uncertainty rather
-// than guessing at one exact DOM structure: fetches old.reddit.com's
-// version of the gallery URL specifically (far more likely to be plain
-// server-rendered HTML a fetch() can actually read, unlike the redesigned
-// www.reddit.com which leans heavily on client-side JS this fetcher
-// can't execute), then just scans the raw page text for any recognizable
-// image-CDN URL pattern rather than depending on a specific tag or class
-// name — more resilient to not knowing the exact markup, since a real
-// image URL is likely to appear as a plain string somewhere on the page
-// (an <img> src, a JSON blob, a link) even if the exact wrapping HTML
-// isn't what got guessed at here. Fails silently on any error (bad
-// response, no match, network issue) — a wrong guess about page
-// structure can never break the pipeline, it just falls back to no
-// thumbnail, same as before this existed.
+// exact same wall. CONFIRMED BLOCKED on a live run: old.reddit.com
+// returns HTTP 403 for this specific gallery URL, the exact same
+// signature as DeviantArt, Bluesky, and the Substack sources elsewhere in
+// this file — GitHub Actions' IP range, not a wrong-pattern guess. The
+// diagnostic built for this specifically settled the question cleanly: a
+// generic "failed" originally couldn't distinguish an HTTP block from a
+// successful-fetch-but-no-match, and the very next real run's log said
+// directly which one it was. Left in anyway, same reasoning as
+// DeviantArt/Bluesky: could plausibly work from a different environment
+// even though it doesn't work here. The pattern-matching approach below
+// itself was never actually tested against real content because of
+// this — genuinely unknown whether the regex guess was even right, since
+// the block happens before any content is ever returned to check.
 function extractGalleryUrl(html) {
   const match = (html || '').match(/<a href="(https:\/\/www\.reddit\.com\/gallery\/[a-z0-9]+)"/i);
   return match ? match[1].replace(/&amp;/g, '&') : null;
