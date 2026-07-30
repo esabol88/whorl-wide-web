@@ -1346,6 +1346,26 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## "You're caught up" removed — show nothing on a quiet day
+
+By request, questioning whether the status line needed to say anything
+at all when there was nothing new. Worth the pushback it got before
+implementing: without *any* status message, a genuine failure (data.json
+not loading, a fetch error) would look identical to an ordinary quiet
+day — the status line is one of the few places on the page that confirms
+the feed actually loaded and evaluated correctly. Landed on a middle
+ground rather than either extreme: the "N new since last visit" and
+filtered-result-count cases stay exactly as before (genuine system-status
+information), along with the sample-data warning if `data.json` failed to
+load — only the specific "0 new, nothing to report" case now shows
+nothing, instead of the "You're caught up." line.
+
+Implemented as a class toggle (`.empty-hidden`, collapses margin/padding/
+height to zero) rather than just emptying the text — the element has no
+fixed height, so a plain empty string would have left its own 16px top
+margin sitting there as a small, purposeless gap. Checked this directly
+rather than assuming it'd look fine either way.
+
 ## Gallery post images: confirmed blocked, not an open question anymore
 
 Two separate real reports (a cover-art post, then a tattoo post) hit the

@@ -100,6 +100,7 @@ h1{ font-family:'Cinzel', serif; font-weight:600; font-size:clamp(30px,5.5vw,48p
   max-width:760px; margin:16px auto 0; padding:0 24px;
   font-size:12.5px; color:var(--muted); text-align:center;
 }
+.status-line.empty-hidden{margin:0; padding:0; height:0; overflow:hidden;}
 .status-line b{color:var(--rust); font-weight:600;}
 .tag-filter-line{
   max-width:760px; margin:10px auto 0; padding:0 24px;
@@ -733,12 +734,21 @@ function render(){
   // cards to know how much they're actually looking at (NN/g heuristic
   // #1, Visibility of System Status; #6, Recognition Rather than Recall).
   const filtersActive = activeSeries!=='all' || activeType!=='all' || !!activeTag || savedOnly || !!activeSearch;
-  document.getElementById('statusLine').innerHTML = (usingSampleData ? `<span style="color:var(--ochre)">Showing sample data — data.json not found yet.</span> ` : '')
+  const statusLineEl = document.getElementById('statusLine');
+  // "You're caught up" removed by request in favor of showing nothing on
+  // a quiet day — but not unconditionally: usingSampleData and the
+  // filtered-count line both stay, since those are genuine system-status
+  // information (confirms the page actually loaded/evaluated correctly,
+  // or tells you how many results a filter matched), not "nothing
+  // happened today." Toggles a class rather than just emptying the text,
+  // so the element's own top margin collapses too instead of leaving a
+  // small empty gap sitting there doing nothing.
+  const hasStatusContent = usingSampleData || filtersActive || newCount > 0;
+  statusLineEl.classList.toggle('empty-hidden', !hasStatusContent);
+  statusLineEl.innerHTML = !hasStatusContent ? '' : (usingSampleData ? `<span style="color:var(--ochre)">Showing sample data — data.json not found yet.</span> ` : '')
     + (filtersActive
       ? `<b>${filtered.length}</b> matching dispatch${filtered.length===1?'':'es'}`
-      : (newCount > 0
-        ? `<b>${newCount} new</b> since your last visit`
-        : `You're caught up.`))
+      : `<b>${newCount} new</b> since your last visit`)
     // A single "start over" action rather than five separate ones (series
     // chip, format chip, tag Clear, search ×, Saved toggle) — NN/g
     // heuristic #3, User Control and Freedom: a clearly marked way out
