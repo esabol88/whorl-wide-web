@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T17:14:37.109Z",
+  "generatedAt": "2026-07-30T19:08:26.798Z",
   "items": [
     {
       "id": "youtube-search-0a590aeb",
@@ -46,6 +46,18 @@
         "Severian"
       ],
       "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-d38ea4c2",
+      "title": "Great cover",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-30",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vavj61/great_cover/",
+      "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/j6ql486fpdgh1.jpeg"
     },
     {
       "id": "r-genewolfe-aca6d000",
@@ -167,23 +179,6 @@
         "the Claw"
       ],
       "thumbnail": "https://i.ytimg.com/vi/_ewinevlofI/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-a42af4a9",
-      "title": "New Sun Religion #11",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-23",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v4m1aa/new_sun_religion_11/",
-      "desc": "Obvious, Lesser, and Obscure: Groping toward a taxonomy of identifying Christian elements in Severian’s narrative.\n  \n We have gone over seven obvious cases linking Severian to Jesus: \n  \nThe water into wine transmutatio",
-      "tags": [
-        "Severian",
-        "Dorcas",
-        "Typhon",
-        "Thecla"
-      ],
-      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-509384d0",
