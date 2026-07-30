@@ -787,12 +787,20 @@ async function fetchGalleryImage(galleryUrl) {
     const res = await fetch(oldUrl, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; fuligin-dev-bot/1.0; +https://fuligin.dev)' }
     });
-    if (!res.ok) return null;
+    if (!res.ok) return { image: null, reason: `HTTP ${res.status}` };
     const html = await res.text();
     const match = html.match(/https:\/\/(?:i\.redd\.it|preview\.redd\.it)\/[\w.\-]+\.(?:jpg|jpeg|png|gif|webp)/i);
-    return match ? match[0].replace(/&amp;/g, '&') : null;
-  } catch {
-    return null;
+    if (match) return { image: match[0].replace(/&amp;/g, '&'), reason: 'matched' };
+    // Fetched fine, but no recognizable image URL anywhere in the page —
+    // genuinely two different problems from an HTTP failure (guessed the
+    // wrong pattern vs. couldn't even reach the page), and the previous
+    // version of this function couldn't tell them apart. A content
+    // snippet here is exactly the kind of evidence that solved the
+    // original <img> vs <a href> bug — better than guessing a second
+    // pattern blind.
+    return { image: null, reason: 'no-match', snippet: html.slice(0, 800) };
+  } catch (err) {
+    return { image: null, reason: `error: ${err.message}` };
   }
 }
 
@@ -983,10 +991,10 @@ async function fetchRedditRss(source) {
     const galleryCandidates = items.filter(i => i._galleryUrl);
     if (galleryCandidates.length) {
       await Promise.all(galleryCandidates.map(async item => {
-        const resolvedImage = await fetchGalleryImage(item._galleryUrl);
-        if (resolvedImage) {
-          console.log(`[debug] ${source.name}: gallery resolved for "${item.title.slice(0,50)}" -> ${resolvedImage.slice(0,80)}`);
-          item.thumbnail = resolvedImage;
+        const result = await fetchGalleryImage(item._galleryUrl);
+        if (result.image) {
+          console.log(`[debug] ${source.name}: gallery resolved for "${item.title.slice(0,50)}" -> ${result.image.slice(0,80)}`);
+          item.thumbnail = result.image;
           item.type = FAN_ART_ENABLED ? 'fanart' : item.type;
           if (item.type === 'fanart') {
             item.artist = item._author ? `u/${item._author} (Reddit)` : 'Unknown artist (via Reddit)';
@@ -994,8 +1002,10 @@ async function fetchRedditRss(source) {
             item.postUrl = item.url;
             item.nsfw = redditTitleNsfw(item.title);
           }
+        } else if (result.reason === 'no-match') {
+          console.log(`[debug] ${source.name}: gallery resolution failed for "${item.title.slice(0,50)}" — fetched OK, no image pattern found. Page snippet: ${result.snippet}`);
         } else {
-          console.log(`[debug] ${source.name}: gallery resolution failed for "${item.title.slice(0,50)}"`);
+          console.log(`[debug] ${source.name}: gallery resolution failed for "${item.title.slice(0,50)}" — ${result.reason}`);
         }
       }));
     }

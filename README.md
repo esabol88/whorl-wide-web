@@ -1390,6 +1390,23 @@ failed for [title]"` once the attempt completes — the next real run's log
 will say directly whether this worked, rather than needing to infer it
 from whether an item shows up under Art.
 
+**Follow-up, from the first real run's result**: the mechanism worked
+exactly as designed — found the candidate, attempted resolution, logged
+clearly — but the tattoo post came back `gallery resolution failed`. The
+generic failure message couldn't say *why*, though, and an HTTP-level
+block and a successful-fetch-but-wrong-pattern-guess are two completely
+different problems needing different fixes — the same reasoning that
+already justified not guessing a second regex blind for the "tried my
+hand" issue. `fetchGalleryImage` now returns a small result object
+(`{ image, reason, snippet? }`) instead of a bare `null`, distinguishing
+an HTTP failure (`HTTP 403`, etc.), a thrown error, and — the case that
+actually needed evidence — a successful fetch that simply didn't contain
+either recognized image-CDN pattern anywhere in the page, which now logs
+an 800-character snippet of the real page content instead of a dead end.
+The next real run's log will show directly which of these it actually
+is, rather than guessing at a second pattern blind the way the first
+attempt had to.
+
 Only triggers for items that are already plausible art candidates (no
 direct image found, but the title/text matches `ART_SIGNAL_RE`) — not
 every gallery post on the subreddit, most of which aren't art at all and
