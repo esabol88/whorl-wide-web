@@ -1346,6 +1346,55 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## Experimental: resolving images inside gallery posts
+
+Two separate real reports (a cover-art post, then a tattoo post) hit the
+same documented gap: Reddit gallery posts (multi-image) never expose a
+direct image URL in their RSS content, only a link to the gallery viewer
+page itself. Previously left unfixed on the reasoning that it'd need a
+second request per gallery post and wasn't clearly worth the complexity —
+two independent reports of the same limitation suggested it might be more
+common than that original assumption accounted for, worth actually
+attempting.
+
+**Genuinely experimental, not a confirmed fix.** My own tools are
+completely blocked from reddit.com — the same wall GitHub Actions' IP
+range hits for DeviantArt/Bluesky/Substack, just on a different
+infrastructure — so there was no way to inspect a real gallery page's
+HTML before writing code against it. Built defensively because of that,
+rather than confidently: `fetchGalleryImage` requests `old.reddit.com`'s
+version of the gallery URL specifically (far more likely to be plain
+server-rendered HTML a `fetch()` can actually read than the redesigned
+`www.reddit.com`, which leans heavily on client-side JS this project's
+fetcher can't execute), then scans the *entire* raw page text for any
+recognizable image-CDN URL pattern (`i.redd.it`/`preview.redd.it`) rather
+than depending on one specific tag or class name — more resilient to not
+actually knowing the exact markup, since a real image URL is likely to
+appear as a plain string somewhere on the page even if the guessed-at
+wrapping HTML is wrong. Fails silently on any error (bad response, no
+match, network issue, gallery deleted) and just leaves the item exactly
+as it already was — this can only ever help, never break something that
+was already working.
+
+One piece *is* independently confirmed, not just reasoned about:
+`extractGalleryUrl` was tested directly against the actual raw RSS
+content from the reported tattoo post (captured in a real debug log
+earlier in this project) and correctly extracts
+`https://www.reddit.com/gallery/1vadhal`. The uncertain part is
+everything downstream of that — what actually happens once that URL gets
+fetched and scanned is unknown until a real run reports back. New debug
+lines were added specifically to make that verifiable: `"gallery post,
+attempting resolution: [url]"` when a candidate is found, then either
+`"gallery resolved for [title] -> [image url]"` or `"gallery resolution
+failed for [title]"` once the attempt completes — the next real run's log
+will say directly whether this worked, rather than needing to infer it
+from whether an item shows up under Art.
+
+Only triggers for items that are already plausible art candidates (no
+direct image found, but the title/text matches `ART_SIGNAL_RE`) — not
+every gallery post on the subreddit, most of which aren't art at all and
+wouldn't be worth the extra request.
+
 ## Three small, direct fixes
 
 **Removed the aggregate "N sources quiet 60+ days" status line** — by

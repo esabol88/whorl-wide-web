@@ -756,6 +756,46 @@ function extractRedditThumbnail(html) {
   return linkMatch ? linkMatch[1].replace(/&amp;/g, '&') : null;
 }
 
+// A gallery post's RSS content never links to an actual image, only to
+// the gallery viewer page itself (e.g. reddit.com/gallery/1vadhal) — two
+// separate real reports (a cover-art post, then a tattoo post) hit this
+// exact same wall. EXPERIMENTAL, genuinely unverified against a real
+// gallery page: my own tools are completely blocked from reddit.com, the
+// same as GitHub Actions' IP range is for the other blocked sources in
+// this file, so there was no way to inspect the actual HTML before
+// writing this. Built defensively because of that uncertainty rather
+// than guessing at one exact DOM structure: fetches old.reddit.com's
+// version of the gallery URL specifically (far more likely to be plain
+// server-rendered HTML a fetch() can actually read, unlike the redesigned
+// www.reddit.com which leans heavily on client-side JS this fetcher
+// can't execute), then just scans the raw page text for any recognizable
+// image-CDN URL pattern rather than depending on a specific tag or class
+// name — more resilient to not knowing the exact markup, since a real
+// image URL is likely to appear as a plain string somewhere on the page
+// (an <img> src, a JSON blob, a link) even if the exact wrapping HTML
+// isn't what got guessed at here. Fails silently on any error (bad
+// response, no match, network issue) — a wrong guess about page
+// structure can never break the pipeline, it just falls back to no
+// thumbnail, same as before this existed.
+function extractGalleryUrl(html) {
+  const match = (html || '').match(/<a href="(https:\/\/www\.reddit\.com\/gallery\/[a-z0-9]+)"/i);
+  return match ? match[1].replace(/&amp;/g, '&') : null;
+}
+async function fetchGalleryImage(galleryUrl) {
+  try {
+    const oldUrl = galleryUrl.replace('www.reddit.com', 'old.reddit.com');
+    const res = await fetch(oldUrl, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; fuligin-dev-bot/1.0; +https://fuligin.dev)' }
+    });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const match = html.match(/https:\/\/(?:i\.redd\.it|preview\.redd\.it)\/[\w.\-]+\.(?:jpg|jpeg|png|gif|webp)/i);
+    return match ? match[0].replace(/&amp;/g, '&') : null;
+  } catch {
+    return null;
+  }
+}
+
 // Re-examining the "Reddit's RSS has no author field" claim rather than
 // taking it as settled — it was inherited from the original project
 // handoff, not verified firsthand. Reddit's feed is Atom, and Atom
@@ -876,6 +916,14 @@ async function fetchRedditRss(source) {
       const isTrustedArtist = author && TRUSTED_ART_AUTHORS.has(author) && hasImage;
       const isTrustedContributor = author && TRUSTED_CONTRIBUTORS.has(author);
       const isArt = FAN_ART_ENABLED && hasImage && (signalMatch || isTrustedArtist);
+      // Gallery posts never expose a direct image URL in Reddit's RSS,
+      // only a link to the gallery viewer page — flagged here for a
+      // second, async resolution pass below, but only when it's already a
+      // plausible art candidate (no image found yet, but the title/text
+      // matches ART_SIGNAL_RE). Not worth the extra request for every
+      // gallery post regardless of content — most gallery posts on a
+      // general subreddit aren't art at all.
+      const galleryUrl = (!hasImage && signalMatch) ? extractGalleryUrl(item.content) : null;
       // A real report of a trusted contributor's post not showing up
       // exposed a genuine blind spot here: the two debug lines below only
       // ever fired for posts with an image or an art-keyword match — a
@@ -900,7 +948,7 @@ async function fetchRedditRss(source) {
         const cats = (item.categories || []).join(',') || 'none';
         console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=yes (${thumbnail.slice(0,80)}) signal=${signalMatch} trusted=${isTrustedArtist} categories=[${cats}]`);
       } else if (signalMatch) {
-        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=NO signal=yes — raw content: ${(item.content || '').slice(0,600)}`);
+        console.log(`[debug] ${source.name}: "${title.slice(0,60)}" image=NO signal=yes${galleryUrl ? ` — gallery post, attempting resolution: ${galleryUrl}` : ' — raw content: ' + (item.content || '').slice(0,600)}`);
       }
       return {
         id: makeId(source.name, item.link),
@@ -914,6 +962,8 @@ async function fetchRedditRss(source) {
         tags: guessTags(`${title} ${snippet}`),
         thumbnail,
         _trustedPriority: isTrustedArtist || isTrustedContributor, // consumed below when picking the final 6, stripped before the item is returned to main()
+        _galleryUrl: galleryUrl, // resolved in a second async pass below, stripped before return either way
+        _author: author, // needed to rebuild artist/artistUrl if gallery resolution flips this item to fanart
         ...(isArt ? {
           artist: author ? `u/${author} (Reddit)` : 'Unknown artist (via Reddit)',
           artistUrl: author ? `https://www.reddit.com/user/${author}` : null,
@@ -922,6 +972,33 @@ async function fetchRedditRss(source) {
         } : {})
       };
     });
+    // Second pass: resolve gallery images for just the flagged candidates.
+    // Genuinely experimental — see the comments above extractGalleryUrl /
+    // fetchGalleryImage for why this couldn't be verified before writing
+    // it. Only reclassifies an item as fanart if a real image URL actually
+    // came back; anything that fails (wrong page structure guessed, gallery
+    // deleted, network error, no match found) just leaves the item exactly
+    // as it already was — this can only ever help, never break something
+    // that was already working.
+    const galleryCandidates = items.filter(i => i._galleryUrl);
+    if (galleryCandidates.length) {
+      await Promise.all(galleryCandidates.map(async item => {
+        const resolvedImage = await fetchGalleryImage(item._galleryUrl);
+        if (resolvedImage) {
+          console.log(`[debug] ${source.name}: gallery resolved for "${item.title.slice(0,50)}" -> ${resolvedImage.slice(0,80)}`);
+          item.thumbnail = resolvedImage;
+          item.type = FAN_ART_ENABLED ? 'fanart' : item.type;
+          if (item.type === 'fanart') {
+            item.artist = item._author ? `u/${item._author} (Reddit)` : 'Unknown artist (via Reddit)';
+            item.artistUrl = item._author ? `https://www.reddit.com/user/${item._author}` : null;
+            item.postUrl = item.url;
+            item.nsfw = redditTitleNsfw(item.title);
+          }
+        } else {
+          console.log(`[debug] ${source.name}: gallery resolution failed for "${item.title.slice(0,50)}"`);
+        }
+      }));
+    }
     // A plain slice(0,6) here would just reproduce the original top-6-by-
     // votes result and defeat the point of scanning 20 — an art post
     // found further down the list needs to actually displace something
@@ -936,7 +1013,7 @@ async function fetchRedditRss(source) {
     const trustedItems = items.filter(i => i._trustedPriority);
     const artItems = items.filter(i => i.type === 'fanart' && !i._trustedPriority);
     const nonArtItems = items.filter(i => i.type !== 'fanart' && !i._trustedPriority);
-    return [...trustedItems, ...artItems, ...nonArtItems].slice(0, 6).map(({ _trustedPriority, ...rest }) => rest);
+    return [...trustedItems, ...artItems, ...nonArtItems].slice(0, 6).map(({ _trustedPriority, _galleryUrl, _author, ...rest }) => rest);
   } catch (err) {
     console.error(`[skip] ${source.name}: ${err.message}`);
     return [];
