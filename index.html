@@ -52,9 +52,7 @@
   --parchment-dim:#8a8474;
   --muted:#857f6f; /* was #5f5a4d — that failed WCAG AA (2.83-2.98:1 vs the 4.5:1 minimum for small text), verified with real contrast math, not assumed. This passes at 4.87-5.13:1. */
   --ochre:#b6924f;
-  --verdigris:#6a9c83;
   --rust:#c2703f;
-  --slate-blue:#6f93c2;
 }
 *{box-sizing:border-box;}
 /* Keyboard-focus only (not mouse clicks) — one consistent ring across
@@ -95,10 +93,6 @@ h1{ font-family:'Cinzel', serif; font-weight:600; font-size:clamp(30px,5.5vw,48p
 }
 .chip:hover{background:rgba(255,255,255,0.09); color:var(--parchment);}
 .chip.active{background:var(--ochre); color:#0e0d0b; box-shadow:0 2px 6px rgba(0,0,0,0.3);}
-.chip[data-series="new"].active{background:var(--rust); color:#0e0d0b;}
-.chip[data-series="long"].active{background:var(--verdigris); color:#0e0d0b;}
-.chip[data-series="short"].active{background:var(--slate-blue); color:#0e0d0b;}
-.chip[data-series="general"].active{background:var(--parchment-dim); color:#0e0d0b;}
 .chip.saved-toggle{ background:rgba(255,255,255,0.045); }
 .chip.saved-toggle.active{ background:var(--parchment); color:#0e0d0b; }
 
@@ -156,20 +150,13 @@ h1{ font-family:'Cinzel', serif; font-weight:600; font-size:clamp(30px,5.5vw,48p
 .featured-label{
   display:flex; align-items:center; gap:8px; margin-bottom:10px;
   font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ochre);
 }
 .featured-label .dot{width:6px; height:6px; border-radius:50%; background:currentColor;}
-.featured-label.new{color:var(--rust);}
-.featured-label.long{color:var(--verdigris);}
-.featured-label.short{color:var(--slate-blue);}
-.featured-label.general{color:var(--ochre);}
 .card.featured{
   padding:26px 28px; margin-bottom:28px; gap:20px;
-  border-width:1.5px;
+  border-width:1.5px; border-color:rgba(138,132,116,0.4);
 }
-.card.new.featured{border-color:rgba(194,112,63,0.45);}
-.card.long.featured{border-color:rgba(106,156,131,0.45);}
-.card.short.featured{border-color:rgba(111,147,194,0.45);}
-.card.general.featured{border-color:rgba(138,132,116,0.4);}
 .card.featured .thumb{width:120px; height:120px; border-radius:16px;}
 .card.featured .title{font-size:21px; font-weight:700;}
 .card.featured .desc{font-size:15px; max-width:none;}
@@ -188,10 +175,6 @@ main{max-width:760px; margin:0 auto; padding:0 24px; display:grid; gap:10px;}
   flex:0 0 auto; width:84px; height:84px; border-radius:14px; position:relative; overflow:hidden;
   background:var(--ochre);
 }
-.card.new .thumb{background:linear-gradient(155deg, var(--rust), #6e3822);}
-.card.long .thumb{background:linear-gradient(155deg, var(--verdigris), #35513f);}
-.card.short .thumb{background:linear-gradient(155deg, var(--slate-blue), #2e4a68);}
-.card.general .thumb{background:linear-gradient(155deg, var(--parchment-dim), #3a362c);}
 .thumb img{ width:100%; height:100%; object-fit:cover; display:block; position:relative; z-index:1; transition:filter .2s ease; }
 .thumb .thumb-icon{
   position:absolute; inset:0; z-index:0; display:flex; align-items:center; justify-content:center;
@@ -230,10 +213,6 @@ a.thumb:hover .thumb-icon{ opacity:0.7; }
   font-weight:600; color:var(--muted); text-transform:none; letter-spacing:0;
   background:rgba(255,255,255,0.05); border-radius:999px; padding:2px 8px; margin-left:6px; font-size:10.5px;
 }
-.card.new .source{color:var(--rust);}
-.card.long .source{color:var(--verdigris);}
-.card.short .source{color:var(--slate-blue);}
-.card.general .source{color:var(--parchment-dim);}
 .desc{font-size:14px; color:var(--parchment-dim); margin-top:8px; line-height:1.55; max-width:54ch; font-weight:400;}
 .attribution{
   display:flex; flex-wrap:wrap; align-items:center; gap:6px;
@@ -710,7 +689,6 @@ function render(){
   Object.entries(sourceLatest).forEach(([source, newestDate]) => {
     if(newestDate < staleCutoff) quietSources[source] = { newestDate };
   });
-  const quietList = Object.keys(quietSources);
 
   // Remember series/format/saved-only/tag so a reload picks up where you
   // left off instead of resetting to "All Series, All Formats" every time.
@@ -761,7 +739,6 @@ function render(){
       : (newCount > 0
         ? `<b>${newCount} new</b> since your last visit`
         : `You're caught up.`))
-    + (quietList.length ? ` &middot; <span title="${quietList.join(', ')}">${quietList.length} source${quietList.length>1?'s':''} quiet ${STALE_DAYS}+ days</span>` : '')
     // A single "start over" action rather than five separate ones (series
     // chip, format chip, tag Clear, search ×, Saved toggle) — NN/g
     // heuristic #3, User Control and Freedom: a clearly marked way out

@@ -1346,6 +1346,42 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## Three small, direct fixes
+
+**Removed the aggregate "N sources quiet 60+ days" status line** — by
+request. Worth noting this is a different mechanism from the per-card
+"quiet" badge on individual stale items, which stayed — that one's still
+useful (flags which specific item is from a source that's gone quiet),
+the aggregate count wasn't. `quietList`, the variable that only fed this
+now-removed line, was fully unused afterward and removed too;
+`quietSources` itself stays, since the per-card badge still needs it.
+
+**Removed all series-based color-coding** — by request ("I don't think we
+need any color-coding for the books"). This touched five separate places
+that had all been color-differentiated by series (New Sun/Long
+Sun/Short Sun/General Wolfe): active chip color, featured-item label
+color, featured-card border color, thumb-tile gradient background, and
+source-line text color. All five collapsed to their existing single
+neutral default (ochre, or the featured-card's existing neutral border)
+rather than needing new rules — the defaults were already there, just
+being overridden per series before. `--verdigris` and `--slate-blue`
+became fully unused afterward and were removed from `:root`; `--rust`
+stayed, since it's still doing real work elsewhere (link hovers, the
+decorative arrow-rule, bolded numbers in the status line) unrelated to
+series color-coding.
+
+**Added "tattoo" to `ART_SIGNAL_RE`** — a real report: a Wolfe tattoo post
+correctly made it into the feed but wasn't labeled as art, since none of
+the existing keywords matched. Tested against realistic cases before
+shipping, same discipline as every prior keyword addition: catches the
+actual reported pattern, doesn't false-positive on "tattered" (word-
+boundary protected). One case worth reporting honestly rather than
+glossing over — a bare off-topic question like "Tattoo shops near me?"
+does technically match the keyword in isolation, but `isArt` also
+requires an actual image, and a plain text question essentially never has
+one attached, so the compound check still protects against it in the real
+pipeline even though the bare regex alone doesn't.
+
 ## SEO and security pass
 
 **The important part first — a real XSS vulnerability, not a

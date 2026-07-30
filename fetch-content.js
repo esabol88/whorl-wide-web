@@ -802,7 +802,30 @@ function redditTitleNsfw(title) {
 // with a caption-free title could still be missed — but a missed real
 // post is a much smaller problem than a feed full of memes, the same
 // trade made for Crossref's "must say wolfe" filter.
-const ART_SIGNAL_RE = /\b(art|artwork|fanart|fan art|drawing|draw|redraw|painting|paint|sketch|illustration|doodle|portrait|lineart|line art|commission|oc|deviantart|artstation|pixiv|tumblr|instagram)\b/i;
+//
+// "tried my hand" added after a real report: "Tried my hand at a cover
+// for the solar cycle" — genuine original fan art, missed because no
+// existing keyword matched. The obvious fix, bare "cover," tested too
+// risky before shipping — it also matches "Just got this beautiful UK
+// cover edition!" (a photo of a purchased book, not art) and "What is the
+// best Shadow of the Torturer cover?" (a discussion, not art). "tried my
+// hand" tested clean against both of those same false-positive cases
+// while still catching the real reported post — idiomatically it's
+// almost always about attempting to make something yourself, rarely used
+// to describe something bought or found.
+// "tattoo" added after a real report: a Wolfe-related tattoo post
+// correctly made it into the feed but wasn't labeled as art, since no
+// existing keyword matched. Tested before shipping: catches "Got my
+// Severian tattoo finished today!" and "New tattoo of the Claw" cleanly,
+// doesn't false-positive on "tattered" (word-boundary matched, same
+// protection as every other short entry in this list). One case is worth
+// being honest about rather than glossing over: a bare, off-topic
+// question like "Tattoo shops near me?" would technically match the
+// keyword too — but isArt also requires hasImage to be true, and a plain
+// text question like that essentially never has a photo attached, so the
+// compound check protects against it in the real pipeline even though the
+// bare regex alone doesn't rule it out.
+const ART_SIGNAL_RE = /\b(art|artwork|fanart|fan art|drawing|draw|redraw|painting|paint|sketch|illustration|doodle|portrait|lineart|line art|commission|oc|deviantart|artstation|pixiv|tumblr|instagram|tried my hand|try my hand|tattoo)\b/i;
 
 // Named directly by request — specific Reddit posters known to be
 // reliably worth including, bypassing the general-purpose filters built
