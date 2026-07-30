@@ -1,6 +1,38 @@
 {
-  "generatedAt": "2026-07-30T12:51:16.958Z",
+  "generatedAt": "2026-07-30T15:01:42.766Z",
   "items": [
+    {
+      "id": "youtube-search-0a590aeb",
+      "title": "The Claw of the Conciliator Gene Wolfe (Book of the New Sun Bk. 2)",
+      "source": "Walls of Horror",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-30",
+      "url": "https://www.youtube.com/watch?v=kwnenD1rDS4",
+      "desc": "The Claw of the Conciliator by Gene Wolfe Book of the New Sun Book 2 Thanks for watching! My first Book of the New Sun Video: ...",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/kwnenD1rDS4/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-82911c53",
+      "title": "Inspired by my favorite book in the solar cycle (On Blue's Waters)",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "short",
+      "date": "2026-07-30",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vatyt6/inspired_by_my_favorite_book_in_the_solar_cycle/",
+      "desc": "Incredibly happy with how this turned out! Done by Katerina at Last Century Tattoo \n    submitted by    /u/IMTReignover  \n [link]   [comments]",
+      "tags": [
+        "Horn"
+      ],
+      "thumbnail": "https://i.redd.it/p3n6uksredgh1.jpeg",
+      "artist": "u/IMTReignover (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/IMTReignover",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vatyt6/inspired_by_my_favorite_book_in_the_solar_cycle/",
+      "nsfw": false
+    },
     {
       "id": "r-genewolfe-8cdda00a",
       "title": "Severian Holding Terminus Est (Tattoo)",
@@ -30,20 +62,6 @@
       "artistUrl": "https://www.reddit.com/user/deimosremus",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1v9lgay/sketch_thrax_locals/",
       "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-d9b61adb",
-      "title": "Anime of Severian on a Destrier? Nope, just Amon Saga, with character designs by Yoshitaka Amano, of course",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-29",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v9zjt0/anime_of_severian_on_a_destrier_nope_just_amon/",
-      "desc": "submitted by    /u/Busy-Pin-9981  \n [link]   [comments]",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": "https://i.redd.it/0ot6kchnt6gh1.png"
     },
     {
       "id": "youtube-search-4e99afc2",
