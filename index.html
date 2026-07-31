@@ -171,6 +171,16 @@ main{max-width:760px; margin:0 auto; padding:0 24px; display:grid; gap:10px;}
   transition:background .16s ease, border-color .16s ease, box-shadow .16s ease, transform .16s ease;
 }
 .card:hover{background:var(--surface-hover); border-color:var(--hairline-hi); box-shadow:0 4px 14px rgba(0,0,0,0.35); transform:translateY(-1px);}
+/* Gentle highlight for items new since the last visit — same isNew flag
+   already driving the small dot indicator on the thumbnail, reused here
+   rather than a separate mechanism. Naturally stops highlighting on its
+   own once lastVisit advances past that item's date on a later visit, no
+   extra "seen" tracking needed. Kept subtle on purpose (a soft border-
+   color shift and a faint glow, not a bright/saturated outline) to match
+   the site's restrained visual language elsewhere — this should read as
+   "worth noticing" at a glance, not shout. */
+.card.is-new{border-color:rgba(182,146,79,0.55); box-shadow:0 0 0 1px rgba(182,146,79,0.18), 0 1px 3px rgba(0,0,0,0.25);}
+.card.is-new:hover{border-color:rgba(182,146,79,0.75); box-shadow:0 0 0 1px rgba(182,146,79,0.25), 0 4px 14px rgba(0,0,0,0.35);}
 
 .thumb{
   flex:0 0 auto; width:84px; height:84px; border-radius:14px; position:relative; overflow:hidden;
@@ -625,7 +635,7 @@ function cardHtml(d, { featured = false, saved, lastVisit, quietSources = {} } =
     </div>` : '';
 
   return `
-    <div class="card ${d.series} ${featured ? 'featured' : ''}">
+    <div class="card ${d.series} ${featured ? 'featured' : ''} ${isNew ? 'is-new' : ''}">
       ${thumbHtml}
       <div class="body">
         <div class="top">

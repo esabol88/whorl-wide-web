@@ -1346,6 +1346,23 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## A gentle highlight outline for newly-added items
+
+By request — cards new since the last visit get a soft border-color
+shift and a faint glow (`.card.is-new`), not just the small dot indicator
+that already existed. Genuinely simple to add: the exact mechanism
+already existed (`isNew = d.date > lastVisit`, already driving that dot),
+just needed the class applied to the outer card too and some restrained
+CSS. Because it reuses the existing flag, "stops being highlighted once
+seen" already came for free — `lastVisit` advances once per visit, so a
+card's highlight naturally disappears on the next visit without any
+additional "seen" tracking needed.
+
+Kept deliberately subtle (a soft ochre-tinted border and a faint glow,
+not a bright or saturated outline) to match the site's restrained visual
+language elsewhere — meant to read as "worth noticing" at a glance, not
+compete with the actual content for attention.
+
 ## "You're caught up" removed — show nothing on a quiet day
 
 By request, questioning whether the status line needed to say anything
