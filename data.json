@@ -1,6 +1,65 @@
 {
-  "generatedAt": "2026-07-30T12:51:16.958Z",
+  "generatedAt": "2026-07-31T13:29:50.997Z",
   "items": [
+    {
+      "id": "alzabo-soup-2688e0f0",
+      "title": "General Discussion - Gene Wolfe's Book of the Short Sun",
+      "source": "Alzabo Soup",
+      "type": "podcast",
+      "series": "short",
+      "date": "2026-07-31",
+      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
+      "desc": "Intro - Metz and Phil try BTS flavored Oreos. Content (8:13) - Discussion of The Book of the Short Sun, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance Check out more at alzabosoup.com.",
+      "tags": [],
+      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-rereadingwolfepodcast-1f8b848a",
+      "title": "I may have pinpointed when Severian passed the trial",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-07-31",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1vbhn8u/i_may_have_pinpointed_when_severian_passed_the/",
+      "desc": "I think I’ve pinpointed the moment Severian may have passed his Trial as UOTNS tells us he already did some time on the past. Certainly I do think it’s a cumulative thing and not one specific moment, but quoting from cha",
+      "tags": [
+        "Severian",
+        "Thecla"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "youtube-search-0a590aeb",
+      "title": "The Claw of the Conciliator Gene Wolfe (Book of the New Sun Bk. 2)",
+      "source": "Walls of Horror",
+      "type": "video",
+      "series": "new",
+      "date": "2026-07-30",
+      "url": "https://www.youtube.com/watch?v=kwnenD1rDS4",
+      "desc": "The Claw of the Conciliator by Gene Wolfe Book of the New Sun Book 2 Thanks for watching! My first Book of the New Sun Video: ...",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/kwnenD1rDS4/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-82911c53",
+      "title": "Inspired by my favorite book in the solar cycle (On Blue's Waters)",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "short",
+      "date": "2026-07-30",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vatyt6/inspired_by_my_favorite_book_in_the_solar_cycle/",
+      "desc": "Incredibly happy with how this turned out! Done by Katerina at Last Century Tattoo \n    submitted by    /u/IMTReignover  \n [link]   [comments]",
+      "tags": [
+        "Horn"
+      ],
+      "thumbnail": "https://i.redd.it/p3n6uksredgh1.jpeg",
+      "artist": "u/IMTReignover (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/IMTReignover",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vatyt6/inspired_by_my_favorite_book_in_the_solar_cycle/",
+      "nsfw": false
+    },
     {
       "id": "r-genewolfe-8cdda00a",
       "title": "Severian Holding Terminus Est (Tattoo)",
@@ -10,6 +69,32 @@
       "date": "2026-07-30",
       "url": "https://www.reddit.com/r/genewolfe/comments/1vadhal/severian_holding_terminus_est_tattoo/",
       "desc": "submitted by    /u/tunaMaestro97  \n [link]   [comments]",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-d38ea4c2",
+      "title": "Great cover",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-07-30",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vavj61/great_cover/",
+      "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/j6ql486fpdgh1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-a373b15f",
+      "title": "Yoshitaka Amano’s Severian in Elden Ring",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-07-30",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vb62xz/yoshitaka_amanos_severian_in_elden_ring/",
+      "desc": "Not a very book accurate design for Severian, but a unique one nonetheless from one of my favorite artists. I’ve noticed Amano usually paints the hair white if a character is dressed in mostly black ( such as Vampire Hun",
       "tags": [
         "Severian"
       ],
@@ -30,20 +115,6 @@
       "artistUrl": "https://www.reddit.com/user/deimosremus",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1v9lgay/sketch_thrax_locals/",
       "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-d9b61adb",
-      "title": "Anime of Severian on a Destrier? Nope, just Amon Saga, with character designs by Yoshitaka Amano, of course",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-29",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v9zjt0/anime_of_severian_on_a_destrier_nope_just_amon/",
-      "desc": "submitted by    /u/Busy-Pin-9981  \n [link]   [comments]",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": "https://i.redd.it/0ot6kchnt6gh1.png"
     },
     {
       "id": "youtube-search-4e99afc2",
@@ -109,85 +180,6 @@
       "tags": [
         "Severian",
         "Dorcas"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "General Discussion - Gene Wolfe's Return to the Whorl",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "long",
-      "date": "2026-07-24",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Phil and Metz discuss the early summer box office and the success of YouTube filmmakers. Content (9:42) - Discussion of Return to the Whorl, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance ",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "r-genewolfe-e9721b82",
-      "title": "Going for the second read (just finished Shadow)",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-24",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v55t32/going_for_the_second_read_just_finished_shadow/",
-      "desc": "Got the Folio Society edition for my birthday ☺️\n    submitted by    /u/InamortaBetwixt  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "youtube-search-ab53cb9f",
-      "title": "The Claw of the Conciliator by Gene Wolfe - Audiobook",
-      "source": "Pacoco",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-23",
-      "url": "https://www.youtube.com/watch?v=_ewinevlofI",
-      "desc": "Book 2 of 'The Book of the New Sun'. An epic science fantasy masterpiece read by Roy Avers.",
-      "tags": [
-        "the Claw"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/_ewinevlofI/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-076964e8",
-      "title": "The Mysteries of the Faceless King is an Epic Worthy of Wolfe and Tolkien - But Only 20 Pages!",
-      "source": "Liminal Spaces",
-      "type": "video",
-      "series": "general",
-      "date": "2026-07-23",
-      "url": "https://www.youtube.com/watch?v=aYFLWHz6anw",
-      "desc": "Darrell Schweitzer's short story, The Mysteries of the Faceless King is a master class in pace and plot. This short story felt every bit ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/aYFLWHz6anw/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-932c3faf",
-      "title": "The Urth of the New Sun by Gene Wolfe [ Full Audiobook Free ]",
-      "source": "Book Flow",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-23",
-      "url": "https://www.youtube.com/watch?v=le3t2QVHNw8",
-      "desc": "The Urth of the New Sun by Gene Wolfe [ Full Audiobook Free ] Listen this Full Audiobook for FREE https://amzn.to/3Socbuz ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/le3t2QVHNw8/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-a42af4a9",
-      "title": "New Sun Religion #11",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-23",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v4m1aa/new_sun_religion_11/",
-      "desc": "Obvious, Lesser, and Obscure: Groping toward a taxonomy of identifying Christian elements in Severian’s narrative.\n  \n We have gone over seven obvious cases linking Severian to Jesus: \n  \nThe water into wine transmutatio",
-      "tags": [
-        "Severian",
-        "Dorcas",
-        "Typhon",
-        "Thecla"
       ],
       "thumbnail": null
     },
