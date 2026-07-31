@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T13:29:50.997Z",
+  "generatedAt": "2026-07-31T22:53:26.716Z",
   "items": [
     {
       "id": "alzabo-soup-2688e0f0",
@@ -12,6 +12,22 @@
       "desc": "Intro - Metz and Phil try BTS flavored Oreos. Content (8:13) - Discussion of The Book of the Short Sun, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-genewolfe-b3498939",
+      "title": "Illustration: The Analeptic Alzabo",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "general",
+      "date": "2026-07-31",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vc09mo/illustration_the_analeptic_alzabo/",
+      "desc": "This one went through a couple major revisions and was a bit more tricky than some of the others--Definitely wanted to give it a very pulpy, acidic color palette, but finally landing on one that worked for the compositio",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/hwzhgdt96mgh1.jpeg",
+      "artist": "u/deimosremus (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/deimosremus",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vc09mo/illustration_the_analeptic_alzabo/",
+      "nsfw": false
     },
     {
       "id": "r-rereadingwolfepodcast-1f8b848a",
@@ -85,20 +101,6 @@
       "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/j6ql486fpdgh1.jpeg"
-    },
-    {
-      "id": "r-genewolfe-a373b15f",
-      "title": "Yoshitaka Amano’s Severian in Elden Ring",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-30",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vb62xz/yoshitaka_amanos_severian_in_elden_ring/",
-      "desc": "Not a very book accurate design for Severian, but a unique one nonetheless from one of my favorite artists. I’ve noticed Amano usually paints the hair white if a character is dressed in mostly black ( such as Vampire Hun",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
     },
     {
       "id": "r-genewolfe-aca6d000",
