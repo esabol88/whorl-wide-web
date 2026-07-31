@@ -666,6 +666,22 @@ const SOURCES = [
     requireKeyword: 'wolfe'
   },
   {
+    // Added after a real report of a missed piece — "Beauty, Mystery,
+    // Horror, Shapechanging," a substantive real essay on The Fifth Head
+    // of Cerberus, July 24, 2026. Horton is an established SFF critic
+    // (broad genre coverage, not Wolfe-exclusive), so requireKeyword
+    // applies same as the other general-interest Substack sources here.
+    // Same platform, so almost certainly hits the identical confirmed
+    // block — left in anyway for the same reasoning as every other
+    // blocked Substack source in this file.
+    name: 'Rich Horton',
+    type: 'article',
+    series: 'general',
+    kind: 'rss',
+    url: 'https://richhorton314252.substack.com/feed',
+    requireKeyword: 'wolfe'
+  },
+  {
     name: 'Dave Hook',
     type: 'article',
     series: 'general',
@@ -1951,6 +1967,17 @@ const MANUAL_ITEMS = [
     artistUrl: 'https://www.andreakalfas.com/',
     postUrl: 'https://andreakalfas.tumblr.com/post/25648964563/severian-and-the-undine-a-scene-from-book-of-the',
     nsfw: false
+  },
+  {
+    id: 'manual-richhorton-fifthhead',
+    title: 'Beauty, Mystery, Horror, Shapechanging',
+    source: 'Rich Horton',
+    type: 'article',
+    series: 'general',
+    date: '2026-07-24',
+    url: 'https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging',
+    desc: 'A close, personal essay on The Fifth Head of Cerberus, Wolfe\'s second novel — the twin-planet structure, the shapechanging Annese, Veil\'s Hypothesis, and how little of it resolves cleanly even on a third read.',
+    tags: guessTags('Fifth Head of Cerberus shapechanging Veil Hypothesis')
   }
 ];
 

@@ -1346,6 +1346,29 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## Rich Horton — a real missed piece, added both ways
+
+A direct report of a specific missed piece: "Beauty, Mystery, Horror,
+Shapechanging," Rich Horton's July 24, 2026 essay on *The Fifth Head of
+Cerberus*. Confirmed real and substantive by fetching it directly, not
+just trusting the title — a genuine close reading, not a passing mention.
+Horton wasn't tracked as a source at all before this.
+
+Added two ways, matching established patterns rather than picking one:
+a new `kind: 'rss'` source (`richhorton314252.substack.com/feed`,
+`requireKeyword: 'wolfe'` since he covers general SFF, not Wolfe
+exclusively) for ongoing coverage, and the specific already-confirmed
+piece backfilled into `MANUAL_ITEMS` with its real publish date, since
+RSS only ever surfaces new content going forward and this piece already
+exists. Worth being upfront: the new RSS source is almost certainly going
+to hit the same platform-wide Substack block confirmed repeatedly
+elsewhere in this file — left in anyway, same reasoning as every other
+blocked Substack source here. A Google Alerts route-around (the pattern
+already proven for five other blocked Substack writers) is the logical
+next step if ongoing coverage turns out to matter, but that requires the
+person running this repo to actually set one up — not something to do
+unprompted.
+
 ## A gentle highlight outline for newly-added items
 
 By request — cards new since the last visit get a soft border-color
