@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T22:53:26.716Z",
+  "generatedAt": "2026-07-31T23:12:04.462Z",
   "items": [
     {
       "id": "alzabo-soup-2688e0f0",
@@ -184,6 +184,17 @@
         "Dorcas"
       ],
       "thumbnail": null
+    },
+    {
+      "id": "manual-richhorton-fifthhead",
+      "title": "Beauty, Mystery, Horror, Shapechanging",
+      "source": "Rich Horton",
+      "type": "article",
+      "series": "general",
+      "date": "2026-07-24",
+      "url": "https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging",
+      "desc": "A close, personal essay on The Fifth Head of Cerberus, Wolfe's second novel — the twin-planet structure, the shapechanging Annese, Veil's Hypothesis, and how little of it resolves cleanly even on a third read.",
+      "tags": []
     },
     {
       "id": "rereading-wolfe-509384d0",
