@@ -1363,6 +1363,10 @@ not a bright or saturated outline) to match the site's restrained visual
 language elsewhere — meant to read as "worth noticing" at a glance, not
 compete with the actual content for attention.
 
+**Follow-up**: strengthened after feedback that it was too subtle —
+wider glow ring (2px instead of 1px) and higher border/glow opacity, so
+it reads as clearly distinct at a glance rather than a barely-there tint.
+
 ## "You're caught up" removed — show nothing on a quiet day
 
 By request, questioning whether the status line needed to say anything
