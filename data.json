@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T12:25:43.846Z",
+  "generatedAt": "2026-08-03T15:37:22.829Z",
   "items": [
     {
       "id": "youtube-search-1025cbad",
@@ -159,18 +159,6 @@
       "thumbnail": "https://i.ytimg.com/vi/sYqlx4u-mTQ/hqdefault.jpg"
     },
     {
-      "id": "r-rereadingwolfepodcast-95b862cf",
-      "title": "Why Are Episode Releases Inconsistent Across Platforms?",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-07-27",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1v82d0f/why_are_episode_releases_inconsistent_across/",
-      "desc": "Do we have a reason why not all episodes are available on all podcast platforms equally?\n I understand bonus episodes on Patreon (which I subscribe to), but not every episode is on Spotify.\n For example, 2:17a, The Tale ",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "rereading-wolfe-c309e24a",
       "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
       "source": "Rereading Wolfe",
@@ -218,17 +206,6 @@
       "date": "2026-07-12",
       "url": "https://litandchess.substack.com/p/gene-wolfes-peace",
       "desc": "A literary treatment of narrative voice, concealed violence, and memory — and Peace's relationship to Poe, Nabokov, and postmodern fiction.",
-      "tags": []
-    },
-    {
-      "id": "urth-mailing-list-b92588aa",
-      "title": "(urth) Homage to The Changeling?",
-      "source": "Urth Mailing List",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-06-04",
-      "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
-      "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
       "tags": []
     },
     {
