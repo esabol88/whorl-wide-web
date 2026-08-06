@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-08-06T15:06:45.547Z",
+  "generatedAt": "2026-08-06T23:49:01.823Z",
   "items": [
+    {
+      "id": "youtube-search-2b3242b7",
+      "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 1-8",
+      "source": "Jeff Cannata",
+      "type": "video",
+      "series": "new",
+      "date": "2026-08-06",
+      "url": "https://www.youtube.com/watch?v=3pWxsO5sAys",
+      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff kick off their read of the third novel in Gene Wolfe's Book ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/3pWxsO5sAys/hqdefault.jpg"
+    },
     {
       "id": "nick-reads-fantasy-4806a50d",
       "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
@@ -40,6 +52,18 @@
       "artistUrl": "https://www.reddit.com/user/deimosremus",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vfmtlq/illustration_the_lake_of_birds/",
       "nsfw": false
+    },
+    {
+      "id": "r-genewolfe-8d26e346",
+      "title": "I'm surprised I don't see people talking about this interview more.",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-03",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1veeakm/im_surprised_i_dont_see_people_talking_about_this/",
+      "desc": "It has Wolfe being surprisingly candid with his answers to \"lore\" questions.\n A Magus Of Many Suns:\n An Interview With Gene Wolfe\n An interview with Nick Gevers\n January 2002\n    submitted by    /u/100100wayt  \n [link]  ",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-1025cbad",
@@ -132,20 +156,6 @@
       "tags": [
         "Severian",
         "Thecla"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-a373b15f",
-      "title": "Yoshitaka Amano’s Severian in Elden Ring",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-30",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vb62xz/yoshitaka_amanos_severian_in_elden_ring/",
-      "desc": "Not a very book accurate design for Severian, but a unique one nonetheless from one of my favorite artists. I’ve noticed Amano usually paints the hair white if a character is dressed in mostly black ( such as Vampire Hun",
-      "tags": [
-        "Severian"
       ],
       "thumbnail": null
     },
