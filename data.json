@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-08-07T02:04:07.461Z",
+  "generatedAt": "2026-08-07T04:47:18.735Z",
   "items": [
+    {
+      "id": "alzabo-soup-2688e0f0",
+      "title": "General Discussion - Gene Wolfe's Solar Cycle",
+      "source": "Alzabo Soup",
+      "type": "podcast",
+      "series": "general",
+      "date": "2026-08-07",
+      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
+      "desc": "Intro - Phil challenges Metz to a poetry recital. Content (5:38) - Discussion of the solar cycle by Gene Wolfe. Current Read-Along - The Palace of Love, by Jack Vance Check out more at alzabosoup.com.",
+      "tags": [],
+      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
     {
       "id": "youtube-search-2b3242b7",
       "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 1-8",
@@ -14,18 +26,6 @@
       "thumbnail": "https://i.ytimg.com/vi/3pWxsO5sAys/hqdefault.jpg"
     },
     {
-      "id": "nick-reads-fantasy-4806a50d",
-      "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
-      "source": "Nick Reads Fantasy",
-      "type": "video",
-      "series": "general",
-      "date": "2026-08-05",
-      "url": "https://www.youtube.com/watch?v=sij2e-erajU",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
-    },
-    {
       "id": "youtube-search-9e7bf7f1",
       "title": "Nothing compares to Book of the New Sun by Gene Wolfe",
       "source": "Bibliopilled",
@@ -36,6 +36,18 @@
       "desc": "Nothing compares to Book of the New Sun by Gene Wolfe. It's one of my favorite books. I get into why in this video. #booktok ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/ciPoDvohA1M/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-4806a50d",
+      "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
+      "source": "Nick Reads Fantasy",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-05",
+      "url": "https://www.youtube.com/watch?v=sij2e-erajU",
+      "desc": "Reddit Discussions: https://www.reddit.com/r/genewolfe/comments/9ryxf8/some_ruminations_on_the_wizard_knight/ ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
     },
     {
       "id": "r-genewolfe-3e72e63a",
@@ -88,18 +100,6 @@
       "desc": "Unfortunately this effect was due to smoke from\n wildfires still raging in Greece, but it was hard not to think of the Red Sun Whorl when I saw it. Photos are unedited.\n    submitted by    /u/XenophanesOne  \n [link]   [c",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "General Discussion - Gene Wolfe's Book of the Short Sun",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "short",
-      "date": "2026-07-31",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Metz and Phil try BTS flavored Oreos. Content (8:13) - Discussion of The Book of the Short Sun, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance Check out more at alzabosoup.com.",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
       "id": "r-genewolfe-b3498939",
@@ -160,20 +160,6 @@
       "thumbnail": null
     },
     {
-      "id": "rereading-wolfe-c309e24a",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-26",
-      "url": "https://www.youtube.com/watch?v=mrELZBYENuY",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/mrELZBYENuY/hqdefault.jpg"
-    },
-    {
       "id": "manual-richhorton-fifthhead",
       "title": "Beauty, Mystery, Horror, Shapechanging",
       "source": "Rich Horton",
@@ -183,20 +169,6 @@
       "url": "https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging",
       "desc": "A close, personal essay on The Fifth Head of Cerberus, Wolfe's second novel — the twin-planet structure, the shapechanging Annese, Veil's Hypothesis, and how little of it resolves cleanly even on a third read.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-509384d0",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 1",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-18",
-      "url": "https://www.youtube.com/watch?v=IMI8UyIdbrc",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/IMI8UyIdbrc/hqdefault.jpg"
     },
     {
       "id": "manual-andylee-peace",
@@ -210,42 +182,6 @@
       "tags": []
     },
     {
-      "id": "high-low-brow-002378fd",
-      "title": "Gene Wolfe: Citadel of the Autarch (BOTNS 4) - Full Analysis | High Lowbrow",
-      "source": "High Low Brow",
-      "type": "video",
-      "series": "new",
-      "date": "2026-06-02",
-      "url": "https://www.youtube.com/watch?v=cuJL2Hu_aEM",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/cuJL2Hu_aEM/hqdefault.jpg"
-    },
-    {
-      "id": "high-low-brow-2a0f8d85",
-      "title": "Gene Wolfe: The Sword of the Lictor (BOTNS Pt 3) - Full Analysis | High Lowbrow",
-      "source": "High Low Brow",
-      "type": "video",
-      "series": "new",
-      "date": "2026-05-19",
-      "url": "https://www.youtube.com/watch?v=u9OxgGjPkmA",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/u9OxgGjPkmA/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-7d19375e",
-      "title": "tbotns 3-9 \"The Salamander\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-05-02",
-      "url": "https://www.youtube.com/watch?v=vZD4oR23S_s",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/vZD4oR23S_s/hqdefault.jpg"
-    },
-    {
       "id": "reactor-2d651c20",
       "title": "Jo Walton’s Reading List: February 2026",
       "source": "Reactor",
@@ -256,30 +192,6 @@
       "desc": "Thoughts on Gene Wolfe, Sharon Shinn, and finally getting the appeal of cosy fantasy!\nThe post Jo Walton’s Reading List: February 2026 appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-3a24120e",
-      "title": "tbotns 3-8 \"Upon the Cliff\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-03-08",
-      "url": "https://www.youtube.com/watch?v=XX2iJ-XeIyk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/XX2iJ-XeIyk/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-e880272f",
-      "title": "RRW Bonus: CSE Claire Cooney and Carlos Hernandez interview",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-01-31",
-      "url": "https://www.youtube.com/watch?v=SYyL0ko4qDk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/SYyL0ko4qDk/hqdefault.jpg"
     },
     {
       "id": "reactor-f9e1b1f8",
@@ -303,18 +215,6 @@
       "url": "https://countercraft.substack.com/p/why-you-should-read-gene-wolfe-and",
       "desc": "Probably the best recent general introduction — Peace for literary readers, Fifth Head for established SF readers, plus the short fiction.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-13c61c86",
-      "title": "tbotns 3-11 and 12 Cyriaca's Wrap Up",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-11-24",
-      "url": "https://www.youtube.com/watch?v=IHHedq0ruoQ",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/IHHedq0ruoQ/hqdefault.jpg"
     },
     {
       "id": "manual-andreakalfas-undine",
@@ -344,30 +244,6 @@
       "desc": "Oh, the joys (and perils) of visiting unfamiliar places and times...\nThe post Adventures in Tourism: Five SFF Stories About Travel appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-3de0f4be",
-      "title": "tbotns 3-7 Attractions",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-09-09",
-      "url": "https://www.youtube.com/watch?v=z0NiLq0ymGM",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/z0NiLq0ymGM/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-d0f62367",
-      "title": "Bonus: Ryan Leslie talks about The Between and The Garden of Before (and Wolfe)",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-08-16",
-      "url": "https://www.youtube.com/watch?v=VYwYlNzHBdo",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/VYwYlNzHBdo/hqdefault.jpg"
     },
     {
       "id": "undertowers-podcast-fecc6d63",
@@ -534,18 +410,6 @@
       "tags": []
     },
     {
-      "id": "ultan-s-library-9134967b",
-      "title": "Gene Wolfe and The Pocket Book of Science-Fiction",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2024-05-30",
-      "url": "https://ultan.org.uk/gene-wolfe-and-the-pocket-book-of-science-fiction/",
-      "desc": "Wolfe said that Wollheim's 1943 anthology was his gateway to discovering the science fiction pulps. Here, Michael Andre-Driussi explores one of Wolfe's earliest influences.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "manual-adamroberts-newsun",
       "title": "Gene Wolfe, \"The Book of the New Sun\" (1980-83)",
       "source": "Adam Roberts",
@@ -605,42 +469,6 @@
       "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
     },
     {
-      "id": "ultan-s-library-bf25b430",
-      "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-11-23",
-      "url": "https://ultan.org.uk/micro-wolfenomics-joan-gordon-reviews-gene-wolfes-first-four-novels-a-chapter-guide-by-michael-andre-driussi/",
-      "desc": "There are two kinds of Wolfeian criticism: macro and micro. Michael Andre-Driussi offers the micro, noting all the small details, word meanings and origins, specific allusions, patterns and inconsistencies in plot, time-",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-c68a226d",
-      "title": "A Curiously Conflicted Book: Craig Brewer reviews ‘Interlibrary Loan’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-11-09",
-      "url": "https://ultan.org.uk/a-curiously-conflicted-book-craig-brewer-reviews-gene-wolfes-interlibrary-loan/",
-      "desc": "This final work is not simply a coda to Wolfe’s career but an integral part of its working out of some of his most central concerns.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-5e1a91e0",
-      "title": "A Weird Mystery: James Wynn considers Gene Wolfe’s ‘A Borrowed Man’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-10-26",
-      "url": "https://ultan.org.uk/a-weird-mystery-james-wynn-considers-gene-wolfes-a-borrowed-man/",
-      "desc": "As a detective novel, this is not a puzzle. It’s a finger-trap.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "crossref-scholarly-papers-188184c2",
       "title": "Time After Time: On the speculative fiction of Gene Wolfe",
       "source": "Critical Quarterly",
@@ -650,42 +478,6 @@
       "url": "https://doi.org/10.1111/criq.12563",
       "desc": "By Francis Gooding — Critical Quarterly",
       "tags": []
-    },
-    {
-      "id": "ultan-s-library-9f37d039",
-      "title": "Review: Gene Wolfe’s ‘Operation ARES’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-08-03",
-      "url": "https://ultan.org.uk/review-gene-wolfes-operation-ares/",
-      "desc": "A review by Martin Crookall of Gene Wolfe's problematic and rarely discussed first novel.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-aaf5f4a8",
-      "title": "Standing on the Shoulders of Giants – A Review of Michael Andre-Driussi’s ‘The Book of the New Sun: A Chapter Guide’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-07-20",
-      "url": "https://ultan.org.uk/standing-on-the-shoulders-of-giants-a-review-of-michael-andre-driussis-the-book-of-the-new-sun-a-chapter-guide/",
-      "desc": "\"While Andre-Driussi acknowledges the complexity and allusiveness of Wolfe’s work, his writing has always seemed to me the most objectively grounded and easiest to digest ... of all the writers and analysts currently exp",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-20ee2c82",
-      "title": "Posthistory 201",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-07-06",
-      "url": "https://ultan.org.uk/posthistory-201/",
-      "desc": "In this new study of how human history is measured and portrayed in Gene Wolfe’s Solar Cycle, Michael Andre-Driussi reassesses the subject of his earlier essay “Posthistory 101” and examines the textual evidence for esti",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-37cc0f62",
@@ -698,18 +490,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
-    },
-    {
-      "id": "ultan-s-library-e377b022",
-      "title": "Everything has to be true somehow",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-06-08",
-      "url": "https://ultan.org.uk/everything-has-to-be-true-somehow/",
-      "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-166c4cdf",
