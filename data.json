@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T09:50:02.818Z",
+  "generatedAt": "2026-08-07T10:42:22.617Z",
   "items": [
     {
       "id": "alzabo-soup-2688e0f0",
@@ -518,18 +518,6 @@
       "tags": []
     },
     {
-      "id": "ultan-s-library-9134967b",
-      "title": "Gene Wolfe and The Pocket Book of Science-Fiction",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2024-05-30",
-      "url": "https://ultan.org.uk/gene-wolfe-and-the-pocket-book-of-science-fiction/",
-      "desc": "Wolfe said that Wollheim's 1943 anthology was his gateway to discovering the science fiction pulps. Here, Michael Andre-Driussi explores one of Wolfe's earliest influences.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "manual-adamroberts-newsun",
       "title": "Gene Wolfe, \"The Book of the New Sun\" (1980-83)",
       "source": "Adam Roberts",
@@ -589,42 +577,6 @@
       "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
     },
     {
-      "id": "ultan-s-library-bf25b430",
-      "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-11-23",
-      "url": "https://ultan.org.uk/micro-wolfenomics-joan-gordon-reviews-gene-wolfes-first-four-novels-a-chapter-guide-by-michael-andre-driussi/",
-      "desc": "There are two kinds of Wolfeian criticism: macro and micro. Michael Andre-Driussi offers the micro, noting all the small details, word meanings and origins, specific allusions, patterns and inconsistencies in plot, time-",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-c68a226d",
-      "title": "A Curiously Conflicted Book: Craig Brewer reviews ‘Interlibrary Loan’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-11-09",
-      "url": "https://ultan.org.uk/a-curiously-conflicted-book-craig-brewer-reviews-gene-wolfes-interlibrary-loan/",
-      "desc": "This final work is not simply a coda to Wolfe’s career but an integral part of its working out of some of his most central concerns.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-5e1a91e0",
-      "title": "A Weird Mystery: James Wynn considers Gene Wolfe’s ‘A Borrowed Man’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-10-26",
-      "url": "https://ultan.org.uk/a-weird-mystery-james-wynn-considers-gene-wolfes-a-borrowed-man/",
-      "desc": "As a detective novel, this is not a puzzle. It’s a finger-trap.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "crossref-scholarly-papers-188184c2",
       "title": "Time After Time: On the speculative fiction of Gene Wolfe",
       "source": "Critical Quarterly",
@@ -634,42 +586,6 @@
       "url": "https://doi.org/10.1111/criq.12563",
       "desc": "By Francis Gooding — Critical Quarterly",
       "tags": []
-    },
-    {
-      "id": "ultan-s-library-9f37d039",
-      "title": "Review: Gene Wolfe’s ‘Operation ARES’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-08-03",
-      "url": "https://ultan.org.uk/review-gene-wolfes-operation-ares/",
-      "desc": "A review by Martin Crookall of Gene Wolfe's problematic and rarely discussed first novel.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-aaf5f4a8",
-      "title": "Standing on the Shoulders of Giants – A Review of Michael Andre-Driussi’s ‘The Book of the New Sun: A Chapter Guide’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-07-20",
-      "url": "https://ultan.org.uk/standing-on-the-shoulders-of-giants-a-review-of-michael-andre-driussis-the-book-of-the-new-sun-a-chapter-guide/",
-      "desc": "\"While Andre-Driussi acknowledges the complexity and allusiveness of Wolfe’s work, his writing has always seemed to me the most objectively grounded and easiest to digest ... of all the writers and analysts currently exp",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-20ee2c82",
-      "title": "Posthistory 201",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-07-06",
-      "url": "https://ultan.org.uk/posthistory-201/",
-      "desc": "In this new study of how human history is measured and portrayed in Gene Wolfe’s Solar Cycle, Michael Andre-Driussi reassesses the subject of his earlier essay “Posthistory 101” and examines the textual evidence for esti",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-37cc0f62",
@@ -682,18 +598,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
-    },
-    {
-      "id": "ultan-s-library-e377b022",
-      "title": "Everything has to be true somehow",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-06-08",
-      "url": "https://ultan.org.uk/everything-has-to-be-true-somehow/",
-      "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-166c4cdf",
