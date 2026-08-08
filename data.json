@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T23:24:47.984Z",
+  "generatedAt": "2026-08-08T00:47:37.634Z",
   "items": [
     {
       "id": "alzabo-soup-2688e0f0",
@@ -78,18 +78,6 @@
       "thumbnail": null
     },
     {
-      "id": "r-genewolfe-fa80b395",
-      "title": "I'm trying to bring \"goodman\" back as a term of endearment",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-08-03",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vepd33/im_trying_to_bring_goodman_back_as_a_term_of/",
-      "desc": "Everywhere I go, I now refer to friends and strangers as \"goodman\" (eg, \"thank you, goodman\", \"hello, goodman\", \"Are you a vegetable then, or a speaking plant, goodman?\").\n I have been met with no resistance, so shall co",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "r-genewolfe-9d349dcf",
       "title": "Behold an Azoth",
       "source": "r/genewolfe",
@@ -100,6 +88,18 @@
       "desc": "submitted by    /u/ApuPunchau2026  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/rzgztvjpx6hh1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-fa80b395",
+      "title": "I'm trying to bring \"goodman\" back as a term of endearment",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-03",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vepd33/im_trying_to_bring_goodman_back_as_a_term_of/",
+      "desc": "Everywhere I go, I now refer to friends and strangers as \"goodman\" (eg, \"thank you, goodman\", \"hello, goodman\", \"Are you a vegetable then, or a speaking plant, goodman?\").\n I have been met with no resistance, so shall co",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-1025cbad",
