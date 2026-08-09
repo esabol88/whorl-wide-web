@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T17:21:34.025Z",
+  "generatedAt": "2026-08-09T18:23:48.454Z",
   "items": [
     {
       "id": "r-genewolfe-d471a58f",
@@ -48,6 +48,20 @@
       "desc": "Hello everyone. My best friend loved literature and especially Book of the New Sun. His widow asked me to read a passage or a quote from books he adored at his memorial. Its been a while since I read BotNS. Does anyone h",
       "tags": [],
       "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-7681d354",
+      "title": "Silk’s meal from Nightside",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "long",
+      "date": "2026-08-08",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vii70s/silks_meal_from_nightside/",
+      "desc": "A simple but pleasant dish… I didn’t have to buy time from an irate holy woman to eat it though\n    submitted by    /u/MichaelRichardsAMA  \n [link]   [comments]",
+      "tags": [
+        "Silk"
+      ],
+      "thumbnail": "https://i.redd.it/1k1v8aapv1ih1.jpeg"
     },
     {
       "id": "alzabo-soup-2688e0f0",
@@ -112,18 +126,6 @@
       "artistUrl": "https://www.reddit.com/user/deimosremus",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vfmtlq/illustration_the_lake_of_birds/",
       "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-08ca6e87",
-      "title": "Captured the “Red Sun” setting over Athens a couple days ago",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-08-02",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vdo3c1/captured_the_red_sun_setting_over_athens_a_couple/",
-      "desc": "Unfortunately this effect was due to smoke from\n wildfires still raging in Greece, but it was hard not to think of the Red Sun Whorl when I saw it. Photos are unedited.\n    submitted by    /u/XenophanesOne  \n [link]   [c",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-c309e24a",
