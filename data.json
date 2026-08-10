@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T23:20:16.519Z",
+  "generatedAt": "2026-08-10T00:53:48.311Z",
   "items": [
     {
       "id": "r-genewolfe-d471a58f",
@@ -26,6 +26,18 @@
       "thumbnail": null
     },
     {
+      "id": "r-genewolfe-fa38e6a2",
+      "title": "Re-reading",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-09",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vjzftv/rereading/",
+      "desc": "Question: (POSSIBLE SPOILER)\n Near the beginning, when Sev falls to the shipdeck from the sails, Wolfe writes \"...I have never been certain that the deck to which I returned was that which I had left\". Why wouldn't it be",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/dwqo8470meih1.jpeg"
+    },
+    {
       "id": "r-genewolfe-454b718d",
       "title": "Caves of Qud",
       "source": "r/genewolfe",
@@ -48,20 +60,6 @@
       "desc": "Hello everyone. My best friend loved literature and especially Book of the New Sun. His widow asked me to read a passage or a quote from books he adored at his memorial. Its been a while since I read BotNS. Does anyone h",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-7681d354",
-      "title": "Silk’s meal from Nightside",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-08-08",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vii70s/silks_meal_from_nightside/",
-      "desc": "A simple but pleasant dish… I didn’t have to buy time from an irate holy woman to eat it though\n    submitted by    /u/MichaelRichardsAMA  \n [link]   [comments]",
-      "tags": [
-        "Silk"
-      ],
-      "thumbnail": "https://i.redd.it/1k1v8aapv1ih1.jpeg"
     },
     {
       "id": "alzabo-soup-2688e0f0",
