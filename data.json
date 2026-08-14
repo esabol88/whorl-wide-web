@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-08-14T03:25:07.567Z",
+  "generatedAt": "2026-08-14T05:24:42.736Z",
   "items": [
+    {
+      "id": "alzabo-soup-b5eaf905",
+      "title": "Treasure Island, by Robert Louis Stevenson",
+      "source": "Alzabo Soup",
+      "type": "podcast",
+      "series": "general",
+      "date": "2026-08-14",
+      "url": "https://www.alzabosoup.com/categories/other-authors/",
+      "desc": "Intro - Metz and Phil celebrate 10 years of Alzabo Soup Content (11:31) - Discussion of Treasure Island, by Robert Louis Stevenson Current Read-Along - The Palace of Love, by Jack Vance Check out more at alzabosoup.com.",
+      "tags": [],
+      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
     {
       "id": "youtube-search-7f497225",
       "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 9-16",
@@ -100,32 +112,6 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "nick-reads-fantasy-4806a50d",
-      "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
-      "source": "Nick Reads Fantasy",
-      "type": "video",
-      "series": "general",
-      "date": "2026-08-05",
-      "url": "https://www.youtube.com/watch?v=sij2e-erajU",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-c309e24a",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-26",
-      "url": "https://www.youtube.com/watch?v=mrELZBYENuY",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/mrELZBYENuY/hqdefault.jpg"
-    },
-    {
       "id": "manual-richhorton-fifthhead",
       "title": "Beauty, Mystery, Horror, Shapechanging",
       "source": "Rich Horton",
@@ -135,20 +121,6 @@
       "url": "https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging",
       "desc": "A close, personal essay on The Fifth Head of Cerberus, Wolfe's second novel — the twin-planet structure, the shapechanging Annese, Veil's Hypothesis, and how little of it resolves cleanly even on a third read.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-509384d0",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 1",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-18",
-      "url": "https://www.youtube.com/watch?v=IMI8UyIdbrc",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/IMI8UyIdbrc/hqdefault.jpg"
     },
     {
       "id": "manual-andylee-peace",
@@ -162,18 +134,6 @@
       "tags": []
     },
     {
-      "id": "rereading-wolfe-7d19375e",
-      "title": "tbotns 3-9 \"The Salamander\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-05-02",
-      "url": "https://www.youtube.com/watch?v=vZD4oR23S_s",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/vZD4oR23S_s/hqdefault.jpg"
-    },
-    {
       "id": "reactor-2d651c20",
       "title": "Jo Walton’s Reading List: February 2026",
       "source": "Reactor",
@@ -184,30 +144,6 @@
       "desc": "Thoughts on Gene Wolfe, Sharon Shinn, and finally getting the appeal of cosy fantasy!\nThe post Jo Walton’s Reading List: February 2026 appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-3a24120e",
-      "title": "tbotns 3-8 \"Upon the Cliff\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-03-08",
-      "url": "https://www.youtube.com/watch?v=XX2iJ-XeIyk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/XX2iJ-XeIyk/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-e880272f",
-      "title": "RRW Bonus: CSE Claire Cooney and Carlos Hernandez interview",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-01-31",
-      "url": "https://www.youtube.com/watch?v=SYyL0ko4qDk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/SYyL0ko4qDk/hqdefault.jpg"
     },
     {
       "id": "reactor-f9e1b1f8",
@@ -231,18 +167,6 @@
       "url": "https://countercraft.substack.com/p/why-you-should-read-gene-wolfe-and",
       "desc": "Probably the best recent general introduction — Peace for literary readers, Fifth Head for established SF readers, plus the short fiction.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-13c61c86",
-      "title": "tbotns 3-11 and 12 Cyriaca's Wrap Up",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-11-24",
-      "url": "https://www.youtube.com/watch?v=IHHedq0ruoQ",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/IHHedq0ruoQ/hqdefault.jpg"
     },
     {
       "id": "manual-andreakalfas-undine",
@@ -272,42 +196,6 @@
       "desc": "Oh, the joys (and perils) of visiting unfamiliar places and times...\nThe post Adventures in Tourism: Five SFF Stories About Travel appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-3de0f4be",
-      "title": "tbotns 3-7 Attractions",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-09-09",
-      "url": "https://www.youtube.com/watch?v=z0NiLq0ymGM",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/z0NiLq0ymGM/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-d0f62367",
-      "title": "Bonus: Ryan Leslie talks about The Between and The Garden of Before (and Wolfe)",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-08-16",
-      "url": "https://www.youtube.com/watch?v=VYwYlNzHBdo",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/VYwYlNzHBdo/hqdefault.jpg"
-    },
-    {
-      "id": "undertowers-podcast-fecc6d63",
-      "title": "Episode 36: Peace by Gene Wolfe; what the $%!^ was that?!",
-      "source": "Undertowers Podcast",
-      "type": "video",
-      "series": "general",
-      "date": "2025-08-11",
-      "url": "https://www.youtube.com/watch?v=W93DwkQvIw4",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/W93DwkQvIw4/hqdefault.jpg"
     },
     {
       "id": "manual-vegadraws-gyoll",
