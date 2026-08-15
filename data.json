@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T00:35:53.893Z",
+  "generatedAt": "2026-08-15T02:08:29.778Z",
   "items": [
     {
       "id": "alzabo-soup-b5eaf905",
@@ -24,6 +24,18 @@
       "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the third novel in Gene Wolfe's ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/_dk7w5NYvlY/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-59f10bab",
+      "title": "Sappho Connection in Book of the Short Sun",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "short",
+      "date": "2026-08-13",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vnjaq3/sappho_connection_in_book_of_the_short_sun/",
+      "desc": "I was reading the poetry of Sappho and was stricken by a line that is very likely being referenced in Short Sun. The following is a translation of Sappho’s fragments from John Myers:\n So ruthless shepherds crush beneath ",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "r-genewolfe-4bf66be2",
@@ -84,20 +96,6 @@
       "desc": "Hello everyone. My best friend loved literature and especially Book of the New Sun. His widow asked me to read a passage or a quote from books he adored at his memorial. Its been a while since I read BotNS. Does anyone h",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-7681d354",
-      "title": "Silk’s meal from Nightside",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-08-08",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vii70s/silks_meal_from_nightside/",
-      "desc": "A simple but pleasant dish… I didn’t have to buy time from an irate holy woman to eat it though\n    submitted by    /u/MichaelRichardsAMA  \n [link]   [comments]",
-      "tags": [
-        "Silk"
-      ],
-      "thumbnail": "https://i.redd.it/1k1v8aapv1ih1.jpeg"
     },
     {
       "id": "alzabo-soup-2688e0f0",
