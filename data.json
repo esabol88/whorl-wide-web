@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T04:19:56.528Z",
+  "generatedAt": "2026-08-15T05:16:00.298Z",
   "items": [
     {
       "id": "alzabo-soup-b5eaf905",
@@ -359,54 +359,6 @@
       "tags": []
     },
     {
-      "id": "marc-aramini-19c4690b",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight Chapter 3",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-06-07",
-      "url": "https://www.youtube.com/watch?v=KNw2dCHTOdc",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/KNw2dCHTOdc/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-d98d5b8c",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight - Chapter 2",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-05-07",
-      "url": "https://www.youtube.com/watch?v=2n7UVuTNCVM",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/2n7UVuTNCVM/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-56df54d3",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight Chapter 1 Analysis",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-04-14",
-      "url": "https://www.youtube.com/watch?v=qCFY_cMTG08",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/qCFY_cMTG08/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-2219c0b0",
-      "title": "Gene Wolfe's Wizard Knight: Introduction to an Extended Reading",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-04-03",
-      "url": "https://www.youtube.com/watch?v=NAQUb1EHs2Y",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
-    },
-    {
       "id": "ultan-s-library-bf25b430",
       "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
       "source": "Ultan's Library",
@@ -490,18 +442,6 @@
       "thumbnail": null
     },
     {
-      "id": "marc-aramini-37cc0f62",
-      "title": "Gene Wolfe and Literature Bonus: Tracking Song",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-06-16",
-      "url": "https://www.youtube.com/watch?v=QtMFrCOveb0",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
-    },
-    {
       "id": "ultan-s-library-e377b022",
       "title": "Everything has to be true somehow",
       "source": "Ultan's Library",
@@ -512,42 +452,6 @@
       "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "marc-aramini-166c4cdf",
-      "title": "Gene Wolfe and Literature Part 11: An Evil Guest",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-04-01",
-      "url": "https://www.youtube.com/watch?v=vhTYdc_K_6o",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/vhTYdc_K_6o/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-15211a53",
-      "title": "Gene Wolfe and Literature Part 10: There Are Doors",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-03-31",
-      "url": "https://www.youtube.com/watch?v=TsSlKDwjn_A",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/TsSlKDwjn_A/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-c4a1b0f2",
-      "title": "Gene Wolfe and Literature Part 9: Sorcerer's House",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-03-25",
-      "url": "https://www.youtube.com/watch?v=wvUlG2I4PEI",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/wvUlG2I4PEI/hqdefault.jpg"
     },
     {
       "id": "manual-theringer-highart",
