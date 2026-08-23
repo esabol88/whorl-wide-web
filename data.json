@@ -1,148 +1,169 @@
 {
-  "generatedAt": "2026-07-31T22:53:26.716Z",
+  "generatedAt": "2026-08-23T20:10:58.624Z",
   "items": [
     {
-      "id": "alzabo-soup-2688e0f0",
-      "title": "General Discussion - Gene Wolfe's Book of the Short Sun",
+      "id": "youtube-search-0c7390f1",
+      "title": "Gene Wolfe Scores WHAT?! 👀 [Battle of the Shorts: Week 14]",
+      "source": "Dad Like Book",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-22",
+      "url": "https://www.youtube.com/watch?v=l4J3cmQWEYQ",
+      "desc": "WEEK FOURTEEN IS HERE!!! Let's discuss two awesome matchups this week. First, we have an Elric tale from Michael Moorcock ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/l4J3cmQWEYQ/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-537cff5f",
+      "title": "Charity shop find today",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-22",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vvo8tv/charity_shop_find_today/",
+      "desc": "First edition UK hardback, £20. Keep hunting! \n    submitted by    /u/sadevi123  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/dzqc4hwetzkh1.jpeg"
+    },
+    {
+      "id": "alzabo-soup-b5eaf905",
+      "title": "Peter Pan, by J.M. Barrie",
       "source": "Alzabo Soup",
       "type": "podcast",
-      "series": "short",
-      "date": "2026-07-31",
-      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
-      "desc": "Intro - Metz and Phil try BTS flavored Oreos. Content (8:13) - Discussion of The Book of the Short Sun, by Gene Wolfe. Current Read-Along - The Killing Machine, by Jack Vance Check out more at alzabosoup.com.",
+      "series": "general",
+      "date": "2026-08-21",
+      "url": "https://www.alzabosoup.com/categories/other-authors/",
+      "desc": "Intro - Phil and Metz discuss the 1991 movie Hook Content (12:14) - Discussion of Peter Pan, by J.M. Barrie Current Read-Along - The Palace of Love, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-genewolfe-b3498939",
-      "title": "Illustration: The Analeptic Alzabo",
+      "id": "r-genewolfe-48e93e15",
+      "title": "(Illustration) The Island of Dr. Death and Other Stories",
       "source": "r/genewolfe",
       "type": "fanart",
       "series": "general",
-      "date": "2026-07-31",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vc09mo/illustration_the_analeptic_alzabo/",
-      "desc": "This one went through a couple major revisions and was a bit more tricky than some of the others--Definitely wanted to give it a very pulpy, acidic color palette, but finally landing on one that worked for the compositio",
+      "date": "2026-08-21",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vu30w0/illustration_the_island_of_dr_death_and_other/",
+      "desc": "(Digital Painting) Based on the last couple pages of the story. I'd love to make more illustrations based off his short stories in the future. He's a very challenging author to make illustrations for but its hard to resi",
       "tags": [],
-      "thumbnail": "https://i.redd.it/hwzhgdt96mgh1.jpeg",
-      "artist": "u/deimosremus (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/deimosremus",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vc09mo/illustration_the_analeptic_alzabo/",
+      "thumbnail": "https://i.redd.it/098um3wnwmkh1.jpeg",
+      "artist": "u/SUPERSP_PRO (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/SUPERSP_PRO",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vu30w0/illustration_the_island_of_dr_death_and_other/",
       "nsfw": false
     },
     {
-      "id": "r-rereadingwolfepodcast-1f8b848a",
-      "title": "I may have pinpointed when Severian passed the trial",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-31",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1vbhn8u/i_may_have_pinpointed_when_severian_passed_the/",
-      "desc": "I think I’ve pinpointed the moment Severian may have passed his Trial as UOTNS tells us he already did some time on the past. Certainly I do think it’s a cumulative thing and not one specific moment, but quoting from cha",
-      "tags": [
-        "Severian",
-        "Thecla"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "youtube-search-0a590aeb",
-      "title": "The Claw of the Conciliator Gene Wolfe (Book of the New Sun Bk. 2)",
-      "source": "Walls of Horror",
+      "id": "youtube-search-ad47d4bb",
+      "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 17-24",
+      "source": "Jeff Cannata",
       "type": "video",
       "series": "new",
-      "date": "2026-07-30",
-      "url": "https://www.youtube.com/watch?v=kwnenD1rDS4",
-      "desc": "The Claw of the Conciliator by Gene Wolfe Book of the New Sun Book 2 Thanks for watching! My first Book of the New Sun Video: ...",
-      "tags": [
-        "the Claw"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/kwnenD1rDS4/hqdefault.jpg"
+      "date": "2026-08-20",
+      "url": "https://www.youtube.com/watch?v=u6olTy2JO0A",
+      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the third novel in Gene Wolfe's ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/u6olTy2JO0A/hqdefault.jpg"
     },
     {
-      "id": "r-genewolfe-82911c53",
-      "title": "Inspired by my favorite book in the solar cycle (On Blue's Waters)",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "short",
-      "date": "2026-07-30",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vatyt6/inspired_by_my_favorite_book_in_the_solar_cycle/",
-      "desc": "Incredibly happy with how this turned out! Done by Katerina at Last Century Tattoo \n    submitted by    /u/IMTReignover  \n [link]   [comments]",
-      "tags": [
-        "Horn"
-      ],
-      "thumbnail": "https://i.redd.it/p3n6uksredgh1.jpeg",
-      "artist": "u/IMTReignover (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/IMTReignover",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vatyt6/inspired_by_my_favorite_book_in_the_solar_cycle/",
-      "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-8cdda00a",
-      "title": "Severian Holding Terminus Est (Tattoo)",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-30",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vadhal/severian_holding_terminus_est_tattoo/",
-      "desc": "submitted by    /u/tunaMaestro97  \n [link]   [comments]",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-d38ea4c2",
-      "title": "Great cover",
+      "id": "r-genewolfe-aded010e",
+      "title": "Not sure what to expect but excited",
       "source": "r/genewolfe",
       "type": "discussion",
       "series": "general",
-      "date": "2026-07-30",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vavj61/great_cover/",
+      "date": "2026-08-20",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vtehtn/not_sure_what_to_expect_but_excited/",
       "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": "https://i.redd.it/j6ql486fpdgh1.jpeg"
+      "thumbnail": "https://i.redd.it/vvgqdye40ikh1.jpeg"
     },
     {
-      "id": "r-genewolfe-aca6d000",
-      "title": "Sketch: Thrax Locals",
+      "id": "youtube-search-21114b6e",
+      "title": "the fifth head of cerberus book review",
+      "source": "Slop War",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-18",
+      "url": "https://www.youtube.com/watch?v=XRU-zKCJlms",
+      "desc": "Gene Wolfe uses his dense and deceptive writing style to craft a sci fi epic that tackles culture, colonialism and identity. I liked it a ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/XRU-zKCJlms/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-4bf55932",
+      "title": "Spotted in the Steam description of the new Darkest Dungeon DLC",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-18",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vs4hxx/spotted_in_the_steam_description_of_the_new/",
+      "desc": "Definitely one of my favorite quotes from BotNS\n    submitted by    /u/CompoteNext1955  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/192qk8mlo7kh1.png"
+    },
+    {
+      "id": "r-genewolfe-9ecad15a",
+      "title": "Weird coincidence",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-18",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vrisrf/weird_coincidence/",
+      "desc": "Driving back from a camping trip…. Listening to sword of the lictor audio book and I come across this street sign lol \n    submitted by    /u/ddzon1  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "youtube-search-e5522ff9",
+      "title": "WHY IS IT ALWAYS GENE WOLFE #BOTNS",
+      "source": "Dad Like Book",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-17",
+      "url": "https://www.youtube.com/watch?v=yuvq927zxlk",
+      "desc": "Just finished “The Death of Doctor Island” by Gene Wolfe over lunch Hear my review this Saturday (8/22) morning at 9 am CT ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/yuvq927zxlk/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-41b2a1f2",
+      "title": "Illustration: The Atrium of Time",
       "source": "r/genewolfe",
       "type": "fanart",
       "series": "general",
-      "date": "2026-07-29",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v9lgay/sketch_thrax_locals/",
-      "desc": "I've got several of the more finished illustrations in progress-- so I'll be sure to post them here once each one is done! In the meantime, was doing some ideation/sketches for an illustration that takes place in Thrax a",
+      "date": "2026-08-17",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vr3502/illustration_the_atrium_of_time/",
+      "desc": "Latest illustration is finished! Definitely one of my favorites so far-- when doing research on the \"Sun Dial\" I came across posts on this reddit about Gnomonic Blocks or Multifaceted Sundials, and while it's very possib",
       "tags": [],
-      "thumbnail": "https://i.redd.it/5352lyfsh3gh1.jpeg",
+      "thumbnail": "https://i.redd.it/j0fyjtfuqzjh1.jpeg",
       "artist": "u/deimosremus (Reddit)",
       "artistUrl": "https://www.reddit.com/user/deimosremus",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1v9lgay/sketch_thrax_locals/",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vr3502/illustration_the_atrium_of_time/",
       "nsfw": false
     },
     {
-      "id": "youtube-search-4e99afc2",
-      "title": "The Shadow of the Torturer by Gene Wolfe - Audiobook",
-      "source": "Pacoco",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-28",
-      "url": "https://www.youtube.com/watch?v=sYqlx4u-mTQ",
-      "desc": "Book 1 of 'The Book of the New Sun'. Severian's journey begins in this legendary science fantasy epic.",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/sYqlx4u-mTQ/hqdefault.jpg"
+      "id": "alzabo-soup-2688e0f0",
+      "title": "General Discussion - Gene Wolfe's Solar Cycle",
+      "source": "Alzabo Soup",
+      "type": "podcast",
+      "series": "general",
+      "date": "2026-08-07",
+      "url": "https://www.alzabosoup.com/category/the-book-of-the-short-sun/",
+      "desc": "Intro - Phil challenges Metz to a poetry recital. Content (5:38) - Discussion of the solar cycle by Gene Wolfe. Current Read-Along - The Palace of Love, by Jack Vance Check out more at alzabosoup.com.",
+      "tags": [],
+      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-rereadingwolfepodcast-95b862cf",
-      "title": "Why Are Episode Releases Inconsistent Across Platforms?",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
+      "id": "nick-reads-fantasy-4806a50d",
+      "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
+      "source": "Nick Reads Fantasy",
+      "type": "video",
       "series": "general",
-      "date": "2026-07-27",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1v82d0f/why_are_episode_releases_inconsistent_across/",
-      "desc": "Do we have a reason why not all episodes are available on all podcast platforms equally?\n I understand bonus episodes on Patreon (which I subscribe to), but not every episode is on Spotify.\n For example, 2:17a, The Tale ",
+      "date": "2026-08-05",
+      "url": "https://www.youtube.com/watch?v=sij2e-erajU",
+      "desc": "",
       "tags": [],
-      "thumbnail": null
+      "thumbnail": "https://i4.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
     },
     {
       "id": "rereading-wolfe-c309e24a",
@@ -159,31 +180,15 @@
       "thumbnail": "https://i2.ytimg.com/vi/mrELZBYENuY/hqdefault.jpg"
     },
     {
-      "id": "r-genewolfe-e10599f7",
-      "title": "Tell me you’re reading BotNS without telling me you’re reading BotNS",
-      "source": "r/genewolfe",
-      "type": "discussion",
+      "id": "manual-richhorton-fifthhead",
+      "title": "Beauty, Mystery, Horror, Shapechanging",
+      "source": "Rich Horton",
+      "type": "article",
       "series": "general",
-      "date": "2026-07-26",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1v7inb2/tell_me_youre_reading_botns_without_telling_me/",
-      "desc": "submitted by    /u/Pooglio17  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/5i4a6cxjknfh1.jpeg"
-    },
-    {
-      "id": "r-rereadingwolfepodcast-5a18c2e6",
-      "title": "The Dorcas Break-up Episode 2 - tBotNS - 3:11,12 - The Sword of the Lictor - The Book of the New Sun by Gene Wolfe",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-07-26",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1v7hnq7/the_dorcas_breakup_episode_2_tbotns_31112_the/",
-      "desc": "Edit: I corrected the link to the episode. - James\n LISTEN HERE and show notes.\n The second part of Dorcas and Severian's breakup, in which... honestly, it's too sad to be snarky.\n No listener comments in this one, so no",
-      "tags": [
-        "Severian",
-        "Dorcas"
-      ],
-      "thumbnail": null
+      "date": "2026-07-24",
+      "url": "https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging",
+      "desc": "A close, personal essay on The Fifth Head of Cerberus, Wolfe's second novel — the twin-planet structure, the shapechanging Annese, Veil's Hypothesis, and how little of it resolves cleanly even on a third read.",
+      "tags": []
     },
     {
       "id": "rereading-wolfe-509384d0",
@@ -211,17 +216,6 @@
       "tags": []
     },
     {
-      "id": "urth-mailing-list-b92588aa",
-      "title": "(urth) Homage to The Changeling?",
-      "source": "Urth Mailing List",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-06-04",
-      "url": "http://lists.urth.net/pipermail/urth-urth.net/2026-June/054349.html",
-      "desc": "Thread on the Urth Mailing List (urth.net), an active Gene Wolfe discussion list running since the 1990s.",
-      "tags": []
-    },
-    {
       "id": "high-low-brow-002378fd",
       "title": "Gene Wolfe: Citadel of the Autarch (BOTNS 4) - Full Analysis | High Lowbrow",
       "source": "High Low Brow",
@@ -232,30 +226,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i4.ytimg.com/vi/cuJL2Hu_aEM/hqdefault.jpg"
-    },
-    {
-      "id": "high-low-brow-2a0f8d85",
-      "title": "Gene Wolfe: The Sword of the Lictor (BOTNS Pt 3) - Full Analysis | High Lowbrow",
-      "source": "High Low Brow",
-      "type": "video",
-      "series": "new",
-      "date": "2026-05-19",
-      "url": "https://www.youtube.com/watch?v=u9OxgGjPkmA",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/u9OxgGjPkmA/hqdefault.jpg"
-    },
-    {
-      "id": "isamwise-ccd9001d",
-      "title": "April Wrap Up - Project Hail Mary, Gene Wolfe and The Terminal List",
-      "source": "iSamwise",
-      "type": "video",
-      "series": "general",
-      "date": "2026-05-05",
-      "url": "https://www.youtube.com/watch?v=AHAY7lTyqR0",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/AHAY7lTyqR0/hqdefault.jpg"
     },
     {
       "id": "rereading-wolfe-7d19375e",
@@ -558,18 +528,6 @@
       "tags": []
     },
     {
-      "id": "ultan-s-library-9134967b",
-      "title": "Gene Wolfe and The Pocket Book of Science-Fiction",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2024-05-30",
-      "url": "https://ultan.org.uk/gene-wolfe-and-the-pocket-book-of-science-fiction/",
-      "desc": "Wolfe said that Wollheim's 1943 anthology was his gateway to discovering the science fiction pulps. Here, Michael Andre-Driussi explores one of Wolfe's earliest influences.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "manual-adamroberts-newsun",
       "title": "Gene Wolfe, \"The Book of the New Sun\" (1980-83)",
       "source": "Adam Roberts",
@@ -629,42 +587,6 @@
       "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
     },
     {
-      "id": "ultan-s-library-bf25b430",
-      "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-11-23",
-      "url": "https://ultan.org.uk/micro-wolfenomics-joan-gordon-reviews-gene-wolfes-first-four-novels-a-chapter-guide-by-michael-andre-driussi/",
-      "desc": "There are two kinds of Wolfeian criticism: macro and micro. Michael Andre-Driussi offers the micro, noting all the small details, word meanings and origins, specific allusions, patterns and inconsistencies in plot, time-",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-c68a226d",
-      "title": "A Curiously Conflicted Book: Craig Brewer reviews ‘Interlibrary Loan’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-11-09",
-      "url": "https://ultan.org.uk/a-curiously-conflicted-book-craig-brewer-reviews-gene-wolfes-interlibrary-loan/",
-      "desc": "This final work is not simply a coda to Wolfe’s career but an integral part of its working out of some of his most central concerns.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-5e1a91e0",
-      "title": "A Weird Mystery: James Wynn considers Gene Wolfe’s ‘A Borrowed Man’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-10-26",
-      "url": "https://ultan.org.uk/a-weird-mystery-james-wynn-considers-gene-wolfes-a-borrowed-man/",
-      "desc": "As a detective novel, this is not a puzzle. It’s a finger-trap.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "crossref-scholarly-papers-188184c2",
       "title": "Time After Time: On the speculative fiction of Gene Wolfe",
       "source": "Critical Quarterly",
@@ -674,42 +596,6 @@
       "url": "https://doi.org/10.1111/criq.12563",
       "desc": "By Francis Gooding — Critical Quarterly",
       "tags": []
-    },
-    {
-      "id": "ultan-s-library-9f37d039",
-      "title": "Review: Gene Wolfe’s ‘Operation ARES’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-08-03",
-      "url": "https://ultan.org.uk/review-gene-wolfes-operation-ares/",
-      "desc": "A review by Martin Crookall of Gene Wolfe's problematic and rarely discussed first novel.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-aaf5f4a8",
-      "title": "Standing on the Shoulders of Giants – A Review of Michael Andre-Driussi’s ‘The Book of the New Sun: A Chapter Guide’",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-07-20",
-      "url": "https://ultan.org.uk/standing-on-the-shoulders-of-giants-a-review-of-michael-andre-driussis-the-book-of-the-new-sun-a-chapter-guide/",
-      "desc": "\"While Andre-Driussi acknowledges the complexity and allusiveness of Wolfe’s work, his writing has always seemed to me the most objectively grounded and easiest to digest ... of all the writers and analysts currently exp",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "ultan-s-library-20ee2c82",
-      "title": "Posthistory 201",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-07-06",
-      "url": "https://ultan.org.uk/posthistory-201/",
-      "desc": "In this new study of how human history is measured and portrayed in Gene Wolfe’s Solar Cycle, Michael Andre-Driussi reassesses the subject of his earlier essay “Posthistory 101” and examines the textual evidence for esti",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-37cc0f62",
@@ -722,18 +608,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
-    },
-    {
-      "id": "ultan-s-library-e377b022",
-      "title": "Everything has to be true somehow",
-      "source": "Ultan's Library",
-      "type": "article",
-      "series": "new",
-      "date": "2020-06-08",
-      "url": "https://ultan.org.uk/everything-has-to-be-true-somehow/",
-      "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "marc-aramini-166c4cdf",
