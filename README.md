@@ -1346,6 +1346,47 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## Urth Net — a new, properly readable mailing list mirror
+
+A new site went live: urth.darkrealm.vip, a personal, unofficial mirror
+of the Urth and Whorl mailing lists — over 38,000 messages, 1996 to 2022,
+with real per-thread URLs, real dates, full-text search, and no tracking
+or analytics of any kind. Genuinely excellent, and directly relevant:
+the existing Urth Mailing List source has always been the most fragile
+one in this file, scraping urth.net's own clunky monthly thread-index
+pages and needing a second fetch per message just to get a real date.
+
+**Not a replacement for the ongoing fetch source, though** — checked the
+site's own "About" page before assuming otherwise: this mirror is a
+static historical archive, stopping in February 2022, with no sign of
+continuing updates. It solves "make 25 years of existing archive
+readable," not "catch whatever's posted this week" — the existing
+scraper against live urth.net still owns that, for whatever trickle of
+new content still shows up there.
+
+Added two things instead, matching what the site's actually good for:
+
+- **A Reference Shelf entry** for the mirror itself, using its own real
+  logo (`urth.darkrealm.vip/static/logo.svg`), with an original
+  description — not copied from the site's own text — that also notes
+  the maintainer's own stated preference: "please treat urth.net as the
+  primary source... it should be cited in preference to this mirror."
+  Linking to the mirror's actual thread pages here regardless, since
+  that's exactly the readability problem it exists to solve, and it's
+  the same practice already used elsewhere in this project (Goodreads
+  editions over harder-to-use publisher pages, for instance) — but the
+  shelf description itself is honest about the site's own stated
+  preference rather than glossing over it.
+- **Six threads from the site's own "Featured conversations"** backfilled
+  into `MANUAL_ITEMS` with real dates and direct thread URLs: Severian's
+  unreliable memory, a Fifth Head of Cerberus/Turing test reading, a
+  close reading of Nightside the Long Sun's opening pages, a long review
+  (and rebuttal) of The Wizard Knight, a real debate on how orthodox
+  Wolfe's Catholicism actually is, and a proposed (and mostly rejected)
+  source-hunt connecting Tracking Song to The Call of the Wild. All six
+  descriptions written fresh rather than adapted from the site's own
+  summaries.
+
 ## Rich Horton — a real missed piece, added both ways
 
 A direct report of a specific missed piece: "Beauty, Mystery, Horror,

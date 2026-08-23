@@ -1978,6 +1978,78 @@ const MANUAL_ITEMS = [
     url: 'https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging',
     desc: 'A close, personal essay on The Fifth Head of Cerberus, Wolfe\'s second novel — the twin-planet structure, the shapechanging Annese, Veil\'s Hypothesis, and how little of it resolves cleanly even on a third read.',
     tags: guessTags('Fifth Head of Cerberus shapechanging Veil Hypothesis')
+  },
+  // Six threads pulled from Urth Net's own "Featured conversations" —
+  // genuinely excellent historical discussions, backfilled the same way
+  // as everything else historical in this list, since the mailing list
+  // itself is now static (archive stops February 2022, nothing ongoing
+  // to fetch). Descriptions below are written fresh, not copied from the
+  // site's own summaries.
+  {
+    id: 'manual-urthnet-severian-memory',
+    title: "Sev's Not-So-Perfect Memory",
+    source: 'Urth Mailing List',
+    type: 'discussion',
+    series: 'new',
+    date: '2003-07-10',
+    url: 'https://urth.darkrealm.vip/thread/urth/4078',
+    desc: "A close argument that Severian's famous perfect memory doesn't actually hold up under scrutiny, worked through by the list line by line.",
+    tags: guessTags('Severian memory unreliable narrator')
+  },
+  {
+    id: 'manual-urthnet-5hc-turing',
+    title: '5HC: Skinner, Turing',
+    source: 'Urth Mailing List',
+    type: 'discussion',
+    series: 'general',
+    date: '2005-02-03',
+    url: 'https://urth.darkrealm.vip/thread/urth/4354',
+    desc: 'Reads The Fifth Head of Cerberus through behaviorism and the Turing test, connecting it to Wolfe\'s own story "The Death of Doctor Island."',
+    tags: guessTags('Fifth Head of Cerberus Turing test behaviorism')
+  },
+  {
+    id: 'manual-urthnet-nightside-ch1',
+    title: 'Nightside Again, Chapter One',
+    source: 'Urth Mailing List',
+    type: 'discussion',
+    series: 'long',
+    date: '1998-12-11',
+    url: 'https://urth.darkrealm.vip/thread/whorl/580',
+    desc: 'A word-by-word close reading of the opening pages of Nightside the Long Sun, tracking one repeated detail across three pages.',
+    tags: guessTags('Nightside the Long Sun close reading')
+  },
+  {
+    id: 'manual-urthnet-wizardknight-review',
+    title: 'Long Review Essay on Wizard Knight',
+    source: 'Urth Mailing List',
+    type: 'discussion',
+    series: 'general',
+    date: '2007-09-18',
+    url: 'https://urth.darkrealm.vip/thread/urth/4910',
+    desc: 'An unimpressed, detailed review of The Wizard Knight draws a long point-by-point response from the list.',
+    tags: guessTags('The Wizard Knight review')
+  },
+  {
+    id: 'manual-urthnet-wolfean-theologies',
+    title: 'Wolfean Theologies',
+    source: 'Urth Mailing List',
+    type: 'discussion',
+    series: 'general',
+    date: '2009-02-04',
+    url: 'https://urth.darkrealm.vip/thread/urth/5332',
+    desc: "A real debate over how orthodox Wolfe's Catholicism actually is, and what would even count as heresy inside his own fiction.",
+    tags: guessTags('Wolfe Catholicism theology heresy')
+  },
+  {
+    id: 'manual-urthnet-tracking-song',
+    title: 'Tracking Song and The Call of the Wild',
+    source: 'Urth Mailing List',
+    type: 'discussion',
+    series: 'general',
+    date: '2007-06-09',
+    url: 'https://urth.darkrealm.vip/thread/urth/4846',
+    desc: "Someone proposes Tracking Song as a deliberate rewriting of The Call of the Wild — a claim the list mostly doesn't buy, but takes seriously.",
+    tags: guessTags('Tracking Song Call of the Wild source')
   }
 ];
 
