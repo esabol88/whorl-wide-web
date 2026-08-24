@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-08-24T03:44:46.510Z",
+  "generatedAt": "2026-08-24T04:35:03.212Z",
   "items": [
+    {
+      "id": "youtube-search-3c8ec26f",
+      "title": "Understanding Peace by Gene Wolfe",
+      "source": "Justin A.W. Blair",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-24",
+      "url": "https://www.youtube.com/watch?v=FoyMCFv-QK4",
+      "desc": "Discussing a lesser-known, Gene Wolfe book--Peace.",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/FoyMCFv-QK4/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-0c7390f1",
       "title": "Gene Wolfe Scores WHAT?! 👀 [Battle of the Shorts: Week 14]",
