@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:40:53.957Z",
+  "generatedAt": "2026-08-25T15:08:56.911Z",
   "items": [
     {
       "id": "youtube-search-1c5573cd",
@@ -108,6 +108,30 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
+      "id": "gene-wolfe-collection-omeka-1354f69d",
+      "title": "1994-02-17 Wolfe to Kovacs",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "new",
+      "date": "2026-08-21",
+      "url": "https://wolfenarrators.omeka.net/items/show/204",
+      "desc": "Dublin Core\nTitle\n1994-02-17 Wolfe to Kovacs\n\n        \nDescription\nPersonal letter from Gene Wolfe to Dr. Christopher Kovacs. Scanned by Dr. Kovacs. Permission obtained August 19, 2026 from him to post contents of letter",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "gene-wolfe-collection-omeka-2696858d",
+      "title": "1994-02-04 Wolfe to Kovacs",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "long",
+      "date": "2026-08-21",
+      "url": "https://wolfenarrators.omeka.net/items/show/203",
+      "desc": "Dublin Core\nTitle\n1994-02-04 Wolfe to Kovacs\n\n        \nDescription\nPersonal letter from Gene Wolfe to Dr. Christopher Kovacs. Scanned by Dr. Kovacs. Permission obtained August 19, 2026 from him to post contents of letter",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "r-genewolfe-48e93e15",
       "title": "(Illustration) The Island of Dr. Death and Other Stories",
       "source": "r/genewolfe",
@@ -160,6 +184,66 @@
       "thumbnail": "https://i.redd.it/192qk8mlo7kh1.png"
     },
     {
+      "id": "gene-wolfe-collection-omeka-825b5b6f",
+      "title": "2011 \"Gene Wolfe, Engineering the Future\"",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-08-14",
+      "url": "https://wolfenarrators.omeka.net/items/show/202",
+      "desc": "Dublin Core\nTitle\n2011 \"Gene Wolfe, Engineering the Future\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nLocus #602, March 2011\n\n        \nDate\nMarch 2011\n\n        \nLanguage\nEnglish",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "gene-wolfe-collection-omeka-ca608249",
+      "title": "2002 \"Ray Lafferty\"",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-08-13",
+      "url": "https://wolfenarrators.omeka.net/items/show/201",
+      "desc": "Dublin Core\nTitle\n2002 \"Ray Lafferty\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nLocus #496, May 2002\n\n        \nDate\nMay 2002\n\n        \nLanguage\nEnglish\n\n    \n\n\n        \nText Item Type Metadata\nText\nRAY LA",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "gene-wolfe-collection-omeka-583077bc",
+      "title": "1988 \"Letter of Comment,\" Science Fiction Chronicle #102, March 1988",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-08-12",
+      "url": "https://wolfenarrators.omeka.net/items/show/200",
+      "desc": "Dublin Core\nTitle\n1988 \"Letter of Comment,\" Science Fiction Chronicle #102, March 1988\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nScience Fiction Chronicle #102, March 1988\n\n        \nDate\nMarch 1988\n\n     ",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "gene-wolfe-collection-omeka-8abf7632",
+      "title": "1980 \"What Do They Mean, SF?\"",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-08-12",
+      "url": "https://wolfenarrators.omeka.net/items/show/199",
+      "desc": "Dublin Core\nTitle\n1980 \"What Do They Mean, SF?\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nThe Writer, August 1980\n\n        \nDate\nAugust 1980\n\n        \nLanguage\nEnglish",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "gene-wolfe-collection-omeka-19744c97",
+      "title": "1976 \"The Special Problems of Science Fiction\"",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-08-12",
+      "url": "https://wolfenarrators.omeka.net/items/show/198",
+      "desc": "Dublin Core\nTitle\n1976 \"The Special Problems of Science Fiction\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nThe Writer, May 1976\n\n        \nDate\nMay 1976\n\n        \nLanguage\nEnglish",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "alzabo-soup-2688e0f0",
       "title": "General Discussion - Gene Wolfe's Solar Cycle",
       "source": "Alzabo Soup",
@@ -170,6 +254,23 @@
       "desc": "Intro - Phil challenges Metz to a poetry recital. Content (5:38) - Discussion of the solar cycle by Gene Wolfe. Current Read-Along - The Palace of Love, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "gene-wolfe-collection-omeka-a9249e52",
+      "title": "1997 \"The Wolfean Oracle Speaks\"",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "new",
+      "date": "2026-08-07",
+      "url": "https://wolfenarrators.omeka.net/items/show/197",
+      "desc": "Dublin Core\nTitle\n1997 \"The Wolfean Oracle Speaks\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nCloud Chamber #77, September 1997\n\n        \nDate\nSeptember 1997\n\n        \nLanguage\nEnglish\n\n    \n\n\n        \nTex",
+      "tags": [
+        "Severian",
+        "Silk",
+        "Horn",
+        "Typhon"
+      ],
+      "thumbnail": null
     },
     {
       "id": "nick-reads-fantasy-4806a50d",
