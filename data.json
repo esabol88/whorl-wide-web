@@ -1,6 +1,20 @@
 {
-  "generatedAt": "2026-08-25T22:15:33.808Z",
+  "generatedAt": "2026-08-25T23:16:39.665Z",
   "items": [
+    {
+      "id": "youtube-search-1c5573cd",
+      "title": "The Digital Archipelago #166: The Claw",
+      "source": "The Prudentialist",
+      "type": "video",
+      "series": "new",
+      "date": "2026-08-25",
+      "url": "https://www.youtube.com/watch?v=qc2ywO_85A8",
+      "desc": "Matt and Gio return for the patron backed review of Gene Wolfe's 1981 novel, Claw of the Conciliator, the second book in the Book ...",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/qc2ywO_85A8/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-3c8ec26f",
       "title": "Understanding Peace by Gene Wolfe",
@@ -146,16 +160,16 @@
       "thumbnail": "https://i.ytimg.com/vi/u6olTy2JO0A/hqdefault.jpg"
     },
     {
-      "id": "r-genewolfe-4bf55932",
-      "title": "Spotted in the Steam description of the new Darkest Dungeon DLC",
+      "id": "r-genewolfe-aded010e",
+      "title": "Not sure what to expect but excited",
       "source": "r/genewolfe",
       "type": "discussion",
       "series": "general",
-      "date": "2026-08-18",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vs4hxx/spotted_in_the_steam_description_of_the_new/",
-      "desc": "Definitely one of my favorite quotes from BotNS\n    submitted by    /u/CompoteNext1955  \n [link]   [comments]",
+      "date": "2026-08-20",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vtehtn/not_sure_what_to_expect_but_excited/",
+      "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": "https://i.redd.it/192qk8mlo7kh1.png"
+      "thumbnail": "https://i.redd.it/vvgqdye40ikh1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-825b5b6f",
