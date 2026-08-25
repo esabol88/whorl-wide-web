@@ -312,6 +312,31 @@ const SOURCES = [
     kind: 'crossref'
   },
 
+  // --- Gene Wolfe Collection (Omeka archive) ---
+  // A genuinely different kind of source: primary documents, not
+  // commentary — scanned personal letters (including several from Wolfe
+  // himself, posted with explicit permission), interviews, fanzine
+  // excerpts, letters of comment to genre magazines. Confirmed active
+  // (a permission dated this month) rather than a static one-time
+  // archive, so added as a real ongoing source rather than a backfill.
+  // No requireKeyword — the whole site is Wolfe-specific already, unlike
+  // the general-interest creators elsewhere in this file.
+  //
+  // Worth flagging for the first real run: uncertain whether Omeka's
+  // RSS2 output uses "date added to the archive" or "the document's own
+  // historical date" (e.g. 1994 for an old letter) as pubDate — if dates
+  // come through looking implausibly old/uniform, that's the likely
+  // explanation, not a bug in this fetcher. Standard RSS2, no custom
+  // parsing needed — the generic kind:'rss' path handles it the same as
+  // every other source here.
+  {
+    name: 'Gene Wolfe Collection (Omeka)',
+    type: 'article',
+    series: 'general',
+    kind: 'rss',
+    url: 'https://wolfenarrators.omeka.net/items/browse?output=rss2'
+  },
+
   // --- Patreon (specific tracked creators — see fetchPatreon above) ---
   // Empty by default — add creators you specifically want tracked, one
   // line each. Each needs the creator's numeric Patreon ID, not their
@@ -1464,6 +1489,23 @@ async function fetchGoogleAlerts(source) {
 // Caveat: the thread-index page doesn't expose per-message timestamps, so
 // dates are approximated to "today" (the day this script ran) rather than
 // the actual post date.
+// CONFIRMED DEAD AT THE SOURCE: a live run returned HTTP 404 reading the
+// archive index. This matches, exactly, what the maintainer of a new
+// third-party mirror (urth.darkrealm.vip) says on their own "About"
+// page: "the Mailman/pipermail archive... is no longer served from its
+// origin and was recovered from the Internet Archive's Wayback Machine."
+// Not a bug in this scraper — the thing it's scraping is genuinely gone.
+// Deliberately NOT repointed at that mirror as a replacement: the mirror
+// is a static historical archive (stops February 2022, no sign of
+// ongoing updates), so it can't supply new content going forward any
+// more than a snapshot can — pointing this scraper at it would just
+// silently replace one kind of nothing with another. Left in place and
+// inert, same treatment as DeviantArt/Bluesky/the blocked Substack
+// sources: could plausibly start working again if urth.net's original
+// archive ever comes back, even though it doesn't work now. See the
+// Urth Net Reference Shelf entry and the six backfilled threads in
+// MANUAL_ITEMS for what this project actually did with that mirror
+// instead — a one-time backfill, not an ongoing source.
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 const PIPERMAIL_BASE = 'http://lists.urth.net/pipermail/urth-urth.net/';
 

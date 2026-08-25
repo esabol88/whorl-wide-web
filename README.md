@@ -1346,6 +1346,51 @@ this comes back later, the intended author list was Jack Vance, M. John
 Harrison, Mervyn Peake, John Crowley, Clark Ashton Smith, and Lord
 Dunsany, each as its own compound-query alert alongside Schweitzer.
 
+## Urth Mailing List scraper retired, and a genuinely good new source
+
+Two follow-ups to the Urth Net discovery above.
+
+**The ongoing pipermail scraper is now documented as confirmed dead**,
+by explicit decision rather than left ambiguous — a live run returned
+`HTTP 404 reading archive index`, and Urth Net's own "About" page
+independently confirms why: the original pipermail archive "is no longer
+served from its origin," which is exactly why that mirror's maintainer
+had to recover it from the Wayback Machine in the first place. Not a bug
+in this scraper — the thing it scrapes is genuinely gone. Deliberately
+not repointed at the new mirror as a replacement, either: that mirror is
+a static historical snapshot (stops February 2022, no sign of ongoing
+updates), so redirecting the scraper there would just silently swap one
+kind of nothing for another. Left in place and inert, same treatment as
+DeviantArt/Bluesky/the blocked Substack sources — could start working
+again if urth.net's original archive ever comes back, even though it
+doesn't work now.
+
+**Added a genuinely different, valuable new source**: the "Gene Wolfe
+Collection," an Omeka-based archive of primary documents — scanned
+personal letters (several from Wolfe himself, posted with explicit
+permission dated this month), interviews, fanzine excerpts, letters of
+comment to genre magazines. Confirmed real and actively maintained before
+adding, not just assumed — checked the site directly, saw 204 items and
+a very recent permission date. Confirmed the RSS2 feed is real too, not
+guessed at: Omeka's own browse page lists it directly under "Output
+Formats" alongside atom/json/dcmes-xml, a standard, documented Omeka
+feature. No `requireKeyword` needed, unlike the general-interest Substack
+writers elsewhere in this file — the whole site is Wolfe-specific by
+design. One real uncertainty flagged for the first live run rather than
+assumed either way: whether Omeka's RSS2 output dates items by "when
+added to the archive" or by the document's own historical date (a 1994
+letter genuinely is from 1994) — if dates come through looking
+implausibly old, that's the explanation, not a fetcher bug.
+
+Worth being explicit about the archive's own copyright situation, since
+it's more sensitive than most sources here: the letters' actual text
+remains Wolfe's own copyrighted writing regardless of who has permission
+to host scans of them. The archive's cataloging descriptions (e.g.
+"Personal letter from Gene Wolfe to Dr. Christopher Kovacs...") are the
+site's own factual metadata, not the letters' content, and are what gets
+pulled into `desc` — same as pulling any other source's description
+field, not a reproduction of Wolfe's own writing.
+
 ## Urth Net — a new, properly readable mailing list mirror
 
 A new site went live: urth.darkrealm.vip, a personal, unofficial mirror
