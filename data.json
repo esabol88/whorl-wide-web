@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-08-27T13:17:30.047Z",
+  "generatedAt": "2026-08-27T23:20:29.591Z",
   "items": [
+    {
+      "id": "r-genewolfe-430ef2b7",
+      "title": "Hell ya",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-27",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w05itx/hell_ya/",
+      "desc": "submitted by    /u/maintainmo  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/1l2uo8m89zlh1.jpeg"
+    },
     {
       "id": "youtube-search-8726d8db",
       "title": "Gene Wolfe 1980&#39;s Books #book #booktok #booktuber #scifi",
@@ -158,30 +170,6 @@
       "artistUrl": "https://www.reddit.com/user/SUPERSP_PRO",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vu30w0/illustration_the_island_of_dr_death_and_other/",
       "nsfw": false
-    },
-    {
-      "id": "youtube-search-ad47d4bb",
-      "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 17-24",
-      "source": "Jeff Cannata",
-      "type": "video",
-      "series": "new",
-      "date": "2026-08-20",
-      "url": "https://www.youtube.com/watch?v=u6olTy2JO0A",
-      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the third novel in Gene Wolfe's ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/u6olTy2JO0A/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-613a4cd0",
-      "title": "Between Light and Shadow paperback",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-08-20",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vtsc0m/between_light_and_shadow_paperback/",
-      "desc": "Here is the link for the paperback version of Between Light and Shadow. Give me about two more days for hardback - I want that format to be perfect. I haven't seen the book yet I hope it comes out good ... I really worke",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/3rcwhdymtkkh1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-825b5b6f",
