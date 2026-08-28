@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-08-27T23:20:29.591Z",
+  "generatedAt": "2026-08-28T07:30:21.571Z",
   "items": [
+    {
+      "id": "alzabo-soup-b5eaf905",
+      "title": "A High Wind in Jamaica, by Richard Hughes",
+      "source": "Alzabo Soup",
+      "type": "podcast",
+      "series": "general",
+      "date": "2026-08-28",
+      "url": "https://www.alzabosoup.com/categories/other-authors/",
+      "desc": "Intro - Metz and Phil bask in a new technological innovation. Content (8:29) - Discussion of A High Wind in Jamaica, by Richard Hughes Current Read-Along - The Face, by Jack Vance Check out more at alzabosoup.com.",
+      "tags": [],
+      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
     {
       "id": "r-genewolfe-430ef2b7",
       "title": "Hell ya",
@@ -120,16 +132,16 @@
       "thumbnail": "https://i.redd.it/dzqc4hwetzkh1.jpeg"
     },
     {
-      "id": "alzabo-soup-b5eaf905",
-      "title": "Peter Pan, by J.M. Barrie",
-      "source": "Alzabo Soup",
-      "type": "podcast",
+      "id": "r-genewolfe-0abf286f",
+      "title": "George R.R. Martin talks about Gene Wolfe briefly in \"Our podcast with George R.R. Martin\"",
+      "source": "r/genewolfe",
+      "type": "discussion",
       "series": "general",
-      "date": "2026-08-21",
-      "url": "https://www.alzabosoup.com/categories/other-authors/",
-      "desc": "Intro - Phil and Metz discuss the 1991 movie Hook Content (12:14) - Discussion of Peter Pan, by J.M. Barrie Current Read-Along - The Palace of Love, by Jack Vance Check out more at alzabosoup.com.",
+      "date": "2026-08-22",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1vv12tk/george_rr_martin_talks_about_gene_wolfe_briefly/",
+      "desc": "Talks about a story in writers workshop\n    submitted by    /u/100100wayt  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+      "thumbnail": null
     },
     {
       "id": "gene-wolfe-collection-omeka-1354f69d",
@@ -154,22 +166,6 @@
       "desc": "Dublin Core\nTitle\n1994-02-04 Wolfe to Kovacs\n\n        \nDescription\nPersonal letter from Gene Wolfe to Dr. Christopher Kovacs. Scanned by Dr. Kovacs. Permission obtained August 19, 2026 from him to post contents of letter",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-48e93e15",
-      "title": "(Illustration) The Island of Dr. Death and Other Stories",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-08-21",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vu30w0/illustration_the_island_of_dr_death_and_other/",
-      "desc": "(Digital Painting) Based on the last couple pages of the story. I'd love to make more illustrations based off his short stories in the future. He's a very challenging author to make illustrations for but its hard to resi",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/098um3wnwmkh1.jpeg",
-      "artist": "u/SUPERSP_PRO (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/SUPERSP_PRO",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vu30w0/illustration_the_island_of_dr_death_and_other/",
-      "nsfw": false
     },
     {
       "id": "gene-wolfe-collection-omeka-825b5b6f",
