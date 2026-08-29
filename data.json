@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T19:45:06.314Z",
+  "generatedAt": "2026-08-29T02:35:03.282Z",
   "items": [
     {
       "id": "alzabo-soup-b5eaf905",
@@ -12,6 +12,20 @@
       "desc": "Intro - Metz and Phil bask in a new technological innovation. Content (8:29) - Discussion of A High Wind in Jamaica, by Richard Hughes Current Read-Along - The Face, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-genewolfe-af3e3e92",
+      "title": "Agia and Agilus",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-28",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w11rxr/agia_and_agilus/",
+      "desc": "I have again taken a few liberties here since I haven’t yet reached this chapter so I’m going from memory, but I love this scene and felt like sketching it\n Edit: is there a way I can add a second image to the post? I fe",
+      "tags": [
+        "Agia"
+      ],
+      "thumbnail": "https://i.redd.it/hxdzi3oad6mh1.jpeg"
     },
     {
       "id": "r-genewolfe-430ef2b7",
@@ -132,18 +146,6 @@
       "thumbnail": "https://i.redd.it/dzqc4hwetzkh1.jpeg"
     },
     {
-      "id": "r-genewolfe-0abf286f",
-      "title": "George R.R. Martin talks about Gene Wolfe briefly in \"Our podcast with George R.R. Martin\"",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-08-22",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vv12tk/george_rr_martin_talks_about_gene_wolfe_briefly/",
-      "desc": "Talks about a story in writers workshop\n    submitted by    /u/100100wayt  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "gene-wolfe-collection-omeka-1354f69d",
       "title": "1994-02-17 Wolfe to Kovacs",
       "source": "Gene Wolfe Collection (Omeka)",
@@ -257,32 +259,6 @@
       "thumbnail": null
     },
     {
-      "id": "nick-reads-fantasy-4806a50d",
-      "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
-      "source": "Nick Reads Fantasy",
-      "type": "video",
-      "series": "general",
-      "date": "2026-08-05",
-      "url": "https://www.youtube.com/watch?v=sij2e-erajU",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-c309e24a",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-26",
-      "url": "https://www.youtube.com/watch?v=mrELZBYENuY",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/mrELZBYENuY/hqdefault.jpg"
-    },
-    {
       "id": "manual-richhorton-fifthhead",
       "title": "Beauty, Mystery, Horror, Shapechanging",
       "source": "Rich Horton",
@@ -292,20 +268,6 @@
       "url": "https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging",
       "desc": "A close, personal essay on The Fifth Head of Cerberus, Wolfe's second novel — the twin-planet structure, the shapechanging Annese, Veil's Hypothesis, and how little of it resolves cleanly even on a third read.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-509384d0",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 1",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-18",
-      "url": "https://www.youtube.com/watch?v=IMI8UyIdbrc",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/IMI8UyIdbrc/hqdefault.jpg"
     },
     {
       "id": "manual-andylee-peace",
@@ -319,18 +281,6 @@
       "tags": []
     },
     {
-      "id": "rereading-wolfe-7d19375e",
-      "title": "tbotns 3-9 \"The Salamander\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-05-02",
-      "url": "https://www.youtube.com/watch?v=vZD4oR23S_s",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/vZD4oR23S_s/hqdefault.jpg"
-    },
-    {
       "id": "reactor-2d651c20",
       "title": "Jo Walton’s Reading List: February 2026",
       "source": "Reactor",
@@ -341,30 +291,6 @@
       "desc": "Thoughts on Gene Wolfe, Sharon Shinn, and finally getting the appeal of cosy fantasy!\nThe post Jo Walton’s Reading List: February 2026 appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-3a24120e",
-      "title": "tbotns 3-8 \"Upon the Cliff\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-03-08",
-      "url": "https://www.youtube.com/watch?v=XX2iJ-XeIyk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/XX2iJ-XeIyk/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-e880272f",
-      "title": "RRW Bonus: CSE Claire Cooney and Carlos Hernandez interview",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-01-31",
-      "url": "https://www.youtube.com/watch?v=SYyL0ko4qDk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/SYyL0ko4qDk/hqdefault.jpg"
     },
     {
       "id": "reactor-f9e1b1f8",
@@ -388,18 +314,6 @@
       "url": "https://countercraft.substack.com/p/why-you-should-read-gene-wolfe-and",
       "desc": "Probably the best recent general introduction — Peace for literary readers, Fifth Head for established SF readers, plus the short fiction.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-13c61c86",
-      "title": "tbotns 3-11 and 12 Cyriaca's Wrap Up",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-11-24",
-      "url": "https://www.youtube.com/watch?v=IHHedq0ruoQ",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/IHHedq0ruoQ/hqdefault.jpg"
     },
     {
       "id": "manual-andreakalfas-undine",
@@ -429,30 +343,6 @@
       "desc": "Oh, the joys (and perils) of visiting unfamiliar places and times...\nThe post Adventures in Tourism: Five SFF Stories About Travel appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-3de0f4be",
-      "title": "tbotns 3-7 Attractions",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-09-09",
-      "url": "https://www.youtube.com/watch?v=z0NiLq0ymGM",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/z0NiLq0ymGM/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-d0f62367",
-      "title": "Bonus: Ryan Leslie talks about The Between and The Garden of Before (and Wolfe)",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-08-16",
-      "url": "https://www.youtube.com/watch?v=VYwYlNzHBdo",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/VYwYlNzHBdo/hqdefault.jpg"
     },
     {
       "id": "undertowers-podcast-fecc6d63",
@@ -517,18 +407,6 @@
       "url": "https://donbeck1.substack.com/p/your-next-read-the-book-of-the-new",
       "desc": "An enthusiastic, accessible first-reader case for New Sun being genuinely life-changing, without pretending it'll suit everyone.",
       "tags": []
-    },
-    {
-      "id": "sunbeamsjess-13c57c37",
-      "title": "april 2025 reading review · gene wolfe, marilynne robinson, isabella hammad",
-      "source": "sunbeamsjess",
-      "type": "video",
-      "series": "general",
-      "date": "2025-05-13",
-      "url": "https://www.youtube.com/watch?v=zccp6_rw7Lg",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/zccp6_rw7Lg/hqdefault.jpg"
     },
     {
       "id": "manual-ramonperales-fuligin",
@@ -642,54 +520,6 @@
       "tags": []
     },
     {
-      "id": "marc-aramini-19c4690b",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight Chapter 3",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-06-07",
-      "url": "https://www.youtube.com/watch?v=KNw2dCHTOdc",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/KNw2dCHTOdc/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-d98d5b8c",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight - Chapter 2",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-05-07",
-      "url": "https://www.youtube.com/watch?v=2n7UVuTNCVM",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/2n7UVuTNCVM/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-56df54d3",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight Chapter 1 Analysis",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-04-14",
-      "url": "https://www.youtube.com/watch?v=qCFY_cMTG08",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/qCFY_cMTG08/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-2219c0b0",
-      "title": "Gene Wolfe's Wizard Knight: Introduction to an Extended Reading",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-04-03",
-      "url": "https://www.youtube.com/watch?v=NAQUb1EHs2Y",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
-    },
-    {
       "id": "ultan-s-library-bf25b430",
       "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
       "source": "Ultan's Library",
@@ -773,18 +603,6 @@
       "thumbnail": null
     },
     {
-      "id": "marc-aramini-37cc0f62",
-      "title": "Gene Wolfe and Literature Bonus: Tracking Song",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-06-16",
-      "url": "https://www.youtube.com/watch?v=QtMFrCOveb0",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
-    },
-    {
       "id": "ultan-s-library-e377b022",
       "title": "Everything has to be true somehow",
       "source": "Ultan's Library",
@@ -795,42 +613,6 @@
       "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "marc-aramini-166c4cdf",
-      "title": "Gene Wolfe and Literature Part 11: An Evil Guest",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-04-01",
-      "url": "https://www.youtube.com/watch?v=vhTYdc_K_6o",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/vhTYdc_K_6o/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-15211a53",
-      "title": "Gene Wolfe and Literature Part 10: There Are Doors",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-03-31",
-      "url": "https://www.youtube.com/watch?v=TsSlKDwjn_A",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/TsSlKDwjn_A/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-c4a1b0f2",
-      "title": "Gene Wolfe and Literature Part 9: Sorcerer's House",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-03-25",
-      "url": "https://www.youtube.com/watch?v=wvUlG2I4PEI",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/wvUlG2I4PEI/hqdefault.jpg"
     },
     {
       "id": "manual-theringer-highart",
