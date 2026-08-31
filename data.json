@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-08-31T01:07:35.132Z",
+  "generatedAt": "2026-08-31T07:51:14.136Z",
   "items": [
+    {
+      "id": "youtube-search-27b45c90",
+      "title": "Gene Wolfe - Özerkin Hisarı (Kitap Özeti)",
+      "source": "Özetle Oku",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-31",
+      "url": "https://www.youtube.com/watch?v=LQ5KJcFcTXU",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/LQ5KJcFcTXU/hqdefault.jpg"
+    },
+    {
+      "id": "r-rereadingwolfepodcast-0329c305",
+      "title": "Gene Wolfe interview from 1982",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-31",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1w35529/gene_wolfe_interview_from_1982/",
+      "desc": "I hope this does not violate any Reddit norms, but a Gene Wolfe interview from 1982 was just posted to the podcast feed KPFA - Radio Wolinsky.\n https://kpfa.org/area941/program/radio-wolinsky/\n And to the hosts of ReRead",
+      "tags": [],
+      "thumbnail": null
+    },
     {
       "id": "r-genewolfe-fb6e7f81",
       "title": "The House Absolute?",
@@ -76,18 +100,6 @@
         "the Claw"
       ],
       "thumbnail": "https://i.ytimg.com/vi/qc2ywO_85A8/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-3c8ec26f",
-      "title": "Understanding Peace by Gene Wolfe",
-      "source": "Justin A.W. Blair",
-      "type": "video",
-      "series": "general",
-      "date": "2026-08-24",
-      "url": "https://www.youtube.com/watch?v=FoyMCFv-QK4",
-      "desc": "Discussing a lesser-known, Gene Wolfe book--Peace.",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/FoyMCFv-QK4/hqdefault.jpg"
     },
     {
       "id": "r-genewolfe-5f58a8cf",
