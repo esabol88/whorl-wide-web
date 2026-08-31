@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-08-31T07:51:14.136Z",
+  "generatedAt": "2026-08-31T15:38:12.440Z",
   "items": [
+    {
+      "id": "youtube-search-d36d0095",
+      "title": "Gene Wolfe engineered the stackable chip in 1966 #Shorts",
+      "source": "Inked Factory",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-31",
+      "url": "https://www.youtube.com/watch?v=wuEPkr1diKM",
+      "desc": "Before writing acclaimed science fiction novels, engineer Gene Wolfe tackled a major logistical problem for snack makers.",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/wuEPkr1diKM/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-85d7392e",
+      "title": "How sci-fi math created the perfect stackable crisp #Shorts",
+      "source": "Sticked",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-31",
+      "url": "https://www.youtube.com/watch?v=EJtd7kPKQbE",
+      "desc": "Stackable potato crisps look uniform because they are shaped like hyperbolic paraboloids. Sci-fi writer Gene Wolfe helped ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/EJtd7kPKQbE/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-27b45c90",
       "title": "Gene Wolfe - Özerkin Hisarı (Kitap Özeti)",
@@ -34,6 +58,18 @@
       "date": "2026-08-30",
       "url": "https://www.reddit.com/r/genewolfe/comments/1w23lxo/the_house_absolute/",
       "desc": "submitted by    /u/pistongasket  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-6f1deec6",
+      "title": "The Antechamber (Claw) + The Backrooms",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-30",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w2336m/the_antechamber_claw_the_backrooms/",
+      "desc": "Anyone else imagine the Antechamber as a surreal, decaying office building? The drop ceiling, electric lights, coffee, and pastries details sent my imagination spiraling, and I really love the idea that a glorified corpo",
       "tags": [],
       "thumbnail": null
     },
@@ -100,24 +136,6 @@
         "the Claw"
       ],
       "thumbnail": "https://i.ytimg.com/vi/qc2ywO_85A8/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-5f58a8cf",
-      "title": "Small sketch of Severian I did on one of my book copies",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "new",
-      "date": "2026-08-24",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vx31v9/small_sketch_of_severian_i_did_on_one_of_my_book/",
-      "desc": "May not be very accurate, it’s been a while since I’ve read the books and was just restarting them\n    submitted by    /u/LifeChoicesRip  \n [link]   [comments]",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": "https://i.redd.it/btg8nizvsblh1.jpeg",
-      "artist": "u/LifeChoicesRip (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/LifeChoicesRip",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1vx31v9/small_sketch_of_severian_i_did_on_one_of_my_book/",
-      "nsfw": false
     },
     {
       "id": "r-genewolfe-361d7f02",
