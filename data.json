@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T15:38:12.440Z",
+  "generatedAt": "2026-08-31T21:12:34.913Z",
   "items": [
     {
       "id": "youtube-search-d36d0095",
@@ -36,6 +36,18 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/LQ5KJcFcTXU/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-1a7fd878",
+      "title": "1982 interview on KPFA just appeared on the Radio Wolinsky podcast",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-31",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w3nkno/1982_interview_on_kpfa_just_appeared_on_the_radio/",
+      "desc": "submitted by    /u/Laurie_Van_Carr  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "r-rereadingwolfepodcast-0329c305",
@@ -136,18 +148,6 @@
         "the Claw"
       ],
       "thumbnail": "https://i.ytimg.com/vi/qc2ywO_85A8/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-361d7f02",
-      "title": "Works in Progress",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-08-24",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1vxdst6/works_in_progress/",
-      "desc": "Just showing a small handful of crops and sketches from future BOTNS pieces!-- some of these are subject to change, some are in more of a rough state than others, etc. \n    submitted by    /u/deimosremus  \n [link]   [com",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/jijzlv3npdlh1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-1354f69d",
