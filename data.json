@@ -1,6 +1,20 @@
 {
-  "generatedAt": "2026-09-01T21:33:51.729Z",
+  "generatedAt": "2026-09-01T23:40:03.950Z",
   "items": [
+    {
+      "id": "youtube-search-08b10e92",
+      "title": "The Citadel of the Autarch (Book of the New Sun, Book 4) - Gene Wolfe",
+      "source": "Nova Circuit Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-01",
+      "url": "https://www.youtube.com/watch?v=W1LtA5FrSGw",
+      "desc": "Severian's journey reaches its climax in the northern war zone as he fulfills his destiny on dying Earth.",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/W1LtA5FrSGw/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-b2ab29a7",
       "title": "Gene Wolfe Biography — A 2-Minute Profile",
