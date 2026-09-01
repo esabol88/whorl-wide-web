@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-09-01T15:17:55.614Z",
+  "generatedAt": "2026-09-01T18:58:34.131Z",
   "items": [
+    {
+      "id": "youtube-search-b2ab29a7",
+      "title": "Gene Wolfe Biography — A 2-Minute Profile",
+      "source": "Nick M",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-01",
+      "url": "https://www.youtube.com/watch?v=VSRRggVvN6E",
+      "desc": "Gene Wolfe Biography — A 2-Minute Profile. A concise look at the background, career, major work and lasting significance of ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/VSRRggVvN6E/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-8dd708b4",
+      "title": "copy_2248998C-DA89-404C-A613-342E4C02ED0D",
+      "source": "The Cosmic Codex",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-01",
+      "url": "https://www.youtube.com/watch?v=68vCpzl65P4",
+      "desc": "I'm currently in the midst of the series The Book of the New Sun by Gene Wolfe. Here are some quick thoughts on the first volume, ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/68vCpzl65P4/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-f4066375",
       "title": "Coffee shop near work is a BotNS fan! Great coffee too!",
@@ -12,6 +36,18 @@
       "desc": "Sorcerer Coffee in Newcastle England! For anyone who is interested! \n    submitted by    /u/PandaFunkTeam  \n [link]   [comments]",
       "tags": [],
       "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-40c32ac7",
+      "title": "Just Arrived!",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-01",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w4iip9/just_arrived/",
+      "desc": "I probably won’t try to read it straight through, but I’m thrilled to have the reference handy!\n    submitted by    /u/UnreliableAmanda  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/c97uxswxzxmh1.jpeg"
     },
     {
       "id": "youtube-search-d36d0095",
@@ -48,18 +84,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/LQ5KJcFcTXU/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-601dbac3",
-      "title": "this book has changed me forever",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-08-31",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1w3s1a4/this_book_has_changed_me_forever/",
-      "desc": "submitted by    /u/ferkalis  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/19px3xe26smh1.jpeg"
     },
     {
       "id": "r-genewolfe-1a7fd878",
