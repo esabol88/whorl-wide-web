@@ -1,6 +1,32 @@
 {
-  "generatedAt": "2026-09-02T15:32:24.162Z",
+  "generatedAt": "2026-09-02T19:04:11.375Z",
   "items": [
+    {
+      "id": "youtube-search-c6986a92",
+      "title": "Claw of the Conciliator thoughts",
+      "source": "The Cosmic Codex",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-02",
+      "url": "https://www.youtube.com/watch?v=P2u_F63dM3o",
+      "desc": "Brief thoughts on \"The Claw of the Conciliator,\" the second volume in Gene Wolfe's series \"The Book of the New Sun.",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/P2u_F63dM3o/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-c38ec52f",
+      "title": "Wizard: Book Two of The Wizard Knight Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-02",
+      "url": "https://www.youtube.com/watch?v=ucO6DxPsOC0",
+      "desc": "Listen to audiobook in full for free : https://libranovo.com/audiobook Title: Wizard: Book Two of The Wizard Knight Author: Gene ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/ucO6DxPsOC0/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-08b10e92",
       "title": "The Citadel of the Autarch (Book of the New Sun, Book 4) - Gene Wolfe",
