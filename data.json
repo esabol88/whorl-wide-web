@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T18:12:44.409Z",
+  "generatedAt": "2026-09-03T21:30:06.943Z",
   "items": [
     {
       "id": "youtube-search-0283dc34",
@@ -24,6 +24,21 @@
       "desc": "Listen to audiobook in full for free : https://libranovo.com/audiobook Title: Interlibrary Loan Author: Gene Wolfe Narrator: Tim ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/vXcSoPE9CsM/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-d509cb41",
+      "title": "Illustration: The Eyes of the World",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-03",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w6ifbn/illustration_the_eyes_of_the_world/",
+      "desc": "Postponed one of my other current in-progress pieces to work on this one-- wanted the lighting to feel appropriately Hellish, given Typhon's scene is more or less \"The Last Temptation of Severian\".\n Reddit wouldn't allow",
+      "tags": [
+        "Severian",
+        "Typhon"
+      ],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-c6986a92",
@@ -210,18 +225,6 @@
         "Agia"
       ],
       "thumbnail": "https://i.redd.it/hxdzi3oad6mh1.jpeg"
-    },
-    {
-      "id": "r-genewolfe-430ef2b7",
-      "title": "Hell ya",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-08-27",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1w05itx/hell_ya/",
-      "desc": "submitted by    /u/maintainmo  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/1l2uo8m89zlh1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-1354f69d",
