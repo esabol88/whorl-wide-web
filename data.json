@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-09-03T21:30:06.943Z",
+  "generatedAt": "2026-09-03T23:40:27.078Z",
   "items": [
+    {
+      "id": "youtube-search-d87701e6",
+      "title": "The Claw of the Conciliator (Book of the New Sun, Book 2) - Gene Wolfe",
+      "source": "Nova Circuit Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-03",
+      "url": "https://www.youtube.com/watch?v=QFaRoP-C6do",
+      "desc": "Severian travels through strange lands wielding a gem with mysterious healing powers while exiled from his guild.",
+      "tags": [
+        "Severian",
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/QFaRoP-C6do/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-0283dc34",
       "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 25-31",
