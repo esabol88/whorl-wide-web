@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T21:08:56.064Z",
+  "generatedAt": "2026-09-04T23:32:38.371Z",
   "items": [
     {
       "id": "youtube-search-2934e8fc",
@@ -24,6 +24,45 @@
       "desc": "Intro - Phil and Metz subject themselves to Netflix Mini Golf Content (9:49) - Discussion of On Stranger Tides, by Tim Powers Current Read-Along - The Face, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "gene-wolfe-collection-omeka-0d0c8b57",
+      "title": "1983-10-21 Wolfe to Stewart",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-09-04",
+      "url": "https://wolfenarrators.omeka.net/items/show/206",
+      "desc": "Dublin Core\nTitle\n1983-10-21 Wolfe to Stewart\n\n        \nSubject\nPersonal letter from Gene Wolfe to Alan Stewart. Scanned by Alan Stewart. Permission obtained September 2, 2026 from him to post contents of letter.\nOne typ",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "gene-wolfe-collection-omeka-2769eb8e",
+      "title": "1984-11-06 Wolfe to Stewart",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-09-04",
+      "url": "https://wolfenarrators.omeka.net/items/show/205",
+      "desc": "Dublin Core\nTitle\n1984-11-06 Wolfe to Stewart\n\n        \nSubject\nPersonal letter from Gene Wolfe to Alan Stewart. Scanned by Alan Stewart. Permission obtained August 25, 2026 from him to post contents of letter.\n\n        ",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "youtube-search-d87701e6",
+      "title": "The Claw of the Conciliator (Book of the New Sun, Book 2) - Gene Wolfe",
+      "source": "Nova Circuit Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-03",
+      "url": "https://www.youtube.com/watch?v=QFaRoP-C6do",
+      "desc": "Severian travels through strange lands wielding a gem with mysterious healing powers while exiled from his guild.",
+      "tags": [
+        "Severian",
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/QFaRoP-C6do/hqdefault.jpg"
     },
     {
       "id": "youtube-search-0283dc34",
@@ -89,6 +128,20 @@
       "desc": "Listen to audiobook in full for free : https://libranovo.com/audiobook Title: Wizard: Book Two of The Wizard Knight Author: Gene ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/ucO6DxPsOC0/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-08b10e92",
+      "title": "The Citadel of the Autarch (Book of the New Sun, Book 4) - Gene Wolfe",
+      "source": "Nova Circuit Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-01",
+      "url": "https://www.youtube.com/watch?v=W1LtA5FrSGw",
+      "desc": "Severian's journey reaches its climax in the northern war zone as he fulfills his destiny on dying Earth.",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/W1LtA5FrSGw/hqdefault.jpg"
     },
     {
       "id": "youtube-search-b2ab29a7",
@@ -295,18 +348,6 @@
       "thumbnail": null
     },
     {
-      "id": "gene-wolfe-collection-omeka-19744c97",
-      "title": "1976 \"The Special Problems of Science Fiction\"",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-08-12",
-      "url": "https://wolfenarrators.omeka.net/items/show/198",
-      "desc": "Dublin Core\nTitle\n1976 \"The Special Problems of Science Fiction\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nThe Writer, May 1976\n\n        \nDate\nMay 1976\n\n        \nLanguage\nEnglish",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "alzabo-soup-2688e0f0",
       "title": "General Discussion - Gene Wolfe's Solar Cycle",
       "source": "Alzabo Soup",
@@ -317,23 +358,6 @@
       "desc": "Intro - Phil challenges Metz to a poetry recital. Content (5:38) - Discussion of the solar cycle by Gene Wolfe. Current Read-Along - The Palace of Love, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-a9249e52",
-      "title": "1997 \"The Wolfean Oracle Speaks\"",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "new",
-      "date": "2026-08-07",
-      "url": "https://wolfenarrators.omeka.net/items/show/197",
-      "desc": "Dublin Core\nTitle\n1997 \"The Wolfean Oracle Speaks\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nCloud Chamber #77, September 1997\n\n        \nDate\nSeptember 1997\n\n        \nLanguage\nEnglish\n\n    \n\n\n        \nTex",
-      "tags": [
-        "Severian",
-        "Silk",
-        "Horn",
-        "Typhon"
-      ],
-      "thumbnail": null
     },
     {
       "id": "nick-reads-fantasy-4806a50d",
@@ -662,6 +686,18 @@
       "tags": []
     },
     {
+      "id": "ultan-s-library-9134967b",
+      "title": "Gene Wolfe and The Pocket Book of Science-Fiction",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2024-05-30",
+      "url": "https://ultan.org.uk/gene-wolfe-and-the-pocket-book-of-science-fiction/",
+      "desc": "Wolfe said that Wollheim's 1943 anthology was his gateway to discovering the science fiction pulps. Here, Michael Andre-Driussi explores one of Wolfe's earliest influences.",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "manual-adamroberts-newsun",
       "title": "Gene Wolfe, \"The Book of the New Sun\" (1980-83)",
       "source": "Adam Roberts",
@@ -721,6 +757,42 @@
       "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
     },
     {
+      "id": "ultan-s-library-bf25b430",
+      "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-11-23",
+      "url": "https://ultan.org.uk/micro-wolfenomics-joan-gordon-reviews-gene-wolfes-first-four-novels-a-chapter-guide-by-michael-andre-driussi/",
+      "desc": "There are two kinds of Wolfeian criticism: macro and micro. Michael Andre-Driussi offers the micro, noting all the small details, word meanings and origins, specific allusions, patterns and inconsistencies in plot, time-",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-c68a226d",
+      "title": "A Curiously Conflicted Book: Craig Brewer reviews ‘Interlibrary Loan’",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-11-09",
+      "url": "https://ultan.org.uk/a-curiously-conflicted-book-craig-brewer-reviews-gene-wolfes-interlibrary-loan/",
+      "desc": "This final work is not simply a coda to Wolfe’s career but an integral part of its working out of some of his most central concerns.",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-5e1a91e0",
+      "title": "A Weird Mystery: James Wynn considers Gene Wolfe’s ‘A Borrowed Man’",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-10-26",
+      "url": "https://ultan.org.uk/a-weird-mystery-james-wynn-considers-gene-wolfes-a-borrowed-man/",
+      "desc": "As a detective novel, this is not a puzzle. It’s a finger-trap.",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "crossref-scholarly-papers-188184c2",
       "title": "Time After Time: On the speculative fiction of Gene Wolfe",
       "source": "Critical Quarterly",
@@ -730,6 +802,42 @@
       "url": "https://doi.org/10.1111/criq.12563",
       "desc": "By Francis Gooding — Critical Quarterly",
       "tags": []
+    },
+    {
+      "id": "ultan-s-library-9f37d039",
+      "title": "Review: Gene Wolfe’s ‘Operation ARES’",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-08-03",
+      "url": "https://ultan.org.uk/review-gene-wolfes-operation-ares/",
+      "desc": "A review by Martin Crookall of Gene Wolfe's problematic and rarely discussed first novel.",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-aaf5f4a8",
+      "title": "Standing on the Shoulders of Giants – A Review of Michael Andre-Driussi’s ‘The Book of the New Sun: A Chapter Guide’",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-07-20",
+      "url": "https://ultan.org.uk/standing-on-the-shoulders-of-giants-a-review-of-michael-andre-driussis-the-book-of-the-new-sun-a-chapter-guide/",
+      "desc": "\"While Andre-Driussi acknowledges the complexity and allusiveness of Wolfe’s work, his writing has always seemed to me the most objectively grounded and easiest to digest ... of all the writers and analysts currently exp",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "ultan-s-library-20ee2c82",
+      "title": "Posthistory 201",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-07-06",
+      "url": "https://ultan.org.uk/posthistory-201/",
+      "desc": "In this new study of how human history is measured and portrayed in Gene Wolfe’s Solar Cycle, Michael Andre-Driussi reassesses the subject of his earlier essay “Posthistory 101” and examines the textual evidence for esti",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "marc-aramini-37cc0f62",
@@ -742,6 +850,18 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
+    },
+    {
+      "id": "ultan-s-library-e377b022",
+      "title": "Everything has to be true somehow",
+      "source": "Ultan's Library",
+      "type": "article",
+      "series": "new",
+      "date": "2020-06-08",
+      "url": "https://ultan.org.uk/everything-has-to-be-true-somehow/",
+      "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "marc-aramini-166c4cdf",
