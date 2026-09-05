@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-05T20:48:58.901Z",
+  "generatedAt": "2026-09-05T22:28:09.256Z",
   "items": [
+    {
+      "id": "gene-wolfe-collection-omeka-59666c66",
+      "title": "Gene Wolfe: A Selected List",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-09-05",
+      "url": "https://wolfenarrators.omeka.net/items/show/207",
+      "desc": "Dublin Core\nTitle\nGene Wolfe: A Selected List\n\n        \nSubject\nA selected list of Wolfe and Wolfe reference works held by the The Chicago Public Library Cultural Center.\n\n        \nDescription\nUndated bookmark published ",
+      "tags": [],
+      "thumbnail": null
+    },
     {
       "id": "r-genewolfe-e20eb80b",
       "title": "Nessus in Minecraft?",
@@ -12,18 +24,6 @@
       "desc": "I came across these renders of the 2b2t spawn and couldn't help but think of Nessus especially because of the illustrations by Bruce Pennington and Alexander Preuss, which evoke a similar atmosphere for me.\n    submitted",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-d3b9bb16",
-      "title": "An accidental view of Nessus from the Gyoll",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-05",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1w809xk/an_accidental_view_of_nessus_from_the_gyoll/",
-      "desc": "submitted by    /u/daicolre  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/dia81n4dapnh1.jpeg"
     },
     {
       "id": "youtube-search-2934e8fc",
@@ -252,6 +252,18 @@
       "thumbnail": "https://i.ytimg.com/vi/LQ5KJcFcTXU/hqdefault.jpg"
     },
     {
+      "id": "r-genewolfe-1a7fd878",
+      "title": "1982 interview on KPFA just appeared on the Radio Wolinsky podcast",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-08-31",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w3nkno/1982_interview_on_kpfa_just_appeared_on_the_radio/",
+      "desc": "submitted by    /u/Laurie_Van_Carr  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "r-rereadingwolfepodcast-0329c305",
       "title": "Gene Wolfe interview from 1982",
       "source": "r/rereadingwolfepodcast",
@@ -332,18 +344,6 @@
       "date": "2026-08-12",
       "url": "https://wolfenarrators.omeka.net/items/show/200",
       "desc": "Dublin Core\nTitle\n1988 \"Letter of Comment,\" Science Fiction Chronicle #102, March 1988\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nScience Fiction Chronicle #102, March 1988\n\n        \nDate\nMarch 1988\n\n     ",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-8abf7632",
-      "title": "1980 \"What Do They Mean, SF?\"",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-08-12",
-      "url": "https://wolfenarrators.omeka.net/items/show/199",
-      "desc": "Dublin Core\nTitle\n1980 \"What Do They Mean, SF?\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nThe Writer, August 1980\n\n        \nDate\nAugust 1980\n\n        \nLanguage\nEnglish",
       "tags": [],
       "thumbnail": null
     },
