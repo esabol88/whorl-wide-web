@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T16:16:00.766Z",
+  "generatedAt": "2026-09-07T20:16:20.526Z",
   "items": [
     {
       "id": "youtube-search-2633a2c7",
@@ -12,6 +12,23 @@
       "desc": "In which the Unreliable Narrators discuss Gene Wolfe's compelling Introduction to Jay Lake's Last Plane to Heaven.",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/buex0j9FNCc/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-25965b0a",
+      "title": "I Hate Severian",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-09-07",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w9gmbv/i_hate_severian/",
+      "desc": "The title says it all. Spoilers through halfway into Sword of the Lictor follow. Please don’t spoil the whole thing for me.\n I am loving these books so much, but I hate Severian with a passion. Not like you’d hate an evi",
+      "tags": [
+        "Severian",
+        "Typhon",
+        "Hethor",
+        "Thecla"
+      ],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-2ad83803",
@@ -254,18 +271,6 @@
       "desc": "I probably won’t try to read it straight through, but I’m thrilled to have the reference handy!\n    submitted by    /u/UnreliableAmanda  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/c97uxswxzxmh1.jpeg"
-    },
-    {
-      "id": "r-genewolfe-1a7fd878",
-      "title": "1982 interview on KPFA just appeared on the Radio Wolinsky podcast",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-08-31",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1w3nkno/1982_interview_on_kpfa_just_appeared_on_the_radio/",
-      "desc": "submitted by    /u/Laurie_Van_Carr  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "gene-wolfe-collection-omeka-1354f69d",
