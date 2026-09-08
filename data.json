@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-08T15:35:38.859Z",
+  "generatedAt": "2026-09-08T19:07:07.331Z",
   "items": [
+    {
+      "id": "youtube-search-e0682087",
+      "title": "Wolfe at the Door Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-08",
+      "url": "https://www.youtube.com/watch?v=WMaaNiTDLoY",
+      "desc": "Listen to audiobook in full for free : https://libranovo.com/audiobook Title: Wolfe at the Door Author: Gene Wolfe Narrator: Charles ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/WMaaNiTDLoY/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-149f9ff5",
       "title": "Beyond Time and Memory paperback and hardback",
@@ -12,6 +24,18 @@
       "desc": "I have completed the formatting for the paperback and hardback versions of Beyond Time and Memory. I believe the margins are definitely better than the first volume hardback. I still need to see for sure in person. \n As ",
       "tags": [],
       "thumbnail": "https://i.redd.it/sd24cv0c9aoh1.png"
+    },
+    {
+      "id": "r-genewolfe-15481aa9",
+      "title": "Wolfe and Wargs",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-08",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wabkge/wolfe_and_wargs/",
+      "desc": "I stumbled upon a reference to Gene Wolfe in “The Lord of the Rings: A Reader’s Companion” by Hammond and Scull. It seems fitting for Wolfe to be interested in the etymology for an old word for “wolf.” And it’s cool to k",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/x3gu6e2rg7oh1.jpeg"
     },
     {
       "id": "youtube-search-2633a2c7",
@@ -249,30 +273,6 @@
         "Severian"
       ],
       "thumbnail": "https://i.ytimg.com/vi/W1LtA5FrSGw/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-b2ab29a7",
-      "title": "Gene Wolfe Biography — A 2-Minute Profile",
-      "source": "Nick M",
-      "type": "video",
-      "series": "general",
-      "date": "2026-09-01",
-      "url": "https://www.youtube.com/watch?v=VSRRggVvN6E",
-      "desc": "Gene Wolfe Biography — A 2-Minute Profile. A concise look at the background, career, major work and lasting significance of ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/VSRRggVvN6E/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-40c32ac7",
-      "title": "Just Arrived!",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-01",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1w4iip9/just_arrived/",
-      "desc": "I probably won’t try to read it straight through, but I’m thrilled to have the reference handy!\n    submitted by    /u/UnreliableAmanda  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/c97uxswxzxmh1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-1354f69d",
