@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-08T19:07:07.331Z",
+  "generatedAt": "2026-09-09T00:49:59.358Z",
   "items": [
+    {
+      "id": "high-low-brow-fd45ecf9",
+      "title": "Latro In The Mist - Gene Wolfe",
+      "source": "High Low Brow",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-08",
+      "url": "https://www.youtube.com/watch?v=yTOKPsPdD3U",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-e0682087",
       "title": "Wolfe at the Door Audiobook by Gene Wolfe",
@@ -26,16 +38,16 @@
       "thumbnail": "https://i.redd.it/sd24cv0c9aoh1.png"
     },
     {
-      "id": "r-genewolfe-15481aa9",
-      "title": "Wolfe and Wargs",
+      "id": "r-genewolfe-04f09cdf",
+      "title": "Reading Book of the New Sun in English as a non native speaker!",
       "source": "r/genewolfe",
       "type": "discussion",
-      "series": "general",
+      "series": "new",
       "date": "2026-09-08",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wabkge/wolfe_and_wargs/",
-      "desc": "I stumbled upon a reference to Gene Wolfe in “The Lord of the Rings: A Reader’s Companion” by Hammond and Scull. It seems fitting for Wolfe to be interested in the etymology for an old word for “wolf.” And it’s cool to k",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1waxjjf/reading_book_of_the_new_sun_in_english_as_a_non/",
+      "desc": "So I’m thinking about rereading The Book of the New Sun in English, and I’m kinda scared lol 😬 I’m French and I originally read the whole series in french. I don’t usually read that much in english, even tho I’d say I’m",
       "tags": [],
-      "thumbnail": "https://i.redd.it/x3gu6e2rg7oh1.jpeg"
+      "thumbnail": "https://i.redd.it/86k2vdewfcoh1.jpeg"
     },
     {
       "id": "youtube-search-2633a2c7",
@@ -259,20 +271,6 @@
       "desc": "Listen to audiobook in full for free : https://libranovo.com/audiobook Title: Wizard: Book Two of The Wizard Knight Author: Gene ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/ucO6DxPsOC0/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-08b10e92",
-      "title": "The Citadel of the Autarch (Book of the New Sun, Book 4) - Gene Wolfe",
-      "source": "Nova Circuit Audiobook",
-      "type": "video",
-      "series": "new",
-      "date": "2026-09-01",
-      "url": "https://www.youtube.com/watch?v=W1LtA5FrSGw",
-      "desc": "Severian's journey reaches its climax in the northern war zone as he fulfills his destiny on dying Earth.",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/W1LtA5FrSGw/hqdefault.jpg"
     },
     {
       "id": "gene-wolfe-collection-omeka-1354f69d",
