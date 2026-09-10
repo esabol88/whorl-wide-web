@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-10T18:48:36.972Z",
+  "generatedAt": "2026-09-10T21:18:07.808Z",
   "items": [
+    {
+      "id": "youtube-search-89ce5953",
+      "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 32-38",
+      "source": "Jeff Cannata",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-10",
+      "url": "https://www.youtube.com/watch?v=zfwSX_bEDWY",
+      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff finish their read of the third novel in Gene Wolfe's Book ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/zfwSX_bEDWY/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-659d2d71",
       "title": "Update Post",
@@ -76,6 +88,23 @@
       "desc": "In which the Unreliable Narrators discuss Gene Wolfe's compelling Introduction to Jay Lake's Last Plane to Heaven.",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/buex0j9FNCc/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-25965b0a",
+      "title": "I Hate Severian",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-09-07",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1w9gmbv/i_hate_severian/",
+      "desc": "The title says it all. Spoilers through halfway into Sword of the Lictor follow. Please don’t spoil the whole thing for me.\n I am loving these books so much, but I hate Severian with a passion. Not like you’d hate an evi",
+      "tags": [
+        "Severian",
+        "Typhon",
+        "Hethor",
+        "Thecla"
+      ],
+      "thumbnail": null
     },
     {
       "id": "r-rereadingwolfepodcast-51ca1431",
@@ -205,21 +234,6 @@
         "the Claw"
       ],
       "thumbnail": "https://i.ytimg.com/vi/QFaRoP-C6do/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-d509cb41",
-      "title": "Illustration: The Eyes of the World",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-03",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1w6ifbn/illustration_the_eyes_of_the_world/",
-      "desc": "Postponed one of my other current in-progress pieces to work on this one-- wanted the lighting to feel appropriately Hellish, given Typhon's scene is more or less \"The Last Temptation of Severian\".\n Reddit wouldn't allow",
-      "tags": [
-        "Severian",
-        "Typhon"
-      ],
-      "thumbnail": null
     },
     {
       "id": "gene-wolfe-collection-omeka-1354f69d",
