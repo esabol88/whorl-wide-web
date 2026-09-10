@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T21:18:07.808Z",
+  "generatedAt": "2026-09-10T23:32:55.875Z",
   "items": [
     {
       "id": "youtube-search-89ce5953",
@@ -219,21 +219,6 @@
       "desc": "Dublin Core\nTitle\n1984-11-06 Wolfe to Stewart\n\n        \nDescription\nPersonal letter from Gene Wolfe to Alan Stewart. Scanned by Alan Stewart. Permission obtained August 25, 2026 from him to post contents of letter.\n\n    ",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "youtube-search-d87701e6",
-      "title": "The Claw of the Conciliator (Book of the New Sun, Book 2) - Gene Wolfe",
-      "source": "Nova Circuit Audiobook",
-      "type": "video",
-      "series": "new",
-      "date": "2026-09-03",
-      "url": "https://www.youtube.com/watch?v=QFaRoP-C6do",
-      "desc": "Severian travels through strange lands wielding a gem with mysterious healing powers while exiled from his guild.",
-      "tags": [
-        "Severian",
-        "the Claw"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/QFaRoP-C6do/hqdefault.jpg"
     },
     {
       "id": "gene-wolfe-collection-omeka-1354f69d",
