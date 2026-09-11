@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-11T01:54:52.787Z",
+  "generatedAt": "2026-09-11T06:48:12.338Z",
   "items": [
+    {
+      "id": "alzabo-soup-b5eaf905",
+      "title": "Annals of Klepsis, by R.A. Lafferty",
+      "source": "Alzabo Soup",
+      "type": "podcast",
+      "series": "general",
+      "date": "2026-09-11",
+      "url": "https://www.alzabosoup.com/categories/other-authors/",
+      "desc": "Intro - Metz tells Phil about Seven Part Pact. Content (10:26) - Discussion of Annals of Klepsis, by R.A. Lafferty Current Read-Along - The Face, by Jack Vance Check out more at alzabosoup.com.",
+      "tags": [],
+      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
     {
       "id": "youtube-search-89ce5953",
       "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 32-38",
@@ -30,16 +42,16 @@
       "nsfw": false
     },
     {
-      "id": "high-low-brow-fd45ecf9",
+      "id": "youtube-search-fd45ecf9",
       "title": "Latro In The Mist - Gene Wolfe",
       "source": "High Low Brow",
       "type": "video",
       "series": "general",
       "date": "2026-09-08",
       "url": "https://www.youtube.com/watch?v=yTOKPsPdD3U",
-      "desc": "",
+      "desc": "Welcome to High Low Brow with Dave Butler! Where culture matters, and it's good to have fun. Get a copy of Titus Groan here: ...",
       "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
+      "thumbnail": "https://i.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
     },
     {
       "id": "youtube-search-e0682087",
@@ -171,30 +183,6 @@
       "desc": "I came across these renders of the 2b2t spawn and couldn't help but think of Nessus especially because of the illustrations by Bruce Pennington and Alexander Preuss, which evoke a similar atmosphere for me.\n    submitted",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "youtube-search-2934e8fc",
-      "title": "Gene Wolfe&#39;s Books in Order - Where to Start?",
-      "source": "Books In Order",
-      "type": "video",
-      "series": "general",
-      "date": "2026-09-04",
-      "url": "https://www.youtube.com/watch?v=u4EeB-epQ_s",
-      "desc": "Find all Gene Wolfe books in order on our site: https://www.booksinorder.io Gene Wolfe's bibliography is vast and layered, ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/u4EeB-epQ_s/hqdefault.jpg"
-    },
-    {
-      "id": "alzabo-soup-b5eaf905",
-      "title": "On Stranger Tides, by Tim Powers",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "general",
-      "date": "2026-09-04",
-      "url": "https://www.alzabosoup.com/categories/other-authors/",
-      "desc": "Intro - Phil and Metz subject themselves to Netflix Mini Golf Content (9:49) - Discussion of On Stranger Tides, by Tim Powers Current Read-Along - The Face, by Jack Vance Check out more at alzabosoup.com.",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
       "id": "gene-wolfe-collection-omeka-0d0c8b57",
