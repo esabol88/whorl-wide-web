@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T12:29:00.971Z",
+  "generatedAt": "2026-09-13T16:44:35.305Z",
   "items": [
     {
       "id": "youtube-search-9dff5ce8",
@@ -114,6 +114,18 @@
       "thumbnail": "https://i.redd.it/sd24cv0c9aoh1.png"
     },
     {
+      "id": "r-genewolfe-15481aa9",
+      "title": "Wolfe and Wargs",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-08",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wabkge/wolfe_and_wargs/",
+      "desc": "I stumbled upon a reference to Gene Wolfe in “The Lord of the Rings: A Reader’s Companion” by Hammond and Scull. It seems fitting for Wolfe to be interested in the etymology for an old word for “wolf.” And it’s cool to k",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/x3gu6e2rg7oh1.jpeg"
+    },
+    {
       "id": "youtube-search-2633a2c7",
       "title": "Gene Wolfe’s Introduction to Jay Lake’s Last Plane to Heaven",
       "source": "The Unreliable Narrators",
@@ -167,22 +179,6 @@
       "desc": "I talk a little Gene Wolfe. I talk a little, \"There are Doors.\" Tina says, 'Watch the video.' Many only read the tetralogy, but I've ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/ByPRg6Bh0yk/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-e268463b",
-      "title": "Alzabo esque",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-09-06",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1w8vaud/alzabo_esque/",
-      "desc": "This artist does not refer to this drawing as inspired by the Alzabo, but it certainly made me think of the Alzabo. https://hifructose.com/2026/07/27/personal-growth-the-art-of-nathan-reidt/?utm_source=orbitaloperations.",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/cyvz68uubwnh1.jpeg",
-      "artist": "u/MonsterReprobate (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/MonsterReprobate",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1w8vaud/alzabo_esque/",
-      "nsfw": false
     },
     {
       "id": "gene-wolfe-collection-omeka-59666c66",
