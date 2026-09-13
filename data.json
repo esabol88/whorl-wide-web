@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T21:54:42.683Z",
+  "generatedAt": "2026-09-13T23:45:51.980Z",
   "items": [
     {
       "id": "youtube-search-9dff5ce8",
@@ -26,6 +26,18 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
+      "id": "r-genewolfe-bb8cb558",
+      "title": "Terminus Est in Warhammer",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-11",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wdw3lm/terminus_est_in_warhammer/",
+      "desc": "From the Warhammer 40k book Blood of Asaheim I’m reading. It’s what the chaos plague cult chants to intimidate the city they are attacking. Do you think the author would choose that phrase without it being a reference to",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/akkk1dyo5zoh1.jpeg"
+    },
+    {
       "id": "youtube-search-89ce5953",
       "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 32-38",
       "source": "Jeff Cannata",
@@ -48,22 +60,6 @@
       "desc": "submitted by    /u/hedcannon  \n [link]   [comments]",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-659d2d71",
-      "title": "Update Post",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-09-09",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wbpn00/update_post/",
-      "desc": "I asked about a very specific illustration a couple of days ago. By the grace of the Outsider, another user found what I was talking about and sent it to me. Here it is for anyone curious about what I was trying to find.",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/jfojikw2pioh1.jpeg",
-      "artist": "u/Cryptographer235 (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/Cryptographer235",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wbpn00/update_post/",
-      "nsfw": false
     },
     {
       "id": "high-low-brow-fd45ecf9",
