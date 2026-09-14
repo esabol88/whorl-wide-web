@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-14T08:14:34.743Z",
+  "generatedAt": "2026-09-14T15:23:01.638Z",
   "items": [
+    {
+      "id": "youtube-search-90986a8f",
+      "title": "Gene Wolfe: Das Buch der Neuen Sonne",
+      "source": "Schreiblust Leselust",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-14",
+      "url": "https://www.youtube.com/watch?v=rqdK4474CW4",
+      "desc": "Ein Meisterwerk der Phantastik in edler Überarbeitung: In Gene Wolfes legendärem Romanzyklus „Das Buch der Neuen Sonne“ ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/rqdK4474CW4/hqdefault.jpg"
+    },
     {
       "id": "gene-wolfe-collection-omeka-86f0192d",
       "title": "2001 \"Americans Must Take Quick, Decisive Action\"",
@@ -148,18 +160,6 @@
       "desc": "I stumbled upon a reference to Gene Wolfe in “The Lord of the Rings: A Reader’s Companion” by Hammond and Scull. It seems fitting for Wolfe to be interested in the etymology for an old word for “wolf.” And it’s cool to k",
       "tags": [],
       "thumbnail": "https://i.redd.it/x3gu6e2rg7oh1.jpeg"
-    },
-    {
-      "id": "youtube-search-2633a2c7",
-      "title": "Gene Wolfe’s Introduction to Jay Lake’s Last Plane to Heaven",
-      "source": "The Unreliable Narrators",
-      "type": "video",
-      "series": "general",
-      "date": "2026-09-07",
-      "url": "https://www.youtube.com/watch?v=buex0j9FNCc",
-      "desc": "In which the Unreliable Narrators discuss Gene Wolfe's compelling Introduction to Jay Lake's Last Plane to Heaven.",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/buex0j9FNCc/hqdefault.jpg"
     },
     {
       "id": "r-rereadingwolfepodcast-51ca1431",
