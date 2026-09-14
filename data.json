@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T02:10:51.517Z",
+  "generatedAt": "2026-09-14T08:14:34.743Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-86f0192d",
@@ -36,6 +36,18 @@
       "desc": "Intro - Metz tells Phil about Seven Part Pact. Content (10:26) - Discussion of Annals of Klepsis, by R.A. Lafferty Current Read-Along - The Face, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-genewolfe-bb8cb558",
+      "title": "Terminus Est in Warhammer",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-11",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wdw3lm/terminus_est_in_warhammer/",
+      "desc": "From the Warhammer 40k book Blood of Asaheim I’m reading. It’s what the chaos plague cult chants to intimidate the city they are attacking. Do you think the author would choose that phrase without it being a reference to",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/akkk1dyo5zoh1.jpeg"
     },
     {
       "id": "youtube-search-89ce5953",
@@ -97,7 +109,7 @@
       "series": "general",
       "date": "2026-09-08",
       "url": "https://www.youtube.com/watch?v=WMaaNiTDLoY",
-      "desc": "Listen to audiobook in full for free : https://libranovo.com/audiobook Title: Wolfe at the Door Author: Gene Wolfe Narrator: Charles ...",
+      "desc": "Listen to free audiobook on Audible : https://amzn.to/4hopIfn Title: Wolfe at the Door Author: Gene Wolfe Narrator: Charles ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/WMaaNiTDLoY/hqdefault.jpg"
     },
@@ -148,23 +160,6 @@
       "desc": "In which the Unreliable Narrators discuss Gene Wolfe's compelling Introduction to Jay Lake's Last Plane to Heaven.",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/buex0j9FNCc/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-25965b0a",
-      "title": "I Hate Severian",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-09-07",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1w9gmbv/i_hate_severian/",
-      "desc": "The title says it all. Spoilers through halfway into Sword of the Lictor follow. Please don’t spoil the whole thing for me.\n I am loving these books so much, but I hate Severian with a passion. Not like you’d hate an evi",
-      "tags": [
-        "Severian",
-        "Typhon",
-        "Hethor",
-        "Thecla"
-      ],
-      "thumbnail": null
     },
     {
       "id": "r-rereadingwolfepodcast-51ca1431",
