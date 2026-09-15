@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-15T20:36:19.071Z",
+  "generatedAt": "2026-09-15T23:17:57.368Z",
   "items": [
+    {
+      "id": "youtube-search-c39e8a3c",
+      "title": "The Sword of the Lictor",
+      "source": "The Cosmic Codex",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-15",
+      "url": "https://www.youtube.com/watch?v=Xp_CHnVcBA0",
+      "desc": "One of the most compelling passages I encountered reading \"The Sword of the Lictor,\" the third volume in Gene Wolfe's The Book ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/Xp_CHnVcBA0/hqdefault.jpg"
+    },
     {
       "id": "gene-wolfe-collection-omeka-cd1ef4cd",
       "title": "1981 \"An Interview with Gene Wolfe by Melissa Mia Hall\"",
@@ -28,18 +40,6 @@
       "thumbnail": null
     },
     {
-      "id": "r-genewolfe-ba2ece13",
-      "title": "New pickup for my Wolfe collection. I just found out The Book of the New Sun got a GURPS treatment back in the day. Anyone played using this guide?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-09-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wh5o2y/new_pickup_for_my_wolfe_collection_i_just_found/",
-      "desc": "submitted by    /u/Fantasy_Brooks  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/sek9yd6rqpph1.jpeg"
-    },
-    {
       "id": "youtube-search-90986a8f",
       "title": "Gene Wolfe: Das Buch der Neuen Sonne",
       "source": "Schreiblust Leselust",
@@ -61,23 +61,6 @@
       "url": "https://wolfenarrators.omeka.net/items/show/210",
       "desc": "Dublin Core\nTitle\n2001 \"Americans Must Take Quick, Decisive Action\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nPioneer Press, Thursday, September 27, 2001, Opinion, page 17.\n\n        \nPublisher\nPioneer Pre",
       "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-2824e730",
-      "title": "Rereading BotNS - what things should I focus on?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-13",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wfi7j1/rereading_botns_what_things_should_i_focus_on/",
-      "desc": "Spoilers obviously!\n I recently finished BotNS and UotNS and absolutely loved them. Without a doubt the most expertly crafted series I've ever read and I'm fairly certain I only understood the surface plot (if that!).\n I",
-      "tags": [
-        "Severian",
-        "Agia",
-        "Hethor",
-        "Thecla"
-      ],
       "thumbnail": null
     },
     {
@@ -105,18 +88,6 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-genewolfe-bb8cb558",
-      "title": "Terminus Est in Warhammer",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-11",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wdw3lm/terminus_est_in_warhammer/",
-      "desc": "From the Warhammer 40k book Blood of Asaheim I’m reading. It’s what the chaos plague cult chants to intimidate the city they are attacking. Do you think the author would choose that phrase without it being a reference to",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/akkk1dyo5zoh1.jpeg"
-    },
-    {
       "id": "youtube-search-89ce5953",
       "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 32-38",
       "source": "Jeff Cannata",
@@ -127,46 +98,6 @@
       "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff finish their read of the third novel in Gene Wolfe's Book ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/zfwSX_bEDWY/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-234814c2",
-      "title": "Unreliable Narrators Podcast Discusses Amanda's Purchase of the First Draft of Shadow of the Torturer",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-09-10",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wcx7w7/unreliable_narrators_podcast_discusses_amandas/",
-      "desc": "submitted by    /u/hedcannon  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-659d2d71",
-      "title": "Update Post",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-09-09",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wbpn00/update_post/",
-      "desc": "I asked about a very specific illustration a couple of days ago. By the grace of the Outsider, another user found what I was talking about and sent it to me. Here it is for anyone curious about what I was trying to find.",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/jfojikw2pioh1.jpeg",
-      "artist": "u/Cryptographer235 (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/Cryptographer235",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wbpn00/update_post/",
-      "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-6cde970e",
-      "title": "Latro In The Mist - Gene Wolfe",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-09",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wbnivc/latro_in_the_mist_gene_wolfe/",
-      "desc": "Thought this was a fun discussion about one of Gene's lesser known books. I enjoyed it! This channel has quite a few good takes on Genes books, Dune, and some other good series.\n    submitted by    /u/sasquatch1235  \n [l",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "high-low-brow-fd45ecf9",
