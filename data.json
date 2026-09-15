@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T13:57:29.649Z",
+  "generatedAt": "2026-09-15T17:52:11.079Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-cd1ef4cd",
@@ -28,6 +28,18 @@
       "thumbnail": null
     },
     {
+      "id": "r-genewolfe-ba2ece13",
+      "title": "New pickup for my Wolfe collection. I just found out The Book of the New Sun got a GURPS treatment back in the day. Anyone played using this guide?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-09-15",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wh5o2y/new_pickup_for_my_wolfe_collection_i_just_found/",
+      "desc": "submitted by    /u/Fantasy_Brooks  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/sek9yd6rqpph1.jpeg"
+    },
+    {
       "id": "youtube-search-90986a8f",
       "title": "Gene Wolfe: Das Buch der Neuen Sonne",
       "source": "Schreiblust Leselust",
@@ -49,23 +61,6 @@
       "url": "https://wolfenarrators.omeka.net/items/show/210",
       "desc": "Dublin Core\nTitle\n2001 \"Americans Must Take Quick, Decisive Action\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nPioneer Press, Thursday, September 27, 2001, Opinion, page 17.\n\n        \nPublisher\nPioneer Pre",
       "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-2824e730",
-      "title": "Rereading BotNS - what things should I focus on?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-13",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wfi7j1/rereading_botns_what_things_should_i_focus_on/",
-      "desc": "Spoilers obviously!\n I recently finished BotNS and UotNS and absolutely loved them. Without a doubt the most expertly crafted series I've ever read and I'm fairly certain I only understood the surface plot (if that!).\n I",
-      "tags": [
-        "Severian",
-        "Agia",
-        "Hethor",
-        "Thecla"
-      ],
       "thumbnail": null
     },
     {
@@ -167,18 +162,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-e0682087",
-      "title": "Wolfe at the Door Audiobook by Gene Wolfe",
-      "source": "Free Audiobook",
-      "type": "video",
-      "series": "general",
-      "date": "2026-09-08",
-      "url": "https://www.youtube.com/watch?v=WMaaNiTDLoY",
-      "desc": "Listen to free audiobook on Audible : https://amzn.to/4hopIfn Title: Wolfe at the Door Author: Gene Wolfe Narrator: Charles ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/WMaaNiTDLoY/hqdefault.jpg"
     },
     {
       "id": "r-genewolfe-04f09cdf",
