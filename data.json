@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T17:52:11.079Z",
+  "generatedAt": "2026-09-15T20:36:19.071Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-cd1ef4cd",
@@ -61,6 +61,23 @@
       "url": "https://wolfenarrators.omeka.net/items/show/210",
       "desc": "Dublin Core\nTitle\n2001 \"Americans Must Take Quick, Decisive Action\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nPioneer Press, Thursday, September 27, 2001, Opinion, page 17.\n\n        \nPublisher\nPioneer Pre",
       "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-2824e730",
+      "title": "Rereading BotNS - what things should I focus on?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-13",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wfi7j1/rereading_botns_what_things_should_i_focus_on/",
+      "desc": "Spoilers obviously!\n I recently finished BotNS and UotNS and absolutely loved them. Without a doubt the most expertly crafted series I've ever read and I'm fairly certain I only understood the surface plot (if that!).\n I",
+      "tags": [
+        "Severian",
+        "Agia",
+        "Hethor",
+        "Thecla"
+      ],
       "thumbnail": null
     },
     {
@@ -162,18 +179,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-04f09cdf",
-      "title": "Reading Book of the New Sun in English as a non native speaker!",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-09-08",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1waxjjf/reading_book_of_the_new_sun_in_english_as_a_non/",
-      "desc": "So I’m thinking about rereading The Book of the New Sun in English, and I’m kinda scared lol 😬 I’m French and I originally read the whole series in french. I don’t usually read that much in english, even tho I’d say I’m",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/86k2vdewfcoh1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-59666c66",
