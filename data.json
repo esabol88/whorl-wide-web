@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T13:50:29.807Z",
+  "generatedAt": "2026-09-16T17:49:59.349Z",
   "items": [
     {
       "id": "youtube-search-c39e8a3c",
@@ -93,6 +93,18 @@
       "thumbnail": null
     },
     {
+      "id": "r-genewolfe-bf7a6e2a",
+      "title": "Did Gene Wolfe ever express his thoughts about 9/11 directly?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-13",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wf2hi4/did_gene_wolfe_ever_express_his_thoughts_about/",
+      "desc": "He got asked about it straight out once, in the 2003 roundtable. Michael Andre-Driussi brought up \"Hour of Trust\" from 1973, which has suicide bombers recruited out of a mass of disaffected people and used for a coherent",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "youtube-search-9dff5ce8",
       "title": "Science Fiction Doesn’t Need Spaceships: Gene Wolfe’s Strangest Collection 🪐📚 #shorts",
       "source": "Paperback Archive",
@@ -129,6 +141,21 @@
       "thumbnail": "https://i.redd.it/akkk1dyo5zoh1.jpeg"
     },
     {
+      "id": "r-genewolfe-995e3e49",
+      "title": "Silk vs Horn’s Idea of Silk",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "long",
+      "date": "2026-09-11",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wdnrpe/silk_vs_horns_idea_of_silk/",
+      "desc": "What do y’all see as being some of the main differences between Horn’s idea of Silk and the man himself? Here are some of my ideas:\n -Suicidal ideation/depression. The moment in Exodus where Horn is suddenly worried that",
+      "tags": [
+        "Silk",
+        "Horn"
+      ],
+      "thumbnail": null
+    },
+    {
       "id": "youtube-search-89ce5953",
       "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 32-38",
       "source": "Jeff Cannata",
@@ -149,34 +176,6 @@
       "date": "2026-09-10",
       "url": "https://www.reddit.com/r/genewolfe/comments/1wcx7w7/unreliable_narrators_podcast_discusses_amandas/",
       "desc": "submitted by    /u/hedcannon  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-659d2d71",
-      "title": "Update Post",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-09-09",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wbpn00/update_post/",
-      "desc": "I asked about a very specific illustration a couple of days ago. By the grace of the Outsider, another user found what I was talking about and sent it to me. Here it is for anyone curious about what I was trying to find.",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/jfojikw2pioh1.jpeg",
-      "artist": "u/Cryptographer235 (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/Cryptographer235",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wbpn00/update_post/",
-      "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-6cde970e",
-      "title": "Latro In The Mist - Gene Wolfe",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-09",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wbnivc/latro_in_the_mist_gene_wolfe/",
-      "desc": "Thought this was a fun discussion about one of Gene's lesser known books. I enjoyed it! This channel has quite a few good takes on Genes books, Dune, and some other good series.\n    submitted by    /u/sasquatch1235  \n [l",
       "tags": [],
       "thumbnail": null
     },
