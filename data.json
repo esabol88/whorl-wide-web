@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T02:10:40.043Z",
+  "generatedAt": "2026-09-16T08:01:20.082Z",
   "items": [
     {
       "id": "youtube-search-c39e8a3c",
@@ -181,6 +181,18 @@
       "thumbnail": null
     },
     {
+      "id": "high-low-brow-fd45ecf9",
+      "title": "Latro In The Mist - Gene Wolfe",
+      "source": "High Low Brow",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-08",
+      "url": "https://www.youtube.com/watch?v=yTOKPsPdD3U",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
+    },
+    {
       "id": "gene-wolfe-collection-omeka-59666c66",
       "title": "Gene Wolfe: A Selected List",
       "source": "Gene Wolfe Collection (Omeka)",
@@ -251,6 +263,18 @@
       "desc": "Intro - Phil challenges Metz to a poetry recital. Content (5:38) - Discussion of the solar cycle by Gene Wolfe. Current Read-Along - The Palace of Love, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "nick-reads-fantasy-4806a50d",
+      "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
+      "source": "Nick Reads Fantasy",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-05",
+      "url": "https://www.youtube.com/watch?v=sij2e-erajU",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i4.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
     },
     {
       "id": "rereading-wolfe-c309e24a",
