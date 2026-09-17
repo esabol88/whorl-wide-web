@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T08:07:13.672Z",
+  "generatedAt": "2026-09-17T13:54:31.789Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-92c89bfd",
@@ -125,6 +125,18 @@
       "thumbnail": null
     },
     {
+      "id": "r-genewolfe-bf7a6e2a",
+      "title": "Did Gene Wolfe ever express his thoughts about 9/11 directly?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-13",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wf2hi4/did_gene_wolfe_ever_express_his_thoughts_about/",
+      "desc": "He got asked about it straight out once, in the 2003 roundtable. Michael Andre-Driussi brought up \"Hour of Trust\" from 1973, which has suicide bombers recruited out of a mass of disaffected people and used for a coherent",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "youtube-search-9dff5ce8",
       "title": "Science Fiction Doesn’t Need Spaceships: Gene Wolfe’s Strangest Collection 🪐📚 #shorts",
       "source": "Paperback Archive",
@@ -159,21 +171,6 @@
       "desc": "From the Warhammer 40k book Blood of Asaheim I’m reading. It’s what the chaos plague cult chants to intimidate the city they are attacking. Do you think the author would choose that phrase without it being a reference to",
       "tags": [],
       "thumbnail": "https://i.redd.it/akkk1dyo5zoh1.jpeg"
-    },
-    {
-      "id": "r-genewolfe-995e3e49",
-      "title": "Silk vs Horn’s Idea of Silk",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-09-11",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wdnrpe/silk_vs_horns_idea_of_silk/",
-      "desc": "What do y’all see as being some of the main differences between Horn’s idea of Silk and the man himself? Here are some of my ideas:\n -Suicidal ideation/depression. The moment in Exodus where Horn is suddenly worried that",
-      "tags": [
-        "Silk",
-        "Horn"
-      ],
-      "thumbnail": null
     },
     {
       "id": "youtube-search-89ce5953",
