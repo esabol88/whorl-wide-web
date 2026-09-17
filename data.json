@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T17:50:26.470Z",
+  "generatedAt": "2026-09-17T20:43:22.444Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-92c89bfd",
@@ -12,6 +12,20 @@
       "desc": "Dublin Core\nTitle\n1977 \"Science Fiction Authors Detail Changes in Genre\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\r\nGeorge R.R. Martin\n\r\nAnne Ely\n\n        \nSource\nThe Courier, April 22, 1977\n\n        \nDate\nApril 22, 1977",
       "tags": [],
       "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-b06d3168",
+      "title": "Diving into Shadow & Claw for the first time",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-17",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wj02h2/diving_into_shadow_claw_for_the_first_time/",
+      "desc": "(I didn't even realise until now that I bought the right kind of snack for my reading session, I've just now read about the Wolfe-Pringles connection so that's a funny coincidence)\n Anyways - I'm in the middle of Shadow ",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": "https://i.redd.it/k7ejftuo54qh1.jpeg"
     },
     {
       "id": "r-genewolfe-bcceb9b2",
@@ -125,18 +139,6 @@
       "thumbnail": null
     },
     {
-      "id": "r-genewolfe-bf7a6e2a",
-      "title": "Did Gene Wolfe ever express his thoughts about 9/11 directly?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-13",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wf2hi4/did_gene_wolfe_ever_express_his_thoughts_about/",
-      "desc": "He got asked about it straight out once, in the 2003 roundtable. Michael Andre-Driussi brought up \"Hour of Trust\" from 1973, which has suicide bombers recruited out of a mass of disaffected people and used for a coherent",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "youtube-search-9dff5ce8",
       "title": "Science Fiction Doesn’t Need Spaceships: Gene Wolfe’s Strangest Collection 🪐📚 #shorts",
       "source": "Paperback Archive",
@@ -171,18 +173,6 @@
       "desc": "From the Warhammer 40k book Blood of Asaheim I’m reading. It’s what the chaos plague cult chants to intimidate the city they are attacking. Do you think the author would choose that phrase without it being a reference to",
       "tags": [],
       "thumbnail": "https://i.redd.it/akkk1dyo5zoh1.jpeg"
-    },
-    {
-      "id": "youtube-search-89ce5953",
-      "title": "DLC Bookclub - Sword of the Lictor by Gene Wolfe - Chapters 32-38",
-      "source": "Jeff Cannata",
-      "type": "video",
-      "series": "new",
-      "date": "2026-09-10",
-      "url": "https://www.youtube.com/watch?v=zfwSX_bEDWY",
-      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff finish their read of the third novel in Gene Wolfe's Book ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/zfwSX_bEDWY/hqdefault.jpg"
     },
     {
       "id": "r-genewolfe-234814c2",
