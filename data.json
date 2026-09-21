@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-21T11:21:15.369Z",
+  "generatedAt": "2026-09-21T17:21:15.965Z",
   "items": [
+    {
+      "id": "youtube-search-bc422c06",
+      "title": "(short without Winds spoiler) ASOIAF and Gene Wolfe&#39;s tBotNS",
+      "source": "Asherah's trueborn son",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-21",
+      "url": "https://www.youtube.com/watch?v=z6xx3A3TZe8",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/z6xx3A3TZe8/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-160b1dfc",
       "title": "Two BOTNS-inspired paintings I made a while back.",
@@ -146,18 +158,6 @@
       "desc": "submitted by    /u/Fantasy_Brooks  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/sek9yd6rqpph1.jpeg"
-    },
-    {
-      "id": "youtube-search-90986a8f",
-      "title": "Gene Wolfe: Das Buch der Neuen Sonne",
-      "source": "Schreiblust Leselust",
-      "type": "video",
-      "series": "general",
-      "date": "2026-09-14",
-      "url": "https://www.youtube.com/watch?v=rqdK4474CW4",
-      "desc": "Ein Meisterwerk der Phantastik in edler Überarbeitung: In Gene Wolfes legendärem Romanzyklus „Das Buch der Neuen Sonne“ ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/rqdK4474CW4/hqdefault.jpg"
     },
     {
       "id": "gene-wolfe-collection-omeka-86f0192d",
