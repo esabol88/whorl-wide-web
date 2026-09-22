@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T19:21:52.798Z",
+  "generatedAt": "2026-09-22T22:29:52.724Z",
   "items": [
     {
       "id": "youtube-search-0897552d",
@@ -224,18 +224,6 @@
       "artistUrl": "https://www.reddit.com/user/InternalSoliloquist",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wi665h/ink_illustration_loosely_inspired_by_botns/",
       "nsfw": false
-    },
-    {
-      "id": "youtube-search-c39e8a3c",
-      "title": "The Sword of the Lictor",
-      "source": "The Cosmic Codex",
-      "type": "video",
-      "series": "new",
-      "date": "2026-09-15",
-      "url": "https://www.youtube.com/watch?v=Xp_CHnVcBA0",
-      "desc": "One of the most compelling passages I encountered reading \"The Sword of the Lictor,\" the third volume in Gene Wolfe's The Book ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/Xp_CHnVcBA0/hqdefault.jpg"
     },
     {
       "id": "gene-wolfe-collection-omeka-cd1ef4cd",
