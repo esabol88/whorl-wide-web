@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-22T15:14:34.190Z",
+  "generatedAt": "2026-09-22T19:21:52.798Z",
   "items": [
+    {
+      "id": "youtube-search-0897552d",
+      "title": "The Best of Gene Wolfe: A Definitive Retrospective of His Finest Short Fiction",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-22",
+      "url": "https://www.youtube.com/watch?v=EBDeSP2mtLc",
+      "desc": "Listen to free audiobook on Audible : https://amzn.to/4hopIfn Title: The Best of Gene Wolfe: A Definitive Retrospective of His Finest ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/EBDeSP2mtLc/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-eb601205",
       "title": "On Blue’s Waters by Gene Wolfe | Full Audiobook | The Book of the Short Sun",
@@ -76,6 +88,36 @@
       "desc": "Enter the strange and mysterious world of The Whorl in Gene Wolfe's Lake of the Long Sun, the second volume of The Book of the ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/ZUAmWtpc4Uk/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-d35f7249",
+      "title": "Caldé of the Long Sun Audiobook | Full Audiobook | Book of the Long Sun #3 | Gene Wolfe",
+      "source": "Echoes of Existence",
+      "type": "video",
+      "series": "long",
+      "date": "2026-09-22",
+      "url": "https://www.youtube.com/watch?v=NosbG4zdyuM",
+      "desc": "Enter Gene Wolfe's intricate world of The Whorl in Caldé of the Long Sun, the third volume of the acclaimed Book of the Long Sun ...",
+      "tags": [
+        "Silk"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/NosbG4zdyuM/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-7100973d",
+      "title": "Unrelated Urth-adjacent artworks",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "general",
+      "date": "2026-09-22",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wnhec9/unrelated_urthadjacent_artworks/",
+      "desc": "I saw the painting Europe After Rain II by Max Ernst for the first time since finishing BOTNS and it really rooted vibe/feel of the books for me. Usually I'll either have a very vivid picture in my head while I read or i",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/1jrzjy7s54rh1.jpeg",
+      "artist": "u/lulaf0rtune (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/lulaf0rtune",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wnhec9/unrelated_urthadjacent_artworks/",
+      "nsfw": false
     },
     {
       "id": "youtube-search-bc422c06",
@@ -224,18 +266,6 @@
         "Agia"
       ],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-ba2ece13",
-      "title": "New pickup for my Wolfe collection. I just found out The Book of the New Sun got a GURPS treatment back in the day. Anyone played using this guide?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-09-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wh5o2y/new_pickup_for_my_wolfe_collection_i_just_found/",
-      "desc": "submitted by    /u/Fantasy_Brooks  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/sek9yd6rqpph1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-86f0192d",
