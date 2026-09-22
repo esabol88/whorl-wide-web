@@ -1,6 +1,82 @@
 {
-  "generatedAt": "2026-09-22T10:30:58.428Z",
+  "generatedAt": "2026-09-22T15:14:34.190Z",
   "items": [
+    {
+      "id": "youtube-search-eb601205",
+      "title": "On Blue’s Waters by Gene Wolfe | Full Audiobook | The Book of the Short Sun",
+      "source": "Echoes of Existence",
+      "type": "video",
+      "series": "short",
+      "date": "2026-09-22",
+      "url": "https://www.youtube.com/watch?v=T99FunYTQ2w",
+      "desc": "On Blue's Waters is the first volume of The Book of the Short Sun, Gene Wolfe's continuation of the universe established in The ...",
+      "tags": [
+        "Horn"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/T99FunYTQ2w/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-9c13d664",
+      "title": "The Claw of the Conciliator by Gene Wolfe | Audiobook | The Book of the New Sun #2",
+      "source": "Echoes of Existence",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-22",
+      "url": "https://www.youtube.com/watch?v=C5OHeIQeSPA",
+      "desc": "Enter the mysterious far-future world of Gene Wolfe's The Claw of the Conciliator, the second volume of The Book of the New Sun.",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/C5OHeIQeSPA/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-2eae3ea6",
+      "title": "In Green’s Jungles by Gene Wolfe | Audiobook | The Book of the Short Sun #2",
+      "source": "Echoes of Existence",
+      "type": "video",
+      "series": "long",
+      "date": "2026-09-22",
+      "url": "https://www.youtube.com/watch?v=J1EnS3r93pE",
+      "desc": "Step aboard the Whorl, an enormous generation starship whose inhabitants have lived for generations without fully understanding ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/J1EnS3r93pE/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-9b6ea4da",
+      "title": "Nightside the Long Sun Audiobook by Gene Wolfe | The Book of the Long Sun #1",
+      "source": "Echoes of Existence",
+      "type": "video",
+      "series": "long",
+      "date": "2026-09-22",
+      "url": "https://www.youtube.com/watch?v=VsYRscP30r8",
+      "desc": "Step aboard the Whorl, an enormous generation starship whose inhabitants have lived for generations without fully understanding ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/VsYRscP30r8/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-cc474a17",
+      "title": "The Sword of the Lictor Audiobook by Gene Wolfe | Full | The Book of the New Sun #3",
+      "source": "Echoes of Existence",
+      "type": "video",
+      "series": "new",
+      "date": "2026-09-22",
+      "url": "https://www.youtube.com/watch?v=1RQc1jlVpOk",
+      "desc": "Enter the dark and mysterious far-future world of Gene Wolfe's The Book of the New Sun. The Sword of the Lictor is the third ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/1RQc1jlVpOk/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-9da7ef12",
+      "title": "Lake of the Long Sun Audiobook Full | by Gene Wolfe | The Book of the Long Sun #2",
+      "source": "Echoes of Existence",
+      "type": "video",
+      "series": "long",
+      "date": "2026-09-22",
+      "url": "https://www.youtube.com/watch?v=ZUAmWtpc4Uk",
+      "desc": "Enter the strange and mysterious world of The Whorl in Gene Wolfe's Lake of the Long Sun, the second volume of The Book of the ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/ZUAmWtpc4Uk/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-bc422c06",
       "title": "(short without Winds spoiler) ASOIAF and Gene Wolfe&#39;s tBotNS",
