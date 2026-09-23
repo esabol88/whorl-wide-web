@@ -1,21 +1,33 @@
 {
-  "generatedAt": "2026-09-23T12:25:19.703Z",
+  "generatedAt": "2026-09-23T17:33:42.543Z",
   "items": [
     {
+      "id": "youtube-search-4df13804",
+      "title": "Peace Audiobook by Gene Wolfe",
+      "source": "Glirkedo Gleiznirdolk",
+      "type": "video",
+      "series": "general",
+      "date": "2026-09-23",
+      "url": "https://www.youtube.com/watch?v=hscExjSsf1s",
+      "desc": "Listen to free audiobook on Audible : https://amzn.to/4hopIfn Title: Peace Author: Gene Wolfe Narrator: David Pittu Length: ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/hscExjSsf1s/hqdefault.jpg"
+    },
+    {
       "id": "youtube-search-b1afe368",
-      "title": "The Knight by Gene Wolfe | Part 2 | Audiobook | The Wizard Knight #1",
+      "title": "The Knight Audiobook Full | by Gene Wolfe | Part 2 | The Wizard Knight #1",
       "source": "Echoes of Existence",
       "type": "video",
       "series": "general",
       "date": "2026-09-23",
       "url": "https://www.youtube.com/watch?v=TeLNse95Ckk",
-      "desc": "",
+      "desc": "Enter the extraordinary fantasy world of Gene Wolfe's The Knight, the first volume of The Wizard Knight. A teenage boy from our ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/TeLNse95Ckk/hqdefault.jpg"
     },
     {
       "id": "youtube-search-dd685e41",
-      "title": "The Knight by Gene Wolfe | Audiobook | The Wizard Knight #1",
+      "title": "The Knight Audiobook Full | by Gene Wolfe | The Wizard Knight #1",
       "source": "Echoes of Existence",
       "type": "video",
       "series": "general",
