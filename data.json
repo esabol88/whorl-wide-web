@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T17:33:42.543Z",
+  "generatedAt": "2026-09-23T20:48:33.920Z",
   "items": [
     {
       "id": "youtube-search-4df13804",
@@ -74,6 +74,22 @@
         "Severian"
       ],
       "thumbnail": "https://i.ytimg.com/vi/vtsn_k3eP0c/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-fdc40b10",
+      "title": "Illustration: The Last House",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "general",
+      "date": "2026-09-23",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wog7j1/illustration_the_last_house/",
+      "desc": "My Take on Master Ash's house-- though Wolfe describes it as resembling a \"summer house\" with a \"wraparound porch\", I took some artistic liberty to make it resemble some sort of outpost/obvservatory, as I've been leaning",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/9o2khj4qpbrh1.jpeg",
+      "artist": "u/deimosremus (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/deimosremus",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wog7j1/illustration_the_last_house/",
+      "nsfw": false
     },
     {
       "id": "youtube-search-0897552d",
@@ -282,22 +298,6 @@
         "Severian"
       ],
       "thumbnail": "https://i.redd.it/k7ejftuo54qh1.jpeg"
-    },
-    {
-      "id": "r-genewolfe-bcceb9b2",
-      "title": "Ink illustration loosely inspired by BOTNS",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-09-16",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wi665h/ink_illustration_loosely_inspired_by_botns/",
-      "desc": "LOOSELY! A faithful illustration is beyond me, but fellow Gene Wolfe fans can probably at least pick out the parts that were inspired by him. \n    submitted by    /u/InternalSoliloquist  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/tibh6zq4ixph1.jpeg",
-      "artist": "u/InternalSoliloquist (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/InternalSoliloquist",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wi665h/ink_illustration_loosely_inspired_by_botns/",
-      "nsfw": false
     },
     {
       "id": "gene-wolfe-collection-omeka-cd1ef4cd",
