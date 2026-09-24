@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T12:59:57.293Z",
+  "generatedAt": "2026-09-24T17:45:48.914Z",
   "items": [
     {
       "id": "youtube-search-4df13804",
@@ -274,6 +274,18 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
+      "id": "r-genewolfe-b24bcdfc",
+      "title": "BOTLS to BOTSS",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-18",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wjofgm/botls_to_botss/",
+      "desc": "Just finished a re read of BOTLS. I love it: quirky, hopeful, inspiring. I have such respect for how it and BOTSS fit together that I want to jump straight into a re read of BOTSS, but man that’s a rough gear change. I t",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "gene-wolfe-collection-omeka-92c89bfd",
       "title": "1977 \"Science Fiction Authors Detail Changes in Genre\"",
       "source": "Gene Wolfe Collection (Omeka)",
@@ -284,20 +296,6 @@
       "desc": "Dublin Core\nTitle\n1977 \"Science Fiction Authors Detail Changes in Genre\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\r\nGeorge R.R. Martin\n\r\nAnne Ely\n\n        \nSource\nThe Courier, April 22, 1977\n\n        \nDate\nApril 22, 1977",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-b06d3168",
-      "title": "Diving into Shadow & Claw for the first time",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-17",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wj02h2/diving_into_shadow_claw_for_the_first_time/",
-      "desc": "(I didn't even realise until now that I bought the right kind of snack for my reading session, I've just now read about the Wolfe-Pringles connection so that's a funny coincidence)\n Anyways - I'm in the middle of Shadow ",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": "https://i.redd.it/k7ejftuo54qh1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-cd1ef4cd",
