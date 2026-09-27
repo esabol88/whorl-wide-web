@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T15:27:09.411Z",
+  "generatedAt": "2026-09-27T19:24:29.724Z",
   "items": [
     {
       "id": "youtube-search-7fd86765",
@@ -70,18 +70,6 @@
       "thumbnail": "https://i.redd.it/r2vfjukew1sh1.jpeg"
     },
     {
-      "id": "r-genewolfe-1957a83d",
-      "title": "New book",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-26",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wqof1t/new_book/",
-      "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/ehhvln0mqurh1.jpeg"
-    },
-    {
       "id": "r-genewolfe-2035b24c",
       "title": "Half Price Books was Good to Me.",
       "source": "r/genewolfe",
@@ -92,6 +80,18 @@
       "desc": "Always delighted to spot Wolfe in the wild.\n    submitted by    /u/UnreliableAmanda  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/80mlpv5mjvrh1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-1957a83d",
+      "title": "New book",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-26",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wqof1t/new_book/",
+      "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/ehhvln0mqurh1.jpeg"
     },
     {
       "id": "alzabo-soup-c1be0af6",
