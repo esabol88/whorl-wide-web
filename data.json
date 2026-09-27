@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T10:17:04.315Z",
+  "generatedAt": "2026-09-27T15:27:09.411Z",
   "items": [
     {
       "id": "youtube-search-7fd86765",
@@ -56,6 +56,20 @@
       "thumbnail": null
     },
     {
+      "id": "r-genewolfe-dd2ee561",
+      "title": "Thecla",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-27",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wri6wt/thecla/",
+      "desc": "submitted by    /u/LifeChoicesRip  \n [link]   [comments]",
+      "tags": [
+        "Thecla"
+      ],
+      "thumbnail": "https://i.redd.it/r2vfjukew1sh1.jpeg"
+    },
+    {
       "id": "r-genewolfe-1957a83d",
       "title": "New book",
       "source": "r/genewolfe",
@@ -90,18 +104,6 @@
       "desc": "Intro - Phil and Metz make a special panel announcement about MileHiCon, where we'll be reading the original draft of The Shadow of the Torturer. Content (3:46) - Discussion of Chapter 1 of Pirate Freedom, by Gene Wolfe ",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "r-genewolfe-8acc1124",
-      "title": "Gene Wolfe - The Shadow of the Torturer",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-09-25",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wqbvqi/gene_wolfe_the_shadow_of_the_torturer/",
-      "desc": "submitted by    /u/Mountain-Ad3230  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/woc5uz7y8rrh1.png"
     },
     {
       "id": "r-genewolfe-99963c7b",
