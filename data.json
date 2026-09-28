@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-09-28T01:17:21.387Z",
+  "generatedAt": "2026-09-28T07:53:37.491Z",
   "items": [
+    {
+      "id": "gene-wolfe-collection-omeka-821c1eff",
+      "title": "1994 ConAdian in Winnipeg",
+      "source": "Gene Wolfe Collection (Omeka)",
+      "type": "article",
+      "series": "general",
+      "date": "2026-09-28",
+      "url": "https://wolfenarrators.omeka.net/items/show/217",
+      "desc": "Dublin Core\nTitle\n1994 ConAdian in Winnipeg\n\n        \nDescription\nPhotography take by Alan Stewart at ConAdian in Winnipeg, Canada, 1994. (The 52nd World Science Fiction Convention).\n\r\nFrom left to right, Rosemary Wolfe,",
+      "tags": [],
+      "thumbnail": null
+    },
     {
       "id": "youtube-search-7fd86765",
       "title": "A Sombra do Torturador",
@@ -426,18 +438,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-59666c66",
-      "title": "Gene Wolfe: A Selected List",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-09-05",
-      "url": "https://wolfenarrators.omeka.net/items/show/207",
-      "desc": "Dublin Core\nTitle\nGene Wolfe: A Selected List\n\n        \nSubject\nA selected list of Wolfe and Wolfe reference works held by the The Chicago Public Library Cultural Center.\n\n        \nDescription\nUndated bookmark published ",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "alzabo-soup-2688e0f0",
