@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T16:12:48.235Z",
+  "generatedAt": "2026-09-28T22:20:09.203Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-821c1eff",
@@ -10,6 +10,18 @@
       "date": "2026-09-28",
       "url": "https://wolfenarrators.omeka.net/items/show/217",
       "desc": "Dublin Core\nTitle\n1994 ConAdian in Winnipeg\n\n        \nDescription\nPhotography take by Alan Stewart at ConAdian in Winnipeg, Canada, 1994. (The 52nd World Science Fiction Convention).\n\r\nFrom left to right, Rosemary Wolfe,",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-db21b2d8",
+      "title": "Q&D on \"The Riders of the Purple Wage\" inspiring \"The Fifth Head of Cerberus\"",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-28",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wsna4g/qd_on_the_riders_of_the_purple_wage_inspiring_the/",
+      "desc": "Quick & dirty.\n 1985 \"Interview of Gene Wolfe\"\n On page 153, Wolfe says he was inspired by Farmer's \"The Riders of the Purple Wage\" to write novella \"The Fifth Head of Cerberus.\"\n Notes on \"The Riders of the Purple Wage\"",
       "tags": [],
       "thumbnail": null
     },
@@ -104,18 +116,6 @@
       "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/ehhvln0mqurh1.jpeg"
-    },
-    {
-      "id": "r-genewolfe-2035b24c",
-      "title": "Half Price Books was Good to Me.",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-26",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wqruly/half_price_books_was_good_to_me/",
-      "desc": "Always delighted to spot Wolfe in the wild.\n    submitted by    /u/UnreliableAmanda  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/80mlpv5mjvrh1.jpeg"
     },
     {
       "id": "alzabo-soup-c1be0af6",
@@ -285,7 +285,7 @@
     },
     {
       "id": "youtube-search-9b6ea4da",
-      "title": "Nightside the Long Sun Audiobook by Gene Wolfe | The Book of the Long Sun #1",
+      "title": "Nightside the Long Sun Audiobook | Gene Wolfe | The Book of the Long Sun Book #1",
       "source": "Echoes of Existence",
       "type": "video",
       "series": "long",
