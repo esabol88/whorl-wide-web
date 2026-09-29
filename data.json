@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T16:12:59.693Z",
+  "generatedAt": "2026-09-29T21:08:40.357Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-821c1eff",
@@ -118,6 +118,18 @@
       "thumbnail": "https://i.redd.it/ehhvln0mqurh1.jpeg"
     },
     {
+      "id": "r-genewolfe-2035b24c",
+      "title": "Half Price Books was Good to Me.",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-26",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wqruly/half_price_books_was_good_to_me/",
+      "desc": "Always delighted to spot Wolfe in the wild.\n    submitted by    /u/UnreliableAmanda  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/80mlpv5mjvrh1.jpeg"
+    },
+    {
       "id": "alzabo-soup-c1be0af6",
       "title": "Chapter 1 - Gene Wolfe's Pirate Freedom",
       "source": "Alzabo Soup",
@@ -229,34 +241,6 @@
       "artist": "u/deimosremus (Reddit)",
       "artistUrl": "https://www.reddit.com/user/deimosremus",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wog7j1/illustration_the_last_house/",
-      "nsfw": false
-    },
-    {
-      "id": "youtube-search-0897552d",
-      "title": "The Best of Gene Wolfe: A Definitive Retrospective of His Finest Short Fiction",
-      "source": "Free Audiobook",
-      "type": "video",
-      "series": "general",
-      "date": "2026-09-22",
-      "url": "https://www.youtube.com/watch?v=EBDeSP2mtLc",
-      "desc": "Listen to free audiobook on Audible : https://amzn.to/4hopIfn Title: The Best of Gene Wolfe: A Definitive Retrospective of His Finest ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/EBDeSP2mtLc/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-7100973d",
-      "title": "Unrelated Urth-adjacent artworks",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-09-22",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wnhec9/unrelated_urthadjacent_artworks/",
-      "desc": "I saw the painting Europe After Rain II by Max Ernst for the first time since finishing BOTNS and it really rooted vibe/feel of the books for me. Usually I'll either have a very vivid picture in my head while I read or i",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/1jrzjy7s54rh1.jpeg",
-      "artist": "u/lulaf0rtune (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/lulaf0rtune",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wnhec9/unrelated_urthadjacent_artworks/",
       "nsfw": false
     },
     {
@@ -979,6 +963,17 @@
       "date": "2005-09-16",
       "url": "https://doi.org/10.1101/gr.3672305",
       "desc": "We developed the Yeast Gene Order Browser (YGOB; http://wolfe.gen.tcd.ie/ygob) to facilitate visual comparisons and computational analysis of synteny relationships in yeasts. The data presented in YGOB, currently coverin",
+      "tags": []
+    },
+    {
+      "id": "crossref-scholarly-papers-beb152eb",
+      "title": "Review: <i>Attending Daedalus: Gene Wolfe, Artifice and the Reader</i>, by Peter Wright",
+      "source": "Science Fiction Studies",
+      "type": "paper",
+      "series": "general",
+      "date": "2005-03-01",
+      "url": "https://doi.org/10.1525/sfs.32.1.0212",
+      "desc": "Science Fiction Studies",
       "tags": []
     },
     {
