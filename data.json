@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T21:08:40.357Z",
+  "generatedAt": "2026-09-30T00:51:40.297Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-821c1eff",
@@ -963,17 +963,6 @@
       "date": "2005-09-16",
       "url": "https://doi.org/10.1101/gr.3672305",
       "desc": "We developed the Yeast Gene Order Browser (YGOB; http://wolfe.gen.tcd.ie/ygob) to facilitate visual comparisons and computational analysis of synteny relationships in yeasts. The data presented in YGOB, currently coverin",
-      "tags": []
-    },
-    {
-      "id": "crossref-scholarly-papers-beb152eb",
-      "title": "Review: <i>Attending Daedalus: Gene Wolfe, Artifice and the Reader</i>, by Peter Wright",
-      "source": "Science Fiction Studies",
-      "type": "paper",
-      "series": "general",
-      "date": "2005-03-01",
-      "url": "https://doi.org/10.1525/sfs.32.1.0212",
-      "desc": "Science Fiction Studies",
       "tags": []
     },
     {
