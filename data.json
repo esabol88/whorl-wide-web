@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T18:41:05.691Z",
+  "generatedAt": "2026-09-30T22:42:57.689Z",
   "items": [
     {
       "id": "gene-wolfe-collection-omeka-821c1eff",
@@ -106,6 +106,20 @@
       "thumbnail": "https://i.redd.it/r2vfjukew1sh1.jpeg"
     },
     {
+      "id": "r-genewolfe-a6550f99",
+      "title": "Some tryout Dorcas sketches",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-09-27",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wrt681/some_tryout_dorcas_sketches/",
+      "desc": "Still trying to figure out how to best show what she looks like in my head\n    submitted by    /u/LifeChoicesRip  \n [link]   [comments]",
+      "tags": [
+        "Dorcas"
+      ],
+      "thumbnail": null
+    },
+    {
       "id": "r-genewolfe-1957a83d",
       "title": "New book",
       "source": "r/genewolfe",
@@ -152,22 +166,6 @@
       "desc": "I stumbled upon these gems. Does anyone else know of other albums inspired by the solar cycle, or songs or even that have nothing to do with it but just give off those vibes?\n    submitted by    /u/No_Lead2782  \n [link] ",
       "tags": [],
       "thumbnail": "https://i.redd.it/17psdfqusirh1.jpeg"
-    },
-    {
-      "id": "r-genewolfe-fdc40b10",
-      "title": "Illustration: The Last House",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-09-23",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wog7j1/illustration_the_last_house/",
-      "desc": "My Take on Master Ash's house-- though Wolfe describes it as resembling a \"summer house\" with a \"wraparound porch\", I took some artistic liberty to make it resemble some sort of outpost/obvservatory, as I've been leaning",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/9o2khj4qpbrh1.jpeg",
-      "artist": "u/deimosremus (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/deimosremus",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1wog7j1/illustration_the_last_house/",
-      "nsfw": false
     },
     {
       "id": "gene-wolfe-collection-omeka-92c89bfd",
