@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-10-01T20:09:31.855Z",
+  "generatedAt": "2026-10-02T00:19:11.852Z",
   "items": [
+    {
+      "id": "youtube-search-7b0a17f1",
+      "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 1-8",
+      "source": "Jeff Cannata",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-01",
+      "url": "https://www.youtube.com/watch?v=4yU1neZe7HE",
+      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff kick off their read of the fourth novel in Gene Wolfe's ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/4yU1neZe7HE/hqdefault.jpg"
+    },
     {
       "id": "gene-wolfe-collection-omeka-821c1eff",
       "title": "1994 ConAdian in Winnipeg",
