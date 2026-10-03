@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T07:14:44.955Z",
+  "generatedAt": "2026-10-03T12:50:05.742Z",
   "items": [
     {
       "id": "alzabo-soup-c1be0af6",
@@ -12,6 +12,20 @@
       "desc": "Intro - Phil and Metz introduce the Gormenghast trilogy Content (11:43) - Discussion of Chapter 2 of Pirate Freedom, by Gene Wolfe Current Read-Along - Titus Groan, by Mervyn Peake Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-genewolfe-bd6eb437",
+      "title": "Another killer Humble Bundle, starring Gene Wolfe",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-02",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wvjxhj/another_killer_humble_bundle_starring_gene_wolfe/",
+      "desc": "In what is becoming somewhat old news, the Humble Bundle again provides (at least to US readers) another great collection of DRM free EPUBs, this time from Hugo Award winner Gene Wolfe.\n Back in June, the Meal of Thorns ",
+      "tags": [
+        "Horn"
+      ],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-7b0a17f1",
@@ -154,18 +168,6 @@
         "Dorcas"
       ],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-1957a83d",
-      "title": "New book",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-26",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wqof1t/new_book/",
-      "desc": "submitted by    /u/BuyHistorical1041  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/ehhvln0mqurh1.jpeg"
     },
     {
       "id": "r-genewolfe-2035b24c",
