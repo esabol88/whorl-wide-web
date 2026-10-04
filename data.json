@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T18:27:33.225Z",
+  "generatedAt": "2026-10-04T22:05:14.170Z",
   "items": [
     {
       "id": "youtube-search-fd6930e2",
@@ -48,6 +48,18 @@
       "desc": "submitted by    /u/AustinBeeman  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/b7whdn6cd9th1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-5ffe4d4f",
+      "title": "Thank you, Marc!",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-03",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wwspgz/thank_you_marc/",
+      "desc": "Thank you for putting these beautiful volumes out in the world! Can't wait to dive in. \n    submitted by    /u/HOXA9  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/cnuerotsdath1.jpeg"
     },
     {
       "id": "r-rereadingwolfepodcast-c394a87e",
@@ -172,20 +184,6 @@
         "Severian",
         "the Claw",
         "Vodalus"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-a6550f99",
-      "title": "Some tryout Dorcas sketches",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-27",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wrt681/some_tryout_dorcas_sketches/",
-      "desc": "Still trying to figure out how to best show what she looks like in my head\n    submitted by    /u/LifeChoicesRip  \n [link]   [comments]",
-      "tags": [
-        "Dorcas"
       ],
       "thumbnail": null
     },
