@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-10-04T08:56:49.880Z",
+  "generatedAt": "2026-10-04T14:31:21.258Z",
   "items": [
+    {
+      "id": "youtube-search-fd6930e2",
+      "title": "The Wizard Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-10-04",
+      "url": "https://www.youtube.com/watch?v=TPZLZ9fA6Ss",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Wizard Subtitle: The Wizard Knight Series, Book Two ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/TPZLZ9fA6Ss/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-fae9a92a",
+      "title": "The Knight Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-10-04",
+      "url": "https://www.youtube.com/watch?v=JH-D9o_t0pE",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Knight Subtitle: The Wizard Knight Series, Book One ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/JH-D9o_t0pE/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-84831661",
       "title": "PSA: Humble Bundle",
@@ -12,6 +36,18 @@
       "desc": "Just a heads up on Humble you can get 38 of Wolfe's books (EPUB) for a $20 minimum, and support Alzheimers research at the same time. Seems like a win for everyone.\n    submitted by    /u/Kaerteolde  \n [link]   [comments",
       "tags": [],
       "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-5ffe4d4f",
+      "title": "Thank you, Marc!",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-03",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wwspgz/thank_you_marc/",
+      "desc": "Thank you for putting these beautiful volumes out in the world! Can't wait to dive in. \n    submitted by    /u/HOXA9  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/cnuerotsdath1.jpeg"
     },
     {
       "id": "r-rereadingwolfepodcast-c394a87e",
@@ -138,20 +174,6 @@
         "Vodalus"
       ],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-dd2ee561",
-      "title": "Thecla",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-09-27",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wri6wt/thecla/",
-      "desc": "submitted by    /u/LifeChoicesRip  \n [link]   [comments]",
-      "tags": [
-        "Thecla"
-      ],
-      "thumbnail": "https://i.redd.it/r2vfjukew1sh1.jpeg"
     },
     {
       "id": "r-genewolfe-a6550f99",
