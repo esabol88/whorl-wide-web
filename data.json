@@ -1,6 +1,56 @@
 {
-  "generatedAt": "2026-10-05T07:52:20.289Z",
+  "generatedAt": "2026-10-05T16:33:31.385Z",
   "items": [
+    {
+      "id": "youtube-search-dc0e9a53",
+      "title": "The Sword of the Lictor Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-05",
+      "url": "https://www.youtube.com/watch?v=_BEDNzDxl5E",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Sword of the Lictor Subtitle: The Book of the New Sun, ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/_BEDNzDxl5E/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-fb695fa1",
+      "title": "The Shadow of the Torturer Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-05",
+      "url": "https://www.youtube.com/watch?v=sTHYosTE12c",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Shadow of the Torturer Subtitle: The Book of the New Sun, ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/sTHYosTE12c/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-a088ca93",
+      "title": "The Claw of the Conciliator Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-05",
+      "url": "https://www.youtube.com/watch?v=pon_41IWwto",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Claw of the Conciliator Subtitle: The Book of the New Sun, ...",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/pon_41IWwto/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-5aa341d7",
+      "title": "The Citadel of the Autarch Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-05",
+      "url": "https://www.youtube.com/watch?v=V2oF3giDKiI",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Citadel of the Autarch Subtitle: The Book of the New Sun, ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/V2oF3giDKiI/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-fd6930e2",
       "title": "The Wizard Audiobook by Gene Wolfe",
@@ -26,18 +76,6 @@
       "thumbnail": "https://i.ytimg.com/vi/JH-D9o_t0pE/hqdefault.jpg"
     },
     {
-      "id": "r-genewolfe-84831661",
-      "title": "PSA: Humble Bundle",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-03",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wwqklc/psa_humble_bundle/",
-      "desc": "Just a heads up on Humble you can get 38 of Wolfe's books (EPUB) for a $20 minimum, and support Alzheimers research at the same time. Seems like a win for everyone.\n    submitted by    /u/Kaerteolde  \n [link]   [comments",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "r-genewolfe-a8bb74ff",
       "title": "Saw this translation meme and realized it is a key to unlocking much of GW’s stories.",
       "source": "r/genewolfe",
@@ -48,6 +86,18 @@
       "desc": "submitted by    /u/AustinBeeman  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/b7whdn6cd9th1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-84831661",
+      "title": "PSA: Humble Bundle",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-03",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wwqklc/psa_humble_bundle/",
+      "desc": "Just a heads up on Humble you can get 38 of Wolfe's books (EPUB) for a $20 minimum, and support Alzheimers research at the same time. Seems like a win for everyone.\n    submitted by    /u/Kaerteolde  \n [link]   [comments",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "r-genewolfe-5ffe4d4f",
