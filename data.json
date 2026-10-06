@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-10-06T02:41:42.833Z",
+  "generatedAt": "2026-10-06T09:33:59.771Z",
   "items": [
+    {
+      "id": "youtube-search-d2bf4051",
+      "title": "The Land Across Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-10-06",
+      "url": "https://www.youtube.com/watch?v=Kyyp7Oa5OkY",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Land Across Categories: Contemporary, Contemporary ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/Kyyp7Oa5OkY/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-dc0e9a53",
       "title": "The Sword of the Lictor Audiobook by Gene Wolfe",
@@ -316,6 +328,18 @@
       "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
     },
     {
+      "id": "nick-reads-fantasy-4806a50d",
+      "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
+      "source": "Nick Reads Fantasy",
+      "type": "video",
+      "series": "general",
+      "date": "2026-08-05",
+      "url": "https://www.youtube.com/watch?v=sij2e-erajU",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i4.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
+    },
+    {
       "id": "rereading-wolfe-c309e24a",
       "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
       "source": "Rereading Wolfe",
@@ -464,6 +488,18 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/VYwYlNzHBdo/hqdefault.jpg"
+    },
+    {
+      "id": "undertowers-podcast-fecc6d63",
+      "title": "Episode 36: Peace by Gene Wolfe; what the $%!^ was that?!",
+      "source": "Undertowers Podcast",
+      "type": "video",
+      "series": "general",
+      "date": "2025-08-11",
+      "url": "https://www.youtube.com/watch?v=W93DwkQvIw4",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i4.ytimg.com/vi/W93DwkQvIw4/hqdefault.jpg"
     },
     {
       "id": "manual-vegadraws-gyoll",
