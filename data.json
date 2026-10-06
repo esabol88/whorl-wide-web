@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-10-06T09:33:59.771Z",
+  "generatedAt": "2026-10-06T16:22:18.055Z",
   "items": [
+    {
+      "id": "youtube-search-1296df92",
+      "title": "Conto: Pedras Estranhas (Alien Stones), de Gene Wolfe",
+      "source": "IAudio Livro ",
+      "type": "video",
+      "series": "general",
+      "date": "2026-10-06",
+      "url": "https://www.youtube.com/watch?v=Bto7PG-FqjA",
+      "desc": "Explore o melhor da literatura na plataforma Odysee! Nossos audiolivros contam com narrações humanas e produção de alta ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/Bto7PG-FqjA/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-8e28e574",
+      "title": "The Citadel of the Autarch",
+      "source": "The Cosmic Codex",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-06",
+      "url": "https://www.youtube.com/watch?v=G6bs_Kc-b0M",
+      "desc": "I've finished reading \"The Citadel of the Autarch,\" the fourth volume in Gene Wolfe's original Book of the New Sun series. #scifi.",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/G6bs_Kc-b0M/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-d2bf4051",
       "title": "The Land Across Audiobook by Gene Wolfe",
