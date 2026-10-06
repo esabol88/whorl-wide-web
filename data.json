@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T22:59:24.575Z",
+  "generatedAt": "2026-10-06T02:41:42.833Z",
   "items": [
     {
       "id": "youtube-search-dc0e9a53",
@@ -88,18 +88,6 @@
       "thumbnail": "https://i.redd.it/b7whdn6cd9th1.jpeg"
     },
     {
-      "id": "r-genewolfe-84831661",
-      "title": "PSA: Humble Bundle",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-03",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wwqklc/psa_humble_bundle/",
-      "desc": "Just a heads up on Humble you can get 38 of Wolfe's books (EPUB) for a $20 minimum, and support Alzheimers research at the same time. Seems like a win for everyone.\n    submitted by    /u/Kaerteolde  \n [link]   [comments",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "r-genewolfe-5ffe4d4f",
       "title": "Thank you, Marc!",
       "source": "r/genewolfe",
@@ -110,6 +98,18 @@
       "desc": "Thank you for putting these beautiful volumes out in the world! Can't wait to dive in. \n    submitted by    /u/HOXA9  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/cnuerotsdath1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-84831661",
+      "title": "PSA: Humble Bundle",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-03",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wwqklc/psa_humble_bundle/",
+      "desc": "Just a heads up on Humble you can get 38 of Wolfe's books (EPUB) for a $20 minimum, and support Alzheimers research at the same time. Seems like a win for everyone.\n    submitted by    /u/Kaerteolde  \n [link]   [comments",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "r-rereadingwolfepodcast-c394a87e",
@@ -316,18 +316,6 @@
       "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
     },
     {
-      "id": "nick-reads-fantasy-4806a50d",
-      "title": "The WizardKnight Explained: Gene Wolfe’s Fantasy Masterpiece ",
-      "source": "Nick Reads Fantasy",
-      "type": "video",
-      "series": "general",
-      "date": "2026-08-05",
-      "url": "https://www.youtube.com/watch?v=sij2e-erajU",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
-    },
-    {
       "id": "rereading-wolfe-c309e24a",
       "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
       "source": "Rereading Wolfe",
@@ -476,18 +464,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/VYwYlNzHBdo/hqdefault.jpg"
-    },
-    {
-      "id": "undertowers-podcast-fecc6d63",
-      "title": "Episode 36: Peace by Gene Wolfe; what the $%!^ was that?!",
-      "source": "Undertowers Podcast",
-      "type": "video",
-      "series": "general",
-      "date": "2025-08-11",
-      "url": "https://www.youtube.com/watch?v=W93DwkQvIw4",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/W93DwkQvIw4/hqdefault.jpg"
     },
     {
       "id": "manual-vegadraws-gyoll",
