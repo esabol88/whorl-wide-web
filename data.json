@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-10-08T14:10:18.668Z",
+  "generatedAt": "2026-10-08T20:20:00.305Z",
   "items": [
+    {
+      "id": "youtube-search-08aa2ec9",
+      "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 9-15",
+      "source": "Jeff Cannata",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-08",
+      "url": "https://www.youtube.com/watch?v=WXdmEYddaDI",
+      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the fourth novel in Gene Wolfe's ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/WXdmEYddaDI/hqdefault.jpg"
+    },
     {
       "id": "gene-wolfe-collection-omeka-e16d5eff",
       "title": "1984-09-26 Wolfe to Stewart",
@@ -72,6 +84,18 @@
       "desc": "submitted by    /u/jeuscorlik  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/5dnjyo2thwth1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-ac424308",
+      "title": "Short Sun",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "short",
+      "date": "2026-10-06",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wysjjy/short_sun/",
+      "desc": "I’m halfway through In Green’s Jungles on my first read through of the Solar Cycle, and I have to say this is the best trilogy of the series. Superb plot, excellent coda. Finding it a very rewarding payoff. \n    submitte",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-dc0e9a53",
@@ -232,18 +256,6 @@
       "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff kick off their read of the fourth novel in Gene Wolfe's ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/4yU1neZe7HE/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-062e0895",
-      "title": "Humble Book Bundle: The Ultimate Gene Wolfe Library by Tor Books",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-01",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wv7rra/humble_book_bundle_the_ultimate_gene_wolfe/",
-      "desc": "This looks like an amazing deal (and it supports charity)!\n Edit: It seems region locked to US only. \n EDIT 2: Of course you shouldn't try to circumvent geographic restrictions because it's against Humble's terms of serv",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "gene-wolfe-collection-omeka-821c1eff",
