@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T19:48:34.469Z",
+  "generatedAt": "2026-10-10T23:04:05.475Z",
   "items": [
     {
       "id": "youtube-search-1dfdead0",
@@ -250,6 +250,18 @@
       "thumbnail": "https://i.ytimg.com/vi/V2oF3giDKiI/hqdefault.jpg"
     },
     {
+      "id": "r-genewolfe-b834bb0d",
+      "title": "What's your favorite non-series Wolfe book/work?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-05",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wye953/whats_your_favorite_nonseries_wolfe_bookwork/",
+      "desc": "In light of having copped the Humble Bundle and the opportunity to dig even further (I say this, having read at least fourteen books by the guy lmao) into Gene Wolfe's writing, I was wondering what selections beyond the ",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "youtube-search-fd6930e2",
       "title": "The Wizard Audiobook by Gene Wolfe",
       "source": "Free Audiobook",
@@ -272,18 +284,6 @@
       "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Knight Subtitle: The Wizard Knight Series, Book One ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/JH-D9o_t0pE/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-a8bb74ff",
-      "title": "Saw this translation meme and realized it is a key to unlocking much of GW’s stories.",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-03",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wwykdv/saw_this_translation_meme_and_realized_it_is_a/",
-      "desc": "submitted by    /u/AustinBeeman  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/b7whdn6cd9th1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-821c1eff",
