@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-10-13T12:18:12.862Z",
+  "generatedAt": "2026-10-13T19:38:00.335Z",
   "items": [
+    {
+      "id": "r-genewolfe-1939dd27",
+      "title": "The Protagonists of Long and Short Sun",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "short",
+      "date": "2026-10-13",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x4whny/the_protagonists_of_long_and_short_sun/",
+      "desc": "I have created a couple of illustration on Silk and the Rajan (Incanto, Silk, Horn, Silk/Horn, and all the other names) after my first read trough the whole solar cycle. (I know that is not a great achivement for alot of",
+      "tags": [
+        "Severian",
+        "Silk",
+        "Horn"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-7ae69ef0",
+      "title": "I feel like we don’t give enough appreciation to how Wolfe was initially inspired to write New Sun because he got irritated that no one was dressing up as his characters at a Comic-Con.",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-10-13",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x553zz/i_feel_like_we_dont_give_enough_appreciation_to/",
+      "desc": "To me this is a pretty amusing start to what became the single best Scifi epic in the genre. Also, we need to bring back the word masquerade for comic cons. Here’s Wolfe’s story:\n “As I sat there being instructed I was s",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
     {
       "id": "youtube-search-a775733f",
       "title": "Interlibrary Loan Audiobook by Gene Wolfe",
@@ -14,6 +44,20 @@
       "thumbnail": "https://i.ytimg.com/vi/JpF6JS62bMs/hqdefault.jpg"
     },
     {
+      "id": "r-genewolfe-d07edd6b",
+      "title": "Wandering in the Botanic Gardens",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-12",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x4hgbk/wandering_in_the_botanic_gardens/",
+      "desc": "It is often said that the mind, when burdened by memory, will project its most ancient terrors onto the most mundane of landscapes. I was walking my dog through the scrub—a creature of simple, trusting habits, entirely i",
+      "tags": [
+        "Agia"
+      ],
+      "thumbnail": "https://i.redd.it/ddi28urwg4vh1.jpeg"
+    },
+    {
       "id": "youtube-search-9016759b",
       "title": "Gene Wolfe Library Bundle: 38 Books at Humble",
       "source": "Nerdy Deals",
@@ -24,6 +68,22 @@
       "desc": "nerdydeals.net/bundle-deals #ad The Ultimate Gene Wolfe Library by Tor Books is live on Humble with 38 DRM-free books ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/k-qM5PvHO0E/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-6526a7ed",
+      "title": "Illustration: Is He Dead?",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "general",
+      "date": "2026-10-11",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x3ldal/illustration_is_he_dead/",
+      "desc": "Been procrastinating on this one for a bit! \n    submitted by    /u/deimosremus  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/0pvxylnzywuh1.jpeg",
+      "artist": "u/deimosremus (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/deimosremus",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1x3ldal/illustration_is_he_dead/",
+      "nsfw": false
     },
     {
       "id": "youtube-search-1dfdead0",
@@ -78,6 +138,18 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
+      "id": "r-genewolfe-b1cfff88",
+      "title": "Decline of the Libraries",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-09",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x1uu60/decline_of_the_libraries/",
+      "desc": "I was reading the 1986 Elliott Swanson interview in Shadows of the New Sun and this exchange struck me. I didn't realize the decline went so far back.\n ES: Libraries and librarians often crop up in your works -- why?\n GW",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "youtube-search-08aa2ec9",
       "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 9-15",
       "source": "Jeff Cannata",
@@ -102,6 +174,18 @@
       "thumbnail": null
     },
     {
+      "id": "r-rereadingwolfepodcast-f0a1922e",
+      "title": "Gene Wolfe Humble Bundle",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-08",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1x128um/gene_wolfe_humble_bundle/",
+      "desc": "For those of you looking to round out your Gene Wolfe collection, or get some books in e-format, nice bundle going on right now:\n https://www.humblebundle.com/books/ultimate-gene-wolfe-library-by-tor-books-books\n    subm",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "youtube-search-3eb185be",
       "title": "A Borrowed Man Audiobook by Gene Wolfe",
       "source": "Free Audiobook",
@@ -114,28 +198,16 @@
       "thumbnail": "https://i.ytimg.com/vi/j_DpFO1GOXg/hqdefault.jpg"
     },
     {
-      "id": "youtube-search-1296df92",
-      "title": "Conto: Pedras Estranhas (Alien Stones), de Gene Wolfe",
-      "source": "IAudio Livro ",
-      "type": "video",
+      "id": "r-genewolfe-9486fb11",
+      "title": "This cover is Soo dope 🤘",
+      "source": "r/genewolfe",
+      "type": "discussion",
       "series": "general",
       "date": "2026-10-06",
-      "url": "https://www.youtube.com/watch?v=Bto7PG-FqjA",
-      "desc": "Explore o melhor da literatura na plataforma Odysee! Nossos audiolivros contam com narrações humanas e produção de alta ...",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1wzc8dv/this_cover_is_soo_dope/",
+      "desc": "submitted by    /u/jeuscorlik  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/Bto7PG-FqjA/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-8e28e574",
-      "title": "The Citadel of the Autarch",
-      "source": "The Cosmic Codex",
-      "type": "video",
-      "series": "new",
-      "date": "2026-10-06",
-      "url": "https://www.youtube.com/watch?v=G6bs_Kc-b0M",
-      "desc": "I've finished reading \"The Citadel of the Autarch,\" the fourth volume in Gene Wolfe's original Book of the New Sun series. #scifi.",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/G6bs_Kc-b0M/hqdefault.jpg"
+      "thumbnail": "https://i.redd.it/5dnjyo2thwth1.jpeg"
     },
     {
       "id": "gene-wolfe-collection-omeka-821c1eff",
@@ -330,18 +402,6 @@
       "thumbnail": "https://i3.ytimg.com/vi/vZD4oR23S_s/hqdefault.jpg"
     },
     {
-      "id": "reactor-2d651c20",
-      "title": "Jo Walton’s Reading List: February 2026",
-      "source": "Reactor",
-      "type": "article",
-      "series": "new",
-      "date": "2026-03-11",
-      "url": "https://reactormag.com/jo-waltons-reading-list-february-2026/",
-      "desc": "Thoughts on Gene Wolfe, Sharon Shinn, and finally getting the appeal of cosy fantasy!\nThe post Jo Walton’s Reading List: February 2026 appeared first on Reactor.",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "rereading-wolfe-3a24120e",
       "title": "tbotns 3-8 \"Upon the Cliff\"",
       "source": "Rereading Wolfe",
@@ -364,18 +424,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i4.ytimg.com/vi/SYyL0ko4qDk/hqdefault.jpg"
-    },
-    {
-      "id": "reactor-f9e1b1f8",
-      "title": "Jo Walton’s Reading List: December 2025",
-      "source": "Reactor",
-      "type": "article",
-      "series": "new",
-      "date": "2026-01-20",
-      "url": "https://reactormag.com/jo-waltons-reading-list-december-2025/",
-      "desc": "Hooray for romantasy, new Penric, Poul Anderson, and movie reviews…\nThe post Jo Walton’s Reading List: December 2025 appeared first on Reactor.",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "manual-lincolnmichel-whyread",
@@ -416,18 +464,6 @@
       "artistUrl": "https://www.andreakalfas.com/",
       "postUrl": "https://andreakalfas.tumblr.com/post/25648964563/severian-and-the-undine-a-scene-from-book-of-the",
       "nsfw": false
-    },
-    {
-      "id": "reactor-8e2aa426",
-      "title": "Adventures in Tourism: Five SFF Stories About Travel",
-      "source": "Reactor",
-      "type": "article",
-      "series": "new",
-      "date": "2025-09-23",
-      "url": "https://reactormag.com/adventures-in-tourism-five-sff-stories-about-travel/",
-      "desc": "Oh, the joys (and perils) of visiting unfamiliar places and times...\nThe post Adventures in Tourism: Five SFF Stories About Travel appeared first on Reactor.",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-3de0f4be",
@@ -878,66 +914,6 @@
       "url": "https://www.newyorker.com/books/page-turner/sci-fis-difficult-genius",
       "desc": "Still probably the most important mainstream profile — memory, unreliability, Catholicism, and Wolfe's own comments about his work and his wife Rosemary.",
       "tags": []
-    },
-    {
-      "id": "reactor-e700b181",
-      "title": "16 Ecologically-Minded Speculative Fictions!",
-      "source": "Reactor",
-      "type": "article",
-      "series": "new",
-      "date": "2015-04-07",
-      "url": "https://reactormag.com/ecologically-minded-science-fiction-and-fantasy-titles/",
-      "desc": "Even as we’re zipping off to unexplored planets or strolling through the enchanted forests in our favorite novels, we sometimes get a little homesick. So in honor of Earth Day (and to celebrate the fact that it’s finally",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "reactor-fa8379c3",
-      "title": "Five Books About Indelible Cityscapes",
-      "source": "Reactor",
-      "type": "article",
-      "series": "new",
-      "date": "2015-02-26",
-      "url": "https://reactormag.com/five-books-about-indelible-cityscapes/",
-      "desc": "I have always loved cities, always been excited and frightened by them. I never wanted to go on a long journey towards Mordor—I don’t even really like to camp. In my dreams I wander through vast and teeming metropolises,",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "reactor-f1b16eca",
-      "title": "Dave Palumbo Paints (on the) Classics",
-      "source": "Reactor",
-      "type": "article",
-      "series": "new",
-      "date": "2014-09-25",
-      "url": "https://reactormag.com/dave-palumbo-paints-on-the-classics/",
-      "desc": "IlluxCon, an annual science fiction and fantasy illustration showcase, was held this past weekend in Allentown, Pennsylvania. Among all the debuted paintings and drawings was a new series from Dave Palumbo inspired by so",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "reactor-cce83602",
-      "title": "A Dream of Caeli-Amur: Finding Unwrapped Sky",
-      "source": "Reactor",
-      "type": "article",
-      "series": "new",
-      "date": "2014-04-25",
-      "url": "https://reactormag.com/a-dream-of-caeli-amur-finding-unwrapped-sky/",
-      "desc": "Last night I dreamed I went to Caeli-Amur again. It seemed I stood by the Ancient Forum, looking out over the spirit-haunted ruins where the gods Aya and Alerion fought, and for a while I could not enter. The way was bar",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "reactor-2b7dc924",
-      "title": "Cover Reveal for Jay Lake’s The Last Plane to Heaven",
-      "source": "Reactor",
-      "type": "article",
-      "series": "new",
-      "date": "2014-02-21",
-      "url": "https://reactormag.com/cover-reveal-jay-lake-the-last-plane-to-heaven/",
-      "desc": "It’s impossible not to have mixed emotions when presenting this book. Jay has been diagnosed with terminal cancer, and in all likelihood this will be the last collection of his work that he will live to see. But we have ",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "manual-urthnet-wolfean-theologies",
