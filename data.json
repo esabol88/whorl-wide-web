@@ -1,6 +1,32 @@
 {
-  "generatedAt": "2026-10-13T19:38:00.335Z",
+  "generatedAt": "2026-10-13T23:30:28.803Z",
   "items": [
+    {
+      "id": "youtube-search-dfe15bd8",
+      "title": "Gene Wolfe Continues to Make Us Rethink Everything | D.J. Butler",
+      "source": "High Low Brow",
+      "type": "video",
+      "series": "general",
+      "date": "2026-10-13",
+      "url": "https://www.youtube.com/watch?v=vgRRg9OtH5A",
+      "desc": "Welcome to High Low Brow with Dave Butler! Where culture matters, and it's good to have fun. Get a copy of Soldier of Sidon here: ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/vgRRg9OtH5A/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-7ae69ef0",
+      "title": "I feel like we don’t give enough appreciation to how Wolfe was initially inspired to write New Sun because he got irritated that no one was dressing up as his characters at a Comic-Con.",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-10-13",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x553zz/i_feel_like_we_dont_give_enough_appreciation_to/",
+      "desc": "To me this is a pretty amusing start to what became the single best Scifi epic in the genre. Also, we need to bring back the word masquerade for comic cons. Here’s Wolfe’s story:\n “As I sat there being instructed I was s",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
     {
       "id": "r-genewolfe-1939dd27",
       "title": "The Protagonists of Long and Short Sun",
@@ -14,20 +40,6 @@
         "Severian",
         "Silk",
         "Horn"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-7ae69ef0",
-      "title": "I feel like we don’t give enough appreciation to how Wolfe was initially inspired to write New Sun because he got irritated that no one was dressing up as his characters at a Comic-Con.",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-10-13",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1x553zz/i_feel_like_we_dont_give_enough_appreciation_to/",
-      "desc": "To me this is a pretty amusing start to what became the single best Scifi epic in the genre. Also, we need to bring back the word masquerade for comic cons. Here’s Wolfe’s story:\n “As I sat there being instructed I was s",
-      "tags": [
-        "Severian"
       ],
       "thumbnail": null
     },
@@ -98,6 +110,18 @@
       "thumbnail": "https://i.ytimg.com/vi/094kna6kTKo/hqdefault.jpg"
     },
     {
+      "id": "r-genewolfe-56cfc9ff",
+      "title": "By Sword and Spirit, covering 1991-2003, out in all formats",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-10",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x2apv1/by_sword_and_spirit_covering_19912003_out_in_all/",
+      "desc": "By Sword and Spirit, volume 3 of my work on Wolfe's stories, is out. It has writeups on Long Sun, Short Sun, and all the stories from 1991 to 2003. I had to make this ebook myself and also did all the editing, so I hope ",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
       "id": "youtube-search-14d8c739",
       "title": "The Claw of the Conciliator - Gene Wolfe",
       "source": "Phantom Case",
@@ -162,18 +186,6 @@
       "thumbnail": "https://i.ytimg.com/vi/WXdmEYddaDI/hqdefault.jpg"
     },
     {
-      "id": "gene-wolfe-collection-omeka-e16d5eff",
-      "title": "1984-09-26 Wolfe to Stewart",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-10-08",
-      "url": "https://wolfenarrators.omeka.net/items/show/218",
-      "desc": "Dublin Core\nTitle\n1984-09-26 Wolfe to Stewart\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nDate\n1984-09-26\n\n        \nLanguage\nEnglish",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "r-rereadingwolfepodcast-f0a1922e",
       "title": "Gene Wolfe Humble Bundle",
       "source": "r/rereadingwolfepodcast",
@@ -198,112 +210,6 @@
       "thumbnail": "https://i.ytimg.com/vi/j_DpFO1GOXg/hqdefault.jpg"
     },
     {
-      "id": "r-genewolfe-9486fb11",
-      "title": "This cover is Soo dope 🤘",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-06",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1wzc8dv/this_cover_is_soo_dope/",
-      "desc": "submitted by    /u/jeuscorlik  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/5dnjyo2thwth1.jpeg"
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-821c1eff",
-      "title": "1994 ConAdian in Winnipeg",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-09-28",
-      "url": "https://wolfenarrators.omeka.net/items/show/217",
-      "desc": "Dublin Core\nTitle\n1994 ConAdian in Winnipeg\n\n        \nDescription\nPhotography take by Alan Stewart at ConAdian in Winnipeg, Canada, 1994. (The 52nd World Science Fiction Convention).\n\r\nFrom left to right, Rosemary Wolfe,",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-1ad1064a",
-      "title": "1987 \"Dealer of the Mist or How I found the Scrolls\"",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-09-27",
-      "url": "https://wolfenarrators.omeka.net/items/show/216",
-      "desc": "Dublin Core\nTitle\n1987 \"Dealer of the Mist or How I found the Scrolls\"\n\n        \nDescription\nExperpt from an interview with David Aronovitz title: \"The Joy of Publishing (An Unbridled Adventure),\" published 20 December 2",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-a6ce0d4e",
-      "title": "1988 \"The Book of Gold #1\"",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-09-27",
-      "url": "https://wolfenarrators.omeka.net/items/show/215",
-      "desc": "Dublin Core\nTitle\n1988 \"The Book of Gold #1\"\n\n        \nDescription\nThe newsletter on Gene Wolfe and his works. A fanzine published by Jeremy Crampton. The fanzine ran for two issues in the late 1980's. Sent by Jeremy Cra",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-c1315df9",
-      "title": "1985 \"Interview of Gene Wolfe\"",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "new",
-      "date": "2026-09-27",
-      "url": "https://wolfenarrators.omeka.net/items/show/214",
-      "desc": "Dublin Core\nTitle\n1985 \"Interview of Gene Wolfe\"\n\n        \nDescription\nScience Fiction Radio Show (SFRS) has three people interviewing Wolfe; David Carson, Daryl Lane and William Vernon. The published transcription doesn",
-      "tags": [
-        "Severian",
-        "the Claw",
-        "Vodalus"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-92c89bfd",
-      "title": "1977 \"Science Fiction Authors Detail Changes in Genre\"",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-09-17",
-      "url": "https://wolfenarrators.omeka.net/items/show/213",
-      "desc": "Dublin Core\nTitle\n1977 \"Science Fiction Authors Detail Changes in Genre\"\n\n        \nCreator\nGene Wolfe (1931–2019)\n\r\nGeorge R.R. Martin\n\r\nAnne Ely\n\n        \nSource\nThe Courier, April 22, 1977\n\n        \nDate\nApril 22, 1977",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-cd1ef4cd",
-      "title": "1981 \"An Interview with Gene Wolfe\" by Melissa Mia Hall",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "new",
-      "date": "2026-09-15",
-      "url": "https://wolfenarrators.omeka.net/items/show/212",
-      "desc": "Dublin Core\nTitle\n1981 \"An Interview with Gene Wolfe\" by Melissa Mia Hall\n\n        \nCreator\nGene Wolfe (1931–2019)\n\r\nMelissa Mia Hall (1954-2011)\n\n        \nSource\nAmazing Stories, September 1981\n\n        \nDate\nSeptember ",
-      "tags": [
-        "Severian",
-        "the Claw",
-        "Dorcas"
-      ],
-      "thumbnail": null
-    },
-    {
-      "id": "gene-wolfe-collection-omeka-ec9c12eb",
-      "title": "1984 \"Letter of Comment,\" Paperback Inferno #49, August 1984",
-      "source": "Gene Wolfe Collection (Omeka)",
-      "type": "article",
-      "series": "general",
-      "date": "2026-09-15",
-      "url": "https://wolfenarrators.omeka.net/items/show/211",
-      "desc": "Dublin Core\nTitle\n1984 \"Letter of Comment,\" Paperback Inferno #49, August 1984\n\n        \nCreator\nGene Wolfe (1931–2019)\n\n        \nSource\nPaperback Inferno #49, August 1984\n\n        \nDate\nAugust 1984\n\n        \nLanguage\nEn",
-      "tags": [
-        "Agia"
-      ],
-      "thumbnail": null
-    },
-    {
       "id": "alzabo-soup-b5eaf905",
       "title": "Annals of Klepsis, by R.A. Lafferty",
       "source": "Alzabo Soup",
@@ -314,18 +220,6 @@
       "desc": "Intro - Metz tells Phil about Seven Part Pact. Content (10:26) - Discussion of Annals of Klepsis, by R.A. Lafferty Current Read-Along - The Face, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "high-low-brow-fd45ecf9",
-      "title": "Latro In The Mist - Gene Wolfe",
-      "source": "High Low Brow",
-      "type": "video",
-      "series": "general",
-      "date": "2026-09-08",
-      "url": "https://www.youtube.com/watch?v=yTOKPsPdD3U",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
     },
     {
       "id": "nick-reads-fantasy-4806a50d",
@@ -340,20 +234,6 @@
       "thumbnail": "https://i4.ytimg.com/vi/sij2e-erajU/hqdefault.jpg"
     },
     {
-      "id": "rereading-wolfe-c309e24a",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-26",
-      "url": "https://www.youtube.com/watch?v=mrELZBYENuY",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/mrELZBYENuY/hqdefault.jpg"
-    },
-    {
       "id": "manual-richhorton-fifthhead",
       "title": "Beauty, Mystery, Horror, Shapechanging",
       "source": "Rich Horton",
@@ -363,20 +243,6 @@
       "url": "https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging",
       "desc": "A close, personal essay on The Fifth Head of Cerberus, Wolfe's second novel — the twin-planet structure, the shapechanging Annese, Veil's Hypothesis, and how little of it resolves cleanly even on a third read.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-509384d0",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 1",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-18",
-      "url": "https://www.youtube.com/watch?v=IMI8UyIdbrc",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/IMI8UyIdbrc/hqdefault.jpg"
     },
     {
       "id": "manual-andylee-peace",
@@ -390,40 +256,28 @@
       "tags": []
     },
     {
-      "id": "rereading-wolfe-7d19375e",
-      "title": "tbotns 3-9 \"The Salamander\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
+      "id": "reactor-2d651c20",
+      "title": "Jo Walton’s Reading List: February 2026",
+      "source": "Reactor",
+      "type": "article",
       "series": "new",
-      "date": "2026-05-02",
-      "url": "https://www.youtube.com/watch?v=vZD4oR23S_s",
-      "desc": "",
+      "date": "2026-03-11",
+      "url": "https://reactormag.com/jo-waltons-reading-list-february-2026/",
+      "desc": "Thoughts on Gene Wolfe, Sharon Shinn, and finally getting the appeal of cosy fantasy!\nThe post Jo Walton’s Reading List: February 2026 appeared first on Reactor.",
       "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/vZD4oR23S_s/hqdefault.jpg"
+      "thumbnail": null
     },
     {
-      "id": "rereading-wolfe-3a24120e",
-      "title": "tbotns 3-8 \"Upon the Cliff\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
+      "id": "reactor-f9e1b1f8",
+      "title": "Jo Walton’s Reading List: December 2025",
+      "source": "Reactor",
+      "type": "article",
       "series": "new",
-      "date": "2026-03-08",
-      "url": "https://www.youtube.com/watch?v=XX2iJ-XeIyk",
-      "desc": "",
+      "date": "2026-01-20",
+      "url": "https://reactormag.com/jo-waltons-reading-list-december-2025/",
+      "desc": "Hooray for romantasy, new Penric, Poul Anderson, and movie reviews…\nThe post Jo Walton’s Reading List: December 2025 appeared first on Reactor.",
       "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/XX2iJ-XeIyk/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-e880272f",
-      "title": "RRW Bonus: CSE Claire Cooney and Carlos Hernandez interview",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-01-31",
-      "url": "https://www.youtube.com/watch?v=SYyL0ko4qDk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/SYyL0ko4qDk/hqdefault.jpg"
+      "thumbnail": null
     },
     {
       "id": "manual-lincolnmichel-whyread",
@@ -435,18 +289,6 @@
       "url": "https://countercraft.substack.com/p/why-you-should-read-gene-wolfe-and",
       "desc": "Probably the best recent general introduction — Peace for literary readers, Fifth Head for established SF readers, plus the short fiction.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-13c61c86",
-      "title": "tbotns 3-11 and 12 Cyriaca's Wrap Up",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-11-24",
-      "url": "https://www.youtube.com/watch?v=IHHedq0ruoQ",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/IHHedq0ruoQ/hqdefault.jpg"
     },
     {
       "id": "manual-andreakalfas-undine",
@@ -466,40 +308,16 @@
       "nsfw": false
     },
     {
-      "id": "rereading-wolfe-3de0f4be",
-      "title": "tbotns 3-7 Attractions",
-      "source": "Rereading Wolfe",
-      "type": "video",
+      "id": "reactor-8e2aa426",
+      "title": "Adventures in Tourism: Five SFF Stories About Travel",
+      "source": "Reactor",
+      "type": "article",
       "series": "new",
-      "date": "2025-09-09",
-      "url": "https://www.youtube.com/watch?v=z0NiLq0ymGM",
-      "desc": "",
+      "date": "2025-09-23",
+      "url": "https://reactormag.com/adventures-in-tourism-five-sff-stories-about-travel/",
+      "desc": "Oh, the joys (and perils) of visiting unfamiliar places and times...\nThe post Adventures in Tourism: Five SFF Stories About Travel appeared first on Reactor.",
       "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/z0NiLq0ymGM/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-d0f62367",
-      "title": "Bonus: Ryan Leslie talks about The Between and The Garden of Before (and Wolfe)",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-08-16",
-      "url": "https://www.youtube.com/watch?v=VYwYlNzHBdo",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/VYwYlNzHBdo/hqdefault.jpg"
-    },
-    {
-      "id": "undertowers-podcast-fecc6d63",
-      "title": "Episode 36: Peace by Gene Wolfe; what the $%!^ was that?!",
-      "source": "Undertowers Podcast",
-      "type": "video",
-      "series": "general",
-      "date": "2025-08-11",
-      "url": "https://www.youtube.com/watch?v=W93DwkQvIw4",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/W93DwkQvIw4/hqdefault.jpg"
+      "thumbnail": null
     },
     {
       "id": "manual-vegadraws-gyoll",
@@ -552,18 +370,6 @@
       "url": "https://donbeck1.substack.com/p/your-next-read-the-book-of-the-new",
       "desc": "An enthusiastic, accessible first-reader case for New Sun being genuinely life-changing, without pretending it'll suit everyone.",
       "tags": []
-    },
-    {
-      "id": "sunbeamsjess-13c57c37",
-      "title": "april 2025 reading review · gene wolfe, marilynne robinson, isabella hammad",
-      "source": "sunbeamsjess",
-      "type": "video",
-      "series": "general",
-      "date": "2025-05-13",
-      "url": "https://www.youtube.com/watch?v=zccp6_rw7Lg",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/zccp6_rw7Lg/hqdefault.jpg"
     },
     {
       "id": "manual-ramonperales-fuligin",
@@ -677,54 +483,6 @@
       "tags": []
     },
     {
-      "id": "marc-aramini-19c4690b",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight Chapter 3",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-06-07",
-      "url": "https://www.youtube.com/watch?v=KNw2dCHTOdc",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/KNw2dCHTOdc/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-d98d5b8c",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight - Chapter 2",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-05-07",
-      "url": "https://www.youtube.com/watch?v=2n7UVuTNCVM",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/2n7UVuTNCVM/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-56df54d3",
-      "title": "Gene Wolfe's The Wizard Knight: The Knight Chapter 1 Analysis",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-04-14",
-      "url": "https://www.youtube.com/watch?v=qCFY_cMTG08",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/qCFY_cMTG08/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-2219c0b0",
-      "title": "Gene Wolfe's Wizard Knight: Introduction to an Extended Reading",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2022-04-03",
-      "url": "https://www.youtube.com/watch?v=NAQUb1EHs2Y",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/NAQUb1EHs2Y/hqdefault.jpg"
-    },
-    {
       "id": "ultan-s-library-bf25b430",
       "title": "Micro-Wolfenomics: Joan Gordon reviews ‘Gene Wolfe’s First Four Novels: A Chapter Guide’ by Michael Andre-Driussi",
       "source": "Ultan's Library",
@@ -808,18 +566,6 @@
       "thumbnail": null
     },
     {
-      "id": "marc-aramini-37cc0f62",
-      "title": "Gene Wolfe and Literature Bonus: Tracking Song",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-06-16",
-      "url": "https://www.youtube.com/watch?v=QtMFrCOveb0",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/QtMFrCOveb0/hqdefault.jpg"
-    },
-    {
       "id": "ultan-s-library-e377b022",
       "title": "Everything has to be true somehow",
       "source": "Ultan's Library",
@@ -830,42 +576,6 @@
       "desc": "Wolfe scholar Marc Aramini talks to Ultan's Library about the progress of his massive critical review of all Wolfe's published fiction, his approach to unlocking that author's meanings, and the current state of Wolfe stu",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "marc-aramini-166c4cdf",
-      "title": "Gene Wolfe and Literature Part 11: An Evil Guest",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-04-01",
-      "url": "https://www.youtube.com/watch?v=vhTYdc_K_6o",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/vhTYdc_K_6o/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-15211a53",
-      "title": "Gene Wolfe and Literature Part 10: There Are Doors",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-03-31",
-      "url": "https://www.youtube.com/watch?v=TsSlKDwjn_A",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/TsSlKDwjn_A/hqdefault.jpg"
-    },
-    {
-      "id": "marc-aramini-c4a1b0f2",
-      "title": "Gene Wolfe and Literature Part 9: Sorcerer's House",
-      "source": "Marc Aramini",
-      "type": "video",
-      "series": "general",
-      "date": "2020-03-25",
-      "url": "https://www.youtube.com/watch?v=wvUlG2I4PEI",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/wvUlG2I4PEI/hqdefault.jpg"
     },
     {
       "id": "manual-theringer-highart",
@@ -914,6 +624,66 @@
       "url": "https://www.newyorker.com/books/page-turner/sci-fis-difficult-genius",
       "desc": "Still probably the most important mainstream profile — memory, unreliability, Catholicism, and Wolfe's own comments about his work and his wife Rosemary.",
       "tags": []
+    },
+    {
+      "id": "reactor-e700b181",
+      "title": "16 Ecologically-Minded Speculative Fictions!",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2015-04-07",
+      "url": "https://reactormag.com/ecologically-minded-science-fiction-and-fantasy-titles/",
+      "desc": "Even as we’re zipping off to unexplored planets or strolling through the enchanted forests in our favorite novels, we sometimes get a little homesick. So in honor of Earth Day (and to celebrate the fact that it’s finally",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "reactor-fa8379c3",
+      "title": "Five Books About Indelible Cityscapes",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2015-02-26",
+      "url": "https://reactormag.com/five-books-about-indelible-cityscapes/",
+      "desc": "I have always loved cities, always been excited and frightened by them. I never wanted to go on a long journey towards Mordor—I don’t even really like to camp. In my dreams I wander through vast and teeming metropolises,",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "reactor-f1b16eca",
+      "title": "Dave Palumbo Paints (on the) Classics",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2014-09-25",
+      "url": "https://reactormag.com/dave-palumbo-paints-on-the-classics/",
+      "desc": "IlluxCon, an annual science fiction and fantasy illustration showcase, was held this past weekend in Allentown, Pennsylvania. Among all the debuted paintings and drawings was a new series from Dave Palumbo inspired by so",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "reactor-cce83602",
+      "title": "A Dream of Caeli-Amur: Finding Unwrapped Sky",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2014-04-25",
+      "url": "https://reactormag.com/a-dream-of-caeli-amur-finding-unwrapped-sky/",
+      "desc": "Last night I dreamed I went to Caeli-Amur again. It seemed I stood by the Ancient Forum, looking out over the spirit-haunted ruins where the gods Aya and Alerion fought, and for a while I could not enter. The way was bar",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "reactor-2b7dc924",
+      "title": "Cover Reveal for Jay Lake’s The Last Plane to Heaven",
+      "source": "Reactor",
+      "type": "article",
+      "series": "new",
+      "date": "2014-02-21",
+      "url": "https://reactormag.com/cover-reveal-jay-lake-the-last-plane-to-heaven/",
+      "desc": "It’s impossible not to have mixed emotions when presenting this book. Jay has been diagnosed with terminal cancer, and in all likelihood this will be the last collection of his work that he will live to see. But we have ",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "manual-urthnet-wolfean-theologies",
