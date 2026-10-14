@@ -1,6 +1,70 @@
 {
-  "generatedAt": "2026-10-14T14:09:29.500Z",
+  "generatedAt": "2026-10-14T19:02:06.153Z",
   "items": [
+    {
+      "id": "youtube-search-6bc21907",
+      "title": "The Claw of the Conciliator Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-14",
+      "url": "https://www.youtube.com/watch?v=wYxF5W8MfuY",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Claw of the Conciliator Subtitle: Urth: Book of the New Sun ...",
+      "tags": [
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/wYxF5W8MfuY/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-f4a3ec53",
+      "title": "The Citadel of the Autarch Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-14",
+      "url": "https://www.youtube.com/watch?v=5kkUe01y_tk",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Citadel of the Autarch Subtitle: Urth: Book of the New Sun, ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/5kkUe01y_tk/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-c077d135",
+      "title": "The Shadow of the Torturer Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-14",
+      "url": "https://www.youtube.com/watch?v=-3a7pUS_GgU",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Shadow of the Torturer Subtitle: Urth: Book of the New Sun ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/-3a7pUS_GgU/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-b7af57c1",
+      "title": "The Sword of the Lictor Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-14",
+      "url": "https://www.youtube.com/watch?v=WKM03eLZt1U",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Sword of the Lictor Subtitle: Urth: Book of the New Sun, ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/WKM03eLZt1U/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-c98f6577",
+      "title": "Silk - From the Book of the Long Sun #illustration #scifi #books",
+      "source": "Emporium of Universal Dice",
+      "type": "video",
+      "series": "long",
+      "date": "2026-10-14",
+      "url": "https://www.youtube.com/watch?v=iOV-jJsMNK8",
+      "desc": "illustration of Silk from the Book of the Long Sun of Gene Wolfe, the second series in the solar cycle.",
+      "tags": [
+        "Silk"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/iOV-jJsMNK8/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-eca93862",
       "title": "The Nightmarish Book Creature That Predicts Our Fear of Fake Consciousness",
@@ -52,6 +116,20 @@
         "Severian",
         "Silk",
         "Horn"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-a1f5dc7a",
+      "title": "Master Malrubius (sort of spoilers I guess)",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-13",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x5ajup/master_malrubius_sort_of_spoilers_i_guess/",
+      "desc": "Readers of this reddit will be familiar with the theory that Malrubius is actually predecessor of, or an alternate version of our Severian.\n I was musing about his name: Malrubius can be divided and understood as Mal (ba",
+      "tags": [
+        "Severian"
       ],
       "thumbnail": null
     },
@@ -120,18 +198,6 @@
       "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Urth of the New Sun Subtitle: The Book of the New Sun, ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/094kna6kTKo/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-56cfc9ff",
-      "title": "By Sword and Spirit, covering 1991-2003, out in all formats",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-10",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1x2apv1/by_sword_and_spirit_covering_19912003_out_in_all/",
-      "desc": "By Sword and Spirit, volume 3 of my work on Wolfe's stories, is out. It has writeups on Long Sun, Short Sun, and all the stories from 1991 to 2003. I had to make this ebook myself and also did all the editing, so I hope ",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "youtube-search-14d8c739",
