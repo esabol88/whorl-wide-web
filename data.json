@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T20:40:07.001Z",
+  "generatedAt": "2026-10-15T23:24:21.315Z",
   "items": [
     {
       "id": "youtube-search-5cdb2fed",
@@ -53,6 +53,22 @@
       "artist": "u/AffectionateReview34 (Reddit)",
       "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1x6hn4l/spoiler_new_illustration_of_the_short_sun/",
+      "nsfw": false
+    },
+    {
+      "id": "r-genewolfe-1bc6cc58",
+      "title": "Auk Illustration",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "general",
+      "date": "2026-10-15",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x6y6lo/auk_illustration/",
+      "desc": "as i promissed here Auk from Book of the Long Sun, for now, i have planned to do Hyacinth, Blood and Musk, and Mayera Mint and another drawing of Chenille down in the tunnel as some of you suggested. Feel free to add oth",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/32psfcap8pvh1.jpeg",
+      "artist": "u/AffectionateReview34 (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1x6y6lo/auk_illustration/",
       "nsfw": false
     },
     {
@@ -278,30 +294,6 @@
       "desc": "Intro - Metz and Phil discuss seeing Coyote vs. Acme Content (7:30) - Discussion of Chapter 3 of Pirate Freedom, by Gene Wolfe Current Read-Along - Titus Groan, by Mervyn Peake Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "r-genewolfe-b1cfff88",
-      "title": "Decline of the Libraries",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-09",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1x1uu60/decline_of_the_libraries/",
-      "desc": "I was reading the 1986 Elliott Swanson interview in Shadows of the New Sun and this exchange struck me. I didn't realize the decline went so far back.\n ES: Libraries and librarians often crop up in your works -- why?\n GW",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-rereadingwolfepodcast-f0a1922e",
-      "title": "Gene Wolfe Humble Bundle",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-08",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1x128um/gene_wolfe_humble_bundle/",
-      "desc": "For those of you looking to round out your Gene Wolfe collection, or get some books in e-format, nice bundle going on right now:\n https://www.humblebundle.com/books/ultimate-gene-wolfe-library-by-tor-books-books\n    subm",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "alzabo-soup-b5eaf905",
