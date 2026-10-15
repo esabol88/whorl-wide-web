@@ -1,6 +1,42 @@
 {
-  "generatedAt": "2026-10-15T17:28:16.165Z",
+  "generatedAt": "2026-10-15T20:40:07.001Z",
   "items": [
+    {
+      "id": "youtube-search-5cdb2fed",
+      "title": "Soldier of the Mist Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-10-15",
+      "url": "https://www.youtube.com/watch?v=BMKVtugX-NI",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: Soldier of the Mist Subtitle: Latro, Book 1 Series: #1 in Latro ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/BMKVtugX-NI/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-40badf3d",
+      "title": "Soldier of Sidon Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-10-15",
+      "url": "https://www.youtube.com/watch?v=qjAWblYeM74",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: Soldier of Sidon Subtitle: Latro, Book 3 Series: #3 in Latro ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/qjAWblYeM74/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-d2afec4a",
+      "title": "Soldier of Arete Audiobook by Gene Wolfe",
+      "source": "Free Audiobook",
+      "type": "video",
+      "series": "general",
+      "date": "2026-10-15",
+      "url": "https://www.youtube.com/watch?v=B1wbY7uWzIE",
+      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: Soldier of Arete Subtitle: Latro, Book 2 Series: #2 in Latro ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/B1wbY7uWzIE/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-475512de",
       "title": "SPOILER! New Illustration of the Short Sun",
