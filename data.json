@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T15:59:44.451Z",
+  "generatedAt": "2026-10-19T20:53:44.983Z",
   "items": [
     {
       "id": "youtube-search-24234810",
@@ -12,6 +12,24 @@
       "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: The Wolfe at the Door Categories: Collection, Fiction, Hard ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/wXTDL7ouI74/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-13415767",
+      "title": "The Mayteras of Sun Street illustration",
+      "source": "r/genewolfe",
+      "type": "fanart",
+      "series": "general",
+      "date": "2026-10-19",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xa5dps/the_mayteras_of_sun_street_illustration/",
+      "desc": "Mint, Marble and Rose are here! Now we are approaching to completing the whole main cast of the Long Sun, i think we miss Horn and Nettle, Dr Crane, Remora and Quetzal, Willet, Hammerstone and Incus, the Ayutamento and t",
+      "tags": [
+        "Horn"
+      ],
+      "thumbnail": "https://i.redd.it/yk4ujwmwygwh1.jpeg",
+      "artist": "u/AffectionateReview34 (Reddit)",
+      "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
+      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1xa5dps/the_mayteras_of_sun_street_illustration/",
+      "nsfw": false
     },
     {
       "id": "youtube-search-2981b4ed",
@@ -366,20 +384,6 @@
         "Severian"
       ],
       "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-d07edd6b",
-      "title": "Wandering in the Botanic Gardens",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-12",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1x4hgbk/wandering_in_the_botanic_gardens/",
-      "desc": "It is often said that the mind, when burdened by memory, will project its most ancient terrors onto the most mundane of landscapes. I was walking my dog through the scrub—a creature of simple, trusting habits, entirely i",
-      "tags": [
-        "Agia"
-      ],
-      "thumbnail": "https://i.redd.it/ddi28urwg4vh1.jpeg"
     },
     {
       "id": "alzabo-soup-b5eaf905",
