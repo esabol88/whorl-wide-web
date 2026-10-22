@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-10-22T18:57:06.102Z",
+  "generatedAt": "2026-10-22T22:00:51.349Z",
   "items": [
+    {
+      "id": "youtube-search-0839645e",
+      "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 16-22",
+      "source": "Jeff Cannata",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=PTXwdkP0ta4",
+      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the fourth novel in Gene Wolfe's ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/PTXwdkP0ta4/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-52189134",
       "title": "Severian the Autarch, and a Question",
@@ -20,6 +32,18 @@
       "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1xalms2/severian_the_autarch_and_a_question/",
       "nsfw": false
+    },
+    {
+      "id": "r-genewolfe-be2092a3",
+      "title": "I got a question about the Latro books",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-20",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xb63px/i_got_a_question_about_the_latro_books/",
+      "desc": "Basically, I know that the first two Latro novels, Soldier of the Mist and Soldier of Arete, rely heavily on Herodotus’ Histories. Is the same true of Soldier of Sidon? If not, are there any books that Wolfe used as heav",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-24234810",
@@ -50,6 +74,18 @@
       "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1xa5dps/the_mayteras_of_sun_street_illustration/",
       "nsfw": false
+    },
+    {
+      "id": "r-genewolfe-720ad70a",
+      "title": "Chenille and Auk (and the Talus) in the tunnels",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-19",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x9rtsq/chenille_and_auk_and_the_talus_in_the_tunnels/",
+      "desc": "Here a piece of a scene from book of the long sun, Chenille in the tunnels i would like to create some other pieces like this.\n    submitted by    /u/AffectionateReview34  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/fqwngaj32ewh1.jpeg"
     },
     {
       "id": "youtube-search-2981b4ed",
@@ -232,70 +268,6 @@
       "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1x7ize8/the_hyacinth_illustration_and_the_question/",
       "nsfw": false
-    },
-    {
-      "id": "youtube-search-5cdb2fed",
-      "title": "Soldier of the Mist Audiobook by Gene Wolfe",
-      "source": "Free Audiobook",
-      "type": "video",
-      "series": "general",
-      "date": "2026-10-15",
-      "url": "https://www.youtube.com/watch?v=BMKVtugX-NI",
-      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: Soldier of the Mist Subtitle: Latro, Book 1 Series: #1 in Latro ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/BMKVtugX-NI/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-40badf3d",
-      "title": "Soldier of Sidon Audiobook by Gene Wolfe",
-      "source": "Free Audiobook",
-      "type": "video",
-      "series": "general",
-      "date": "2026-10-15",
-      "url": "https://www.youtube.com/watch?v=qjAWblYeM74",
-      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: Soldier of Sidon Subtitle: Latro, Book 3 Series: #3 in Latro ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/qjAWblYeM74/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-d2afec4a",
-      "title": "Soldier of Arete Audiobook by Gene Wolfe",
-      "source": "Free Audiobook",
-      "type": "video",
-      "series": "general",
-      "date": "2026-10-15",
-      "url": "https://www.youtube.com/watch?v=B1wbY7uWzIE",
-      "desc": "Listen to this title for free on Audible : https://amzn.to/4ygBDlL Title: Soldier of Arete Subtitle: Latro, Book 2 Series: #2 in Latro ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/B1wbY7uWzIE/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-1bc6cc58",
-      "title": "Auk Illustration",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-10-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1x6y6lo/auk_illustration/",
-      "desc": "as i promissed here Auk from Book of the Long Sun, for now, i have planned to do Hyacinth, Blood and Musk, and Mayera Mint and another drawing of Chenille down in the tunnel as some of you suggested. Feel free to add oth",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/32psfcap8pvh1.jpeg",
-      "artist": "u/AffectionateReview34 (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1x6y6lo/auk_illustration/",
-      "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-a9a85b0e",
-      "title": "The first 100 pages of Calde of the Long Sun",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-10-15",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1x6xotr/the_first_100_pages_of_calde_of_the_long_sun/",
-      "desc": "The Unsuspecting Badass Award goes to: Maytera Mint! \n    submitted by    /u/zdenn21  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/whylp1s15pvh1.jpeg"
     },
     {
       "id": "high-low-brow-dfe15bd8",
