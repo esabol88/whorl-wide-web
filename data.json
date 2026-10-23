@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T10:40:37.118Z",
+  "generatedAt": "2026-10-23T15:32:18.452Z",
   "items": [
     {
       "id": "alzabo-soup-c1be0af6",
@@ -24,6 +24,18 @@
       "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the fourth novel in Gene Wolfe's ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/PTXwdkP0ta4/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-511902c0",
+      "title": "Humble Bundle of Mr Wolfe Books",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-21",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xbdhbz/humble_bundle_of_mr_wolfe_books/",
+      "desc": "Dunno what’s good in these but found this bundle and figured I’d post it here \n    submitted by    /u/Gagahahatehe  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "r-genewolfe-52189134",
@@ -98,6 +110,18 @@
       "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1xa5dps/the_mayteras_of_sun_street_illustration/",
       "nsfw": false
+    },
+    {
+      "id": "r-genewolfe-720ad70a",
+      "title": "Chenille and Auk (and the Talus) in the tunnels",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-19",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1x9rtsq/chenille_and_auk_and_the_talus_in_the_tunnels/",
+      "desc": "Here a piece of a scene from book of the long sun, Chenille in the tunnels i would like to create some other pieces like this.\n    submitted by    /u/AffectionateReview34  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/fqwngaj32ewh1.jpeg"
     },
     {
       "id": "youtube-search-ece29676",
@@ -248,38 +272,6 @@
       "desc": "illustration of Hyacinth from the Book of the Long Sun of Gene Wolfe, the second series in the solar cycle.",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/8hmBhvcwm_c/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-75d59cdc",
-      "title": "Blood and Musk illustration and a question!",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-10-16",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1x7e9d2/blood_and_musk_illustration_and_a_question/",
-      "desc": "Another Illustration! This time Blood and Musk togheter with Aquila. Now i think the next will be Hyacinth, but in the meantime i find the time to draw her, i will ask to you a question: Do you think that Musk was posses",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/19qhsv1mjtvh1.jpeg",
-      "artist": "u/AffectionateReview34 (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1x7e9d2/blood_and_musk_illustration_and_a_question/",
-      "nsfw": false
-    },
-    {
-      "id": "r-genewolfe-951c17f6",
-      "title": "The Hyacinth (illustration) and the question",
-      "source": "r/genewolfe",
-      "type": "fanart",
-      "series": "general",
-      "date": "2026-10-16",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1x7ize8/the_hyacinth_illustration_and_the_question/",
-      "desc": "a new illustration (i think it will be the last for this week) where i try to illustrate Hycinth (Giacinto). The question, now, could be easy to spot. I saw some theory about Hyacinth, the male theory and the male chem. ",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/8glztm06juvh1.jpeg",
-      "artist": "u/AffectionateReview34 (Reddit)",
-      "artistUrl": "https://www.reddit.com/user/AffectionateReview34",
-      "postUrl": "https://www.reddit.com/r/genewolfe/comments/1x7ize8/the_hyacinth_illustration_and_the_question/",
-      "nsfw": false
     },
     {
       "id": "high-low-brow-dfe15bd8",
