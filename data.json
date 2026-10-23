@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T15:32:18.452Z",
+  "generatedAt": "2026-10-23T19:38:19.650Z",
   "items": [
     {
       "id": "alzabo-soup-c1be0af6",
@@ -14,6 +14,21 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
+      "id": "r-genewolfe-aaea5db2",
+      "title": "Do Symbols actually invent us?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-23",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xdkc7u/do_symbols_actually_invent_us/",
+      "desc": "This is one of the most popular quotes from Gene Wolfe's ouvre, but other than being directly contradicted later on by Severian's realization about the coin, if also just does not bear out in my reading of most things th",
+      "tags": [
+        "Severian",
+        "Dorcas"
+      ],
+      "thumbnail": "https://i.redd.it/a0ribcli49xh1.jpeg"
+    },
+    {
       "id": "youtube-search-0839645e",
       "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 16-22",
       "source": "Jeff Cannata",
@@ -24,18 +39,6 @@
       "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the fourth novel in Gene Wolfe's ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/PTXwdkP0ta4/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-511902c0",
-      "title": "Humble Bundle of Mr Wolfe Books",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-21",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xbdhbz/humble_bundle_of_mr_wolfe_books/",
-      "desc": "Dunno what’s good in these but found this bundle and figured I’d post it here \n    submitted by    /u/Gagahahatehe  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
     },
     {
       "id": "r-genewolfe-52189134",
@@ -260,18 +263,6 @@
         "Silk"
       ],
       "thumbnail": "https://i.ytimg.com/vi/AYJpSQpVfhY/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-34e13437",
-      "title": "Hyacinth - From the Book of the Long Sun #illustration #scifi #books",
-      "source": "Emporium of Universal Dice",
-      "type": "video",
-      "series": "long",
-      "date": "2026-10-16",
-      "url": "https://www.youtube.com/watch?v=8hmBhvcwm_c",
-      "desc": "illustration of Hyacinth from the Book of the Long Sun of Gene Wolfe, the second series in the solar cycle.",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/8hmBhvcwm_c/hqdefault.jpg"
     },
     {
       "id": "high-low-brow-dfe15bd8",
