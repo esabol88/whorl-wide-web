@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-10-23T00:26:48.746Z",
+  "generatedAt": "2026-10-23T05:33:24.077Z",
   "items": [
+    {
+      "id": "alzabo-soup-c1be0af6",
+      "title": "Chapter 5 - Gene Wolfe's Pirate Freedom",
+      "source": "Alzabo Soup",
+      "type": "podcast",
+      "series": "general",
+      "date": "2026-10-23",
+      "url": "https://www.alzabosoup.com/category/pirate-freedom/",
+      "desc": "Intro - Metz and Phil discuss the trend of clean-up games Content (7:21) - Discussion of Chapter 5 of Pirate Freedom, by Gene Wolfe Current Read-Along - Titus Groan, by Mervyn Peake Check out more at alzabosoup.com.",
+      "tags": [],
+      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
     {
       "id": "youtube-search-0839645e",
       "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 16-22",
@@ -86,6 +98,18 @@
       "desc": "Here a piece of a scene from book of the long sun, Chenille in the tunnels i would like to create some other pieces like this.\n    submitted by    /u/AffectionateReview34  \n [link]   [comments]",
       "tags": [],
       "thumbnail": "https://i.redd.it/fqwngaj32ewh1.jpeg"
+    },
+    {
+      "id": "youtube-search-ece29676",
+      "title": "Blood and Musk - From the Book of the Long Sun #illustration #scifi #books",
+      "source": "Emporium of Universal Dice",
+      "type": "video",
+      "series": "long",
+      "date": "2026-10-18",
+      "url": "https://www.youtube.com/watch?v=v0yKLMSTfWA",
+      "desc": "illustration of Blood and Musk from the Book of the Long Sun of Gene Wolfe, the second series in the solar cycle.",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/v0yKLMSTfWA/hqdefault.jpg"
     },
     {
       "id": "youtube-search-2981b4ed",
@@ -224,18 +248,6 @@
       "desc": "illustration of Hyacinth from the Book of the Long Sun of Gene Wolfe, the second series in the solar cycle.",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/8hmBhvcwm_c/hqdefault.jpg"
-    },
-    {
-      "id": "alzabo-soup-c1be0af6",
-      "title": "Chapter 4 - Gene Wolfe's Pirate Freedom",
-      "source": "Alzabo Soup",
-      "type": "podcast",
-      "series": "general",
-      "date": "2026-10-16",
-      "url": "https://www.alzabosoup.com/category/pirate-freedom/",
-      "desc": "Intro - Phil tells Metz about the Immortal John Tryptich Content (5:23) - Discussion of Chapter 4 of Pirate Freedom, by Gene Wolfe Current Read-Along - Titus Groan, by Mervyn Peake Check out more at alzabosoup.com.",
-      "tags": [],
-      "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
       "id": "r-genewolfe-75d59cdc",
