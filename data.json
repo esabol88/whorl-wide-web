@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-10-25T07:54:22.560Z",
+  "generatedAt": "2026-10-25T12:50:46.802Z",
   "items": [
+    {
+      "id": "rereading-wolfe-0dab6cbe",
+      "title": "tbotns 3-13 Into the Mountains",
+      "source": "Rereading Wolfe",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-25",
+      "url": "https://www.youtube.com/watch?v=TWXRvbG9m6g",
+      "desc": "",
+      "tags": [],
+      "thumbnail": "https://i1.ytimg.com/vi/TWXRvbG9m6g/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-17de426e",
       "title": "Richard Bober",
@@ -359,18 +371,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i3.ytimg.com/vi/z0NiLq0ymGM/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-d0f62367",
-      "title": "Bonus: Ryan Leslie talks about The Between and The Garden of Before (and Wolfe)",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-08-16",
-      "url": "https://www.youtube.com/watch?v=VYwYlNzHBdo",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/VYwYlNzHBdo/hqdefault.jpg"
     },
     {
       "id": "undertowers-podcast-fecc6d63",
