@@ -1,17 +1,109 @@
 {
-  "generatedAt": "2026-10-28T23:52:35.880Z",
+  "generatedAt": "2026-10-29T03:19:45.958Z",
   "items": [
     {
-      "id": "rereading-wolfe-0dab6cbe",
-      "title": "tbotns 3-13 Into the Mountains",
-      "source": "Rereading Wolfe",
-      "type": "video",
+      "id": "r-rereadingwolfepodcast-0e5a466f",
+      "title": "An Answer to the Chinese in Podcast Title?",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-27",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1xgwss3/an_answer_to_the_chinese_in_podcast_title/",
+      "desc": "Have we ever gotten an answer to why there is Chinese in the podcast title? \n Google translates 重读沃尔夫播客 directly and a little incorrectly as \"Rereading Woolf Podcast.\" \n When I first approached the channel, I thought the",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-a18ad704",
+      "title": "The Feast of St. Catherine",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-26",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xg7j1e/the_feast_of_st_catherine/",
+      "desc": "Just wanted to let you all know that the manuscript of The Feast of St. Catherine (the original novella that became The Shadow of the Torturer) is now available on The Unreliable Narrators Omeka site. We have a post over",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/au5r6fo2bvxh1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-105136dd",
+      "title": "Urth of the New Sun is... different",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-10-26",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xfsj4w/urth_of_the_new_sun_is_different/",
+      "desc": "I've managed to finish the first four books of the series recently. They are really great, my favourite is Sword of the Lictor, the weakest one is definitely Citadel of the Autarch. I've started reading Urth, I'm about a",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-17de426e",
+      "title": "Richard Bober",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-25",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xeq7gk/richard_bober/",
+      "desc": "I have long been mesmerized by some of Wolfe's novel covers. Later I got to know they were painted by Richard Bober and it seems that the book \"Visions of Never\" has been the only artbook that collects Bober's representa",
+      "tags": [],
+      "thumbnail": null
+    },
+    {
+      "id": "r-genewolfe-fda828ab",
+      "title": "Severian 2 seconds after meeting any woman",
+      "source": "r/genewolfe",
+      "type": "discussion",
       "series": "new",
       "date": "2026-10-25",
-      "url": "https://www.youtube.com/watch?v=TWXRvbG9m6g",
-      "desc": "",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xepl55/severian_2_seconds_after_meeting_any_woman/",
+      "desc": "submitted by    /u/superglue1982  \n [link]   [comments]",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-rereadingwolfepodcast-5d72a16d",
+      "title": "James and Craig follow Severian \"Into The Mountains.\"",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-10-25",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1xfe0cw/james_and_craig_follow_severian_into_the_mountains/",
+      "desc": "A welcome draught of discussion under the reddish glare of the decrepit sun !\n    submitted by    /u/Oneirimancer  \n [link]   [comments]",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": "https://external-preview.redd.it/A93f9IByW-RVFsgplpwvvs7GJSolf3vq3Y4OLmeb0ac.jpeg?width=640&crop=smart&auto=webp&s=f71d1a473358fadee85a3c95df0f9a485a1c73a4"
+    },
+    {
+      "id": "r-rereadingwolfepodcast-493d6a95",
+      "title": "The Great Cliff - The Great Book",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-25",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1xfcf8b/the_great_cliff_the_great_book/",
+      "desc": "Great episode gents! Been a while since I've written in about anything, but I've been loyally following along the whole time. As a fellow podcast creator who's podcast has also found itself with an ever widening maw betw",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
+    {
+      "id": "r-rereadingwolfepodcast-9c875e68",
+      "title": "The Uncollected Stories - Summary Guide",
+      "source": "r/rereadingwolfepodcast",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-24",
+      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1xeh930/the_uncollected_stories_summary_guide/",
+      "desc": "submitted by    /u/mpc3980  \n [link]   [comments]",
       "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/TWXRvbG9m6g/hqdefault.jpg"
+      "thumbnail": "https://preview.redd.it/8tatj1m1tgxh1.png?width=640&crop=smart&auto=webp&s=07bd58bda03800c30df53861a3e4256980b30e85"
     },
     {
       "id": "alzabo-soup-c1be0af6",
@@ -24,6 +116,33 @@
       "desc": "Intro - Metz and Phil discuss the trend of clean-up games Content (7:21) - Discussion of Chapter 5 of Pirate Freedom, by Gene Wolfe Current Read-Along - Titus Groan, by Mervyn Peake Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
+    },
+    {
+      "id": "r-genewolfe-aaea5db2",
+      "title": "Do Symbols actually invent us?",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-23",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xdkc7u/do_symbols_actually_invent_us/",
+      "desc": "This is one of the most popular quotes from Gene Wolfe's ouvre, but other than being directly contradicted later on by Severian's realization about the coin, if also just does not bear out in my reading of most things th",
+      "tags": [
+        "Severian",
+        "Dorcas"
+      ],
+      "thumbnail": "https://i.redd.it/a0ribcli49xh1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-05ef99f1",
+      "title": "Arriving at MileHiCon. Facsimile in hand:",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-10-23",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xdm0a8/arriving_at_milehicon_facsimile_in_hand/",
+      "desc": "submitted by    /u/UnreliableAmanda  \n [link]   [comments]",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/24ayei6rf9xh1.jpeg"
     },
     {
       "id": "youtube-search-0839645e",
@@ -50,20 +169,6 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "rereading-wolfe-c309e24a",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 2",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-26",
-      "url": "https://www.youtube.com/watch?v=mrELZBYENuY",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/mrELZBYENuY/hqdefault.jpg"
-    },
-    {
       "id": "manual-richhorton-fifthhead",
       "title": "Beauty, Mystery, Horror, Shapechanging",
       "source": "Rich Horton",
@@ -73,20 +178,6 @@
       "url": "https://richhorton314252.substack.com/p/beauty-mystery-horror-shapechanging",
       "desc": "A close, personal essay on The Fifth Head of Cerberus, Wolfe's second novel — the twin-planet structure, the shapechanging Annese, Veil's Hypothesis, and how little of it resolves cleanly even on a third read.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-509384d0",
-      "title": "tbotns 3-10,11,12  The Dorcas Break-Up Part 1",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-07-18",
-      "url": "https://www.youtube.com/watch?v=IMI8UyIdbrc",
-      "desc": "",
-      "tags": [
-        "Dorcas"
-      ],
-      "thumbnail": "https://i2.ytimg.com/vi/IMI8UyIdbrc/hqdefault.jpg"
     },
     {
       "id": "manual-andylee-peace",
@@ -100,18 +191,6 @@
       "tags": []
     },
     {
-      "id": "rereading-wolfe-7d19375e",
-      "title": "tbotns 3-9 \"The Salamander\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-05-02",
-      "url": "https://www.youtube.com/watch?v=vZD4oR23S_s",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/vZD4oR23S_s/hqdefault.jpg"
-    },
-    {
       "id": "reactor-2d651c20",
       "title": "Jo Walton’s Reading List: February 2026",
       "source": "Reactor",
@@ -122,30 +201,6 @@
       "desc": "Thoughts on Gene Wolfe, Sharon Shinn, and finally getting the appeal of cosy fantasy!\nThe post Jo Walton’s Reading List: February 2026 appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-3a24120e",
-      "title": "tbotns 3-8 \"Upon the Cliff\"",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-03-08",
-      "url": "https://www.youtube.com/watch?v=XX2iJ-XeIyk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i1.ytimg.com/vi/XX2iJ-XeIyk/hqdefault.jpg"
-    },
-    {
-      "id": "rereading-wolfe-e880272f",
-      "title": "RRW Bonus: CSE Claire Cooney and Carlos Hernandez interview",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2026-01-31",
-      "url": "https://www.youtube.com/watch?v=SYyL0ko4qDk",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i4.ytimg.com/vi/SYyL0ko4qDk/hqdefault.jpg"
     },
     {
       "id": "reactor-f9e1b1f8",
@@ -169,18 +224,6 @@
       "url": "https://countercraft.substack.com/p/why-you-should-read-gene-wolfe-and",
       "desc": "Probably the best recent general introduction — Peace for literary readers, Fifth Head for established SF readers, plus the short fiction.",
       "tags": []
-    },
-    {
-      "id": "rereading-wolfe-13c61c86",
-      "title": "tbotns 3-11 and 12 Cyriaca's Wrap Up",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-11-24",
-      "url": "https://www.youtube.com/watch?v=IHHedq0ruoQ",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/IHHedq0ruoQ/hqdefault.jpg"
     },
     {
       "id": "manual-andreakalfas-undine",
@@ -210,18 +253,6 @@
       "desc": "Oh, the joys (and perils) of visiting unfamiliar places and times...\nThe post Adventures in Tourism: Five SFF Stories About Travel appeared first on Reactor.",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "rereading-wolfe-3de0f4be",
-      "title": "tbotns 3-7 Attractions",
-      "source": "Rereading Wolfe",
-      "type": "video",
-      "series": "new",
-      "date": "2025-09-09",
-      "url": "https://www.youtube.com/watch?v=z0NiLq0ymGM",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i3.ytimg.com/vi/z0NiLq0ymGM/hqdefault.jpg"
     },
     {
       "id": "manual-vegadraws-gyoll",
