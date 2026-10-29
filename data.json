@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-10-29T17:11:34.128Z",
+  "generatedAt": "2026-10-29T22:11:09.562Z",
   "items": [
+    {
+      "id": "youtube-search-2b0f7bf4",
+      "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 22-31",
+      "source": "Jeff Cannata",
+      "type": "video",
+      "series": "new",
+      "date": "2026-10-29",
+      "url": "https://www.youtube.com/watch?v=EZhAq64DqeI",
+      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the fourth novel in Gene Wolfe's ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/EZhAq64DqeI/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-ee9c4365",
       "title": "New poster!",
@@ -36,6 +48,20 @@
       "desc": "Just wanted to let you all know that the manuscript of The Feast of St. Catherine (the original novella that became The Shadow of the Torturer) is now available on The Unreliable Narrators Omeka site. We have a post over",
       "tags": [],
       "thumbnail": "https://i.redd.it/au5r6fo2bvxh1.jpeg"
+    },
+    {
+      "id": "r-genewolfe-105136dd",
+      "title": "Urth of the New Sun is... different",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "new",
+      "date": "2026-10-26",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xfsj4w/urth_of_the_new_sun_is_different/",
+      "desc": "I've managed to finish the first four books of the series recently. They are really great, my favourite is Sword of the Lictor, the weakest one is definitely Citadel of the Autarch. I've started reading Urth, I'm about a",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-0dab6cbe",
@@ -143,30 +169,6 @@
       "thumbnail": "https://i.redd.it/a0ribcli49xh1.jpeg"
     },
     {
-      "id": "r-genewolfe-05ef99f1",
-      "title": "Arriving at MileHiCon. Facsimile in hand:",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-23",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xdm0a8/arriving_at_milehicon_facsimile_in_hand/",
-      "desc": "submitted by    /u/UnreliableAmanda  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/24ayei6rf9xh1.jpeg"
-    },
-    {
-      "id": "youtube-search-0839645e",
-      "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 16-22",
-      "source": "Jeff Cannata",
-      "type": "video",
-      "series": "new",
-      "date": "2026-10-22",
-      "url": "https://www.youtube.com/watch?v=PTXwdkP0ta4",
-      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the fourth novel in Gene Wolfe's ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/PTXwdkP0ta4/hqdefault.jpg"
-    },
-    {
       "id": "high-low-brow-dfe15bd8",
       "title": "Gene Wolfe Continues to Make Us Rethink Everything | D.J. Butler",
       "source": "High Low Brow",
@@ -189,18 +191,6 @@
       "desc": "Intro - Metz tells Phil about Seven Part Pact. Content (10:26) - Discussion of Annals of Klepsis, by R.A. Lafferty Current Read-Along - The Face, by Jack Vance Check out more at alzabosoup.com.",
       "tags": [],
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
-    },
-    {
-      "id": "high-low-brow-fd45ecf9",
-      "title": "Latro In The Mist - Gene Wolfe",
-      "source": "High Low Brow",
-      "type": "video",
-      "series": "general",
-      "date": "2026-09-08",
-      "url": "https://www.youtube.com/watch?v=yTOKPsPdD3U",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i2.ytimg.com/vi/yTOKPsPdD3U/hqdefault.jpg"
     },
     {
       "id": "nick-reads-fantasy-4806a50d",
