@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-11-01T19:57:54.502Z",
+  "generatedAt": "2026-11-01T23:17:30.307Z",
   "items": [
+    {
+      "id": "youtube-search-18d4b94d",
+      "title": "Weekly Update: Are Publishers Playing It Safe? Reading Goals, Gene Wolfe &amp; Used Bookstores",
+      "source": "Page Chewing",
+      "type": "video",
+      "series": "general",
+      "date": "2026-11-01",
+      "url": "https://www.youtube.com/watch?v=wqvkOUqGLn8",
+      "desc": "Are publishers playing it too safe? And are readers partly responsible for the lack of challenging, unconventional books getting ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/wqvkOUqGLn8/hqdefault.jpg"
+    },
     {
       "id": "r-genewolfe-8795a542",
       "title": "Illustration: The House Absolute",
@@ -144,34 +156,6 @@
       "desc": "",
       "tags": [],
       "thumbnail": "https://i1.ytimg.com/vi/TWXRvbG9m6g/hqdefault.jpg"
-    },
-    {
-      "id": "r-rereadingwolfepodcast-5d72a16d",
-      "title": "James and Craig follow Severian \"Into The Mountains.\"",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-10-25",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1xfe0cw/james_and_craig_follow_severian_into_the_mountains/",
-      "desc": "A welcome draught of discussion under the reddish glare of the decrepit sun !\n    submitted by    /u/Oneirimancer  \n [link]   [comments]",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": "https://external-preview.redd.it/A93f9IByW-RVFsgplpwvvs7GJSolf3vq3Y4OLmeb0ac.jpeg?width=640&crop=smart&auto=webp&s=f71d1a473358fadee85a3c95df0f9a485a1c73a4"
-    },
-    {
-      "id": "r-rereadingwolfepodcast-493d6a95",
-      "title": "The Great Cliff - The Great Book",
-      "source": "r/rereadingwolfepodcast",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-10-25",
-      "url": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1xfcf8b/the_great_cliff_the_great_book/",
-      "desc": "Great episode gents! Been a while since I've written in about anything, but I've been loyally following along the whole time. As a fellow podcast creator who's podcast has also found itself with an ever widening maw betw",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
     },
     {
       "id": "high-low-brow-dfe15bd8",
