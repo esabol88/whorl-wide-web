@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-11-02T11:47:29.702Z",
+  "generatedAt": "2026-11-02T20:59:50.222Z",
   "items": [
+    {
+      "id": "youtube-search-5da068ea",
+      "title": "Yazarların Yazarı Gene Wolfe ve Güvenilmez Anlatıcı | Book of the New Sun İncelemesi",
+      "source": "Hepsini Okudun mu?",
+      "type": "video",
+      "series": "new",
+      "date": "2026-11-02",
+      "url": "https://www.youtube.com/watch?v=fmEywOkFX6A",
+      "desc": "Bir hikâyeyi anlatan kişiye ne kadar güvenebiliriz? Peki ya okuduğumuz her şey, anlatıcının bize göstermek istediğinden ibaretse ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/fmEywOkFX6A/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-18d4b94d",
       "title": "Weekly Update: Are Publishers Playing It Safe? Reading Goals, Gene Wolfe &amp; Used Bookstores",
@@ -125,15 +137,16 @@
       "thumbnail": "https://i2.ytimg.com/vi/IMI8UyIdbrc/hqdefault.jpg"
     },
     {
-      "id": "manual-andylee-peace",
+      "id": "andy-lee-f5355e5b",
       "title": "Gene Wolfe's Peace",
       "source": "Andy Lee",
       "type": "article",
       "series": "general",
       "date": "2026-07-12",
       "url": "https://litandchess.substack.com/p/gene-wolfes-peace",
-      "desc": "A literary treatment of narrative voice, concealed violence, and memory — and Peace's relationship to Poe, Nabokov, and postmodern fiction.",
-      "tags": []
+      "desc": "Occult classic.",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-7d19375e",
