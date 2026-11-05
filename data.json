@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-11-05T15:54:36.583Z",
+  "generatedAt": "2026-11-05T21:40:45.394Z",
   "items": [
+    {
+      "id": "youtube-search-8c14095a",
+      "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 32-38",
+      "source": "Jeff Cannata",
+      "type": "video",
+      "series": "new",
+      "date": "2026-11-05",
+      "url": "https://www.youtube.com/watch?v=qxH_bUJ5NVc",
+      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff finish their read of the fourth novel in Gene Wolfe's Book ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/qxH_bUJ5NVc/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-cb2f4f61",
       "title": "The Pain and Pleasure of Reading The Book of the New Sun",
@@ -146,18 +158,6 @@
       "artistUrl": "https://www.reddit.com/user/Grassidius_Fike",
       "postUrl": "https://www.reddit.com/r/ReReadingWolfePodcast/comments/1xjpegw/a_totally_unexpected_little_easter_egg_in_the/",
       "nsfw": false
-    },
-    {
-      "id": "youtube-search-2b0f7bf4",
-      "title": "DLC Bookclub - CITADEL OF THE AUTARCH by Gene Wolfe - Chapters 22-31",
-      "source": "Jeff Cannata",
-      "type": "video",
-      "series": "new",
-      "date": "2026-10-29",
-      "url": "https://www.youtube.com/watch?v=EZhAq64DqeI",
-      "desc": "Buy the book wth our affiliate link: https://amzn.to/3PwJXfC Lana and Jeff continue their read of the fourth novel in Gene Wolfe's ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/EZhAq64DqeI/hqdefault.jpg"
     },
     {
       "id": "rereading-wolfe-0dab6cbe",
