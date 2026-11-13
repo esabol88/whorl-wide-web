@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-11-13T10:16:49.815Z",
+  "generatedAt": "2026-11-13T18:16:22.521Z",
   "items": [
+    {
+      "id": "youtube-search-6fef4124",
+      "title": "The Book of the New Sun by Gene Wolfe",
+      "source": "Leaf by Leaf",
+      "type": "video",
+      "series": "new",
+      "date": "2026-11-13",
+      "url": "https://www.youtube.com/watch?v=ON_7sUqOgHY",
+      "desc": "Like what I do? Feel free to buy me a coffee: https://ko-fi.com/leafbyleaf Get the books through my affiliate links: ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/ON_7sUqOgHY/hqdefault.jpg"
+    },
     {
       "id": "alzabo-soup-c1be0af6",
       "title": "Chapter 8 - Gene Wolfe's Pirate Freedom",
@@ -36,18 +48,6 @@
       "desc": "Get a free audiobook with Audible's 30-day trial – https://amzn.to/4sEmVSx​ Enter a mysterious world where ancient ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/fcPAg1YZXQs/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-e45935f1",
-      "title": "I think Fifth Head might be my new favorite book",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-11-11",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xtvhu7/i_think_fifth_head_might_be_my_new_favorite_book/",
-      "desc": "submitted by    /u/pornmicomp  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/gonfo237621i1.jpeg"
     },
     {
       "id": "youtube-search-7c75e921",
@@ -105,6 +105,18 @@
       "artistUrl": "https://www.reddit.com/user/Icy_Matter",
       "postUrl": "https://www.reddit.com/r/genewolfe/comments/1xql3de/nightside_the_long_sun_original_art_by_richard/",
       "nsfw": false
+    },
+    {
+      "id": "r-genewolfe-ee5b5095",
+      "title": "Extra copies of Wolfe books",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-11-08",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xr8sic/extra_copies_of_wolfe_books/",
+      "desc": "Over the years I have accumulated quite a few duplicates. I've finally gotten everything unpacked and sorted. I'm selling these through my Abebooks bookstore, and thought some people here might be in the market. You can ",
+      "tags": [],
+      "thumbnail": null
     },
     {
       "id": "youtube-search-184e98d2",
