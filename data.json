@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-11-14T00:01:06.193Z",
+  "generatedAt": "2026-11-14T05:27:53.426Z",
   "items": [
+    {
+      "id": "youtube-search-f4c78fba",
+      "title": "Gene Wolfe Broke My Brain | Shadow &amp; Claw Read-Along #2",
+      "source": "Page Chewing",
+      "type": "video",
+      "series": "new",
+      "date": "2026-11-14",
+      "url": "https://www.youtube.com/watch?v=v8_m1PDqrUk",
+      "desc": "I thought I was getting the hang of Gene Wolfe's The Shadow of the Torturer. Then I reached the Botanic Gardens, the mirrors, and ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/v8_m1PDqrUk/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-6fef4124",
       "title": "The Book of the New Sun by Gene Wolfe",
@@ -117,20 +129,6 @@
       "desc": "Over the years I have accumulated quite a few duplicates. I've finally gotten everything unpacked and sorted. I'm selling these through my Abebooks bookstore, and thought some people here might be in the market. You can ",
       "tags": [],
       "thumbnail": null
-    },
-    {
-      "id": "youtube-search-184e98d2",
-      "title": "Can We Trust Severian? | The Shadow of the Torturer (Shadow &amp; Claw) Read-Along #1",
-      "source": "Page Chewing",
-      "type": "video",
-      "series": "new",
-      "date": "2026-11-07",
-      "url": "https://www.youtube.com/watch?v=GpM4os4-lHE",
-      "desc": "Can we trust Severian? And what is Gene Wolfe hiding in the opening chapters of The Shadow of the Torturer? Welcome to ...",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/GpM4os4-lHE/hqdefault.jpg"
     },
     {
       "id": "r-genewolfe-26b76b32",
