@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T18:35:50.338Z",
+  "generatedAt": "2026-11-14T22:49:01.496Z",
   "items": [
     {
       "id": "youtube-search-f4c78fba",
@@ -12,6 +12,18 @@
       "desc": "I thought I was getting the hang of Gene Wolfe's The Shadow of the Torturer. Then I reached the Botanic Gardens, the mirrors, and ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/v8_m1PDqrUk/hqdefault.jpg"
+    },
+    {
+      "id": "r-genewolfe-c1d6eb0c",
+      "title": "Explorable Model of a Whorl-like Generation Ship",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "long",
+      "date": "2026-11-14",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xvshc6/explorable_model_of_a_whorllike_generation_ship/",
+      "desc": "ARK\n I've been using LLMs for coding to make html files that procedurally build whatever environments, dioramas, or worlds I imagine.\n One of the first projects I took through multiple iterations was an effort to visuali",
+      "tags": [],
+      "thumbnail": "https://i.redd.it/0vl467rq1i1i1.png"
     },
     {
       "id": "youtube-search-6fef4124",
@@ -103,6 +115,20 @@
       "thumbnail": "https://external-preview.redd.it/saFp5QPx7oOxXYZh6DD76glP5QonfYv1HAvfz4HpXJY.jpeg?width=320&crop=smart&auto=webp&s=a866fcd30232be8389ecf97db4ea16565f926846"
     },
     {
+      "id": "r-genewolfe-4bbbc217",
+      "title": "I finished BOTNS over the weekend and am obsessed. Please help me grapple with the one major criticism I have of the work.",
+      "source": "r/genewolfe",
+      "type": "discussion",
+      "series": "general",
+      "date": "2026-11-09",
+      "url": "https://www.reddit.com/r/genewolfe/comments/1xru4xp/i_finished_botns_over_the_weekend_and_am_obsessed/",
+      "desc": "Quick Story time: I got the digital version of BOTNS during COVID on a whim, I saw it available for my Kindle and thought (and still think) Shadow of the Torturer had the coolest title I'd ever heard for a book. I put so",
+      "tags": [
+        "Severian"
+      ],
+      "thumbnail": null
+    },
+    {
       "id": "r-genewolfe-87ab6c69",
       "title": "Nightside the Long Sun Original Art by Richard Bober",
       "source": "r/genewolfe",
@@ -127,30 +153,6 @@
       "date": "2026-11-08",
       "url": "https://www.reddit.com/r/genewolfe/comments/1xr8sic/extra_copies_of_wolfe_books/",
       "desc": "Over the years I have accumulated quite a few duplicates. I've finally gotten everything unpacked and sorted. I'm selling these through my Abebooks bookstore, and thought some people here might be in the market. You can ",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-26b76b32",
-      "title": "BOTNS Yoshitaka Amano Covers",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-11-07",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xqh6nj/botns_yoshitaka_amano_covers/",
-      "desc": "As requested by u/goldmansachsceo_ and u/sine_qua here are the best hi-res images I could take of my copies of the Japanese prints of BOTNS. I had to do some very slight cropping of the edges of the up close artwork just",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
-      "id": "r-genewolfe-da2a44cc",
-      "title": "Look at what I finally found",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-11-07",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xqfokv/look_at_what_i_finally_found/",
-      "desc": "In my collection: Lexicon Urthus, 1st edition. \n    submitted by    /u/mdmonk  \n [link]   [comments]",
       "tags": [],
       "thumbnail": null
     },
