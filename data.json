@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:37:28.119Z",
+  "generatedAt": "2026-11-17T21:26:53.150Z",
   "items": [
     {
       "id": "youtube-search-2cb0eb43",
@@ -26,32 +26,6 @@
       "thumbnail": "https://i.ytimg.com/vi/_eHN8IrxU2s/hqdefault.jpg"
     },
     {
-      "id": "r-genewolfe-2451d007",
-      "title": "How I imagine Blood",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-11-16",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xxp563/how_i_imagine_blood/",
-      "desc": "submitted by    /u/Dependent_Coast3906  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/hmijdoid6z1i1.gif"
-    },
-    {
-      "id": "r-genewolfe-4b51a0d4",
-      "title": "I present to you my Severian cosplay",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-11-16",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xxzhqq/i_present_to_you_my_severian_cosplay/",
-      "desc": "Took me a while, but it's done.\n Never done a cosplay before and I am not planning to do any more, but I felt Wolfe's memory thrives in us bringing his character to life, as he'd wished we would.\n This is super DIY. The ",
-      "tags": [
-        "Severian"
-      ],
-      "thumbnail": null
-    },
-    {
       "id": "youtube-search-f4c78fba",
       "title": "Gene Wolfe Broke My Brain | Shadow &amp; Claw Read-Along #2",
       "source": "Page Chewing",
@@ -62,30 +36,6 @@
       "desc": "I thought I was getting the hang of Gene Wolfe's The Shadow of the Torturer. Then I reached the Botanic Gardens, the mirrors, and ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/v8_m1PDqrUk/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-c1d6eb0c",
-      "title": "Explorable Model of a Whorl-like Generation Ship",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "long",
-      "date": "2026-11-14",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xvshc6/explorable_model_of_a_whorllike_generation_ship/",
-      "desc": "ARK\n I've been using LLMs for coding to make html files that procedurally build whatever environments, dioramas, or worlds I imagine.\n One of the first projects I took through multiple iterations was an effort to visuali",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/0vl467rq1i1i1.png"
-    },
-    {
-      "id": "r-genewolfe-c96337c9",
-      "title": "Explorable Model of Nessus",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "general",
-      "date": "2026-11-14",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xvyqp4/explorable_model_of_nessus/",
-      "desc": "I've also been working on this model of Nessus you can walk around in and kinda catch a vibe or look for easter eggs. There's a lot going on but some locations overlap/are redundant, and there's some overall jank along w",
-      "tags": [],
-      "thumbnail": "https://i.redd.it/kcrjyomuwj1i1.png"
     },
     {
       "id": "youtube-search-6fef4124",
@@ -112,18 +62,6 @@
       "thumbnail": "https://static.libsyn.com/p/assets/9/5/0/f/950f294a85280bd4/Rssfeedavatar.png"
     },
     {
-      "id": "r-genewolfe-00a575bf",
-      "title": "Recently picked up some signed prints of Don Maitz’s cover art for Gene Wolfe’s Book of the New Sun. Decided to get them professionally framed.",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-11-13",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xutwer/recently_picked_up_some_signed_prints_of_don/",
-      "desc": "submitted by    /u/Fantasy_Brooks  \n [link]   [comments]",
-      "tags": [],
-      "thumbnail": null
-    },
-    {
       "id": "youtube-search-9b43bf42",
       "title": "Shadow &amp; Claw _ Gene Wolfe",
       "source": "Voiceaudio",
@@ -134,38 +72,6 @@
       "desc": "Get a free audiobook with Audible's 30-day trial – https://amzn.to/4sEmVSx​ Enter a mysterious world where ancient ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/fcPAg1YZXQs/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-7c75e921",
-      "title": "Dr. Wolfe AP Biology - Cell Cycle Gene Mutations",
-      "source": "Tommy Wolfe",
-      "type": "video",
-      "series": "general",
-      "date": "2026-11-10",
-      "url": "https://www.youtube.com/watch?v=9Z2W9jviKDw",
-      "desc": "",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/9Z2W9jviKDw/hqdefault.jpg"
-    },
-    {
-      "id": "r-genewolfe-7aae0bb8",
-      "title": "Sword of the Lictor - what is even going on?",
-      "source": "r/genewolfe",
-      "type": "discussion",
-      "series": "new",
-      "date": "2026-11-10",
-      "url": "https://www.reddit.com/r/genewolfe/comments/1xstujh/sword_of_the_lictor_what_is_even_going_on/",
-      "desc": "I just finished Sword of the Lictor and feel so confused. Not about the plot itself, I think I have a grasp on what’s happening (correct me if I'm missing something), but rather WHY any of this is happening or what it ha",
-      "tags": [
-        "Severian",
-        "the Claw",
-        "Vodalus",
-        "Dorcas",
-        "Agia",
-        "Typhon",
-        "Hethor"
-      ],
-      "thumbnail": null
     },
     {
       "id": "rereading-wolfe-0dab6cbe",
