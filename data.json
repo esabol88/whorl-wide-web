@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-11-20T18:06:54.859Z",
+  "generatedAt": "2026-11-21T00:27:12.103Z",
   "items": [
+    {
+      "id": "youtube-search-e02c1098",
+      "title": "Shadow of Torturer and Wolfe&#39;s Catholicism",
+      "source": "Recoverying the Sacred",
+      "type": "video",
+      "series": "new",
+      "date": "2026-11-21",
+      "url": "https://www.youtube.com/watch?v=QLOoxy3_gbk",
+      "desc": "My sister Rebecca, my brother Peter and I discuss Gene Wolfe's genre bending novel The Shadow of the Torturer, which is the ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/QLOoxy3_gbk/hqdefault.jpg"
+    },
     {
       "id": "alzabo-soup-c1be0af6",
       "title": "Chapter 9 - Gene Wolfe's Pirate Freedom",
