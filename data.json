@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-11-21T00:27:12.103Z",
+  "generatedAt": "2026-11-21T07:50:21.494Z",
   "items": [
+    {
+      "id": "youtube-search-8814a8e1",
+      "title": "Severian Remembers Everything. So Why Don&#39;t I Believe Him? The Claw of the Conciliator, Ch 1–15",
+      "source": "Page Chewing",
+      "type": "video",
+      "series": "new",
+      "date": "2026-11-21",
+      "url": "https://www.youtube.com/watch?v=fKNDI6oM9bs",
+      "desc": "Is Gene Wolfe's The Book of the New Sun actually science fiction disguised as fantasy? Welcome back to Page Chewing's ...",
+      "tags": [
+        "Severian",
+        "the Claw"
+      ],
+      "thumbnail": "https://i.ytimg.com/vi/fKNDI6oM9bs/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-e02c1098",
       "title": "Shadow of Torturer and Wolfe&#39;s Catholicism",
@@ -48,18 +63,6 @@
       "desc": "In which the Unreliable Narrators discuss Gene Wolfe's short story ”The Detective of Dreams”.",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/_eHN8IrxU2s/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-f4c78fba",
-      "title": "Gene Wolfe Broke My Brain | Shadow &amp; Claw Read-Along #2",
-      "source": "Page Chewing",
-      "type": "video",
-      "series": "new",
-      "date": "2026-11-14",
-      "url": "https://www.youtube.com/watch?v=v8_m1PDqrUk",
-      "desc": "I thought I was getting the hang of Gene Wolfe's The Shadow of the Torturer. Then I reached the Botanic Gardens, the mirrors, and ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/v8_m1PDqrUk/hqdefault.jpg"
     },
     {
       "id": "rereading-wolfe-0dab6cbe",
