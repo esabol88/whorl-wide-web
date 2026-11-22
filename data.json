@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-11-22T08:59:54.812Z",
+  "generatedAt": "2026-11-22T16:54:49.858Z",
   "items": [
+    {
+      "id": "youtube-search-f196e16e",
+      "title": "Challenge Match @ The 4S BARn - Jeffrey Wolfe vs Gene Reynolds (Part 2)",
+      "source": "White Mountain Pool Players BCAPL",
+      "type": "video",
+      "series": "general",
+      "date": "2026-11-22",
+      "url": "https://www.youtube.com/watch?v=cRKhnRhJewQ",
+      "desc": "Part 2.",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/cRKhnRhJewQ/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-1fb1410b",
+      "title": "Challenge Match @ The 4S BARn - Jeffrey Wolfe vs Gene Reynolds (Part 1)",
+      "source": "White Mountain Pool Players BCAPL",
+      "type": "video",
+      "series": "general",
+      "date": "2026-11-22",
+      "url": "https://www.youtube.com/watch?v=wP7jga_e8pw",
+      "desc": "Part 1.",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/wP7jga_e8pw/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-8814a8e1",
       "title": "Severian Remembers Everything. So Why Don&#39;t I Believe Him? The Claw of the Conciliator, Ch 1–15",
