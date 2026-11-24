@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-11-24T11:46:18.365Z",
+  "generatedAt": "2026-11-24T21:41:00.022Z",
   "items": [
+    {
+      "id": "youtube-search-caf71639",
+      "title": "Jesse Fillingham - Fatherhood &amp; Wolfe",
+      "source": "Blind Shovel: Arts and Music Interviews",
+      "type": "video",
+      "series": "general",
+      "date": "2026-11-24",
+      "url": "https://www.youtube.com/watch?v=IKBjz8fcm5I",
+      "desc": "The first episode ever of Blind Shovel, with my good friend Jesse Fillingham. Among many other things we discuss his new role as ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/IKBjz8fcm5I/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-f196e16e",
       "title": "Challenge Match @ The 4S BARn - Jeffrey Wolfe vs Gene Reynolds (Part 2)",
