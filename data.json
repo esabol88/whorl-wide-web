@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2026-11-25T04:40:59.875Z",
+  "generatedAt": "2026-11-25T15:07:13.338Z",
   "items": [
+    {
+      "id": "youtube-search-9c63066b",
+      "title": "Gene Wolfe - Liktorun Kılıcı (Kitap Özeti)",
+      "source": "Özetle Oku",
+      "type": "video",
+      "series": "new",
+      "date": "2026-11-25",
+      "url": "https://www.youtube.com/watch?v=v9Wmy0oz4Rc",
+      "desc": "Gene Wolfe - The Sword of the Lictor.",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/v9Wmy0oz4Rc/hqdefault.jpg"
+    },
     {
       "id": "youtube-search-caf71639",
       "title": "Jesse Fillingham - Fatherhood &amp; Wolfe",
