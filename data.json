@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T23:52:33.978Z",
+  "generatedAt": "2026-11-26T05:50:33.286Z",
   "items": [
     {
       "id": "youtube-search-9c63066b",
@@ -75,6 +75,18 @@
       "desc": "My sister Rebecca, my brother Peter and I discuss Gene Wolfe's genre bending novel The Shadow of the Torturer, which is the ...",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/QLOoxy3_gbk/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-ccd07776",
+      "title": "📖 GENE WOLFE - La verdad entre las palabras",
+      "source": "Fronteras de Fantasia ",
+      "type": "video",
+      "series": "general",
+      "date": "2026-11-20",
+      "url": "https://www.youtube.com/watch?v=v6ln-unKZYY",
+      "desc": "Y si el narrador de una novela te estuviera engañando sin que te dieras cuenta? ¿Y si recordarlo absolutamente todo no fuera ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/v6ln-unKZYY/hqdefault.jpg"
     },
     {
       "id": "alzabo-soup-c1be0af6",
