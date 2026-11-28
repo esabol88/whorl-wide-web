@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-11-27T19:15:08.062Z",
+  "generatedAt": "2026-11-28T02:20:29.195Z",
   "items": [
+    {
+      "id": "youtube-search-3e1f5cc3",
+      "title": "A Espada do Lictor",
+      "source": "Livraria do David",
+      "type": "video",
+      "series": "general",
+      "date": "2026-11-27",
+      "url": "https://www.youtube.com/watch?v=mViPuJsc_es",
+      "desc": "Resenha sobre o terceiro volume do \"Livro do Novo Sol\", sci-fantasy escrita pelo autor americano Gene Wolfe.",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/mViPuJsc_es/hqdefault.jpg"
+    },
+    {
+      "id": "youtube-search-fe46c045",
+      "title": "Understanding Gene Wolfe&#39;s The Book of the New Sun | Michael Andre-Driussi",
+      "source": "Page Chewing",
+      "type": "video",
+      "series": "new",
+      "date": "2026-11-27",
+      "url": "https://www.youtube.com/watch?v=wxFLb3gjhNo",
+      "desc": "Why is Gene Wolfe's The Book of the New Sun so difficult to read, and how much are we supposed to understand on our first ...",
+      "tags": [],
+      "thumbnail": "https://i.ytimg.com/vi/wxFLb3gjhNo/hqdefault.jpg"
+    },
     {
       "id": "alzabo-soup-c1be0af6",
       "title": "Chapter 10 - Gene Wolfe's Pirate Freedom",
@@ -72,33 +96,6 @@
       "desc": "Part 1.",
       "tags": [],
       "thumbnail": "https://i.ytimg.com/vi/wP7jga_e8pw/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-8814a8e1",
-      "title": "Severian Remembers Everything. So Why Don&#39;t I Believe Him? The Claw of the Conciliator, Ch 1–15",
-      "source": "Page Chewing",
-      "type": "video",
-      "series": "new",
-      "date": "2026-11-21",
-      "url": "https://www.youtube.com/watch?v=fKNDI6oM9bs",
-      "desc": "Is Gene Wolfe's The Book of the New Sun actually science fiction disguised as fantasy? Welcome back to Page Chewing's ...",
-      "tags": [
-        "Severian",
-        "the Claw"
-      ],
-      "thumbnail": "https://i.ytimg.com/vi/fKNDI6oM9bs/hqdefault.jpg"
-    },
-    {
-      "id": "youtube-search-e02c1098",
-      "title": "Shadow of Torturer and Wolfe&#39;s Catholicism",
-      "source": "Recoverying the Sacred",
-      "type": "video",
-      "series": "new",
-      "date": "2026-11-21",
-      "url": "https://www.youtube.com/watch?v=QLOoxy3_gbk",
-      "desc": "My sister Rebecca, my brother Peter and I discuss Gene Wolfe's genre bending novel The Shadow of the Torturer, which is the ...",
-      "tags": [],
-      "thumbnail": "https://i.ytimg.com/vi/QLOoxy3_gbk/hqdefault.jpg"
     },
     {
       "id": "rereading-wolfe-0dab6cbe",
